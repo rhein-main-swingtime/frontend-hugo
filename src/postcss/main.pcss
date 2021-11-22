@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "learn.pcss";
+@import "buttons.pcss";
+
+html {
+    @apply font-serif font-light;
+    @apply bg-gray-800;
+}
+
+body {
+    @apply bg-gray-50;
+    @apply text-xl;
+}
+
+section.is-padded {
+    @apply px-4;
+}
+
+.container.is-default {
+    @apply mx-auto flex flex-col max-w-screen-xl py-10;
+}
+
+a.is-internal-link {
+    @apply underline;
+}
+
+#page-mast-head {
+    background-image: url(/img/wintery-sunburst.svg);
+    background-size: cover;
+    background-position: center center;
+    & #site-logo {
+        filter: invert(1);
+    }
+}
+
+.dance-event-previews {
+    .has-border {
+        @apply border-t border-gray-200;
+    }
+    .dance-event-preview-item {
+     @apply py-4;
+        & > * {
+            @apply mb-2;
+        }
+    }
+}
+
+.is-button {
+    @apply border border-gray-100 px-2 py-1 rounded-sm;
+    @apply hover:bg-gray-50 hover:text-gray-700;
+    @apply active:bg-gray-200;
+}
+
+
+#mast-head {
+    .hero-anchor-link {
+        @apply text-xl uppercase inline-block;
+        @apply mr-2 last-of-type:mr-0;
+        svg {
+            @apply inline-block h-6 w-6 relative -top-0.5 -mr-1;
+            @apply text-red-700 font-bold not-italic;
+        }
+    }
+}

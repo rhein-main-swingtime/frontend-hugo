@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "ignoreBrowserslistConfig": true,
+        "targets": {
+            "node": 8,
+            "browsers": [
+                "last 3 versions",
+                "> 1% in DE",
+                "Explorer >= 10"
+            ]
+        }
+      }
+    ]
+  ]
+}

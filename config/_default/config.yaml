@@ -1,0 +1,17 @@
+baseURL: 'http://example.org/'
+title: 'Rhein Main Swing Time'
+
+
+defaultContentLanguage: de
+languages:
+  en:
+    title: Rhein Main Swing Time
+    weight: 2
+    params:
+      nav: Switch to English
+  de:
+    params:
+      navigation:
+        help: Zu Deutsch wechseln
+    title: Rhein Main Swing Time
+    weight: 1

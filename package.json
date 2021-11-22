@@ -1,0 +1,35 @@
+{
+  "name": "rmswing.de",
+  "version": "1.0.0",
+  "description": "RMSwing.de Website",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.4.0",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.39",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm:watch\" \"npm:hugo-dev-server\"",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "hugo-dev-server": "hugo server -D"
+  }
+}

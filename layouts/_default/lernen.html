@@ -1,0 +1,75 @@
+{{ define "main" }}
+    {{- partial "page/main-content" . -}}
+{{ end }}
+
+{{ define "additional" }}
+
+    {{ $categories := slice }}
+    {{ $cities := slice }}
+    {{ range $.Site.Data.learn }}
+        {{ $categories = $categories | append .category }}
+        {{ $cities = $cities | append .city }}
+    {{ end }}
+
+    <div id="learn-section">
+        <div class="alpine-component" x-data="RMST.learnList({{ $.Site.Data.learn | jsonify }})">
+            <div class="container mx-auto max-w-screen-lg flex flex-wrap gap-2 my-2 bg-white top-0 px-2 py-1 border-gray-300 border shadow-sm">
+                <div class="mr-4 font-bold">Filter:</div>
+                {{ range $categories | uniq }}
+                    {{ $translatableKey := (printf "learn-%s" .) }}
+                    <a
+                        href="#"
+                        class="rmst-button has-icon text-sm relative"
+                        :class="selected.category === '{{.}}' ? 'active' : ''"
+                        @click="setVal('category', '{{ . }}')"
+
+                    >
+                    <template  x-if="selected.category === '{{.}}'">
+                        <span>
+                            {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                        </span>
+                    </template>
+                    <template  x-if="selected.category !== '{{.}}'">
+                        <span>
+                            {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                        </span>
+                    </template>
+                        {{ i18n $translatableKey }}
+                    </a>
+                {{ end }}
+                {{ range $cities | uniq }}
+                    <a
+                        href="#"
+                        class="rmst-button has-icon text-sm relative pl-10"
+                        :class="selected.city === '{{.}}' ? 'active' : ''"
+                        @click="setVal('city', '{{ . }}')"
+                    >
+                        <template  x-if="selected.city === '{{.}}'">
+                            <span>
+                                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            </span>
+                        </template>
+                        <template  x-if="selected.city !== '{{.}}'">
+                            <span>
+                                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            </span>
+                        </template>
+                        {{ . }}
+                    </a>
+                {{ end }}
+                <a href="#" class="rmst-button has-icon text-sm" @click="reset()" :class="trashActive() ? 'highlighted' : ''">
+                    <span>
+                        {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                    </span>
+                    Zurücksetzen
+                </a>
+            </div>
+
+            <div class="container items">
+                {{ range sort $.Site.Data.learn "name" "asc" }}
+                    {{ partial "learn/item" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}

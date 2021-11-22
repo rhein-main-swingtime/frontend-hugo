@@ -1,0 +1,26 @@
+<!-- baseof -->
+<!DOCTYPE html>
+<html>
+    {{- partial "header.html" . -}}
+    <body>
+        {{- partial "page/mast-head.html" . -}}
+
+        {{/*  <div id="content">
+            {{- block "title" . }}{{- end }}
+        </div>  */}}
+
+        <div id="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+
+        <div id="additonal-content">
+            {{ block "additional" . }}{{- end }}
+        </div>
+
+        <pre class="hidden">
+            {{ printf "%#v" $.Site }}
+        </pre>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

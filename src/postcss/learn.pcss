@@ -1,0 +1,28 @@
+#learn-section {
+    & .learn-item {
+        @apply border border-gray-200 shadow;
+        @apply bg-white;
+        @apply p-4 ;
+        @apply flex flex-col;
+        &.has-address {
+            & .contact {
+                @apply grid-cols-2;
+            }
+        }
+        &.has-no-address {
+            & .contact {
+                & .virtual {
+                    @apply grid-cols-2 grid;
+                }
+            }
+        }
+    }
+    & .contact {
+        /* @apply place-self-end; */
+    }
+    & > .alpine-component > .container.items {
+        @apply mx-auto max-w-screen-lg;
+        @apply gap-6 flex flex-col;
+        @apply lg:grid lg:grid-cols-2;
+    }
+}

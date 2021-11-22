@@ -1,0 +1,49 @@
+{{ $addr := (cond (isset . "address") "has-address" "has-no-address") }}
+<article
+    class="learn-item {{ $addr }} lg:min-h-[15rem]"
+    x-show="itemVisible('{{ .city }}', '{{ .category}}')"
+>
+    {{ .Language.Lang }}
+    <div class="flex flex-col">
+        <h3 class="text-4xl text-center font-thin my-4">
+            {{ .name }}
+        </h3>
+        <div class="mb-8 text-center">
+            <span class="font-light text-sm bg-gray-500 text-white py-1 px-2 rounded">
+                {{ i18n (printf "learn-%s" .category) }}
+            </span>
+        </div>
+        <div class="class mt-auto grid text-sm contact">
+            <div class="physical">
+                {{ range .address }}
+                    <span class="block">
+                        {{ . }}
+                    </span>
+                {{ end }}
+            </div>
+            <div class="virtual">
+                {{ range $index, $val := .contact }}
+                    <div class="{{ $index }}">
+                        {{ $partialPath := printf "contact/%s.html" $index }}
+                        {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                            {{ partial $partialPath . }}
+                        {{ else }}
+                            {{ $val }}
+                        {{ end }}
+                    </div>
+                {{ end }}
+                {{ range $index, $val := .socialmedia }}
+                    <div class="{{ $index }}">
+                        {{ $partialPath := printf "simpleicons.org/%s.svg" $index }}
+                        {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                            {{ partial ( printf "%s" $partialPath ) "inline-block w-4 h-4" }}
+                        {{ end }}
+                        <a href="{{ $val }}" target="_blank">
+                            {{ $index }}
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</article>
