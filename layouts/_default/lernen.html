@@ -21,7 +21,7 @@
                         href="#"
                         class="rmst-button has-icon text-sm relative"
                         :class="selected.category === '{{.}}' ? 'active' : ''"
-                        @click="setVal('category', '{{ . }}')"
+                        @click.prevent="setVal('category', '{{ . }}')"
 
                     >
                     <template  x-if="selected.category === '{{.}}'">
@@ -42,7 +42,7 @@
                         href="#"
                         class="rmst-button has-icon text-sm relative pl-10"
                         :class="selected.city === '{{.}}' ? 'active' : ''"
-                        @click="setVal('city', '{{ . }}')"
+                        @click.prevent="setVal('city', '{{ . }}')"
                     >
                         <template  x-if="selected.city === '{{.}}'">
                             <span>
