@@ -1,6 +1,6 @@
-import eventPreview from "./eventPreview";
-import fetchEvents from "./fetchEvents";
-import learnList from "./learnList";
+import eventPreview from './eventPreview'
+import fetchEvents from './fetchEvents'
+import learnList from './learnList'
 
 const RMST = {
     fetchEvents,

@@ -3,19 +3,6 @@
  * in the frontend. It should remain unmutable
  */
 class DanceEvent {
-
-    dateOptions = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    }
-
-    timeOptions = {
-        hour: '2-digit',
-        minute: '2-digit'
-    }
-
     /**
      * Constructor
      *
@@ -23,26 +10,41 @@ class DanceEvent {
      */
     constructor (
         payload
-    ){
-
+    ) {
         this.id = payload.id
-        this.foreignUrl = payload.foreignUrl || null;
-        this.source = payload.source || null;
-        this.creator = payload.creator || null;
-        this.location = payload.location || null;
-        this.city = payload.city || null;
-        this.summary = payload.summary || null;
-        this.description = payload.description || null;
-        this.created = this.getDateFromVal(payload.created);
-        this.startDateTime = this.getDateFromVal(payload.startDateTime);
-        this.endDateTime = this.getDateFromVal(payload.endDateTime);
+        this.foreignUrl = payload.foreignUrl || null
+        this.source = payload.source || null
+        this.creator = payload.creator || null
+        this.location = payload.location || null
+        this.city = payload.city || null
+        this.summary = payload.summary || null
+        this.description = payload.description || null
+        this.created = this.getDateFromVal(payload.created)
+        this.startDateTime = this.getDateFromVal(payload.startDateTime)
+        this.endDateTime = this.getDateFromVal(payload.endDateTime)
     }
 
-    getDateFromVal(val) {
-        if (typeof val !== "string") {
+    getDateFromVal (val) {
+        if (typeof val !== 'string') {
             return null
         }
         return new Date(val)
+    }
+
+    getDateOptions () {
+        return {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }
+    }
+
+    getTimeOptions () {
+        return {
+            hour: '2-digit',
+            minute: '2-digit'
+        }
     }
 
     /**
@@ -50,7 +52,7 @@ class DanceEvent {
      *
      * @returns {boolean}
      */
-    isNow(start, end) {
+    isNow (start, end) {
         const nowTime = new Date().getTime()
         return (
             this.getStartDateTime().getTime() <= nowTime &&
@@ -64,7 +66,7 @@ class DanceEvent {
      * @param {Date} date
      * @returns {boolean}
      */
-    isToday(date) {
+    isToday (date) {
         const now = new Date()
         return (
             date.getDate() === now.getDate() &&
@@ -79,14 +81,14 @@ class DanceEvent {
      * @param {Date} date
      * @returns {boolean}
      */
-    isThisYear(date) {
+    isThisYear (date) {
         const now = new Date()
         return date.getFullYear() === now.getFullYear()
     }
 
-    localizeDate(date) {
+    localizeDate (date) {
         const locale = 'de-DE'
-        const options = this.dateOptions
+        const options = this.getDateOptions()
 
         if (this.isNow()) {
             return 'Jetzt'
@@ -96,56 +98,70 @@ class DanceEvent {
             return 'Heute'
         }
         if (this.isThisYear(this.getEndDateTime())) {
-            delete options['year']
+            delete options.year
         }
         return date.toLocaleDateString(locale, options)
     }
 
-    getId() {
+    getId () {
         return this.id
     }
-    getForeignUrl() {
+
+    getForeignUrl () {
         return this.foreignUrl
     }
-    getSource() {
+
+    getSource () {
         return this.source
     }
-    getCreator() {
+
+    getCreator () {
         return this.creator
     }
-    getCreated() {
+
+    getCreated () {
         return this.created
     }
-    getLocation() {
+
+    getLocation () {
         return this.location
     }
-    getCity() {
+
+    getCity () {
         return this.city
     }
-    getSummary() {
+
+    getSummary () {
         return this.summary
     }
-    getDescription() {
+
+    getDescription () {
         return this.description
     }
-    getStartDateTime() {
+
+    getStartDateTime () {
         return this.startDateTime
     }
-    getStartDateLocalized() {
+
+    getStartDateLocalized () {
         return this.localizeDate(this.getStartDateTime())
     }
-    getStartTimeLocalized() {
-        return this.startDateTime.toLocaleString('de-DE', this.timeOptions)
+
+    getStartTimeLocalized () {
+        return this.startDateTime.toLocaleString('de-DE', this.getTimeOptions())
     }
-    getEndDateTime() {
+
+    getEndDateTime () {
         return this.endDateTime
     }
-    getEndTimeLocalized() {
-        return this.endDateTime.toLocaleString('de-DE', this.timeOptions)
+
+    getEndTimeLocalized () {
+        return this.endDateTime.toLocaleString('de-DE', this.getTimeOptions())
     }
-    getEndDateLocalized() {
+
+    getEndDateLocalized () {
         return this.localizeDate(this.getEndDateTime())
     }
 }
 
-export default DanceEvent;
+export default DanceEvent
