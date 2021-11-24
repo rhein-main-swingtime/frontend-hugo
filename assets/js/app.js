@@ -1,11 +1,11 @@
 import eventPreview from './eventPreview'
 import fetchEvents from './fetchEvents'
-import learnList from './learnList'
+import LearnList from './LearnList'
 
 const RMST = {
     fetchEvents,
     eventPreview,
-    learnList
+    LearnList
 }
 
 window.RMST = RMST

@@ -11,9 +11,10 @@
         {{ $cities = $cities | append .city }}
     {{ end }}
 
-    <div id="learn-section">
-        <div class="alpine-component" x-data="RMST.learnList({{ $.Site.Data.learn | jsonify }})">
-            <div class="container mx-auto max-w-screen-lg flex flex-wrap gap-2 my-2 bg-white top-0 px-2 py-1 border-gray-300 border shadow-sm">
+    <div id="learn-section" class="container is-default">
+        <div class="alpine-component"
+            x-data="RMST_TS.LearnList({{ $.Site.Data.learn | jsonify }})">
+            <div class="flex flex-wrap gap-2 my-2 bg-white top-0 px-2 py-1 border-gray-300 border shadow-sm">
                 <div class="mr-4 font-bold">Filter:</div>
                 {{ range $categories | uniq }}
                     {{ $translatableKey := (printf "learn-%s" .) }}
@@ -21,17 +22,17 @@
                         href="#"
                         class="rmst-button has-icon text-sm relative"
                         :class="selected.category === '{{.}}' ? 'active' : ''"
-                        @click.prevent="setVal('category', '{{ . }}')"
+                        @click.prevent="addSelection('category', '{{ . }}')"
 
                     >
                     <template  x-if="selected.category === '{{.}}'">
                         <span>
-                            {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
                         </span>
                     </template>
                     <template  x-if="selected.category !== '{{.}}'">
                         <span>
-                            {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
                         </span>
                     </template>
                         {{ i18n $translatableKey }}
@@ -42,22 +43,22 @@
                         href="#"
                         class="rmst-button has-icon text-sm relative pl-10"
                         :class="selected.city === '{{.}}' ? 'active' : ''"
-                        @click.prevent="setVal('city', '{{ . }}')"
+                        @click.prevent="addSelection('city', '{{ . }}')"
                     >
                         <template  x-if="selected.city === '{{.}}'">
                             <span>
-                                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
                             </span>
                         </template>
                         <template  x-if="selected.city !== '{{.}}'">
                             <span>
-                                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
                             </span>
                         </template>
                         {{ . }}
                     </a>
                 {{ end }}
-                <a href="#" class="rmst-button has-icon text-sm" @click="reset()" :class="trashActive() ? 'highlighted' : ''">
+                <a href="#" class="rmst-button has-icon text-sm highlighted" @click="resetSelections()" x-show="trashActive">
                     <span>
                         {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
                     </span>
@@ -66,6 +67,22 @@
             </div>
 
             <div class="container items">
+                <template x-if="visibleItems.length === 0">
+                    <article class="is-card py-5 lg:col-span-2 text-center">
+                        <div class="mb-4">
+                            <h2 class="text-xl font-bold">
+                                {{ T "learn-page-sorry-hl" }}
+                            </h2>
+                            {{ T "learn-page-sorry-copy" }}
+                        </div>
+                        <a href="#" class="rmst-button has-icon text-sm highlighted" @click="resetSelections()">
+                            <span>
+                                {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            </span>
+                            Zurücksetzen
+                        </a>
+                    </article>
+                </template>
                 {{ range sort $.Site.Data.learn "name" "asc" }}
                     {{ partial "learn/item" . }}
                 {{ end }}

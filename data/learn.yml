@@ -97,13 +97,13 @@
     contact:
         web: 'https://www.ftg-frankfurt.de'
 -
-    name: "Swingin' Wiesbaden e.V."
+    name: Swingin` Wiesbaden e.V.
     city: Wiesbaden
     category: club
     contact:
         web: 'http://swinginwiesbaden.de'
 -
-    name: 'Tanzatelier Ralf S. '
+    name: Tanzatelier Ralf S.
     city: Wiesbaden
     category: school
     contact:
@@ -123,13 +123,13 @@
         mail: info@lindyhop-giessen.de
         facebook: 'https://www.facebook.com/lindyhopgiessen/'
 -
-    name: 'Salty & Strick'
+    name: Salty & Strick
     city: Frankfurt
     category: teacher
     contact:
         mail: ausderzeitgefallen@gmail.com
 -
-    name: 'Diana & Michael'
+    name: Diana & Michael
     city: Frankfurt
     category: teacher
     contact:

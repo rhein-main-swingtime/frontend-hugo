@@ -1,56 +1,45 @@
 export default function (items) {
-    const allItems = items
-    const visibleItems = []
+    const visible = items.map(i => i.name)
 
     const selected = {
         city: false,
         category: false
     }
 
-    const reset = function () {
+    const resetSelections = function () {
         this.selected.city = false
         this.selected.category = false
     }
 
-    const setVal = function (key, val) {
-        if (this.selected[key] === val) {
+    const addSelection = function (key, value) {
+        if (this.selected[key] === value) {
             this.selected[key] = false
         } else {
-            this.selected[key] = val
+            this.selected[key] = value
         }
-        updateVisible()
-    }
-
-    const updateVisible = function () {
-        const visible = []
-        this.allItems.forEach((i) => {
-            if (
-                (i.category === this.selected.category || this.selected.category === false) &&
-                (i.city === this.selected.city || this.selected.city === false)
-            ) {
-                visible.push(i.name)
-            }
-        })
-        this.visibleItems = visible
-    }
-
-    const itemVisible = function (name) {
-        return this.visibleItems === undefined || this.visibleItems.includes(name)
-    }
-
-    const trashActive = function () {
-        return this.selected.city !== false ||
-    this.selected.category !== false
     }
 
     return {
+        visible,
         selected,
-        reset,
-        setVal,
-        itemVisible,
-        trashActive,
-        visibleItems,
-        allItems,
-        updateVisible
+        resetSelections,
+        items,
+        get visibleItems () {
+            const names = []
+            this.items.forEach((i) => {
+                if (
+                    (i.city === this.selected.city || !this.selected.city) &&
+                    (i.category === this.selected.category || !this.selected.category)
+                ) {
+                    names.push(i.name)
+                }
+            })
+            return names
+        },
+        get trashActive () {
+            return (this.selected.city !== false ||
+                this.selected.category !== false)
+        },
+        addSelection
     }
 }

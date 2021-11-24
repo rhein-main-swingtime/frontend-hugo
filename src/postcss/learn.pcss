@@ -1,8 +1,5 @@
 #learn-section {
     & .learn-item {
-        @apply border border-gray-200 shadow;
-        @apply bg-white;
-        @apply p-4 ;
         @apply flex flex-col;
         &.has-address {
             & .contact {
@@ -10,11 +7,6 @@
             }
         }
         &.has-no-address {
-            & .contact {
-                & .virtual {
-                    @apply grid-cols-2 grid;
-                }
-            }
         }
     }
     & .contact {

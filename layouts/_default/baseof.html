@@ -9,13 +9,13 @@
             {{- block "title" . }}{{- end }}
         </div>  */}}
 
-        <div id="content">
+        <section id="content" class="is-padded">
             {{- block "main" . }}{{- end }}
-        </div>
+        </section>
 
-        <div id="additonal-content">
+        <section id="additonal-content" class="is-padded">
             {{ block "additional" . }}{{- end }}
-        </div>
+        </section>
 
         <pre class="hidden">
             {{ printf "%#v" $.Site }}
