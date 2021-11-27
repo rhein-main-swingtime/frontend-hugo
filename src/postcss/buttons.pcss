@@ -1,7 +1,9 @@
-.rmst-button {
-    @apply px-2 py-1 mr-2 last-of-type:mr-0 ;
-    @apply border border-gray-300 rounded;
-    @apply font-bold;
+.is-button {
+    @apply inline-block;
+    @apply border border-gray-400 px-2 py-1 rounded-sm;
+    @apply hover:bg-gray-50 hover:text-gray-700;
+    @apply active:bg-gray-200;
+
     &.active {
         @apply bg-blue-800 border-blue-500;
         @apply text-white;
@@ -24,5 +26,11 @@
         & span svg {
             opacity: 1;
         }
+    }
+    &.is-xl {
+        @apply text-xl
+    }
+    &.is-white {
+        @apply bg-gray-50 text-gray-900 border-gray-300 border;
     }
 }

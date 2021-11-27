@@ -1,8 +1,4 @@
-<!-- {{ $js := resources.Get "js/app.js" | babel | js.Build -}}
-{{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script> -->
-
-{{ $typescript := resources.Get "ts/main.ts" | babel | js.Build }}
-{{ $javascript := slice $typescript | resources.Concat "scripts/maints.js" }}
-{{ $secureJS := $javascript | resources.Fingerprint "sha512" }}
+{{ $typescript := resources.Get "scripts/main.ts" | babel | js.Build }}
+{{/*  {{ $javascript := slice $typescript | resources.Concat "js/maints.js" }}  */}}
+{{ $secureJS := $typescript | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>

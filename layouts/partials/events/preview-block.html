@@ -1,0 +1,10 @@
+<div
+    id="event-preview"
+    x-init="teasers = await RMST_TS.fetchEventTeasers({{ .Params.eventTeasers | jsonify }})"
+    x-data="{ teasers: [], test: 'test', previews: {{ .Params.eventTeasers.limit }} }"
+    class="flex flex-col sm:grid sm:grid-cols-3 gap-3 my-6"
+>
+    <template x-for="num in previews">
+        {{ partial "events/preview-teaser" . }}
+    </template>
+</div>

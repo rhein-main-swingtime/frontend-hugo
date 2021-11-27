@@ -1,7 +1,8 @@
 {{ $addr := (cond (isset . "address") "has-address" "has-no-address") }}
 <article
     class="learn-item {{ $addr }} lg:min-h-[15rem] is-card"
-    x-show="visibleItems.includes('{{ .name }}')"
+    x-show="list.visibleItems.includes('{{ .name }}')"
+    x-transition
 >
     {{ .Language.Lang }}
     <div class="flex flex-col">

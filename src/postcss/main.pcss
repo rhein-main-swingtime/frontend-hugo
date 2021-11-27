@@ -4,10 +4,11 @@
 @import "card.pcss";
 @import "learn.pcss";
 @import "buttons.pcss";
+@import "icons.pcss";
 
 html {
     @apply font-serif font-light;
-    @apply bg-gray-800;
+    @apply bg-gray-900;
 }
 
 body {
@@ -20,14 +21,15 @@ section.is-padded {
 }
 
 .container.is-default {
-    @apply mx-auto flex flex-col max-w-screen-lg py-10;
+    @apply mx-auto flex flex-col max-w-screen-lg py-10 px-4;
+    @apply lg:px-0
 }
 
 a.is-internal-link {
     @apply underline;
 }
 
-#page-mast-head {
+#home-hero {
     background-image: url(/img/wintery-sunburst.svg);
     background-size: cover;
     background-position: center center;
@@ -48,13 +50,6 @@ a.is-internal-link {
     }
 }
 
-.is-button {
-    @apply border border-gray-100 px-2 py-1 rounded-sm;
-    @apply hover:bg-gray-50 hover:text-gray-700;
-    @apply active:bg-gray-200;
-}
-
-
 #mast-head {
     .hero-anchor-link {
         @apply text-xl uppercase inline-block;
@@ -64,4 +59,24 @@ a.is-internal-link {
             @apply text-red-700 font-bold not-italic;
         }
     }
+}
+
+#page-mast-head {
+    & .rmst-bg {
+        filter: invert(1);
+        background-repeat: no-repeat;
+        background-position: center right;
+        opacity: .1
+    }
+    /* background-image: url(img/rmst-logo.svg); */
+}
+
+#mobile-nav-trigger {
+    @apply lg:hidden;
+    @apply border py-2 px-4 border-gray-600 rounded-full;
+    @apply text-gray-100 bg-gray-900 fixed bottom-8 mx-auto z-50 left-16 shadow-lg;
+    @apply text-xl;
+    left: 50vw;
+    transform: translateX(-50%);
+
 }

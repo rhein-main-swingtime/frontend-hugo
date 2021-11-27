@@ -3,23 +3,17 @@
 <html>
     {{- partial "header.html" . -}}
     <body>
-        {{- partial "page/mast-head.html" . -}}
+        {{ if not (eq .Kind "home") }}
+            {{- partial "page/page-header.html" . -}}
+        {{ end }}
 
-        {{/*  <div id="content">
-            {{- block "title" . }}{{- end }}
-        </div>  */}}
-
-        <section id="content" class="is-padded">
-            {{- block "main" . }}{{- end }}
-        </section>
-
-        <section id="additonal-content" class="is-padded">
-            {{ block "additional" . }}{{- end }}
-        </section>
+        {{- block "main" . }}{{- end }}
 
         <pre class="hidden">
-            {{ printf "%#v" $.Site }}
+            {{ printf "%#v" .Kind }}
         </pre>
+
+        {{ partial "nav/mobile-trigger.html" . }}
 
         {{- partial "footer.html" . -}}
     </body>

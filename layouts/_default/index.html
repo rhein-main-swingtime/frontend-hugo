@@ -1,6 +1,100 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <div class="prose prose-lg">
-    {{ .Content }}
+
+<section id="home-hero" class="bg-gray-700 py-10 is-padded">
+  <div class="container max-w-screen-lg mx-auto text-gray-50">
+
+    <figure id="site-logo" class="mb-8 flex flex-row justify-center">
+          <img src="{{ "/img/rmst-logo.svg" | relURL }}">
+      </figure>
+
+      {{ partial "events/preview-block" .}}
+
+      <div class="text-right w-full">
+        <a href="#" class="is-button is-xl is-white bg-blue-600">
+          Mehr Infos
+          {{ partial "heroicons/solid/chevron-double-down.svg" "is-icon is-1em" }}
+        </a>
+        <a href="#" class="is-button is-xl is-white">
+            Alle Social Dances
+            {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em -top-1" }}
+        </a>
+
+      </div>
+
+      {{/*  <div id="mast-head-title" class="text-center text-gray-50">
+        <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
+        {{ if (isset .Params "subtitle") }}
+            <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
+        {{ end }}
+      </div>  */}}
+
+      {{/*  <nav id="mast-head-nav" class="text-center flex flex-row flex-wrap justify-center gap-4 uppercase text-lg mt-4">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+           <a
+              class="hover:text-red-600 underline
+                  sidebar-nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}
+              "
+              href="{{ .URL }}" title="{{ .Title }}">
+              <span class="text-red-600">
+                  {{ partial "heroicons/solid/hashtag.svg" "h-5 w-5 inline-block -mr-1 relative -top-0.5"}}
+              </span>
+              {{ .Name }}
+          </a>
+          {{ end }}
+      </nav>  */}}
   </div>
+</section>
+
+<section class="bg-gray-50 is-padded">
+  <div class="container is-default">
+    <div class="prose prose-lg">
+     {{ .Content }}
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-gray-900">
+  <div class="container is-default">
+
+    <div class="text-center text-gray-50 mb-6">
+        <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
+        {{ if (isset .Params "subtitle") }}
+            <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
+        {{ end }}
+    </div>
+
+    <div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-4">
+    {{ range .Site.Menus.main }}
+      <div class="is-card flex flex-col">
+        <div class="text-gray-900 uppercase">
+          <div class="flex flex-row font-bold">
+            {{ partial "heroicons/solid/hashtag.svg" "text-red-700 h-7 w-7 inline-block relative top-0.5"}}
+            <h1 class="text-2xl">
+              {{ .Title }}
+            </h1>
+          </div>
+          {{ if (isset .Page.Params "subtitle") }}
+            <div class="text-base">
+              {{ .Page.Params.subtitle }}
+            </div>
+          {{ end}}
+        </div>
+        <div class="mt-auto">
+          {{/*  {{ .Page.Params.teaser }}  */}}
+          <div class="mt-4 text-right text-sm">
+            <a href="{{ .URL }}" class="is-button highlighted">
+              Mehr lesen
+              {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em" }}
+            </a>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+    s</div>
+  </div>
+</section>
+
+
 {{ end }}

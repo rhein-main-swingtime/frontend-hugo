@@ -1,0 +1,61 @@
+<div
+    class="is-card text-black is-padded drop-shadow-lg p-2 rounded-sm"
+>
+    <template
+        x-if="teasers.length < 1"
+    >
+        <div class="p-5 text-center flex flex-row gap-1 text-gray-500 animate-pulse justify-center">
+            <div>
+                {{ partial "heroicons/outline/sparkles.svg" "w-7 h-7 text-yellow-500" }}
+            </div>
+            <div class="">
+                Gleich da :)
+            </div>
+            <div>
+                {{ partial "heroicons/outline/sparkles.svg" "w-7 h-7 text-yellow-500" }}
+            </div>
+        </div>
+    </template>
+    <template
+        x-if="teasers.length > 0"
+    >
+        <div class="h-full flex flex-col text-sm">
+            <h1 class="text-lg bold font-bold">
+                <span x-text="teasers[num - 1].summary"></span>
+            </h1>
+            <div class="mb-3">
+                <div class="flex flex-row gap-2">
+                    <div>
+                        {{ partial "heroicons/outline/calendar.svg" "is-icon is-base"}}
+                        <span x-text="teasers[num - 1].startDateLocalized"></span>
+                    </div>
+                    <div>
+                        {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
+                        <span x-text="teasers[num - 1].startTimeLocalized"></span>
+                        Uhr
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="pr-1">
+                        {{ partial "heroicons/outline/location-marker.svg" "is-icon is-base"}}
+                    </div>
+                    <div x-html="teasers[num - 1].location"></div>
+                </div>
+            </div>
+            <div class="mt-4 text-right mt-auto">
+                <a href="#" class="is-button">
+                    {{ partial "heroicons/outline/share.svg" "is-icon is-base"}}
+                    Teilen
+                </a>
+                <a href="#" class="is-button">
+                    {{ partial "heroicons/outline/heart.svg" "is-icon is-base"}}
+                    Merken
+                </a>
+                <a href="#" class="is-button">
+                    Mehr infos
+                    {{ partial "heroicons/outline/chevron-double-right.svg" "is-sm icon" }}
+                </a>
+            </div>
+        </div>
+    </template>
+</div>

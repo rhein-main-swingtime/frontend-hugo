@@ -1,4 +1,4 @@
-import { LearnListPayload } from './Types/LearnListPayload'
+import { LearnListPayload } from '../Types/LearnListPayload'
 
 interface LearnListSelectionInterface {
     city: boolean | string
@@ -7,22 +7,21 @@ interface LearnListSelectionInterface {
 
 class LearnList {
     items: LearnListPayload
+    selected: LearnListSelectionInterface = {
+        city: false,
+        category: false
+    }
 
     constructor (items:LearnListPayload) {
         this.items = items
     }
 
-    selected:LearnListSelectionInterface = {
-        city: false,
-        category: false
-    }
-
-    public resetSelections = function () {
+    public resetSelections = function (this: LearnList) {
         this.selected.city = false
         this.selected.category = false
     }
 
-    public addSelection = function (key: string, value: string) {
+    public addSelection = function (this: LearnList, key: 'city' | 'category', value: string) {
         if (this.selected[key] === value) {
             this.selected[key] = false
         } else {
@@ -30,8 +29,8 @@ class LearnList {
         }
     }
 
-    get visibleItems (): string[] {
-        const names = []
+    public get visibleItems (): string[] {
+        const names: string[] = []
         this.items.forEach((i) => {
             if (
                 (i.city === this.selected.city || !this.selected.city) &&
@@ -43,12 +42,14 @@ class LearnList {
         return names
     }
 
-    get trashActive (): boolean {
+    public get trashActive (): boolean {
         return (this.selected.city !== false ||
             this.selected.category !== false)
     }
 }
 
 export default function (items: LearnListPayload) {
-    return new LearnList(items)
+    return {
+        list: new LearnList(items)
+    }
 }
