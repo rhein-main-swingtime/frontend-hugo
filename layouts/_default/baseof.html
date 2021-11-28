@@ -7,7 +7,21 @@
             {{- partial "page/page-header.html" . -}}
         {{ end }}
 
-        {{- block "main" . }}{{- end }}
+        {{ if not (eq .Kind "home") }}
+            <section id="page-body">
+                    <div class="container is-default flex-row">
+                        {{- partial "nav/sidebar.html" . -}}
+                    <div id="page-content" class="w-full">
+                        {{- block "main" . }}{{- end }}
+                    </div>
+                </div>
+            </section>
+        {{ else }}
+            <section id="home-content">
+                {{- block "main" . }}{{- end }}
+            </section>
+        {{ end }}
+
 
         <pre class="hidden">
             {{ printf "%#v" .Kind }}

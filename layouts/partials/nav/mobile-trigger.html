@@ -1,12 +1,27 @@
-<div id="mobile-nav-trigger">
-    <div class="flex flex-row gap-2 ">
+<div
+    id="mobile-nav-trigger"
+    :class="$store.mobileNavigationStore.open ? 'bg-red-700' : 'bg-gray-900'"
+    x-data=""
+>
+    <a
+        class="flex flex-row gap-2"
+        href="#"
+        @click.prevent="$store.mobileNavigationStore.toggle()"
+    >
         <div>
-            {{ partial "heroicons/outline/menu.svg" "h-8 w-8" }}
+            <template x-if="!$store.mobileNavigationStore.open">
+                {{ partial "heroicons/outline/menu.svg" "h-8" }}
+            </template>
+            <template x-if="$store.mobileNavigationStore.open">
+                {{ partial "heroicons/outline/x.svg" "h-8" }}
+            </template>
         </div>
         <div>
-            <span class="uppercase text-2xl font-light">
-                Menu
+            <span
+                class="uppercase text-2xl font-light"
+                x-text="!$store.mobileNavigationStore.open ? 'Navigieren' : 'Schließen'"
+            >
             </span>
         </div>
-    </div>
+    </a>
 </div>

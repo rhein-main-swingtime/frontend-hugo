@@ -1,0 +1,26 @@
+{{ define "main" }}
+    {{- partial "page/main-content" . -}}
+
+    test!
+
+    <div x-data="RMST_TS.createPickster()">
+        <div class="grid grid-cols-7 grid-rows-8 bg-gray-200 p-2 gap-1">
+            <div class="col-span-1 bg-white" @click="calendarDates.back()">
+                {{ partial "heroicons/solid/chevron-left.svg" "is-icon is-1em"}}
+            </div>
+            <div class="col-span-5 text-center bg-white">
+                <span x-text="calendarDates.headers.headline"></span>
+            </div>
+            <div class="col-span-1 text-right bg-white" @click="calendarDates.forward()">
+                {{ partial "heroicons/solid/chevron-right.svg" "is-icon is-1em"}}
+            </div>
+            <template x-for="day in calendarDates.headers.days">
+                <div x-text="day" class="font-bold bg-white"></div>
+            </template>
+            <template x-for="Day in calendarDates.calendarCells">
+                <div x-text="Day.dayInMonth" class="bg-white"></div>
+            </template>
+        </div>
+    </div>
+
+{{ end }}

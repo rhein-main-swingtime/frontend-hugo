@@ -9,7 +9,9 @@ export interface DanceEventPayload {
     description: string
     created: string
     start_date_time: string     // eslint-disable-line
-    end_date_time: string       // eslint-disable-line
+    end_date_time?: string      // eslint-disable-line
+    startDateTime?: string      // eslint-disable-line
+    endDateTime?: string        // eslint-disable-line
 }
 
 export interface EventServerApiPayload {

@@ -1,15 +1,15 @@
+
 <section
     id="page-mast-head"
     class="bg-gray-900 page-{{ .Page.Type }}"
 >
-    <div class="container is-default text-gray-50 relative z-10 pt-2 pb-4">
+    <div class="container mx-auto max-w-screen-xl flex text-gray-50 relative z-10 pt-1 pb-2 px-8">
         <div
             class="rmst-bg absolute top-0 left-0 right-0 bottom-0 z-0"
             style='background-image: url({{ "/img/rmst-logo.svg" | relURL }});' >
         </div>
-        <div class="relative z-10 flex flex-col">
+        <div class="relative z-10 flex flex-col offset">
             <div id="mast-head-title" class="text-gray-50 flex-grow mb-4">
-
                 <h1 class="text-4xl font-light">
                     {{ partial "heroicons/outline/hashtag.svg" "is-icon is-1em text-red-500 -mr-1" }}
                     {{ .Page.Title }}
@@ -18,28 +18,12 @@
                     <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
                 {{ end }}
             </div>
-            <nav id="mast-head-nav" class="flex-grow-0 lg:flex lg:flex-row flex-wrap gap-4 uppercase lg:mt-4 flex-shrink">
-                <a class="hover:text-red-600 underline"
-                    href="{{ .Site.BaseURL | relLangURL }}">
-                    <span class="text-red-600">
-                        {{ partial "heroicons/outline/home.svg" "h-5 w-5 inline-block -mr-1 relative -top-0.5"}}
-                    </span>
-                    Home
-                </a>
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                <a
-                    class="hover:text-red-600 underline
-                        sidebar-nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}
-                    "
-                    href="{{ .URL }}" title="{{ .Title }}">
-                    <span class="text-red-600">
-                        {{ partial "heroicons/solid/hashtag.svg" "h-5 w-5 inline-block -mr-1 relative -top-0.5"}}
-                    </span>
-                    {{ .Name }}
-                </a>
-                {{ end }}
-            </nav>
+            {{ partial "nav/mobile-nav-content.html" . }}
         </div>
     </div>
 </section>
+
+<template x-if="$store.mobileNavigationStore.open" x-transition>
+<div
+class="fixed top-0 bottom-0 left-0 right-0 bg-gray-500 opacity-20 z-100 filter backdrop-blur-md"> </div>
+</template>

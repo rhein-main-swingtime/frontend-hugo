@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <section id="home-hero" class="bg-gray-700 py-10 is-padded">
-  <div class="container max-w-screen-lg mx-auto text-gray-50">
+  <div class="container is-default text-gray-50">
 
     <figure id="site-logo" class="mb-8 flex flex-row justify-center">
           <img src="{{ "/img/rmst-logo.svg" | relURL }}">
@@ -21,32 +21,10 @@
 
       </div>
 
-      {{/*  <div id="mast-head-title" class="text-center text-gray-50">
-        <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
-        {{ if (isset .Params "subtitle") }}
-            <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
-        {{ end }}
-      </div>  */}}
-
-      {{/*  <nav id="mast-head-nav" class="text-center flex flex-row flex-wrap justify-center gap-4 uppercase text-lg mt-4">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-           <a
-              class="hover:text-red-600 underline
-                  sidebar-nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}
-              "
-              href="{{ .URL }}" title="{{ .Title }}">
-              <span class="text-red-600">
-                  {{ partial "heroicons/solid/hashtag.svg" "h-5 w-5 inline-block -mr-1 relative -top-0.5"}}
-              </span>
-              {{ .Name }}
-          </a>
-          {{ end }}
-      </nav>  */}}
   </div>
 </section>
 
-<section class="bg-gray-50 is-padded">
+<section class="bg-gray-50 is-padded py-12">
   <div class="container is-default">
     <div class="prose prose-lg">
      {{ .Content }}
@@ -55,7 +33,7 @@
 </section>
 
 
-<section class="bg-gray-900">
+<section class="bg-gray-900  py-12">
   <div class="container is-default">
 
     <div class="text-center text-gray-50 mb-6">

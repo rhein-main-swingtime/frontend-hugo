@@ -1,10 +1,24 @@
 import { DanceEventPayload } from '../Types/EventServerApiTypes'
 
+interface DancEventInterface {
+    id: number
+    foreignUrl: string
+    source: string
+    creator: string
+    location: string
+    city: string
+    summary: string
+    description: string
+    created: Date
+    startDateTime: Date
+    endDateTime: Date
+}
+
 /**
  * This class represents a DanceEvent for use
  * in the frontend. It should remain unmutable
  */
-class DanceEvent {
+class DanceEvent implements DancEventInterface {
     readonly id: number
     readonly foreignUrl: string
     readonly source: string
@@ -34,8 +48,8 @@ class DanceEvent {
         this.summary = payload.summary
         this.description = payload.description
         this.created = this.getDateFromVal(payload.created)
-        this.startDateTime = this.getDateFromVal(payload.start_date_time)
-        this.endDateTime = this.getDateFromVal(payload.end_date_time)
+        this.startDateTime = this.getDateFromVal(payload.start_date_time || payload.startDateTime || '')
+        this.endDateTime = this.getDateFromVal(payload.end_date_time || payload.startDateTime || '')
     }
 
     private getDateFromVal (val: string) {
@@ -114,3 +128,7 @@ class DanceEvent {
 }
 
 export default DanceEvent
+
+export function createDanceEventFromJson (payload: DanceEventPayload): DanceEvent {
+    return new DanceEvent(payload)
+}
