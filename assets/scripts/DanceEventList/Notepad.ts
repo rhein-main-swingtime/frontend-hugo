@@ -67,10 +67,6 @@ export class Notepad {
         this.save()
     }
 
-    get savedIds (): string[] {
-        return Object.keys(this.collection).map(k => String(k))
-    }
-
     get isSaved () {
         return (event: DanceEvent) => {
             return Object.keys(this.collection || {}).includes(String(event.id))

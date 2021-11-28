@@ -10,3 +10,11 @@ learn-page-sorry-hl:
   other: Sorry!
 learn-page-sorry-copy:
   other: Leider haben wir für diese Kombination nichts gefunden
+event-is-saved:
+  other: Gemerkt
+event-is-not-saved:
+  other: Merken
+event-share:
+  other: Teilen
+event-more-information:
+  other: Mehr infos
