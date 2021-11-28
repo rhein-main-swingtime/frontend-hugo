@@ -1,19 +1,5 @@
-import { DanceEventPayload } from './../Types/EventServerApiTypes';
+import { DanceEventPayload } from './../Types/EventServerApiTypes'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-
-class Entry {
-    public readonly endDate: Date
-    public readonly id: number
-
-    constructor (id: number, endDate: Date) {
-        this.id = id
-        this.endDate = endDate
-    }
-
-    get numericDate () {
-        return this.endDate.getTime()
-    }
-}
 
 interface collectionInterface {
     [key: number | string]: DanceEvent
