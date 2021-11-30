@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
   #pull_request:
     #branches: [ master ]
 
@@ -42,4 +42,5 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}
             ./hugo -d ${{ github.run_id }}_${{ github.sha }}
+            echo "ln -s  ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}/${{ github.run_id }}_${{ github.sha }}"
             ln -s  ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}/${{ github.run_id }}_${{ github.sha }}
