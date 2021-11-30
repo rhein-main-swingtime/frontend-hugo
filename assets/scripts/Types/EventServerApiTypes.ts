@@ -14,10 +14,25 @@ export interface DanceEventPayload {
     endDateTime?: string        // eslint-disable-line
 }
 
+export interface DanceEventDatesInterface {
+    [key: string]: number[]
+}
+
 export interface EventServerApiPayload {
-    cities: string[]
-    dates: string[]
-    categories: string[]
-    calendars: string []
+    dates: DanceEventDatesInterface,
     danceEvents: DanceEventPayload[]
+}
+
+interface FilterItem {
+    name: string;
+    available: number
+}
+
+export interface FilterApiPayload {
+    filters: {
+        calendar: FilterItem[],
+        category: FilterItem[],
+        city: FilterItem[],
+    },
+    totalCount: number
 }

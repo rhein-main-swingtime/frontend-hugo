@@ -1,10 +1,13 @@
+
 module.exports = {
+    plugins: [require('babel-plugin-lodash')],
     presets: [
-        '@babel/preset-typescript',
+        require('@babel/preset-typescript'),
         [
-            '@babel/preset-env',
+            require('@babel/preset-env'),
             {
                 useBuiltIns: 'entry',
+                corejs: '3.3.5',
                 ignoreBrowserslistConfig: true,
                 targets: {
                     browsers: [

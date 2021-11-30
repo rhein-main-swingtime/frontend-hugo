@@ -1,0 +1,54 @@
+
+<div data-role="event-list-filter-bar" class="col-span-4 ">
+    <div class="is-card is-sticky-on-side">
+        <h3 class="text-lg font-bold">
+            Filter
+        </h3>
+        <form class="text-sm">
+            <div>
+            <label for="start">Start date:</label>
+
+            <input type="date" id="start" name="trip-start"
+                value="2018-07-22"
+                min="2021-11-01" max="2025-11-01">
+            </div>
+
+            <div class="border-t-2 border-gray-200 my-2">
+                <h2 class="font-bold">
+                    Stadt
+                </h2>
+                <template x-for="item in filters.itemsInCategory('city')">
+                    <div class="flex flex-row gap-2">
+                        <div><input type="checkbox" x-model="item.checked"></div>
+                        <label>
+                            <span x-text="item.name"></span>
+                            <span x-text="item.available"></span>
+                        </label>
+                    </div>
+                </template>
+            </div>
+
+            <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
+                <div><input type="checkbox" x-model="filters.showClasses"></div>
+                <label>
+                    <span>
+                        Auch Kurse anzeigen
+                    </span>
+                </label>
+            </div>
+            <div x-show="filters.showClasses">
+                <template x-for="item in filters.itemsInCategory('calendar')">
+                    <template x-if="item !== 'Social Time'">
+                        <div class="flex flex-row gap-2">
+                            <div><input type="checkbox" x-model="item.checked"></div>
+                            <label>
+                                <span x-text="item.name"></span>
+                                <span x-text="item.available"></span>
+                            </label>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </form>
+    </div>
+</div>

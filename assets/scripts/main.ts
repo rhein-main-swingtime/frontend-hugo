@@ -1,9 +1,13 @@
+import { EventList } from './DanceEventList/EventList'
+
 import { Notepad } from './DanceEventList/Notepad'
 import { createPickster } from './DanceEventList/Dates'
 import fetchEventTeasers from './DanceEventList/Preview'
 import { setTouchBodyClass } from './Helpers/TouchDeviceDetection'
-import List from './Learn/List'
+// import List from './Learn/List'
 import { createMobileNavigation } from './Navigation/Mobile'
+import danceEventPageFacade from './DanceEventList/DanceEventPageFacade'
+import { Filters } from './DanceEventList/Filters'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -12,11 +16,14 @@ declare global {
 }
 
 window.RMST_TS = {
-    LearnList: List,
+    // LearnList: List,
     fetchEventTeasers: fetchEventTeasers,
     createMobileNavigation: createMobileNavigation,
     createPickster,
-    notepad: new Notepad()
+    notepad: new Notepad(),
+    danceEventPageFacade,
+    EventList,
+    eventFilters: Filters
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
@@ -26,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
 })
 
 document.addEventListener('alpine:init', () => {
-    Alpine.store('mobileNavigationStore', createMobileNavigation())
+    Alpine.store('mobileNavigationStore', createMobileNavigation()) // eslint-disable-line
 })

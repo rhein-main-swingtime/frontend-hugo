@@ -1,4 +1,5 @@
 {{ $typescript := resources.Get "scripts/main.ts" | babel | js.Build }}
-{{/*  {{ $javascript := slice $typescript | resources.Concat "js/maints.js" }}  */}}
-{{ $secureJS := $typescript | resources.Fingerprint "sha512" }}
+{{ $alpine := resources.Get "scripts/alpine.js" | babel | js.Build  }}
+{{ $bundle := slice $typescript $alpine | resources.Concat "scripts/bundle.js" }}
+{{ $secureJS := $bundle | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>

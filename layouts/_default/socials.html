@@ -1,8 +1,7 @@
 {{ define "main" }}
     {{- partial "page/main-content" . -}}
 
-    test!
-
+    <!--
     <div x-data="RMST_TS.createPickster()">
         <div class="grid grid-cols-7 grid-rows-8 bg-gray-200 p-2 gap-1">
             <div class="col-span-1 bg-white" @click="calendarDates.back()">
@@ -21,6 +20,124 @@
                 <div x-text="Day.dayInMonth" class="bg-white"></div>
             </template>
         </div>
+    </div>
+    -->
+
+
+    <div
+        data-role="event-list"
+        id="dance-event-list"
+        class="grid grid-cols-12 gap-4 grid"
+        x-data="RMST_TS.danceEventPageFacade()"
+        x-init="function() {
+            list.init();
+            filters.init();
+            $watch('filters.searchQuery', val => handleFilterChange(val));
+        }"
+    >
+
+    <div class="col-span-8">
+        <div
+            x-show="list.isLoading" x-transition
+            class=" h-64 min-h-screen flex flex-col items-center border-gray-300 border-dashed border-4 rounded-sm pt-12"
+        >
+            <div class="is-sticky-on-side animate-pulse">
+                <div class="mb-5 inline-block px-4 py-2 text-gray-50 font-bold bg-gray-600 rounded-lg">Wird geladen</div>
+                <div class="flex items-center justify-center space-x-2 is-tripple-dots">
+                    <div class="w-4 h-4 bg-gray-600 rounded-full is-dot"></div>
+                    <div class="w-4 h-4 bg-gray-600 rounded-full is-dot"></div>
+                    <div class="w-4 h-4 bg-gray-600 rounded-full is-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            x-transition x-show="!list.isLoading"
+            class="col-span-8"
+        >
+            <template x-for="date in list.dates">
+                <div class="mb-4 px-0">
+                    <h1 class="text-xl font-bold is-card mb-2" x-text="date"></h1>
+                    <template x-for="event in list.getEventsByDate(date)">
+                        <div class="h-full flex flex-col text-sm is-card" x-data="{notepad: RMST_TS.notepad}">
+                            <h1 class="text-lg bold font-bold">
+                                <span x-text="event.summary"></span>
+                                <span x-text="event.id"></span>
+                            </h1>
+                            <div class="mb-3">
+                                <div class="flex flex-row gap-2">
+                                    <div>
+                                        {{ partial "heroicons/outline/calendar.svg" "is-icon is-base"}}
+                                        <span x-text="event.startDateLocalized"></span>
+                                    </div>
+                                    <div>
+                                        {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
+                                        <span x-text="event.startTimeLocalized"></span>
+                                        &ndash;
+                                        <span x-text="event.endTimeLocalized"></span>
+                                        Uhr
+                                    </div>
+                                </div>
+                                <div class="flex flex-row">
+                                    <div class="pr-1">
+                                        {{ partial "heroicons/outline/location-marker.svg" "is-icon is-base"}}
+                                    </div>
+                                    <div x-html="event.location"></div>
+                                </div>
+                            </div>
+                            <div class="text-right mt-auto">
+                                <a
+                                    href="#"
+                                    class="is-button"
+                                >
+                                    {{ partial "heroicons/outline/share.svg" "is-icon is-base"}}
+                                    {{ i18n "event-share" }}
+                                </a>
+                                <a href="#" class="is-button" @click.prevent="notepad.toggle(event)">
+                                    <template x-if="!notepad.isSaved(event)">
+                                        <span>
+                                            {{ partial "heroicons/outline/heart.svg" "is-icon is-base"}}
+                                            {{ i18n "event-is-not-saved" }}
+                                        </span>
+                                    </template>
+                                    <template x-if="notepad.isSaved(event)">
+                                        <span>
+                                            {{ partial "heroicons/solid/heart.svg" "is-icon is-base text-red-500"}}
+                                            {{ i18n "event-is-saved" }}
+                                        </span>
+                                    </template>
+                                </a>
+                                <a href="#" class="is-button">
+                                    {{ i18n "event-more-information" }}
+                                    {{ partial "heroicons/outline/chevron-double-right.svg" "is-sm icon" }}
+                                </a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <template x-if="list.initialized">
+                <template x-if="list.showLoader">
+                    <div
+                        x-intersect:enter="list.loadMore()"
+                        class=""
+                    >
+                        <div class="flex items-center justify-center space-x-2 animate-bounce">
+                            <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+                            <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+                            <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+                        </div>
+                    </div>
+                </template>
+                <template x-if="!list.showLoader">
+                    <div>
+                        Mehr hamma nich!
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+    {{ partial "events/filter-bar.html" . }}
     </div>
 
 {{ end }}
