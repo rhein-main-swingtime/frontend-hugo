@@ -19,11 +19,6 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: Generate build number
-        id: buildnumber
-        uses: einaregilsson/build-number@v3
-        with:
-          token: ${{secrets.github_token}}
       - name: Update and Build
         uses: appleboy/ssh-action@v0.1.4
         with:
@@ -37,7 +32,7 @@ jobs:
             yarn install
             yarn prod
             chmod +x ./bin/hugo
-            ./bin/hugo -d ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ steps.buildnumber.outputs.build_number }}_${{ github.sha }}
+            ./bin/hugo -d ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }}
       - name: Linking
         uses: appleboy/ssh-action@v0.1.4
         with:
@@ -47,4 +42,4 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}
             rm ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
-            ln -s ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ steps.buildnumber.outputs.build_number }}_${{ github.sha }} ${{ secrets.PUBLIC_WEBROOT }}
+            ln -s ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }} ${{ secrets.PUBLIC_WEBROOT }}
