@@ -19,7 +19,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch and Build
+      - name: Update and Build
         uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.DEPLOYMENT_HOST }}
@@ -31,7 +31,8 @@ jobs:
             git pull
             yarn install
             yarn prod
-      - name: Deploy
+            ./hugo -d dist_${{ github.sha }}
+      - name: Linking
         uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.DEPLOYMENT_HOST }}
@@ -39,7 +40,5 @@ jobs:
           key: ${{ secrets.DEPLOYMENT_KEY }}
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}
-            ./hugo -d ${{ github.run_id }}_${{ github.sha }}
             rm ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
-            echo "ln -s  ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}/${{ github.run_id }}_${{ github.sha }}"
-            ln -s ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}/${{ github.run_id }}_${{ github.sha }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
+            ln -s ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}/dist_${{ github.sha }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
