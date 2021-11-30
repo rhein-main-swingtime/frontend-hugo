@@ -42,4 +42,4 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}
             rm ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
-            ln -s ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.sha }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
+            ln -s ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.sha }} ${{ secrets.PUBLIC_WEBROOT }}
