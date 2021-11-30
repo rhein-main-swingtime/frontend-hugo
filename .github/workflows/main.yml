@@ -41,5 +41,5 @@ jobs:
           key: ${{ secrets.DEPLOYMENT_KEY }}
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}
-            ./hugo -d ${{ GITHUB_RUN_ID }}_${{ github.sha }}
+            ./hugo -d ${{ github.run_id }}_${{ github.sha }}
             ln -s  ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }} ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}/${{ GITHUB_RUN_ID }}_${{ github.sha }}
