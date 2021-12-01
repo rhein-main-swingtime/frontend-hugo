@@ -13,6 +13,7 @@ interface DancEventInterface {
     created: Date
     startDateTime: Date
     endDateTime: Date
+    category: 'class' | 'socials'
 }
 
 /**
@@ -31,6 +32,7 @@ class DanceEvent implements DancEventInterface {
     readonly created: Date
     readonly startDateTime: Date
     readonly endDateTime: Date
+    readonly category: 'class' | 'socials'
 
     /**
      * Constructor
@@ -48,6 +50,7 @@ class DanceEvent implements DancEventInterface {
         this.city = payload.city
         this.summary = payload.summary
         this.description = payload.description
+        this.category = payload.category
         this.created = convertStringToDate(payload.created)
         this.startDateTime = convertStringToDate(payload.start_date_time || payload.startDateTime || '')
         this.endDateTime = convertStringToDate(payload.end_date_time || payload.startDateTime || '')
@@ -62,11 +65,32 @@ class DanceEvent implements DancEventInterface {
     }
 
     get endTimeLocalized () {
-        return getLocalizedDate(this.endDateTime)
+        return getLocalizedTime(this.endDateTime)
     }
 
     get endDateLocalized () {
         return getLocalizedDate(this.endDateTime)
+    }
+
+    get isSocial () {
+        return this.category === 'socials'
+    }
+
+    get isClass () {
+        return !this.isSocial
+    }
+
+    get locationHtml () {
+        return this.location.split(', ').join('<br>')
+    }
+
+    get mapsLink (): string {
+        return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(this.location)
+    }
+
+    get isLong (): boolean {
+        const long = 12 * 60 * 60 * 1000 // 12hrs in ms
+        return this.endDateTime.getTime() - this.startDateTime.getTime() > long
     }
 }
 

@@ -8,6 +8,7 @@ export interface DanceEventPayload {
     summary: string
     description: string
     created: string
+    category: 'class' | 'socials'
     start_date_time: string     // eslint-disable-line
     end_date_time?: string      // eslint-disable-line
     startDateTime?: string      // eslint-disable-line

@@ -56,14 +56,33 @@
             class="col-span-8"
         >
             <template x-for="date in list.dates">
-                <div class="mb-4 px-0">
-                    <h1 class="text-xl font-bold is-card mb-2" x-text="date"></h1>
+                <div class="px-0  mb-12 last:mb-0">
+                    <h1
+                        class="text-xl font-bold px-2 py-1 border- mb-2 border-t-4 border-gray-200 border-dashed"
+                        x-text="date"
+                    ></h1>
                     <template x-for="event in list.getEventsByDate(date)">
-                        <div class="h-full flex flex-col text-sm is-card" x-data="{notepad: RMST_TS.notepad}">
+                        <div class="h-full flex flex-col text-sm is-card" x-data="{notepad: RMST_TS.notepad, additional: null}">
                             <h1 class="text-lg bold font-bold">
                                 <span x-text="event.summary"></span>
-                                <span x-text="event.id"></span>
                             </h1>
+                            <div class="my-2">
+                                <span
+                                    class="rounded-sm px-1 inline-block border text-white text-sm"
+                                    :class="
+                                        event.category === 'socials'
+                                        ? 'bg-red-600 border-red-400'
+                                        : 'bg-blue-600 border-blue-400'
+                                    "
+                                >
+                                    <span x-show="event.isSocial">
+                                        {{ i18n "event-category-socials"}}
+                                    </span>
+                                    <span x-show="event.isClass">
+                                        {{ i18n "event-category-class"}}
+                                    </span>
+                                </span>
+                            </div>
                             <div class="mb-3">
                                 <div class="flex flex-row gap-2">
                                     <div>
@@ -74,6 +93,9 @@
                                         {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
                                         <span x-text="event.startTimeLocalized"></span>
                                         &ndash;
+                                        <template x-if="event.isLong">
+                                            <span x-text="event.endDateLocalized"></span>
+                                        </template>
                                         <span x-text="event.endTimeLocalized"></span>
                                         Uhr
                                     </div>
@@ -85,10 +107,11 @@
                                     <div x-html="event.location"></div>
                                 </div>
                             </div>
-                            <div class="text-right mt-auto">
+                            <div class="text-right mt-auto flex flex-row justify-end gap-2">
                                 <a
                                     href="#"
                                     class="is-button"
+                                    @click.prevent="additional = list.handleAdditional(additional, 'share')"
                                 >
                                     {{ partial "heroicons/outline/share.svg" "is-icon is-base"}}
                                     {{ i18n "event-share" }}
@@ -107,11 +130,73 @@
                                         </span>
                                     </template>
                                 </a>
-                                <a href="#" class="is-button">
+                                <a href="#" class="is-button" @click.prevent="additional = list.handleAdditional(additional, 'more')">
                                     {{ i18n "event-more-information" }}
                                     {{ partial "heroicons/outline/chevron-double-right.svg" "is-sm icon" }}
                                 </a>
                             </div>
+                            <template x-if="additional !== null">
+                                <div class="additional bg-gray-50 border-t-2 border-dashed -mx-4 -mb-4 px-4 py-4 mt-4">
+                                    <template x-if="additional === 'more'">
+                                        <!-- More -->
+                                        <div class="inner">
+                                            <h4 class="font-bold text-lg">{{ i18n "event-headline-description" }}</h4>
+                                            <div class="prose" x-html="event.description"></div>
+                                            <div class="flex flex-row flex-wrap gap-4">
+                                                <div>
+                                                    <h4 class="font-bold text-lg">{{ i18n "event-headline-location" }}</h4>
+                                                    <div x-html="event.locationHtml"></div>
+                                                    <a
+                                                        class="underline"
+                                                        target="_blank"
+                                                        :href="event.mapsLink"
+                                                    >
+                                                        {{ partial "heroicons/solid/location-marker.svg" "is-icon is-1em" }}
+                                                        {{ i18n "event-directions"}}
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold text-lg">{{ i18n "event-headline-time" }}</h4>
+                                                    <div>
+                                                        <div>
+                                                            {{ partial "heroicons/outline/calendar.svg" "is-icon is-base"}}
+                                                            <span x-text="event.startDateLocalized"></span>
+                                                        </div>
+                                                        <div>
+                                                            {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
+                                                            <span x-text="event.startTimeLocalized"></span>
+                                                            &ndash;
+                                                            <template x-if="event.isLong">
+                                                                <span x-text="event.endDateLocalized"></span>
+                                                            </template>
+                                                            <span x-text="event.endTimeLocalized"></span>
+                                                            Uhr
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <!-- Share -->
+                                    <template x-if="additional === 'share'">
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div>
+                                                <h4 class="font-bold text-lg">
+                                                    Scan & Go
+                                                </h4>
+                                                <canvas
+                                                    class="w-max-auto max-w-full h-auto"
+                                                    :id="'dance-event-qr-'+ event.id"
+                                                    x-init="list.generateQrCode(event)"
+                                                ></canvas>
+                                            </div>
+                                            <div>
+                                                links
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
                         </div>
                     </template>
                 </div>

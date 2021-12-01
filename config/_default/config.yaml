@@ -1,6 +1,8 @@
 baseURL: 'https://hugo.rmswing.de'
 title: 'Rhein Main Swing Time'
 
+ignoreFiles:
+  - "src$"
 
 defaultContentLanguage: de
 languages:

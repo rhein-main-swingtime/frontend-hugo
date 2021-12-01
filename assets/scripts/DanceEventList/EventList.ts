@@ -2,6 +2,7 @@ import { EventServerApiPayload } from './../Types/EventServerApiTypes'
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
 import { uniq } from 'lodash'
+import QRCode from 'qrcode'
 
 async function fetchEvents (params: string[] = []) {
     const url = new URL(RMSTApiUrls.eventList)
@@ -56,6 +57,7 @@ export class EventList {
     public getEventsByDate = getEventsByDate
     public getEventCount = getEventCount
     public loadMore = loadMore
+    public additional: string | null = null
     public initialized = false
 
     public reset () {
@@ -63,6 +65,30 @@ export class EventList {
         this.eventsInDates = {}
         this.init()
         this.showLoader = false
+    }
+
+    public handleAdditional (current: string | null, s: string): string | null {
+        return current === s
+            ? null
+            : s
+    }
+
+    public generateQrCode (danceEvent: DanceEvent, basePage: string) {
+        const canvas = document.getElementById('dance-event-qr-' + danceEvent.id)
+        const url = window.location.href.split('?')[0] + '?highlight=' + danceEvent.id
+        console.log(url)
+        QRCode.toCanvas(
+            canvas,
+            url,
+            {
+                width: 500,
+                height: 'auto'
+            },
+            function (error: any) {
+                if (error) console.error(error)
+                console.log('success!')
+            }
+        )
     }
 
     public async init () {
