@@ -12,6 +12,7 @@ languages:
     params:
       nav: Switch to English
   de:
+    contentDir: content/de
     params:
       navigation:
         help: Zu Deutsch wechseln

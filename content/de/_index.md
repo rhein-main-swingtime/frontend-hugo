@@ -4,7 +4,7 @@ subtitle: Alles, was du wissen musst!
 draft: "false"
 eventTeasers:
     limit: 3
-    calendars:
+    calendar:
         - Social Time
 ---
 
