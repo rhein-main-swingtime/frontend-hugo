@@ -17,3 +17,12 @@ languages:
         help: Zu Deutsch wechseln
     title: Rhein Main Swing Time
     weight: 1
+
+module:
+  mounts:
+    - source: i18n
+      target: i18n
+    - source: i18n
+      target: data
+    - source: data
+      target: data
