@@ -4,7 +4,7 @@
         <h3 class="text-lg font-bold">
             Filter
         </h3>
-        <form class="text-sm">
+        <form class="text">
             <!-- cities -->
             <div class="border-t-2 border-gray-200 my-2">
                 <h2 class="font-bold">
@@ -66,8 +66,10 @@
                 </label>
             </div>
             <div x-show="filters.showDates">
-                <div class="flex flex-row">
-                    <label class="block w-20" for="start">Start date:</label>
+                <div class="flex flex-row mb-2">
+                    <div>
+                        <label class="block w-20" for="start">Von:</label>
+                    </div>
                     <input
                         type="date"
                         x-model="filters.fromDate"
@@ -80,7 +82,7 @@
                     >
                 </div>
                 <div class="flex flex-row">
-                    <label class="block w-20" for="start">End date:</label>
+                    <label class="block w-20" for="start">Bis:</label>
                     <input
                         type="date"
                         x-model="filters.toDate"
