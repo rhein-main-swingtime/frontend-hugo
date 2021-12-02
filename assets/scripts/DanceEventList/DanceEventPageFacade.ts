@@ -13,7 +13,10 @@ export default function create () {
     return {
         list,
         filters,
-        handleFilterChange: async function (value: string) {
+        handleFilterChange: async function (value: string, oldValue: string) {
+            if (value === oldValue) {
+                return
+            }
             updateSearchQuery(value)
             this.list.reset()
         }

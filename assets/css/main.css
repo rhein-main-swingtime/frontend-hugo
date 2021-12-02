@@ -1578,6 +1578,12 @@ select {
 .w-8 {
 	width: 2rem;
 }
+.w-3\/12 {
+	width: 25%;
+}
+.w-20 {
+	width: 5rem;
+}
 .max-w-full {
 	max-width: 100%;
 }
@@ -2250,6 +2256,18 @@ a.is-internal-link {
 
 canvas.max-w-full {
     height: auto !important;
+}
+
+input[type=date] {
+	border-radius: 0.125rem;
+	font-family: Roboto Slab, serif;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+input[type=date].is-faded {
+	--tw-text-opacity: 1;
+	color: rgba(156, 163, 175, var(--tw-text-opacity));
 }
 
 .last\:mb-0:last-child {

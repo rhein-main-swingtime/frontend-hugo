@@ -5,14 +5,7 @@
             Filter
         </h3>
         <form class="text-sm">
-            <div>
-            <label for="start">Start date:</label>
-
-            <input type="date" id="start" name="trip-start"
-                value="2018-07-22"
-                min="2021-11-01" max="2025-11-01">
-            </div>
-
+            <!-- cities -->
             <div class="border-t-2 border-gray-200 my-2">
                 <h2 class="font-bold">
                     Stadt
@@ -27,9 +20,11 @@
                     </div>
                 </template>
             </div>
-
+            <!-- Classes -->
             <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
-                <div><input type="checkbox" x-model="filters.showClasses"></div>
+                <div>
+                    <input type="checkbox" x-model="filters.showClasses">
+                </div>
                 <label>
                     <span>
                         Auch Kurse anzeigen
@@ -48,6 +43,55 @@
                         </div>
                     </template>
                 </template>
+                <div class="flex flex-row gap-2">
+                    <div>
+                        <input type="checkbox" x-model="filters.hideSocials">
+                    </div>
+                    <label>
+                        <span>
+                            Socials ausblenden
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!-- dates -->
+            <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
+                <div>
+                    <input type="checkbox" x-model="filters.showDates">
+                </div>
+                <label>
+                    <span>
+                        Datum einschränken
+                    </span>
+                </label>
+            </div>
+            <div x-show="filters.showDates">
+                <div class="flex flex-row">
+                    <label class="block w-20" for="start">Start date:</label>
+                    <input
+                        type="date"
+                        x-model="filters.fromDate"
+                        id="start-date"
+                        name="start-date"
+                        :min="filters.minMaxDates.minFrom"
+                        :max="filters.minMaxDates.maxFrom"
+                        class="flex-grow block"
+                        :class="filters.fromDate ? '' : 'is-faded' "
+                    >
+                </div>
+                <div class="flex flex-row">
+                    <label class="block w-20" for="start">End date:</label>
+                    <input
+                        type="date"
+                        x-model="filters.toDate"
+                        id="end-date"
+                        name="end-date"
+                        :min="filters.minMaxDates.minTo"
+                        :max="filters.minMaxDates.maxTo"
+                        class="flex-grow block"
+                        :class="filters.toDate ? '' : 'is-faded' "
+                    >
+                </div>
             </div>
         </form>
     </div>
