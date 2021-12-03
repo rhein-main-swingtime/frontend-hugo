@@ -44,14 +44,14 @@ async function loadMore (this: EventList) {
     const apiResponse = await fetchEvents(['skip=' + this.getEventCount()])
     this.dates = uniq(this.dates.concat(Object.keys(apiResponse.dates)).sort())
     apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
-    this.showLoader = this.getEventCount() > 0
+    this.showLoader = apiResponse.danceEvents.length > 0
 }
 
 export class EventList {
     public dates: string[] = []
     public eventsInDates: {[key: string]: DanceEvent[]} = {}
-    public showLoader: boolean = false;
-    public isLoading: boolean = false;
+    public showLoader: boolean = false
+    public isLoading: boolean = false
 
     public addEvent = addEvent
     public getEventsByDate = getEventsByDate
@@ -91,8 +91,11 @@ export class EventList {
         )
     }
 
+    get noEventsAvailable () : boolean {
+        return this.dates.length === 0
+    }
+
     public async init () {
-        console.log('init called')
         this.isLoading = true
         const apiResponse = await fetchEvents()
         this.dates = Object.keys(apiResponse.dates).sort()
