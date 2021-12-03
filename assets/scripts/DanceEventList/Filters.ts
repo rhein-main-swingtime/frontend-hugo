@@ -71,10 +71,10 @@ export class Filters {
 
     private setStateFromSearchParams () {
         this.showClasses = window.location.search.includes('calendar[]=') ||
-        window.location.search.includes('category[]=class')
+            window.location.search.includes('category[]=class')
 
         this.hideSocials = this.showClasses === true &&
-        window.location.search.includes('calendar[]=' + encodeURIComponent('Social Time'))
+        window.location.search.includes('calendar[]=' + encodeURIComponent('Social Time')) === false
 
         const params = this.getParamsAsObject()
         if (params.from !== undefined) {
@@ -102,7 +102,7 @@ export class Filters {
                 const filters: FilterSettings = {}
                 for (const [category, items] of Object.entries(payload.filters)) {
                     const filterCategory: FilterItemInterface[] = []
-                    items.forEach(i => filterCategory.push({
+                    items.filter(i => i.name !== 'Social Time').forEach(i => filterCategory.push({
                         name: i.name,
                         available: i.available,
                         checked: this.getCheckedByUrl(category, i.name)
@@ -137,11 +137,8 @@ export class Filters {
         for (const [key, values] of Object.entries(this._filters)) {
             const param = encodeURIComponent(key) + '[]='
             if (key === 'category') {
-                if (this.showClasses) {
+                if (this.showClasses && this.hideSocials) {
                     out.push(param + encodeURIComponent('class'))
-                    if (!this.hideSocials) {
-                        out.push('calendar[]=' + encodeURIComponent('Social Time'))
-                    }
                 }
             } else if (key === 'calendar') {
                 if (this.showClasses) {
@@ -154,6 +151,10 @@ export class Filters {
                     .filter(v => v.checked && !hiddenFilters.includes(v.name))
                     .forEach(v => out.push(param + encodeURIComponent(v.name)))
             }
+        }
+
+        if (this.hideSocials === false && out.some(i => i.includes('calendar'))) {
+            out.push('calendar[]=' + encodeURIComponent('Social Time'))
         }
 
         if (this.showDates) {
