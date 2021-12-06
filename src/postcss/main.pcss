@@ -52,6 +52,9 @@ section.is-padded {
 
     }
     }
+    & a {
+        @apply underline;
+    }
     & nav#sidebar {
         @apply hidden lg:block;
         @apply lg:relative;
@@ -95,6 +98,8 @@ a.is-internal-link {
         filter: invert(1);
     }
 }
+
+
 
 .dance-event-previews {
     .has-border {
@@ -149,7 +154,9 @@ canvas.max-w-full {
 
 input[type=date] {
     @apply rounded-sm;
-    @apply text-sm font-serif;
+    @apply font-sans text-lg;
+    line-height: 1rem;
+    @apply border-gray-200;
     &.is-faded {
         @apply text-gray-400;
     }

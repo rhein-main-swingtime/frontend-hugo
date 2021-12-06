@@ -1,4 +1,5 @@
 import { convertStringToDate, getLocalizedDate, getLocalizedTime } from '../Helpers/DateHelper'
+import T from '../i18n/T'
 import { DanceEventPayload } from '../Types/EventServerApiTypes'
 
 interface DancEventInterface {
@@ -34,6 +35,8 @@ class DanceEvent implements DancEventInterface {
     readonly endDateTime: Date
     readonly category: 'class' | 'socials'
 
+    wasCopied: boolean = false
+
     /**
      * Constructor
      *
@@ -54,6 +57,12 @@ class DanceEvent implements DancEventInterface {
         this.created = convertStringToDate(payload.created)
         this.startDateTime = convertStringToDate(payload.start_date_time || payload.startDateTime || '')
         this.endDateTime = convertStringToDate(payload.end_date_time || payload.startDateTime || '')
+    }
+
+    copyToClipboard () {
+        navigator.clipboard.writeText(this.shareUrl)
+        this.wasCopied = true
+        setTimeout(() => { this.wasCopied = false }, 3 * 1000)
     }
 
     get startDateLocalized () {
@@ -91,6 +100,49 @@ class DanceEvent implements DancEventInterface {
     get isLong (): boolean {
         const long = 12 * 60 * 60 * 1000 // 12hrs in ms
         return this.endDateTime.getTime() - this.startDateTime.getTime() > long
+    }
+
+    get shareUrl (): string {
+        return window.location.protocol + '//' +
+            window.location.host + window.location.pathname +
+            '?id=' + String(this.id)
+    }
+
+    get shareLinkCopy (): string {
+        const out = []
+        out.push(T('event-share-copy') + ':')
+        out.push(T('event-category-' + this.category))
+        out.push('|')
+        out.push(this.summary)
+        return out.join(' ')
+    }
+
+    get shareLinkMail () {
+        const copy = this.shareLinkCopy
+        const url = this.shareUrl
+        return 'mailto:' +
+            '?subject=' + encodeURIComponent(T('event-share-copy')) +
+            '&body=' + encodeURIComponent(
+            `${copy}: ${url}`
+        )
+    }
+
+    get shareLinkWhatsapp () {
+        return 'https://api.whatsapp.com/send?text=' +
+            encodeURIComponent(this.shareLinkCopy + ' | ' + this.shareUrl)
+    }
+
+    get shareLinkTelegram () {
+        return 'https://t.me/share/url?url=' +
+            encodeURIComponent(this.shareUrl + '&text=' + this.shareLinkCopy)
+    }
+
+    get shareLinks () {
+        return {
+            whatsapp: this.shareLinkWhatsapp,
+            telegram: this.shareLinkTelegram,
+            mail: this.shareLinkMail
+        }
     }
 }
 

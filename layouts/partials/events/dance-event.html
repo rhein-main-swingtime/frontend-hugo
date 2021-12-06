@@ -1,0 +1,30 @@
+<div
+    :data-dance-event-id="event.id"
+    data-role="dance-event"
+    class="h-full flex flex-col text-sm is-card"
+    x-data="{notepad: RMST_TS.notepad, openSection: null}"
+>
+    <h1 class="text-lg bold font-bold">
+        <span x-text="event.summary"></span>
+    </h1>
+    <div class="my-2">
+        <span
+            class="rounded-sm px-1 inline-block border text-white text-sm"
+            :class="
+                event.category === 'socials'
+                ? 'bg-red-600 border-red-400'
+                : 'bg-blue-600 border-blue-400'
+            "
+        >
+            <span x-show="event.isSocial">
+                {{ i18n "event-category-socials"}}
+            </span>
+            <span x-show="event.isClass">
+                {{ i18n "event-category-class"}}
+            </span>
+        </span>
+    </div>
+    {{ partial "events/dance-event/time-location.html" . }}
+    {{ partial "events/dance-event/ctas.html" . }}
+    {{ partial "events/dance-event/details.html" . }}
+</div>

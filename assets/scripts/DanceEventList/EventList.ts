@@ -1,21 +1,7 @@
-import { EventServerApiPayload } from './../Types/EventServerApiTypes'
-import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
 import { uniq } from 'lodash'
-import QRCode from 'qrcode'
-
-async function fetchEvents (params: string[] = []) {
-    const url = new URL(RMSTApiUrls.eventList)
-    let search = window.location.search
-    if (params.length > 0) {
-        search += (search.includes('?') ? '&' : '?') + params.join('&')
-    }
-    url.search = search
-
-    return fetch(url.toString())
-        .then((response) => response.json())
-        .then((r: EventServerApiPayload) => { return r })
-}
+import DanceEventQr from './DanceEventQr'
+import FetchEventList from '../Helpers/FetchEventList'
 
 function addEvent (this: EventList, e: DanceEvent) {
     const key = [
@@ -41,7 +27,7 @@ function getEventCount (this: EventList): number {
 }
 
 async function loadMore (this: EventList) {
-    const apiResponse = await fetchEvents(['skip=' + this.getEventCount()])
+    const apiResponse = await FetchEventList(['skip=' + this.getEventCount()])
     this.dates = uniq(this.dates.concat(Object.keys(apiResponse.dates)).sort())
     apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
     this.showLoader = apiResponse.danceEvents.length > 0
@@ -67,28 +53,8 @@ export class EventList {
         this.showLoader = false
     }
 
-    public handleAdditional (current: string | null, s: string): string | null {
-        return current === s
-            ? null
-            : s
-    }
-
-    public generateQrCode (danceEvent: DanceEvent, basePage: string) {
-        const canvas = document.getElementById('dance-event-qr-' + danceEvent.id)
-        const url = window.location.href.split('?')[0] + '?highlight=' + danceEvent.id
-        console.log(url)
-        QRCode.toCanvas(
-            canvas,
-            url,
-            {
-                width: 500,
-                height: 'auto'
-            },
-            function (error: any) {
-                if (error) console.error(error)
-                console.log('success!')
-            }
-        )
+    public generateQrCode (danceEvent: DanceEvent) {
+        return DanceEventQr(danceEvent)
     }
 
     get noEventsAvailable () : boolean {
@@ -97,7 +63,7 @@ export class EventList {
 
     public async init () {
         this.isLoading = true
-        const apiResponse = await fetchEvents()
+        const apiResponse = await FetchEventList()
         this.dates = Object.keys(apiResponse.dates).sort()
         apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
         this.showLoader = this.getEventCount() > 0

@@ -1,0 +1,126 @@
+<template x-if="openSection !== null">
+    <div class="openSection bg-gray-50 border-t-2 border-dashed -mx-4 -mb-4 px-4 py-4 mt-4">
+        <template x-if="openSection === 'more'">
+            <!-- More -->
+            <div class="inner">
+                <h4 class="font-bold text-lg">{{ i18n "event-headline-description" }}</h4>
+                <div class="prose" x-html="event.description"></div>
+                <div class="flex flex-row flex-wrap gap-4">
+
+                    <div>
+                        <h4 class="font-bold text-lg">{{ i18n "event-headline-location" }}</h4>
+                        <template x-if="event.location">
+                            <div x-html="event.locationHtml"></div>
+                            <a
+                                class="underline"
+                                target="_blank"
+                                :href="event.mapsLink"
+                            >
+                                {{ partial "heroicons/solid/location-marker.svg" "is-icon is-1em" }}
+                                {{ i18n "event-directions"}}
+                            </a>
+                        </template>
+                        <template x-if="!event.location">
+                            <div class="italic">
+                                <p>&ndash; {{ i18n "event-location-not-set" }} &ndash;</p>
+                            </div>
+                        </template>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">{{ i18n "event-headline-time" }}</h4>
+                        <div>
+                            <div>
+                                {{ partial "heroicons/outline/calendar.svg" "is-icon is-base"}}
+                                <span x-text="event.startDateLocalized"></span>
+                            </div>
+                            <div>
+                                {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
+                                <span x-text="event.startTimeLocalized"></span>
+                                &ndash;
+                                <template x-if="event.isLong">
+                                    <span x-text="event.endDateLocalized"></span>
+                                </template>
+                                <span x-text="event.endTimeLocalized"></span>
+                                Uhr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <!-- Share -->
+        <template x-if="openSection === 'share'">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <h4 class="font-bold text-lg">
+                    {{ i18n "share-qr" }}
+                    </h4>
+                    <canvas
+                        class="w-max-auto max-w-full h-auto border-4 border-gray-400"
+                        :id="'dance-event-qr-'+ event.id"
+                        x-init="list.generateQrCode(event)"
+                    ></canvas>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg">
+                        {{ T "event-share-links-headline" }}
+                    </h4>
+                    <div class="text-base flex-col flex">
+                        <a
+                            :href="event.shareLinks.mail"
+                            target="_blank"
+                            class="mb-2"
+                        >
+                            {{ partial "heroicons/solid/mail.svg" "is-icon is-1em"}}
+                            {{ i18n "share-link-mail-cta" }}
+                        </a>
+                        <a
+                            :href="event.shareLinks.whatsapp"
+                            target="_blank"
+                            class="mb-2"
+                        >
+                            {{ partial "simpleicons.org/whatsapp.svg" "is-icon is-1em"}}
+                            {{ i18n "share-link-whatsapp-cta" }}
+                        </a>
+                        <a
+                            :href="event.shareLinks.telegram"
+                            target="_blank"
+                            class=""
+                        >
+                            {{ partial "simpleicons.org/telegram.svg" "is-icon is-1em"}}
+                            {{ i18n "share-link-telegram-cta" }}
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block font-bold text-lg" :for="'copy-' + event.id">
+                            {{ T "event-share-copy-headline" }}
+                        </label>
+                        <form class="flex flex-row gap-2 pr-2 relative">
+                            <input
+                                type="text"
+                                class="block flex-shrink text-sm overflow-x-hidden"
+                                :name="'copy-' + event.id"
+                                :value="event.shareUrl"
+                                readonly
+                            />
+                            <a class="is-button block" href="#" @click.prevent="event.copyToClipboard()">
+                                <template x-if="!event.wasCopied">
+                                    {{ partial "heroicons/solid/clipboard-copy.svg" "h-8 w-8"}}
+                                </template>
+                                <template x-if="event.wasCopied">
+                                    {{ partial "heroicons/solid/check.svg" "h-8 w-8"}}
+                                </template>
+                            </a>
+                            <!-- <div
+                                class="bg-gray-500 text-white font-bold border-gray-900
+                                    px-4 py-1 w-auto top-2 right-16 absolute"
+                            >
+                                {{ T "share-link-copied" }}
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
