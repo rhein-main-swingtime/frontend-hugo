@@ -10,10 +10,6 @@ interface FilterSettings {
     [key: string]: FilterItemInterface[]
 }
 
-const hiddenFilters = [
-    'Social Time'
-]
-
 export class Filters {
     public _filters: FilterSettings = {}
     public loading: boolean = true
@@ -74,7 +70,10 @@ export class Filters {
             window.location.search.includes('category[]=class')
 
         this.hideSocials = this.showClasses === true &&
-        window.location.search.includes('calendar[]=' + encodeURIComponent('Social Time')) === false
+            (
+                window.location.search.includes('calendar[]=' + encodeURIComponent('Social Time')) === false &&
+                window.location.search.includes('category[]=social') === false
+            )
 
         const params = this.getParamsAsObject()
         if (params.from !== undefined) {
@@ -85,6 +84,31 @@ export class Filters {
         }
 
         this.showDates = (this.toDate !== false || this.fromDate !== false)
+    }
+
+    private handleQueryClasses (out: string[]): string[] {
+        if (this.showClasses) {
+            if (this.isClassCalendarSelected) {
+                const selected = Object.values(this._filters.calendar || []).filter(v => v.checked === true)
+                selected.forEach(v => out.push('calendar[]=' + encodeURIComponent(v.name)))
+            } else {
+                out.push('category[]=class')
+            }
+        }
+
+        return out
+    }
+
+    private handleQuerySocials (out: string[]): string[] {
+        if (this.hideSocials === false) {
+            if (this.isClassCalendarSelected) {
+                out.push('calendar[]=' + encodeURIComponent('Social Time'))
+            } else {
+                out.push('category[]=social')
+            }
+        }
+
+        return out
     }
 
     public async init () {
@@ -127,34 +151,24 @@ export class Filters {
         return Object.keys(this._filters) || []
     }
 
+    get isClassCalendarSelected () {
+        if (this._filters.calendar === undefined) {
+            return false
+        }
+        return Object.values(this._filters.calendar).some(i => i.checked)
+    }
+
     get searchQuery (): string | null {
         if (this._filters === {}) {
             return null
         }
 
-        const out: string[] = []
+        let out: string[] = []
+        out = this.handleQueryClasses(out)
+        out = this.handleQuerySocials(out)
 
-        for (const [key, values] of Object.entries(this._filters)) {
-            const param = encodeURIComponent(key) + '[]='
-            if (key === 'category') {
-                if (this.showClasses && this.hideSocials) {
-                    out.push(param + encodeURIComponent('class'))
-                }
-            } else if (key === 'calendar') {
-                if (this.showClasses) {
-                    values
-                        .filter(v => v.checked && !hiddenFilters.includes(v.name))
-                        .forEach(v => out.push(param + encodeURIComponent(v.name)))
-                }
-            } else {
-                values
-                    .filter(v => v.checked && !hiddenFilters.includes(v.name))
-                    .forEach(v => out.push(param + encodeURIComponent(v.name)))
-            }
-        }
-
-        if (this.hideSocials === false && out.some(i => i.includes('calendar'))) {
-            out.push('calendar[]=' + encodeURIComponent('Social Time'))
+        for (const city of Object.values(this._filters.city || {}).filter(i => i.checked)) {
+            out.push('city[]=' + encodeURIComponent(city.name))
         }
 
         if (this.showDates) {
