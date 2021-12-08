@@ -6,70 +6,89 @@
     </h3>
     <form class="text">
         <!-- cities -->
-        <div class="border-t-2 border-gray-200 my-2">
-            <h2 class="font-bold">
-                Stadt
-            </h2>
-            <template x-for="item in filters.itemsInCategory('city')">
-                <div class="flex flex-row gap-2">
-                    <div><input type="checkbox" x-model="item.checked"></div>
-                    <label>
-                        <span x-text="item.name"></span>
-                        <span x-text="item.available"></span>
-                    </label>
-                </div>
-            </template>
+        <div class="border-t-2 border-gray-200 my-2 py-2">
+            <div class="flex gap-1 flex-row flex-wrap">
+                <template x-for="item in filters.itemsInCategory('city')">
+                    {{ partial "events/filter-bar-item.html" . }}
+                </template>
+            </div>
         </div>
         <!-- Classes -->
-        <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
-            <div>
-                <input type="checkbox" x-model="filters.showClasses">
-            </div>
-            <label>
-                <span>
-                    Auch Kurse anzeigen
-                </span>
-            </label>
+        <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
+            <a
+                href="#"
+                @click.prevent="filters.showClasses = !filters.showClasses"
+                class="is-button has-icon text-sm relative inline-block"
+                :class="filters.showClasses ? 'active' : ''"
+            >
+                Auch Kurse anzeigen
+                <template  x-if="filters.showClasses">
+                    <span>
+                        {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                    </span>
+                </template>
+                <template  x-if="!filters.showClasses">
+                    <span>
+                        {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                    </span>
+                </template>
+            </a>
         </div>
-        <div x-show="filters.showClasses">
+        <div x-show="filters.showClasses" class="flex gap-1 flex-row flex-wrap">
             <template x-for="item in filters.itemsInCategory('calendar')">
                 <template x-if="item !== 'Social Time'">
                     <div class="flex flex-row gap-2">
-                        <div><input type="checkbox" x-model="item.checked"></div>
-                        <label>
-                            <span x-text="item.name"></span>
-                            <span x-text="item.available"></span>
-                        </label>
+                        {{ partial "events/filter-bar-item.html" . }}
                     </div>
                 </template>
             </template>
-            <div class="flex flex-row gap-2">
-                <div>
-                    <input type="checkbox" x-model="filters.hideSocials">
-                </div>
-                <label>
+            <a
+                href="#"
+                @click.prevent="filters.hideSocials = !filters.hideSocials"
+                class="is-button has-icon text-sm relative inline-block"
+                :class="filters.hideSocials ? 'active' : ''"
+            >
+                Socials ausblenden
+                <template  x-if="filters.hideSocials">
                     <span>
-                        Socials ausblenden
+                        {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
                     </span>
-                </label>
-            </div>
+                </template>
+                <template  x-if="!filters.hideSocials">
+                    <span>
+                        {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                    </span>
+                </template>
+            </a>
         </div>
         <!-- dates -->
-        <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
-            <div>
-                <input type="checkbox" x-model="filters.showDates">
-            </div>
-            <label>
-                <span>
-                    Datum einschränken
-                </span>
-            </label>
+        <div class="flex flex-row gap-2 border-t-2 border-gray-200 mt-1 pt-1 mb-1">
+            <a
+                href="#"
+                @click.prevent="filters.showDates = !filters.showDates"
+                class="is-button has-icon text-sm relative inline-block"
+                :class="filters.showDates ? 'active' : ''"
+            >
+                Datum einschränken
+                <template  x-if="filters.showDates">
+                    <span>
+                        {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                    </span>
+                </template>
+                <template  x-if="!filters.showDates">
+                    <span>
+                        {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                    </span>
+                </template>
+            </a>
         </div>
-        <div x-show="filters.showDates">
-            <div class="flex flex-row mb-2">
-                <div>
-                    <label class="block w-20" for="start">Von:</label>
-                </div>
+        <div x-show="filters.showDates" class="text-sm flex flex-col gap-1">
+            <div
+                class="relative is-button flex flex-row align-middle"
+            >
+                <span class="flex flex-col justify-center">
+                    <label class="w-20" for="start">Von:</label>
+                </span>
                 <input
                     type="date"
                     x-model="filters.fromDate"
@@ -77,12 +96,16 @@
                     name="start-date"
                     :min="filters.minMaxDates.minFrom"
                     :max="filters.minMaxDates.maxFrom"
-                    class="flex-grow block"
+                    class="flex-grow block text-sm"
                     :class="filters.fromDate ? '' : 'is-faded' "
                 >
             </div>
-            <div class="flex flex-row">
-                <label class="block w-20" for="start">Bis:</label>
+            <div
+                class="relative is-button flex flex-row align-middle	"
+            >
+                <span class="flex flex-col justify-center">
+                    <label class="w-20" for="start">Bis:</label>
+                </span>
                 <input
                     type="date"
                     x-model="filters.toDate"
@@ -90,7 +113,7 @@
                     name="end-date"
                     :min="filters.minMaxDates.minTo"
                     :max="filters.minMaxDates.maxTo"
-                    class="flex-grow block"
+                    class="flex-grow block is-filter"
                     :class="filters.toDate ? '' : 'is-faded' "
                 >
             </div>
