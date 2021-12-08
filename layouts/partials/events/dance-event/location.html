@@ -1,0 +1,19 @@
+<h4 class="font-bold text-lg">{{ i18n "event-headline-location" }}</h4>
+<template x-if="event.location">
+    <div>
+        <div x-html="event.locationHtml"></div>
+        <a
+            class="underline"
+            target="_blank"
+            :href="event.mapsLink"
+        >
+            {{ partial "heroicons/solid/location-marker.svg" "is-icon is-1em" }}
+            {{ i18n "event-directions"}}
+        </a>
+    </div>
+</template>
+<template x-if="!event.location">
+    <div class="italic">
+        <p>&ndash; {{ i18n "event-location-not-set" }} &ndash;</p>
+    </div>
+</template>

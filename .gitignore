@@ -2,3 +2,4 @@ node_modules
 public
 .DS_Store
 .hugo_build.lock
+assets/css/main.css

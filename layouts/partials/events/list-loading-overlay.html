@@ -1,0 +1,16 @@
+<div
+    x-show="list.isLoading" x-transition
+    class="absolute top-0 left-0 w-full h-full
+        flex flex-col items-center border-gray-300 bg-white z-50
+        border-dashed border-4 rounded-sm pt-12
+    "
+>
+    <div class="is-sticky-on-side animate-pulse">
+        <div class="mb-5 inline-block px-4 py-2 text-gray-50 font-bold bg-gray-600 rounded-lg">Wird geladen</div>
+        <div class="flex items-center justify-center space-x-2 is-tripple-dots">
+            <div class="w-4 h-4 bg-gray-600 rounded-full is-dot"></div>
+            <div class="w-4 h-4 bg-gray-600 rounded-full is-dot"></div>
+            <div class="w-4 h-4 bg-gray-600 rounded-full is-dot"></div>
+        </div>
+    </div>
+</div>

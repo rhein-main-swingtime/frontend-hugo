@@ -2,5 +2,5 @@
 {{ $alpine := resources.Get "scripts/alpine.js" | babel | js.Build  }}
 {{ $bundle := slice $typescript $alpine | resources.Concat "scripts/bundle.js" }}
 {{ $secureJS := $bundle | resources.Fingerprint "sha512" }}
+
 <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-{{ partial "data/translations.html" . }}

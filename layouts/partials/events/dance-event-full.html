@@ -1,0 +1,37 @@
+<div
+    :data-dance-event-id="event.id"
+    data-role="dance-event"
+    class="h-full flex flex-col text-sm is-card"
+    x-data="{notepad: RMST_TS.notepad, openSection: null}"
+>
+    <div class="mb-4">
+        <h1
+            class="text-xl font-bold mb-2"
+            x-text="event.summary"
+        ></h1>
+        <div>
+            {{ partial "events/dance-event/category.html" . }}
+            {{ partial "events/dance-event/city.html" . }}
+        </div>
+    </div>
+    <div class="sm:grid grid-cols-12 flex flex-col gap-4">
+        <div class="col-span-9">
+            {{ partial "events/dance-event/description.html" . }}
+        </div>
+        <div class="col-span-3">
+            {{ partial "events/dance-event/date-time.html" . }}
+            {{ partial "events/dance-event/location.html" . }}
+        </div>
+    </div>
+    <div class="sm:grid sm:grid-cols-3 flex flex-col mt-4 gap-4">
+        <div>
+
+        </div>
+        <div>
+            {{ partial "events/dance-event/share-links.html" . }}
+        </div>
+        <div>
+            {{ partial "events/dance-event/share-qr.html" . }}
+        </div>
+    </div>
+</div>

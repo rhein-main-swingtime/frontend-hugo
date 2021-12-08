@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <div
+        x-data="{sharedEvents: null}"
+        x-init="sharedEvents = await RMST_TS.FetchSharedEvents()"
+        class="col-span-12"
+    >
+        <h1>
+            {{ T "events-shared-section-headline" }}
+        </h1>
+        <template x-if="sharedEvents !== null && sharedEvents.length > 0">
+            <template x-for="event in sharedEvents">
+                <div >
+                    {{ partial "events/dance-event-full.html" . }}
+                </div>
+            </template>
+        </template>
+        <h2 class="text-2xl">
+            Mehr Events
+        </h2>
+        {{/*  {{ partial "events/full-list.html" . }}  */}}
+    </div>
+{{ end }}

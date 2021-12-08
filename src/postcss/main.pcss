@@ -41,6 +41,10 @@ section.is-padded {
     }
 }
 
+a {
+    @apply underline;
+}
+
 #page-body {
     @apply bg-gray-200;
     @apply pt-36;
@@ -96,6 +100,10 @@ a.is-internal-link {
     }
 }
 
+.is-badge {
+    @apply rounded px-2 inline-block border text-white text-base shadow-inner;
+}
+
 .dance-event-previews {
     .has-border {
         @apply border-t border-gray-200;
@@ -145,4 +153,14 @@ a.is-internal-link {
 
 canvas.max-w-full {
     height: auto !important;
+}
+
+input[type=date] {
+    @apply rounded-sm;
+    @apply font-sans text-lg;
+    line-height: 1rem;
+    @apply border-gray-200;
+    &.is-faded {
+        @apply text-gray-400;
+    }
 }

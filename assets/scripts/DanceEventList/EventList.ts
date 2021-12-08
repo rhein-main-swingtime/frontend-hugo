@@ -1,21 +1,10 @@
-import { EventServerApiPayload } from './../Types/EventServerApiTypes'
-import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-import { uniq } from 'lodash'
-import QRCode from 'qrcode'
-
-async function fetchEvents (params: string[] = []) {
-    const url = new URL(RMSTApiUrls.eventList)
-    let search = window.location.search
-    if (params.length > 0) {
-        search += (search.includes('?') ? '&' : '?') + params.join('&')
-    }
-    url.search = search
-
-    return fetch(url.toString())
-        .then((response) => response.json())
-        .then((r: EventServerApiPayload) => { return r })
-}
+import { head, uniq } from 'lodash'
+import DanceEventQr from './DanceEventQr'
+import FetchEventList from '../Helpers/FetchEventList'
+import { convertToObject } from 'typescript'
+import { elementOffset } from '../Helpers/UiHelpers'
+import { convertStringToDate, getLocalizedDate } from '../Helpers/DateHelper'
 
 function addEvent (this: EventList, e: DanceEvent) {
     const key = [
@@ -41,17 +30,17 @@ function getEventCount (this: EventList): number {
 }
 
 async function loadMore (this: EventList) {
-    const apiResponse = await fetchEvents(['skip=' + this.getEventCount()])
+    const apiResponse = await FetchEventList(['skip=' + this.getEventCount()])
     this.dates = uniq(this.dates.concat(Object.keys(apiResponse.dates)).sort())
     apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
-    this.showLoader = this.getEventCount() > 0
+    this.showLoader = apiResponse.danceEvents.length > 0
 }
 
 export class EventList {
     public dates: string[] = []
     public eventsInDates: {[key: string]: DanceEvent[]} = {}
-    public showLoader: boolean = false;
-    public isLoading: boolean = false;
+    public showLoader: boolean = false
+    public isLoading: boolean = false
 
     public addEvent = addEvent
     public getEventsByDate = getEventsByDate
@@ -67,34 +56,42 @@ export class EventList {
         this.showLoader = false
     }
 
-    public handleAdditional (current: string | null, s: string): string | null {
-        return current === s
-            ? null
-            : s
+    public generateQrCode (danceEvent: DanceEvent) {
+        return DanceEventQr(danceEvent)
     }
 
-    public generateQrCode (danceEvent: DanceEvent, basePage: string) {
-        const canvas = document.getElementById('dance-event-qr-' + danceEvent.id)
-        const url = window.location.href.split('?')[0] + '?highlight=' + danceEvent.id
-        console.log(url)
-        QRCode.toCanvas(
-            canvas,
-            url,
-            {
-                width: 500,
-                height: 'auto'
-            },
-            function (error: any) {
-                if (error) console.error(error)
-                console.log('success!')
-            }
+    get noEventsAvailable () : boolean {
+        return this.dates.length === 0
+    }
+
+    public handleHashNavivation (id: number | string, element: HTMLElement): null | 'more' {
+        if (window.location.hash !== '#' + id) {
+            return null
+        }
+
+        setTimeout(
+            () => {
+                const offset = elementOffset(element)
+                const header = document.getElementById('page-mast-head')
+                if (header) {
+                    offset.top = offset.top - header.offsetHeight
+                }
+                window.scrollTo({
+                    top: offset.top,
+                    behavior: 'smooth'
+                })
+            }, 250
         )
+        return 'more'
+    }
+
+    public dateFromString (s: string): string {
+        return getLocalizedDate(convertStringToDate(s))
     }
 
     public async init () {
-        console.log('init called')
         this.isLoading = true
-        const apiResponse = await fetchEvents()
+        const apiResponse = await FetchEventList()
         this.dates = Object.keys(apiResponse.dates).sort()
         apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
         this.showLoader = this.getEventCount() > 0

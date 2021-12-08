@@ -1,23 +1,39 @@
 
-<div data-role="event-list-filter-bar" class="col-span-4 ">
-    <div class="is-card is-sticky-on-side">
-        <h3 class="text-lg font-bold">
-            Filter
-        </h3>
-        <form class="text-sm">
+
+<div class="is-card is-sticky-on-side">
+    <h3 class="text-lg font-bold">
+        Filter
+    </h3>
+    <form class="text">
+        <!-- cities -->
+        <div class="border-t-2 border-gray-200 my-2">
+            <h2 class="font-bold">
+                Stadt
+            </h2>
+            <template x-for="item in filters.itemsInCategory('city')">
+                <div class="flex flex-row gap-2">
+                    <div><input type="checkbox" x-model="item.checked"></div>
+                    <label>
+                        <span x-text="item.name"></span>
+                        <span x-text="item.available"></span>
+                    </label>
+                </div>
+            </template>
+        </div>
+        <!-- Classes -->
+        <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
             <div>
-            <label for="start">Start date:</label>
-
-            <input type="date" id="start" name="trip-start"
-                value="2018-07-22"
-                min="2021-11-01" max="2025-11-01">
+                <input type="checkbox" x-model="filters.showClasses">
             </div>
-
-            <div class="border-t-2 border-gray-200 my-2">
-                <h2 class="font-bold">
-                    Stadt
-                </h2>
-                <template x-for="item in filters.itemsInCategory('city')">
+            <label>
+                <span>
+                    Auch Kurse anzeigen
+                </span>
+            </label>
+        </div>
+        <div x-show="filters.showClasses">
+            <template x-for="item in filters.itemsInCategory('calendar')">
+                <template x-if="item !== 'Social Time'">
                     <div class="flex flex-row gap-2">
                         <div><input type="checkbox" x-model="item.checked"></div>
                         <label>
@@ -26,29 +42,58 @@
                         </label>
                     </div>
                 </template>
-            </div>
-
-            <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
-                <div><input type="checkbox" x-model="filters.showClasses"></div>
+            </template>
+            <div class="flex flex-row gap-2">
+                <div>
+                    <input type="checkbox" x-model="filters.hideSocials">
+                </div>
                 <label>
                     <span>
-                        Auch Kurse anzeigen
+                        Socials ausblenden
                     </span>
                 </label>
             </div>
-            <div x-show="filters.showClasses">
-                <template x-for="item in filters.itemsInCategory('calendar')">
-                    <template x-if="item !== 'Social Time'">
-                        <div class="flex flex-row gap-2">
-                            <div><input type="checkbox" x-model="item.checked"></div>
-                            <label>
-                                <span x-text="item.name"></span>
-                                <span x-text="item.available"></span>
-                            </label>
-                        </div>
-                    </template>
-                </template>
+        </div>
+        <!-- dates -->
+        <div class="flex flex-row gap-2 border-t-2 border-gray-200 my-2">
+            <div>
+                <input type="checkbox" x-model="filters.showDates">
             </div>
-        </form>
-    </div>
+            <label>
+                <span>
+                    Datum einschränken
+                </span>
+            </label>
+        </div>
+        <div x-show="filters.showDates">
+            <div class="flex flex-row mb-2">
+                <div>
+                    <label class="block w-20" for="start">Von:</label>
+                </div>
+                <input
+                    type="date"
+                    x-model="filters.fromDate"
+                    id="start-date"
+                    name="start-date"
+                    :min="filters.minMaxDates.minFrom"
+                    :max="filters.minMaxDates.maxFrom"
+                    class="flex-grow block"
+                    :class="filters.fromDate ? '' : 'is-faded' "
+                >
+            </div>
+            <div class="flex flex-row">
+                <label class="block w-20" for="start">Bis:</label>
+                <input
+                    type="date"
+                    x-model="filters.toDate"
+                    id="end-date"
+                    name="end-date"
+                    :min="filters.minMaxDates.minTo"
+                    :max="filters.minMaxDates.maxTo"
+                    class="flex-grow block"
+                    :class="filters.toDate ? '' : 'is-faded' "
+                >
+            </div>
+        </div>
+    </form>
 </div>

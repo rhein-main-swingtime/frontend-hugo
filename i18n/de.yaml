@@ -16,6 +16,8 @@ event-is-not-saved:
   other: Merken
 event-share:
   other: Teilen
+event-share-copy:
+  other: Schau mal, auf RMSwing.de
 event-more-information:
   other: Mehr infos
 event-category-socials:
@@ -30,3 +32,21 @@ event-headline-time:
   other: Datum und Uhrzeit
 event-directions:
   other: Karte öffnen
+event-location-not-set:
+  other: Keine Addresse eingetragen
+share-link-whatsapp-cta:
+  other: Whatsapp
+share-link-telegram-cta:
+  other: Telegram
+share-link-mail-cta:
+  other: Mail
+share-qr:
+  other: Scannen
+share-link-copied:
+  other: Kopiert
+event-share-links-headline:
+  other: Versenden
+event-share-copy-headline:
+  other: Link kopieren
+close:
+  other: Schließen
