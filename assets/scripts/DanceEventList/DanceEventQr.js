@@ -6,10 +6,9 @@ import QRCode from 'qrcode'
  */
 export default function (danceEvent) {
     const canvas = document.getElementById('dance-event-qr-' + danceEvent.id)
-    const url = window.location.href.split('?')[0] + '?highlight=' + danceEvent.id
     QRCode.toCanvas(
         canvas,
-        url,
+        danceEvent.shareUrl + '?' + danceEvent.id,
         {
             width: 500,
             height: 'auto'

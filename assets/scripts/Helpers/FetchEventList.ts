@@ -7,7 +7,7 @@ interface eventSearchRequestInterface {
     q?: string
 }
 
-export function fetchEventsBySearch (params: eventSearchRequestInterface) {
+export async function fetchEventsBySearch (params: eventSearchRequestInterface) {
     const url = new URL(RMSTApiUrls.eventSearch)
     const parts = []
     for (const [key, value] of Object.entries(params)) {
@@ -30,10 +30,12 @@ export function fetchEventsBySearch (params: eventSearchRequestInterface) {
 export default async function fetchEventList (params: string[] = []) {
     const url = new URL(RMSTApiUrls.eventList)
     let search = window.location.search
+    search += (search.includes('?') ? '&' : '?') + params.join('&')
 
-    if (params.length > 0) {
-        search += (search.includes('?') ? '&' : '?') + params.join('&')
+    if (search.length < 2) {
+        search = '?category[]=socials'
     }
+
     url.search = search
 
     return fetch(url.toString())

@@ -72,7 +72,7 @@ export class Filters {
         this.hideSocials = this.showClasses === true &&
             (
                 window.location.search.includes('calendar[]=' + encodeURIComponent('Social Time')) === false &&
-                window.location.search.includes('category[]=social') === false
+                window.location.search.includes('category[]=socials') === false
             )
 
         const params = this.getParamsAsObject()
@@ -104,7 +104,7 @@ export class Filters {
             if (this.isClassCalendarSelected) {
                 out.push('calendar[]=' + encodeURIComponent('Social Time'))
             } else {
-                out.push('category[]=social')
+                out.push('category[]=socials')
             }
         }
 

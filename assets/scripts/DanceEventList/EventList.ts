@@ -1,7 +1,9 @@
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-import { uniq } from 'lodash'
+import { head, uniq } from 'lodash'
 import DanceEventQr from './DanceEventQr'
 import FetchEventList from '../Helpers/FetchEventList'
+import { convertToObject } from 'typescript'
+import { elementOffset } from '../Helpers/UiHelpers'
 
 function addEvent (this: EventList, e: DanceEvent) {
     const key = [
@@ -59,6 +61,27 @@ export class EventList {
 
     get noEventsAvailable () : boolean {
         return this.dates.length === 0
+    }
+
+    public handleHashNavivation (id: number | string, element: HTMLElement): null | 'more' {
+        if (window.location.hash !== '#' + id) {
+            return null
+        }
+
+        setTimeout(
+            () => {
+                const offset = elementOffset(element)
+                const header = document.getElementById('page-mast-head')
+                if (header) {
+                    offset.top = offset.top - header.offsetHeight
+                }
+                window.scrollTo({
+                    top: offset.top,
+                    behavior: 'smooth'
+                })
+            }, 2500
+        )
+        return 'more'
     }
 
     public async init () {

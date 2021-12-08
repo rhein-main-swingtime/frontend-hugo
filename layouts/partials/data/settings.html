@@ -1,0 +1,11 @@
+{{ $settings := newScratch }}
+{{ with .Site.GetPage "geteilt" }}
+    {{ $settings.SetInMap "rmstSettings" "eventShareUrl" .Permalink }}
+{{ end }}
+{{ with .Site.GetPage "tanzen" }}
+    {{ $settings.SetInMap "rmstSettings" "eventListPage" .Permalink }}
+{{ end }}
+
+<script type="text/javascript">
+    siteSettings = JSON.parse({{ $settings.Get "rmstSettings" | jsonify }})
+</script>

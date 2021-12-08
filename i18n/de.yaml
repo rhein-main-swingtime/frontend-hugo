@@ -35,11 +35,11 @@ event-directions:
 event-location-not-set:
   other: Keine Addresse eingetragen
 share-link-whatsapp-cta:
-  other: Mit Whatsapp teilen
+  other: Whatsapp
 share-link-telegram-cta:
-  other: Mit Telegram teilen
+  other: Telegram
 share-link-mail-cta:
-  other: Per Mail versenden
+  other: Mail
 share-qr:
   other: Scannen
 share-link-copied:
@@ -48,3 +48,5 @@ event-share-links-headline:
   other: Versenden
 event-share-copy-headline:
   other: Link kopieren
+close:
+  other: Schließen

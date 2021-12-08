@@ -1,12 +1,4 @@
 <div class="text-right mt-auto flex flex-row justify-end gap-2">
-    <a
-        href="#"
-        class="is-button"
-        @click.prevent="openSection = handleOpenEventSection(openSection, 'share')"
-    >
-        {{ partial "heroicons/outline/share.svg" "is-icon is-base"}}
-        {{ i18n "event-share" }}
-    </a>
     <a href="#" class="is-button" @click.prevent="notepad.toggle(event)">
         <template x-if="!notepad.isSaved(event)">
             <span>
@@ -21,8 +13,22 @@
             </span>
         </template>
     </a>
-    <a href="#" class="is-button" @click.prevent="openSection = handleOpenEventSection(openSection, 'more')">
+    <a
+        href="#"
+        class="is-button"
+        :class="openSection === 'share' ? 'active' : ''"
+        @click.prevent="openSection = handleOpenEventSection(openSection, 'share')"
+    >
+        {{ partial "heroicons/outline/share.svg" "is-icon is-base"}}
+        {{ i18n "event-share" }}
+    </a>
+    <a
+        href="#"
+        class="is-button font-bold no-underline"
+        :class="openSection === 'more' ? 'active' : ''"
+        @click.prevent="openSection = handleOpenEventSection(openSection, 'more')"
+    >
         {{ i18n "event-more-information" }}
-        {{ partial "heroicons/outline/chevron-double-right.svg" "is-sm icon" }}
+        {{ partial "heroicons/outline/chevron-down.svg" "is-icon is-1em" }}
     </a>
 </div>

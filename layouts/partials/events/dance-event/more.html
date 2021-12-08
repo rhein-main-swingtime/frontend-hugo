@@ -1,0 +1,14 @@
+<div class="inner">
+    <h4 class="font-bold text-lg">
+        {{ i18n "event-headline-description" }}
+    </h4>
+    {{ partial "events/dance-event/description.html"}}
+    <div class="flex flex-row flex-wrap gap-4">
+        <div>
+            {{ partial "events/dance-event/location.html" . }}
+        </div>
+        <div>
+            {{ partial "events/dance-event/date-time.html" . }}
+        </div>
+    </div>
+</div>

@@ -1,18 +1,10 @@
-import DanceEvent from '../DTO/DanceEvent'
-import { fetchEventsBySearch } from '../Helpers/FetchEventList'
+import FetchSharedEvents from '../Helpers/FetchSharedEvents'
 import { EventList } from './EventList'
 import { Filters } from './Filters'
 
 function updateSearchQuery (search: string): void {
     const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname + search
     window.history.pushState({ path: newurl }, '', newurl)
-}
-
-function getSharedEventIdsFromUrl () {
-    return window.location.search.split('&')
-        .filter(i => i.includes('id'))
-        .map(i => parseInt(i.split('=')[1] || ''))
-        .filter(i => i > 0)
 }
 
 export default function create () {
@@ -34,13 +26,6 @@ export default function create () {
                 ? null
                 : s
         },
-        fetchSharedEvent: async function () {
-            let out: DanceEvent[] = []
-            for (const id of getSharedEventIdsFromUrl()) {
-                out = Array.prototype.concat(out, await fetchEventsBySearch({ id }))
-            }
-            console.log(out)
-            return out || false
-        }
+        fetchSharedEvent: FetchSharedEvents
     }
 }

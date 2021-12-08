@@ -1,0 +1,53 @@
+<div>
+    <h4 class="font-bold text-lg">
+        {{ T "event-share-links-headline" }}
+    </h4>
+    <div class="text-base flex-col flex" x-init="console.log(event, 'event')">
+        <a
+            :href="event.shareLinks.mail"
+            target="_blank"
+            class="mb-2"
+        >
+            {{ partial "heroicons/solid/mail.svg" "is-icon is-1em"}}
+            {{ i18n "share-link-mail-cta" }}
+        </a>
+        <a
+            :href="event.shareLinks.whatsapp"
+            target="_blank"
+            class="mb-2"
+        >
+            {{ partial "simpleicons.org/whatsapp.svg" "is-icon is-1em"}}
+            {{ i18n "share-link-whatsapp-cta" }}
+        </a>
+        <a
+            :href="event.shareLinks.telegram"
+            target="_blank"
+            class=""
+        >
+            {{ partial "simpleicons.org/telegram.svg" "is-icon is-1em"}}
+            {{ i18n "share-link-telegram-cta" }}
+        </a>
+        <div class="mt-4">
+            <label class="block font-bold text-lg" :for="'copy-' + event.id">
+                {{ T "event-share-copy-headline" }}
+            </label>
+            <form class="flex flex-row gap-2 pr-2 relative">
+                <input
+                    type="text"
+                    class="inline-block flex-shrink text-sm overflow-x-hidden px-2 py-0.5 bg-gray-100 border-dashed"
+                    :name="'copy-' + event.id"
+                    :value="event.shareUrl"
+                    readonly
+                />
+                <a class="is-button block" href="#" @click.prevent="event.copyToClipboard()">
+                    <template x-if="!event.wasCopied">
+                        {{ partial "heroicons/solid/clipboard-copy.svg" "h-8 w-8"}}
+                    </template>
+                    <template x-if="event.wasCopied">
+                        {{ partial "heroicons/solid/check.svg" "h-8 w-8"}}
+                    </template>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

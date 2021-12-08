@@ -41,6 +41,10 @@ section.is-padded {
     }
 }
 
+a {
+    @apply underline;
+}
+
 #page-body {
     @apply bg-gray-200;
     @apply pt-36;
@@ -51,9 +55,6 @@ section.is-padded {
         @apply px-4 md:px-8 py-10;
 
     }
-    }
-    & a {
-        @apply underline;
     }
     & nav#sidebar {
         @apply hidden lg:block;
@@ -99,7 +100,9 @@ a.is-internal-link {
     }
 }
 
-
+.is-badge {
+    @apply rounded px-2 inline-block border text-white text-base shadow-inner;
+}
 
 .dance-event-previews {
     .has-border {
