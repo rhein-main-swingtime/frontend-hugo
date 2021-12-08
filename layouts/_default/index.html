@@ -7,18 +7,21 @@
           <img src="{{ "/img/rmst-logo.svg" | relURL }}">
       </figure>
 
-      {{ partial "events/preview-block" .}}
-
-      <div class="text-right w-full">
-        <a href="#" class="is-button is-xl is-white bg-blue-600">
-          Mehr Infos
-          {{ partial "heroicons/solid/chevron-double-down.svg" "is-icon is-1em" }}
-        </a>
-        <a href="#" class="is-button is-xl is-white">
-            Alle Social Dances
-            {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em -top-1" }}
-        </a>
-
+      <div class="my-16">
+        <h2 class="text-2xl font-light">
+          Deine nächsten Socials:
+        </h2>
+        {{ partial "events/preview-block" .}}
+        <div class="text-right w-full">
+        {{ with .Site.GetPage "tanzen" }}
+          <a
+          href="{{ .Permalink }}"
+          class="is-button is-xl is-white">
+              Alle Socials im Rhein Main Gebiet
+              {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em -top-1" }}
+          </a>
+        {{ end }}
+        </div>
       </div>
 
   </div>

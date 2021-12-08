@@ -1,0 +1,16 @@
+<div class="flex flex-row gap-2">
+    <div>
+        {{ partial "heroicons/outline/calendar.svg" "is-icon is-base"}}
+        <span x-text="event.startDateLocalized"></span>
+    </div>
+    <div>
+        {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
+        <span x-text="event.startTimeLocalized"></span>
+        &ndash;
+        <template x-if="event.isLong">
+            <span x-text="event.endDateLocalized"></span>
+        </template>
+        <span x-text="event.endTimeLocalized"></span>
+        Uhr
+    </div>
+</div>
