@@ -4,6 +4,7 @@ import DanceEventQr from './DanceEventQr'
 import FetchEventList from '../Helpers/FetchEventList'
 import { convertToObject } from 'typescript'
 import { elementOffset } from '../Helpers/UiHelpers'
+import { convertStringToDate, getLocalizedDate } from '../Helpers/DateHelper'
 
 function addEvent (this: EventList, e: DanceEvent) {
     const key = [
@@ -79,9 +80,13 @@ export class EventList {
                     top: offset.top,
                     behavior: 'smooth'
                 })
-            }, 2500
+            }, 250
         )
         return 'more'
+    }
+
+    public dateFromString (s: string): string {
+        return getLocalizedDate(convertStringToDate(s))
     }
 
     public async init () {
