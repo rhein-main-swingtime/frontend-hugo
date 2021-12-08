@@ -48,5 +48,7 @@ event-share-links-headline:
   other: Versenden
 event-share-copy-headline:
   other: Link kopieren
+event-filters-reset:
+  other: Filter zurücksetzen
 close:
   other: Schließen

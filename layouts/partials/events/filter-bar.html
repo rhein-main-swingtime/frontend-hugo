@@ -118,5 +118,16 @@
                 >
             </div>
         </div>
+        <template x-if="filters.canBeReset === true">
+            <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
+                <a href="#"
+                    class="is-button text-sm highlighted"
+                    @click.prevent="filters.reset()">
+                    {{ T "event-filters-reset" }}
+                </a>
+            </div>
+        </template>
+
+        </template>
     </form>
 </div>

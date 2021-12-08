@@ -32,6 +32,22 @@ export class Filters {
         ].join('-')
     }
 
+    public reset () {
+        for (const values of Object.values(this._filters)) {
+            values.forEach((v) => { v.checked = false })
+        }
+        this.showClasses = false
+        this.hideSocials = false
+        this.fromDate = false
+        this.toDate = false
+        this.showDates = false
+    }
+
+    get canBeReset () {
+        const search = this.searchQuery || ''
+        return search.replace('category[]=socials', '').length > 2 || this.showDates
+    }
+
     get minMaxDates () {
         const today = this.formatDateForField(new Date())
         const maxDate = new Date()
