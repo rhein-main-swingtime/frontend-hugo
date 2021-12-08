@@ -14,7 +14,7 @@ function paramsToString (params: EventListApiParams) {
             p.push(key + '=' + val)
         }
     }
-    return (p.length > 0 ? '?' : '') + p.join('&')
+    return p.join('&')
 }
 
 export default async function fetchEventTeasers (params: EventListApiParams) {

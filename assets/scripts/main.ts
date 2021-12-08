@@ -19,7 +19,7 @@ declare global {
 
 window.RMST_TS = {
     LearnList: List,
-    fetchEventTeasers: fetchEventTeasers,
+    fetchEventTeasers,
     createMobileNavigation: createMobileNavigation,
     createPickster,
     notepad: new Notepad(),
