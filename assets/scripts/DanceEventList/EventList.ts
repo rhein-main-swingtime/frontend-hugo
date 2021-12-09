@@ -1,8 +1,7 @@
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-import { head, uniq } from 'lodash'
+import { uniq } from 'lodash'
 import DanceEventQr from './DanceEventQr'
 import FetchEventList from '../Helpers/FetchEventList'
-import { convertToObject } from 'typescript'
 import { elementOffset } from '../Helpers/UiHelpers'
 import { convertStringToDate, getLocalizedDate } from '../Helpers/DateHelper'
 

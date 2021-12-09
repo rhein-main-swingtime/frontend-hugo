@@ -10,6 +10,7 @@ import danceEventPageFacade from './DanceEventList/DanceEventPageFacade'
 import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
 import DanceEventQr from './DanceEventList/DanceEventQr'
+import { Input } from 'postcss'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -19,7 +20,7 @@ declare global {
 
 window.RMST_TS = {
     LearnList: List,
-    fetchEventTeasers: fetchEventTeasers,
+    fetchEventTeasers,
     createMobileNavigation: createMobileNavigation,
     createPickster,
     notepad: new Notepad(),
@@ -38,8 +39,4 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 document.addEventListener('alpine:init', () => {
     Alpine.store('mobileNavigationStore', createMobileNavigation()) // eslint-disable-line
-})
-
-document.addEventListener('alpine:initialized', () => {
-    console.log('alpine initialized')
 })

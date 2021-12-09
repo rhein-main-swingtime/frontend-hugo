@@ -1,11 +1,10 @@
 ---
 title: Swing tanzen im Rhein-Main Gebiet
 subtitle: Alles, was du wissen musst!
-draft: "false"
 eventTeasers:
     limit: 3
-    calendar:
-        - Social Time
+    category:
+      - socials
 ---
 
 # Hallo

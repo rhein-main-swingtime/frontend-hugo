@@ -1,0 +1,18 @@
+<a
+    href="#"
+    @click.prevent="item.checked = !item.checked"
+    class="is-button has-icon text-sm relative inline-block"
+    :class="item.checked ? 'active' : ''"
+>
+    <span x-text="item.name"></span>
+    <template  x-if="item.checked">
+        <span>
+            {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+        </span>
+    </template>
+    <template  x-if="!item.checked">
+        <span>
+            {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+        </span>
+    </template>
+</a>

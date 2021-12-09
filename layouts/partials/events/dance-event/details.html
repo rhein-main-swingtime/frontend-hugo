@@ -1,14 +1,12 @@
 <template x-if="openSection !== null">
-    <div class="openSection bg-gray-50 border-t-2 border-dashed -mx-4 -mb-4 px-4 py-4 mt-4">
-        <div class="flex flex-row-reverse">
-            <a
-                href="#"
-                class="is-button active text-sm"
-                @click.prevent="openSection = null"
-            >
-                {{ partial "heroicons/outline/x.svg" "is-icon is-1em"}}
-            </a>
-        </div>
+    <div class="openSection bg-gray-50 border-t-2 border-dashed -mx-4 -mb-4 px-4 py-4 pr-8 mt-4 relative">
+        <a
+        href="#"
+        class="is-button active text-sm absolute top-4 right-4"
+        @click.prevent="openSection = null"
+        >
+            {{ partial "heroicons/outline/x.svg" "is-icon is-1em"}}
+        </a>
         <template x-if="openSection === 'more'">
             <!-- More -->
             {{ partial "events/dance-event/more.html" . }}
