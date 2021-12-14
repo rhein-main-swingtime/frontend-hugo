@@ -27,10 +27,11 @@
             {{ partial "simpleicons.org/telegram.svg" "is-icon is-1em"}}
             {{ i18n "share-link-telegram-cta" }}
         </a>
-        <div class="mt-4">
-            <label class="block font-bold text-lg" :for="'copy-' + event.id">
+        <div class="mt-2">
+            <a href="#" @click.prevent="event.copyToClipboard()">
+                {{ partial "heroicons/solid/clipboard-copy.svg" "is-icon is-1em"}}
                 {{ T "event-share-copy-headline" }}
-            </label>
+            </a>
             <form class="flex flex-row gap-2 pr-2 relative">
                 <input
                     type="text"
@@ -39,12 +40,12 @@
                     :value="event.shareUrl"
                     readonly
                 />
-                <a class="is-button block" href="#" @click.prevent="event.copyToClipboard()">
+                <a class="is-button block text-sm" href="#" @click.prevent="event.copyToClipboard()">
                     <template x-if="!event.wasCopied">
-                        {{ partial "heroicons/solid/clipboard-copy.svg" "h-8 w-8"}}
+                        {{ partial "heroicons/solid/clipboard-copy.svg" "h-5 w-5"}}
                     </template>
                     <template x-if="event.wasCopied">
-                        {{ partial "heroicons/solid/check.svg" "h-8 w-8"}}
+                        {{ partial "heroicons/solid/check.svg" "h-5 w-5"}}
                     </template>
                 </a>
             </form>

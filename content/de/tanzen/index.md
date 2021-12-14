@@ -1,6 +1,7 @@
 ---
-title: Socials
-subtitle: Social Dances im Rhein-Main Gebiet
+title: Komm tanzen
+subtitle: Deine Veranstaltungen im Rhein Main Gebiet
+hp-title: Alle Social Dances
 menu: main
 weight: 10
 layout: socials

@@ -108,8 +108,8 @@ class DanceEvent implements DancEventInterface {
                 (
                     window.location.protocol + '//' +
                     window.location.host + window.location.pathname
-                    )
-                ) +
+                )
+        ) +
                 '?' + String(this.id)
     }
 
@@ -138,8 +138,8 @@ class DanceEvent implements DancEventInterface {
     }
 
     get shareLinkTelegram () {
-        return 'https://t.me/share/url?url=' +
-            encodeURIComponent(this.shareUrl + '&text=' + this.shareLinkCopy)
+        return 'https://t.me/share/url?url=' + encodeURIComponent(this.shareUrl) +
+            '&text=' + encodeURIComponent(this.shareLinkCopy)
     }
 
     get shareLinks () {
