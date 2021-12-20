@@ -1,26 +1,18 @@
 {{define "main"}}
+    {{- partial "page/main-content" . -}}
+
     {{.Scratch.Set "lang" .Lang}}
     {{$lang := newScratch}}
     {{$lang.Set "lang" .Lang}}
-    {{ range $.Site.Data.scene.items }}
-        <pre>
-            {{.name }}
-            {{ if isset .desc ($lang.Get "lang")}}
-            {{$value := ($lang.Get "lang")}}
-            {{index .desc $value}}
-            {{ end }}
 
-        </pre>
-
-    {{ end }}
-
-
-    <ul>
-    {{ range $.Site.Home.AllTranslations }}
-    <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-    {{ end }}
-    </ul>
-
-
-
+    <div id="scene-section" class="container is-default">
+        <div class="alpine-component"
+            x-data="RMST_TS.SceneList({{ $.Site.Data.scene | jsonify }})">
+                <div class="container items">
+                    {{ range $.Site.Data.scene.items }}
+                        {{ partial "scene/item" . }}
+                    {{ end }}
+                </div>
+        </div>
+    </div>
 {{end}}

@@ -5,4 +5,4 @@ menu: main
 weight: 20
 layout: scene
 ---
-Lorem ipsum
+Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
