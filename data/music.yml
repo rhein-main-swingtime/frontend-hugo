@@ -1,0 +1,32 @@
+- name: IKS Big Band
+  contact:
+    - homepage: "http://iksbigband.de"
+  city: Rüsselsheim
+  category: band
+
+- name: Jubilee Jumpers
+  city: Frankfurt
+  contact:
+    - homepage: "http://jubileejumpers.de"
+  category: band
+
+- name: Maurice Kühn Trio
+  contact:
+    - homepage: "http://mauricekuehn.de"
+  category: band
+
+- name: Trio HEF zu Viert
+  contact:
+    - homepage: "http://triohef.de"
+  category: band
+
+- name: Schallplattenunterhalter Kaiser L
+  contact:
+    - homepage: "http://music.jumpinjive.com/html/aktuell.htm"
+    - facebook: "https://facebook.com/DJKaiserL"
+  city: Frankfurt
+
+- name: Jo van Nelsen
+  contact:
+    - homepage: "http://jovannelsen.de/aktuelle-programme/schellack-dj"
+  city: Frankfurt

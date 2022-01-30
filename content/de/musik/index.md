@@ -2,6 +2,7 @@
 title: Musik
 subtitle: Bands und DJs
 menu: main
+layout: music
 weight: 20
 ---
-Lorem ipsum
+Hier kommt die Musik
