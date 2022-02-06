@@ -8,64 +8,62 @@
         {{ $cities = $cities | append .city }}
     {{ end }}
 
+    {{ $categories | uniq | jsonify}}
+
+
+    <div
+        id="generic-filter-test"
+        class="filterable-container"
+        x-data="{
+            bar: RMST_TS.filterBar({
+                filterable: [
+                    'city', 'category'
+                ],
+                identifier: 'name',
+                title: 'Filter',
+                trash: 'Zurücksetzen',
+            })
+        }"
+    >
+        {{ partial "filterbar/bar" . }}
+
+        <div class="container items flex flex-col flex-wrap">
+            <!--
+            <template x-if="list.visibleItems.length === 0">
+                <article class="is-card py-5 lg:col-span-2 text-center">
+                    <div class="mb-4">
+                        <h2 class="text-xl font-bold">
+                            {{ T "learn-page-sorry-hl" }}
+                        </h2>
+                        {{ T "learn-page-sorry-copy" }}
+                    </div>
+                    <a href="#" class="is-button has-icon text-sm highlighted" @click="list.resetSelections()">
+                        <span>
+                            {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                        </span>
+                        Zurücksetzen
+                    </a>
+                </article>
+            </template>
+            -->
+            {{ range sort $.Site.Data.learn "name" "asc" }}
+                {{ partial "learn/item" . }}
+            {{ end }}
+        </div>
+
+    </div>
+    {{/*
+
     <div id="learn-section" class="container is-default">
         <div class="alpine-component"
-            x-data="RMST_TS.LearnList({{ $.Site.Data.learn | jsonify }})">
-            <div class="flex flex-wrap gap-2 my-2 is-card shadow-sm mb-4">
-                <div class="mr-4 font-bold">
-                    {{ partial "heroicons/outline/filter.svg" "is-icon is-1em" }}
-                    Filter:
-                </div>
+            x-data="RMST_TS.LearnList(
+                {
+                    categories: {{ $categories | jsonify }}
+                    cities: {{ $cities | jsonify }}
+                }
+            )">
 
-                {{ range $categories | uniq }}
-                    {{ $translatableKey := (printf "learn-%s" .) }}
-                    <a
-                        href="#"
-                        class="is-button has-icon text-sm relative"
-                        :class="list.selected.category === '{{.}}' ? 'active' : ''"
-                        @click.prevent="list.addSelection('category', '{{ . }}')"
-
-                    >
-                    <template  x-if="list.selected.category === '{{.}}'">
-                        <span>
-                            {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                        </span>
-                    </template>
-                    <template  x-if="list.selected.category !== '{{.}}'">
-                        <span>
-                            {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                        </span>
-                    </template>
-                        {{ i18n $translatableKey }}
-                    </a>
-                {{ end }}
-                {{ range $cities | uniq }}
-                    <a
-                        href="#"
-                        class="is-button has-icon text-sm relative pl-10"
-                        :class="list.selected.city === '{{.}}' ? 'active' : ''"
-                        @click.prevent="list.addSelection('city', '{{ . }}')"
-                    >
-                        <template  x-if="list.selected.city === '{{.}}'">
-                            <span>
-                                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                            </span>
-                        </template>
-                        <template  x-if="list.selected.city !== '{{.}}'">
-                            <span>
-                                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                            </span>
-                        </template>
-                        {{ . }}
-                    </a>
-                {{ end }}
-                <a href="#" class="is-button has-icon text-sm highlighted" @click="list.resetSelections()" x-show="list.trashActive">
-                    <span>
-                        {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                    </span>
-                    Zurücksetzen
-                </a>
-            </div>
+            partial "filterbar/bar" .
 
             <div class="container items">
                 <template x-if="list.visibleItems.length === 0">
@@ -90,5 +88,5 @@
             </div>
         </div>
     </div>
-
+    */}}
 {{ end }}
