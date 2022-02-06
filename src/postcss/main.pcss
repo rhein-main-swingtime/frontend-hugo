@@ -49,12 +49,12 @@ a {
     @apply bg-gray-200;
     @apply pt-36;
     @apply pb-10;
-    & .container {
+    & > .container {
         @apply flex flex-row;
         & > * {
         @apply px-4 md:px-8 py-10;
 
-    }
+        }
     }
     & nav#sidebar {
         @apply hidden lg:block;
@@ -164,8 +164,8 @@ input[type=date] {
         @apply text-gray-400;
     }
 }
-.filterable-container {
-    & .container.items {
+.filterable {
+    & .item-container {
         @apply mx-auto max-w-screen-lg;
         @apply gap-6 flex flex-col;
         @apply lg:grid lg:grid-cols-2;

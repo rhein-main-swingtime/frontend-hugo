@@ -1,19 +1,9 @@
 {{ define "main" }}
     {{- partial "page/main-content" . -}}
 
-    {{ $categories := slice }}
-    {{ $cities := slice }}
-    {{ range $.Site.Data.learn }}
-        {{ $categories = $categories | append .category }}
-        {{ $cities = $cities | append .city }}
-    {{ end }}
-
-    {{ $categories | uniq | jsonify}}
-
-
     <div
         id="generic-filter-test"
-        class="filterable-container"
+        class="filterable"
         x-data="{
             bar: RMST_TS.filterBar({
                 filterable: [
@@ -27,7 +17,7 @@
     >
         {{ partial "filterbar/bar" . }}
 
-        <div class="container items flex flex-col flex-wrap">
+        <div class="item-container">
             <!--
             <template x-if="list.visibleItems.length === 0">
                 <article class="is-card py-5 lg:col-span-2 text-center">
