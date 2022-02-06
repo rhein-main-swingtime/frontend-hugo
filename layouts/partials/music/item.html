@@ -1,6 +1,36 @@
 <article class="music-item lg:min-h-[15rem] is-card">
     <div>
-        {{ .name }}
+        <h3 class="text-4xl font-thin my-4">{{ .name }}</h3>
+        <div class="mb-8">
+            <span class="font-light text-sm bg-gray-500 text-white py-1 px-2 rounded">
+                {{ .category }}
+            </span>
+        </div>
         <p>{{ .city }}</p>
+
+        <div class="virtual">
+            {{ range $index, $val := .contact }}
+            <div class="{{ $index }}">
+                {{ $partialPath := printf "contact/%s.html" $index }}
+                {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                {{ partial $partialPath . }}
+                {{ else }}
+                {{ $val }}
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ range $index, $val := .socialmedia }}
+            <div class="{{ $index }}">
+                {{ $partialPath := printf "simpleicons.org/%s.svg" $index }}
+                {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                {{ partial ( printf "%s" $partialPath ) "inline-block w-4 h-4" }}
+                {{ end }}
+                <a href="{{ $val }}" target="_blank">
+                    {{ $index }}
+                </a>
+            </div>
+            {{ end }}
+        </div>
+
     </div>
 </article>
