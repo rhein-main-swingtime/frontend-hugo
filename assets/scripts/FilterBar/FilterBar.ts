@@ -21,10 +21,9 @@ class GenericFilterBar {
         }
     } = {}
 
-    items: object[] = []
+    items: {[key:string]: any}[] = []
 
     public registerElement (element: any) {
-        console.log(element)
         this.items.push(element)
 
         this.config.filterable.forEach((k) => {
@@ -47,7 +46,7 @@ class GenericFilterBar {
         return null
     }
 
-    public elementMatchesFilters (element: object): boolean {
+    public elementMatchesFilters (element: {[key:string]: any}): boolean {
         let out = true
 
         this.config.filterable.forEach((f) => {
@@ -69,6 +68,17 @@ class GenericFilterBar {
             const out = this.elementMatchesFilters(element)
             return out
         }
+    }
+
+    get visibleIds (): string[] {
+        // first step filters elements, by visibility
+        // seconds step takes elements, and returns only the identifiers
+        return this.items.filter(i => this.isVisible(i) && i[this.config.identifier] !== undefined)
+            .map(i => i[this.config.identifier])
+    }
+
+    get noItemsAvailable (): boolean {
+        return this.visibleIds.length === 0
     }
 
     public toggleSelection (category: string, item: string): void {

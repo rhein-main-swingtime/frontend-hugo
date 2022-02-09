@@ -14,7 +14,7 @@ class LearnList {
         category: false
     }
 
-    constructor(items: LearnListPayload, filterableCategories: string[]) {
+    constructor (items: LearnListPayload, filterableCategories: string[]) {
         this.items = items
         console.log(items)
         this.filterableCategories = filterableCategories
@@ -33,7 +33,7 @@ class LearnList {
         }
     }
 
-    public get visibleItems(): string[] {
+    public get visibleItems (): string[] {
         const names: string[] = []
         this.items.forEach((i) => {
             if (
@@ -46,7 +46,7 @@ class LearnList {
         return names
     }
 
-    public get trashActive(): boolean {
+    public get trashActive (): boolean {
         return (this.selected.city !== false ||
             this.selected.category !== false)
     }
