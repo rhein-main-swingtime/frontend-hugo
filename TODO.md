@@ -1,0 +1,4 @@
+- Store anlegen
+- Leiste als eigenständige Component -> schreibt, liest in Store
+- Jede Karte: sichtbarkeit aus Store
+- Constructor der Leiste anpassen: Filterable Categories

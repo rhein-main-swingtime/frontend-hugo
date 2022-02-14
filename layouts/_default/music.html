@@ -1,0 +1,12 @@
+{{ define "main" }}
+    {{- partial "page/main-content" . -}}
+
+    <div id="music-section" class="container is-default">
+        <div class="has-items">
+            {{ range sort $.Site.Data.music "name" "asc" }}
+                {{ partial "music/item" . }}
+            {{ end }}
+        </div>
+    </div>
+
+{{ end }}

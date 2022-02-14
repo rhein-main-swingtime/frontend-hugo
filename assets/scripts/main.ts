@@ -11,6 +11,7 @@ import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
 import DanceEventQr from './DanceEventList/DanceEventQr'
 import { Input } from 'postcss'
+import GenericFilterBarFactory from './FilterBar/FilterBar'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -28,7 +29,8 @@ window.RMST_TS = {
     EventList,
     eventFilters: Filters,
     FetchSharedEvents,
-    DanceEventQr
+    DanceEventQr,
+    filterBar: GenericFilterBarFactory
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
