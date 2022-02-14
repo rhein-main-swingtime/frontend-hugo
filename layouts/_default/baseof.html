@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <html>
     {{- partial "header.html" . -}}
-    <body>
+    <body
+        x-data=""
+        :class="$store.mobileNavigationStore.open ? 'overflow-hidden' : ''"
+    >
         {{ if not (eq .Kind "home") }}
             {{- partial "page/page-header.html" . -}}
         {{ end }}
@@ -21,11 +24,6 @@
                 {{- block "main" . }}{{- end }}
             </section>
         {{ end }}
-
-
-        <pre class="hidden">
-            {{ printf "%#v" .Kind }}
-        </pre>
 
         {{ partial "nav/mobile-trigger.html" . }}
 
