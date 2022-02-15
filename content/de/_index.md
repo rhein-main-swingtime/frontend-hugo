@@ -7,6 +7,4 @@ eventTeasers:
       - socials
 ---
 
-# Hallo
-
-Wir wollen dir hier alle wichten Infos, rund um das Swing tanzen im Rhein-Main Gebiet bieten.
+Bei uns findest du alle wichtigen Infos zum Swing Tanzen im Rhein-Main Gebiet, ganz egal ob du gerade angefangen hast, schon seit vielen Jahren tanzt, auf der Suche nach einer Tanzschule bist oder den nächsten Social finden willst.

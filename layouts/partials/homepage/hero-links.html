@@ -1,0 +1,11 @@
+<div class="text-2xl gap-4 flex-row flex-wrap my-16 md:justify-center hidden sm:flex">
+    {{ range .Site.Menus.main }}
+      <a
+        class="text-white inline-block mr-4"
+        href="{{ .URL }}"
+      >
+      {{ .Title }}
+      {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
+      </a>
+    {{end}}
+  </div>

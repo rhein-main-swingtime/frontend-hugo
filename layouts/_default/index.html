@@ -1,55 +1,20 @@
 {{ define "main" }}
 
-<section id="home-hero" class="bg-gray-700 py-10 is-padded">
-  <div class="container is-default text-gray-50">
+{{ partial "homepage/hero" . }}
 
-    <figure id="site-logo" class="mb-8 flex flex-row justify-center">
-          <img src="{{ "/img/rmst-logo.svg" | relURL }}">
-      </figure>
-
-      <div class="my-16">
-        <h2 class="text-2xl font-light">
-          Deine nächsten Socials:
-        </h2>
-        {{ partial "events/preview-block" .}}
-        <div class="text-right w-full">
-        {{ with .Site.GetPage "tanzen" }}
-          <a
-          href="{{ .Permalink }}"
-          class="is-button is-xl is-white">
-              Alle Socials im Rhein Main Gebiet
-              {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em -top-1" }}
-          </a>
-        {{ end }}
-        </div>
-      </div>
-
-  </div>
+<section id="divider" class="is-padded py-12 text-center bg-gray-700 text-white shadow-inner">
+  <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
+  {{ if (isset .Params "subtitle") }}
+      <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
+  {{ end }}
 </section>
 
-<section class="bg-gray-50 is-padded py-12">
+<section class="bg-gray-50 py-12 is-padded">
   <div class="container is-default">
-    <div class="prose prose-lg">
-     {{ .Content }}
-    </div>
-  </div>
-</section>
-
-
-<section class="bg-gray-900  py-12">
-  <div class="container is-default">
-
-    <div class="text-center text-gray-50 mb-6">
-        <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
-        {{ if (isset .Params "subtitle") }}
-            <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
-        {{ end }}
-    </div>
-
     <div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-4">
     {{ range .Site.Menus.main }}
       <div class="is-card flex flex-col">
-        <div class="text-gray-900 uppercase">
+        <div class="text-gray-900">
           <div class="flex flex-row font-bold">
             {{ partial "heroicons/solid/hashtag.svg" "text-red-700 h-7 w-7 inline-block relative top-0.5"}}
             <h1 class="text-2xl">
@@ -65,15 +30,28 @@
         <div class="mt-auto">
           {{/*  {{ .Page.Params.teaser }}  */}}
           <div class="mt-4 text-right text-sm">
-            <a href="{{ .URL }}" class="is-button highlighted">
+            <a href="{{ .URL }}" class="">
               Mehr lesen
-              {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em" }}
+              {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
             </a>
           </div>
         </div>
       </div>
     {{ end }}
-    s</div>
+    </div>
+
+    <div class="text-sm mt-8 text-center">
+      {{ range .Site.Menus.minor }}
+      <a
+        class="inline-block mr-4 last:mr-0"
+        href="{{ .URL }}"
+      >
+      {{ .Title }}
+      {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
+      </a>
+    {{end}}
+    </div>
+
   </div>
 </section>
 
