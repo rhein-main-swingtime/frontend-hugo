@@ -6,11 +6,15 @@ function getLang (): string {
     return Object.keys(translations).includes(long) ? long : short
 }
 
+export function isTranslationDefined (key: string): boolean {
+    return translations[getLang()][key] !== undefined
+}
+
 export default function (key: string, num: number | undefined = undefined) {
     try {
         if (translations[getLang()][key] === undefined) {
             console.error('key ' + key + ' is not a valid translation key')
-            return ''
+            return key
         }
     } catch (e: any) {
         console.error(e)
