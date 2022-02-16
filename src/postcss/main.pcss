@@ -26,10 +26,6 @@ section.is-padded {
     @apply flex-col;
 }
 
-.is-sticky-on-side {
-    @apply sticky top-32;
-}
-
 .is-tripple-dots {
     & > .is-dot {
         &:nth-child(2) {
@@ -47,36 +43,22 @@ a {
 
 #page-body {
     @apply bg-gray-200;
-    @apply pt-36;
-    @apply pb-10;
-    & .container {
+    & > .container {
         @apply flex flex-row;
         & > * {
         @apply px-4 md:px-8 py-10;
 
-    }
+        }
     }
     & nav#sidebar {
         @apply hidden lg:block;
         @apply lg:relative;
         @apply lg:w-1/4;
-        /* @apply bg-gray-200; */
         @apply z-50;
-        /* @apply h-full; */
-        /* &:before {
-            @apply hidden lg:block;
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: -30vw;
-            bottom: 0;
-            background-color: inherit;
-            @apply shadow-inner;
-        } */
         & #sidebar-content {
             @apply flex flex-col gap-2;
             @apply text-xl;
+            @apply sticky top-28;
         }
 
 
@@ -128,9 +110,8 @@ a.is-internal-link {
 }
 
 #page-mast-head {
-    @apply lg:sticky top-0;
+    @apply sticky w-screen top-0;
     @apply z-110;
-    @apply fixed left-0 right-0;
     @apply shadow-md;
     & .rmst-bg {
         filter: invert(1);
@@ -162,5 +143,12 @@ input[type=date] {
     @apply py-0.5;
     &.is-faded {
         @apply text-gray-400;
+    }
+}
+.filterable {
+    & .item-container {
+        @apply mx-auto max-w-screen-lg;
+        @apply gap-6 flex flex-col;
+        @apply lg:grid lg:grid-cols-2;
     }
 }

@@ -1,10 +1,14 @@
 {{ $addr := (cond (isset . "address") "has-address" "has-no-address") }}
 <article
     class="learn-item {{ $addr }} lg:min-h-[15rem] is-card"
-    x-show="list.visibleItems.includes('{{ .name }}')"
     x-transition
+    x-init="
+        bar.registerElement({{ . | jsonify }})
+    "
+    x-show="
+        bar.isVisible({{ . | jsonify }})
+    "
 >
-    {{ .Language.Lang }}
     <div class="flex flex-col">
         <h3 class="text-4xl text-center font-thin my-4">
             {{ .name }}
@@ -17,40 +21,38 @@
         <div class="class mt-auto grid text-sm contact">
             <div class="physical">
                 {{ range .address }}
-                    <span class="block">
-                        {{ . }}
-                    </span>
+                <span class="block">
+                    {{ . }}
+                </span>
                 {{ end }}
                 {{ if isset . "address"}}
-                    <a
-                        href='https://www.google.com/maps/search/?api=1&{{ querify "query" (delimit .address ", ") }}'
-                        target="_blank"
-                    >
-                        Maps Link
-                    </a>
+                <a href='https://www.google.com/maps/search/?api=1&{{ querify "query" (delimit .address ", ") }}'
+                    target="_blank">
+                    Maps Link
+                </a>
                 {{ end }}
             </div>
             <div class="virtual">
                 {{ range $index, $val := .contact }}
-                    <div class="{{ $index }}">
-                        {{ $partialPath := printf "contact/%s.html" $index }}
-                        {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
-                            {{ partial $partialPath . }}
-                        {{ else }}
-                            {{ $val }}
-                        {{ end }}
-                    </div>
+                <div class="{{ $index }}">
+                    {{ $partialPath := printf "contact/%s.html" $index }}
+                    {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                    {{ partial $partialPath . }}
+                    {{ else }}
+                    {{ $val }}
+                    {{ end }}
+                </div>
                 {{ end }}
                 {{ range $index, $val := .socialmedia }}
-                    <div class="{{ $index }}">
-                        {{ $partialPath := printf "simpleicons.org/%s.svg" $index }}
-                        {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
-                            {{ partial ( printf "%s" $partialPath ) "inline-block w-4 h-4" }}
-                        {{ end }}
-                        <a href="{{ $val }}" target="_blank">
-                            {{ $index }}
-                        </a>
-                    </div>
+                <div class="{{ $index }}">
+                    {{ $partialPath := printf "simpleicons.org/%s.svg" $index }}
+                    {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                    {{ partial ( printf "%s" $partialPath ) "inline-block w-4 h-4" }}
+                    {{ end }}
+                    <a href="{{ $val }}" target="_blank">
+                        {{ $index }}
+                    </a>
+                </div>
                 {{ end }}
             </div>
         </div>

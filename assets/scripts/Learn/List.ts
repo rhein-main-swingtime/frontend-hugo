@@ -7,13 +7,17 @@ interface LearnListSelectionInterface {
 
 class LearnList {
     items: LearnListPayload
+    filterableCategories: string[]
+
     selected: LearnListSelectionInterface = {
         city: false,
         category: false
     }
 
-    constructor (items:LearnListPayload) {
+    constructor (items: LearnListPayload, filterableCategories: string[]) {
         this.items = items
+        console.log(items)
+        this.filterableCategories = filterableCategories
     }
 
     public resetSelections = function (this: LearnList) {
