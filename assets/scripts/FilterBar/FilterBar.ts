@@ -117,6 +117,16 @@ class GenericFilterBar {
         )
     }
 
+    public resetSelections (): void {
+        Object.keys(this.filters).forEach(
+            (c) => {
+                Object.keys(this.filters[c]).forEach(item => {
+                    this.filters[c][item] = false
+                })
+            }
+        )
+    }
+
     constructor (config: GenericListConfig) {
         this.config = config
     }
