@@ -1,16 +1,36 @@
 <article
-    class="scene-item lg:min-h-[15rem] is-card"
-    x-show="list.visibleItems.includes('{{ .name }}')"
+    class="lg:min-h-[15rem] is-card"
     x-transition
+    x-init="bar.registerElement({{ . | jsonify }})"
+    x-show="bar.isVisible({{ . | jsonify }})"
 >
-    {{ .Language.Lang }}
     <div class="flex flex-col">
-        <h3 class="text-4xl text-center font-thin my-4">
+        <h4 class="text-4xl text-center font-thin my-4">
             {{ .name }}
-        </h3>
-        {{ .face_group }}
-        {{ .public }}
+        </h4>
+        <div class="mb-8 text-center">
+            <span class="font-light text-sm bg-gray-500 text-white py-1 px-2 rounded">
+                {{ i18n (printf "scene-%s" .category) }}
+            </span>
+        </div>
+
+        <div class="class mt-auto grid text-sm contact">
+            <p>TODO: description with lang: {{ .Site.Lang }}</p>
 
 
+            {{ if isset . "desc"}}
+            {{.desc.de}}
+            {{ else }}
+            WTF?!
+            {{ .Site.Data.scene.defaults.desc.de }}
+            {{ end }}
+
+            {{ if isset . "face_group"}}
+            <a href='https://facebook.com/groups/{{ printf .face_group }}'
+                target="_blank">
+                facebook.com/{{printf .face_group}}
+            </a>
+            {{ end }}
+        </div>
     </div>
 </article>

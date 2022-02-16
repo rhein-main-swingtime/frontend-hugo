@@ -1,12 +1,8 @@
 {
-    "label": {
-        "de": "Facebook Gruppen",
-        "en": "Facebook groups"
-    },
     "defaults": {
         "desc": {
-            "de": "rund ums Swing-Tanzen in {area}",
-            "en": "all about Swing-Dancing in {area}"
+            "de": "rund ums Swing-Tanzen in ",
+            "en": "all about Swing-Dancing in "
         },
         "url": "https://facebook.com/groups/{face_group}"
     },
@@ -14,29 +10,33 @@
         {
             "name": "Swing In Frankfurt Am Main",
             "public": false,
-            "face_group": 1442899695957970,
-            "desc": {},
-            "area": "Frankfurt"
+            "face_group": "1442899695957970",
+            "area": "Frankfurt",
+            "category": "facebook-group"
         },
         {
             "name": "Swing Out d'or Wiesbaden",
             "public": true,
-            "face_group": 222069277804935,
+            "face_group": "222069277804935",
             "desc": {},
-            "area": "Wiesbaden"
+            "area": "Wiesbaden",
+            "category": "facebook-group"
         },
         {
             "name": "Swing In Mainz",
-            "face_group": 317930771663002,
+            "face_group": "317930771663002",
             "desc": {},
-            "public": true
+            "public": true,
+            "area": "Mainz",
+            "category": "facebook-group"
         },
         {
             "name": "Darmstadt Swing & Friends",
-            "face_group": 202862923090162,
+            "face_group": "202862923090162",
             "area": "Darmstadt",
             "public": true,
-            "desc": {}
+            "desc": {},
+            "category": "facebook-group"
         },
         {
             "name": "Rhein-Main goes Workshop",
@@ -45,7 +45,9 @@
                 "de": "zum koordinieren von Fahrten zu internationalen Workshops"
             },
             "face_group": "Rheinmaingoesworkshop",
-            "public": false
+            "public": false,
+            "area": "Rhein-Main",
+            "category": "facebook-group"
         },
         {
             "name": "Swing Attacke",
@@ -53,43 +55,50 @@
                 "de": "Spontanes Swing-Tanzen umsonst und draußen",
                 "en": "Random, out-door, free social swing dancing"
             },
-            "face_group": 490692287651143,
+            "face_group": "490692287651143",
             "area": "Frankfurt",
-            "public": false
+            "public": false,
+            "category": "facebook-group"
         },
         {
             "name": "Swing Is Just Around The Corner",
             "area": "Frankfurt",
-            "face_group": 680509751994581,
+            "face_group": "680509751994581",
             "desc": {},
-            "public": true
+            "public": true,
+            "category": "facebook-group"
         },
         {
             "name": "Frankfurt Blues Dancing",
             "area": "Frankfurt",
-            "face_group": 395357990544635,
+            "face_group": "395357990544635",
             "desc": {},
-            "public": true
+            "public": true,
+            "category": "facebook-group"
         },
         {
             "name": "Hop The Main",
             "area": "Frankfurt",
-            "face_group": 48505773375,
+            "face_group": "48505773375",
             "desc": {},
-            "public": true
+            "public": true,
+            "category": "facebook-group"
         },
         {
             "name": "Balboa in Frankfurt",
             "area": "Frankfurt",
-            "face_group": 392286414141165,
+            "face_group": "392286414141165",
             "desc": {},
-            "public": false
+            "public": false,
+            "category": "facebook-group"
         },
         {
             "name": "Shag-Time Rhein-Main",
-            "face_group": 862588183758717,
+            "face_group": "862588183758717",
             "desc": {},
-            "public": false
+            "public": false,
+            "area": "Rhein-Main",
+            "category": "facebook-group"
         }
     ]
 }
