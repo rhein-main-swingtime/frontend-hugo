@@ -1,86 +1,38 @@
 <div class="flex flex-wrap gap-2 my-2 is-card shadow-sm mb-4">
     <div class="mr-4 font-bold">
-        {{ partial "heroicons/outline/filter.svg" "is-icon is-1em" }}
-        <span x-text="bar.config.title"></span>
-
+        <div class="mb-2">
+            {{ partial "heroicons/outline/filter.svg" "is-icon is-1em" }}
+            <span x-text="bar.config.title"></span>
+        </div>
         <template x-for="(category, key) in bar.filters">
-            <div>
-            <span x-text="key"></span>
-            <template x-for="(selected, name) in category">
-                <a
-                    href="#"
-                    class="is-button has-icon text-sm relative"
-                    :class="selected ? 'active' : ''"
-                    @click.prevent="bar.toggleSelection(key, name)"
-                >
-                    <template  x-if="selected">
-                        <span>
-                            {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                        </span>
-                    </template>
-                    <template  x-if="!selected">
-                        <span>
-                            {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                        </span>
-                    </template>
-                    <span x-text="name"></span>
-                </a>
-            </template>
-            </div>
+            <span
+                class="m-0"
+                :class="!bar.categoriesVisibleInBar ? 'inline' : 'block'"
+            >
+                <template x-if="bar.categoriesVisibleInBar">
+                    <span x-text="key"></span>
+                </template>
+                <template x-for="(selected, name) in category">
+                    <a
+                        href="#"
+                        class="is-button has-icon text-sm relative mb-2 mr-2"
+                        :class="selected ? 'active' : ''"
+                        @click.prevent="bar.toggleSelection(key, name)"
+                    >
+                        <template  x-if="selected">
+                            <span>
+                                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            </span>
+                        </template>
+                        <template  x-if="!selected">
+                            <span>
+                                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                            </span>
+                        </template>
+                        <span x-text="bar.getTranslation(name)"></span>
+                    </a>
+                </template>
+            </span>
         </template>
     </div>
-
-
-    {{/*
-
-    {{ range $categories | uniq }}
-        {{ $translatableKey := (printf "learn-%s" .) }}
-        <a
-            href="#"
-            class="is-button has-icon text-sm relative"
-            :class="list.selected.category === '{{.}}' ? 'active' : ''"
-            @click.prevent="list.addSelection('category', '{{ . }}')"
-
-        >
-        <template  x-if="list.selected.category === '{{.}}'">
-            <span>
-                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-            </span>
-        </template>
-        <template  x-if="list.selected.category !== '{{.}}'">
-            <span>
-                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-            </span>
-        </template>
-            {{ i18n $translatableKey }}
-        </a>
-    {{ end }}
-    {{ range $cities | uniq }}
-        <a
-            href="#"
-            class="is-button has-icon text-sm relative pl-10"
-            :class="list.selected.city === '{{.}}' ? 'active' : ''"
-            @click.prevent="list.addSelection('city', '{{ . }}')"
-        >
-            <template  x-if="list.selected.city === '{{.}}'">
-                <span>
-                    {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-            <template  x-if="list.selected.city !== '{{.}}'">
-                <span>
-                    {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-            {{ . }}
-        </a>
-    {{ end }}
-    <a href="#" class="is-button has-icon text-sm highlighted" @click="list.resetSelections()" x-show="list.trashActive">
-        <span>
-            {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-        </span>
-        Zurücksetzen
-    </a>
-*/}}
-
 </div>

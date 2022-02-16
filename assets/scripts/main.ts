@@ -12,10 +12,12 @@ import FetchSharedEvents from './Helpers/FetchSharedEvents'
 import DanceEventQr from './DanceEventList/DanceEventQr'
 import { Input } from 'postcss'
 import GenericFilterBarFactory from './FilterBar/FilterBar'
+import T from './i18n/T'
 
 declare global {
     interface Window { // eslint-disable-line
         RMST_TS: Object;
+        T: Function;
     }
 }
 
@@ -32,6 +34,8 @@ window.RMST_TS = {
     DanceEventQr,
     filterBar: GenericFilterBarFactory
 }
+
+window.T = T
 
 document.addEventListener('DOMContentLoaded', function (event) {
     setTouchBodyClass()
