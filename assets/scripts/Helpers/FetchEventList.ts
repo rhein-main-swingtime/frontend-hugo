@@ -1,6 +1,7 @@
 import { EventServerApiPayload, DanceEventPayload } from './../Types/EventServerApiTypes'
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import { createDanceEventFromJson } from '../DTO/DanceEvent'
+import { Stores } from '../Settings/Stores'
 
 interface eventSearchRequestInterface {
     id?: number[] | string[] | number | string
@@ -30,10 +31,19 @@ export async function fetchEventsBySearch (params: eventSearchRequestInterface) 
 export default async function fetchEventList (params: string[] = []) {
     const url = new URL(RMSTApiUrls.eventList)
     let search = window.location.search
-    search += (search.includes('?') ? '&' : '?') + params.join('&')
 
-    if (search.length < 2) {
-        search = '?category[]=socials'
+    if (search === '?onlyFavorites=true') {
+        const notepad = Alpine.store(Stores.FavoriteStore)
+        const ids = Object.keys(notepad.collection).map((i) => {
+            return 'id[]=' + i
+        })
+        search += '&' + ids.join('&')
+    } else {
+        search += (search.includes('?') ? '&' : '?') + params.join('&')
+
+        if (search.length < 2) {
+            search = '?category[]=socials'
+        }
     }
 
     url.search = search

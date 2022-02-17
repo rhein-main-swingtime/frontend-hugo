@@ -35,7 +35,7 @@
             {{ partial "events/list.html" . }}
         </template>
         <template x-if="list.initialized">
-            <template x-if="list.showLoader">
+            <template x-if="list.showLoader && filters.onlyFavorites === false">
                 <div
                     x-intersect:enter="list.loadMore()"
                     class=""

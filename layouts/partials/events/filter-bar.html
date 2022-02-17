@@ -5,6 +5,18 @@
         Filter
     </h3>
     <form class="text">
+        <div class="border-t-2 border-gray-200 my-2 py-2">
+            <a
+            href="#"
+            @click.prevent="filters.onlyFavorites = !filters.onlyFavorites"
+            class="is-button has-icon text-sm relative inline-block"
+            :class="filters.showClasses ? 'active' : ''"
+        >
+            {{ partial "heroicons/outline/heart.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+            Events auf Merkliste
+        </a>
+        </div>
+
         <!-- cities -->
         <div class="border-t-2 border-gray-200 my-2 py-2">
             <div class="flex gap-1 flex-row flex-wrap">

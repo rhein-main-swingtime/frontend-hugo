@@ -1,3 +1,3 @@
-export default {
-    MobileNavigationStore: 'Navigation:Mobile'
+export const Stores = {
+    FavoriteStore: 'favoriteStore'
 }

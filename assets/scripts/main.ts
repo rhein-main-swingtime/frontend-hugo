@@ -1,6 +1,6 @@
 import { EventList } from './DanceEventList/EventList'
 
-import { Notepad } from './DanceEventList/Notepad'
+import { FavoritesStore } from './Store/FavoritesStore'
 import { createPickster } from './DanceEventList/Dates'
 import fetchEventTeasers from './DanceEventList/Preview'
 import { setTouchBodyClass } from './Helpers/TouchDeviceDetection'
@@ -13,6 +13,7 @@ import DanceEventQr from './DanceEventList/DanceEventQr'
 import { Input } from 'postcss'
 import GenericFilterBarFactory from './FilterBar/FilterBar'
 import T from './i18n/T'
+import { Stores } from './Settings/Stores'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -26,7 +27,7 @@ window.RMST_TS = {
     fetchEventTeasers,
     createMobileNavigation: createMobileNavigation,
     createPickster,
-    notepad: new Notepad(),
+    notepad: new FavoritesStore(),
     danceEventPageFacade,
     EventList,
     eventFilters: Filters,
@@ -45,4 +46,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 document.addEventListener('alpine:init', () => {
     Alpine.store('mobileNavigationStore', createMobileNavigation()) // eslint-disable-line
+    Alpine.store(Stores.FavoriteStore, new FavoritesStore())                       // eslint-disable-line
 })

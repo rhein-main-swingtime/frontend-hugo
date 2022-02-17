@@ -19,13 +19,11 @@ function paramsToString (params: EventListApiParams) {
 
 export default async function fetchEventTeasers (params: EventListApiParams) {
     const teasers: DanceEvent[] = []
-    console.log(params)
     await FetchEventList([paramsToString(params)]).then(
         (payload) => payload.danceEvents.forEach(
             (danceEvent) => {
                 teasers.push(new DanceEvent(danceEvent))
             })
     )
-    console.log(teasers)
     return teasers
 }

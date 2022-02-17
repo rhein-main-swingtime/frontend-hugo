@@ -1,9 +1,9 @@
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-import { uniq } from 'lodash'
 import DanceEventQr from './DanceEventQr'
 import FetchEventList from '../Helpers/FetchEventList'
 import { elementOffset } from '../Helpers/UiHelpers'
 import { convertStringToDate, getLocalizedDate } from '../Helpers/DateHelper'
+import { remove, unset, uniq } from 'lodash'
 
 function addEvent (this: EventList, e: DanceEvent) {
     const key = [
@@ -18,6 +18,14 @@ function addEvent (this: EventList, e: DanceEvent) {
     this.eventsInDates[key].push(e)
 }
 
+function removeEvent (this: EventList, id: number) {
+    Object.keys(this.eventsInDates).forEach((date) => {
+        this.eventsInDates[date] = Object.values(this.eventsInDates[date]).filter((danceEvent) => {
+            return danceEvent.id !== id
+        })
+    })
+}
+
 function getEventsByDate (this: EventList, date: string): DanceEvent[] {
     return this.eventsInDates[date] || []
 }
@@ -30,13 +38,11 @@ function getEventCount (this: EventList): number {
 
 async function loadMore (this: EventList) {
     const apiResponse = await FetchEventList(['skip=' + this.getEventCount()])
-    this.dates = uniq(this.dates.concat(Object.keys(apiResponse.dates)).sort())
     apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
     this.showLoader = apiResponse.danceEvents.length > 0
 }
 
 export class EventList {
-    public dates: string[] = []
     public eventsInDates: {[key: string]: DanceEvent[]} = {}
     public showLoader: boolean = false
     public isLoading: boolean = false
@@ -44,15 +50,16 @@ export class EventList {
     public addEvent = addEvent
     public getEventsByDate = getEventsByDate
     public getEventCount = getEventCount
+    public removeEvent = removeEvent
     public loadMore = loadMore
     public additional: string | null = null
     public initialized = false
 
     public reset () {
-        this.dates = []
         this.eventsInDates = {}
-        this.init()
-        this.showLoader = false
+        this.init().then(() => {
+            this.showLoader = false
+        })
     }
 
     public generateQrCode (danceEvent: DanceEvent) {
@@ -61,6 +68,10 @@ export class EventList {
 
     get noEventsAvailable () : boolean {
         return this.dates.length === 0
+    }
+
+    get dates (): string[] {
+        return Object.keys(this.eventsInDates)
     }
 
     public handleHashNavivation (id: number | string, element: HTMLElement): null | 'more' {
@@ -91,7 +102,6 @@ export class EventList {
     public async init () {
         this.isLoading = true
         const apiResponse = await FetchEventList()
-        this.dates = Object.keys(apiResponse.dates).sort()
         apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
         this.showLoader = this.getEventCount() > 0
         this.initialized = true

@@ -1,6 +1,9 @@
 import FetchSharedEvents from '../Helpers/FetchSharedEvents'
 import { EventList } from './EventList'
 import { Filters } from './Filters'
+import { FavoritesStore } from '../Store/FavoritesStore'
+import danceEvent from '../DTO/DanceEvent'
+import { Stores } from '../Settings/Stores'
 
 function updateSearchQuery (search: string): void {
     const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname + search
@@ -25,6 +28,13 @@ export default function create () {
             return current === s
                 ? null
                 : s
+        },
+        handleFav (danceEvent: danceEvent) {
+            const favStore: FavoritesStore = Alpine.store(Stores.FavoriteStore)
+            favStore.toggle(danceEvent)
+            if (this.filters.onlyFavorites && !favStore.danceEventIdsInCollection.includes(danceEvent.id.toString())) {
+                this.list.removeEvent(danceEvent.id)
+            }
         },
         fetchSharedEvent: FetchSharedEvents
     }

@@ -4,3 +4,4 @@ public
 .hugo_build.lock
 assets/css/main.css
 yarn-error.log
+.idea
