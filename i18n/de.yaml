@@ -56,5 +56,7 @@ event-filters-fav-show-only:
   other: Nur Merkliste zeigen
 event-filters-fav-show-all:
   other: Alle zeigen
+event-list-favorites:
+  other: Deine gemerkten Veranstaltungen
 close:
   other: Schließen

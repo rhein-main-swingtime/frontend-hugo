@@ -57,9 +57,7 @@ export class EventList {
 
     public reset () {
         this.eventsInDates = {}
-        this.init().then(() => {
-            this.showLoader = false
-        })
+        this.init()
     }
 
     public generateQrCode (danceEvent: DanceEvent) {

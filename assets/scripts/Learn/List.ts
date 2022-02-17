@@ -16,7 +16,6 @@ class LearnList {
 
     constructor (items: LearnListPayload, filterableCategories: string[]) {
         this.items = items
-        console.log(items)
         this.filterableCategories = filterableCategories
     }
 
