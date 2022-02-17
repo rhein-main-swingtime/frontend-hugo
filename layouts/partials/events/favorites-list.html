@@ -1,0 +1,25 @@
+<div class="col-span-8 relative min-h-screen">
+    {{ partial "events/list-loading-overlay.html" . }}
+
+    <template x-if="list.dates.length === 0">
+        <div class="is-card">
+            <h3>
+                Sorry!
+            </h3>
+            <span>
+                Du hast noch keine Veranstalungen vorgemerkt.
+            </span>
+        </div>
+    </template>
+
+    <template x-if="list.dates.length > 0">
+        <div class="pb-4">
+            <h2 class="text-xl font-bold">
+                {{ T "event-list-favorites" }}
+            </h2>
+        </div>
+    </template>
+    <template x-for="date in list.dates">
+        {{ partial "events/in-date.html" . }}
+    </template>
+</div>
