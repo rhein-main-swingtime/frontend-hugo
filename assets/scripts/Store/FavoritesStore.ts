@@ -1,11 +1,11 @@
-import { DanceEventPayload } from './../Types/EventServerApiTypes'
+import { DanceEventPayload } from '../Types/EventServerApiTypes'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
 
 interface collectionInterface {
     [key: number | string]: DanceEvent
 }
 
-export class Notepad {
+export class FavoritesStore {
     collection: collectionInterface
     private storageKey = 'RMST:eventSave'
 
@@ -54,8 +54,20 @@ export class Notepad {
     }
 
     get isSaved () {
-        return (event: DanceEvent) => {
-            return Object.keys(this.collection || {}).includes(String(event.id))
+        return (danceEvent: DanceEvent) => {
+            return Object.keys(this.collection || {}).includes(String(danceEvent.id))
         }
+    }
+
+    get savedEvents () {
+        return this.collection
+    }
+
+    get danceEventIdsInCollection () {
+        return Object.keys(this.collection)
+    }
+
+    get hasFavorites () {
+        return this.danceEventIdsInCollection.length > 0
     }
 }

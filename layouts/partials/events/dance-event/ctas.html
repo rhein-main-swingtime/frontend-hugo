@@ -1,12 +1,12 @@
 <div class="text-right mt-auto flex flex-row justify-end gap-2">
-    <a href="#" class="is-button" @click.prevent="notepad.toggle(event)">
-        <template x-if="!notepad.isSaved(event)">
+    <a href="#" class="is-button" @click.prevent="handleFav(danceEvent)">
+        <template x-if="!$store.favoriteStore.isSaved(danceEvent)">
             <span>
                 {{ partial "heroicons/outline/heart.svg" "is-icon is-base"}}
                 {{ i18n "event-is-not-saved" }}
             </span>
         </template>
-        <template x-if="notepad.isSaved(event)">
+        <template x-if="$store.favoriteStore.isSaved(danceEvent)">
             <span>
                 {{ partial "heroicons/solid/heart.svg" "is-icon is-base text-red-500"}}
                 {{ i18n "event-is-saved" }}

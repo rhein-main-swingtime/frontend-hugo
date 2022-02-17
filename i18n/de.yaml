@@ -1,3 +1,5 @@
+homepage-cta-all-socials:
+  other: Alle Socials im Rhein Main Gebiet
 learn-school:
   other: Tanzschule
 learn-teacher:
@@ -11,7 +13,7 @@ learn-page-sorry-hl:
 learn-page-sorry-copy:
   other: Leider haben wir für diese Kombination nichts gefunden
 event-is-saved:
-  other: Gemerkt
+  other: Aufheben
 event-is-not-saved:
   other: Merken
 event-share:
@@ -50,5 +52,9 @@ event-share-copy-headline:
   other: Link kopieren
 event-filters-reset:
   other: Filter zurücksetzen
+event-filters-fav-show-only:
+  other: Nur Merkliste zeigen
+event-filters-fav-show-all:
+  other: Alle zeigen
 close:
   other: Schließen
