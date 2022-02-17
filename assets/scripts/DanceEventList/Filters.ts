@@ -46,6 +46,7 @@ export class Filters {
         this.fromDate = false
         this.toDate = false
         this.showDates = false
+        this.onlyFavorites = false
     }
 
     get canBeReset () {
@@ -86,7 +87,14 @@ export class Filters {
         return out
     }
 
+    /**
+     * Sets the initial state of the filters from the current search parameters
+     *
+     * @private
+     */
     private setStateFromSearchParams () {
+        this.onlyFavorites = window.location.search.includes('onlyFavorites=true')
+
         this.showClasses = window.location.search.includes('calendar[]=') ||
             window.location.search.includes('category[]=class')
 

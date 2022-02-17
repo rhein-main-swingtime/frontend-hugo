@@ -5,16 +5,29 @@
         Filter
     </h3>
     <form class="text">
-        <div class="border-t-2 border-gray-200 my-2 py-2">
-            <a
-            href="#"
-            @click.prevent="filters.onlyFavorites = !filters.onlyFavorites"
-            class="is-button has-icon text-sm relative inline-block"
-            :class="filters.showClasses ? 'active' : ''"
+        <div
+            x-show="$store.favoriteStore.hasFavorites"
+            class="border-t-2 border-gray-200 my-2 py-2"
         >
-            {{ partial "heroicons/outline/heart.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-            Events auf Merkliste
-        </a>
+            <a
+                href="#"
+                @click.prevent="filters.onlyFavorites = !filters.onlyFavorites"
+                class="is-button has-icon text-sm relative inline-block"
+                :class="filters.onlyFavorites ? 'active' : ''"
+            >
+                <template x-if="filters.onlyFavorites === true">
+                    <span>
+                        {{ partial "heroicons/solid/heart.svg" "inline-block w-6 h-6 absolute left-1 top-0.5 text-red-500" }}
+                        {{ T "event-filters-fav-show-all" }}
+                    </span>
+                </template>
+                <template x-if="filters.onlyFavorites === false">
+                    <span>
+                        {{ partial "heroicons/outline/heart.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                        {{ T "event-filters-fav-show-only" }}
+                    </span>
+                </template>
+            </a>
         </div>
 
         <!-- cities -->

@@ -66,4 +66,8 @@ export class FavoritesStore {
     get danceEventIdsInCollection () {
         return Object.keys(this.collection)
     }
+
+    get hasFavorites () {
+        return this.danceEventIdsInCollection.length > 0
+    }
 }

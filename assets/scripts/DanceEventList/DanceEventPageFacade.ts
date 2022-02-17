@@ -13,10 +13,12 @@ function updateSearchQuery (search: string): void {
 export default function create () {
     const list = new EventList()
     const filters = new Filters()
+    const favStore: FavoritesStore = Alpine.store(Stores.FavoriteStore)
 
     return {
         list,
         filters,
+        favoritesAvailable: favStore.hasFavorites,
         handleFilterChange: async function (value: string, oldValue: string) {
             if (value === oldValue) {
                 return
@@ -30,7 +32,7 @@ export default function create () {
                 : s
         },
         handleFav (danceEvent: danceEvent) {
-            const favStore: FavoritesStore = Alpine.store(Stores.FavoriteStore)
+
             favStore.toggle(danceEvent)
             if (this.filters.onlyFavorites && !favStore.danceEventIdsInCollection.includes(danceEvent.id.toString())) {
                 this.list.removeEvent(danceEvent.id)
