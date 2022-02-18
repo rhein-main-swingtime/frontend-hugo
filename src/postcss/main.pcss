@@ -5,6 +5,7 @@
 @import "./learn.pcss";
 @import "./buttons.pcss";
 @import "./icons.pcss";
+@import "./sidebar.pcss";
 
 html {
     @apply font-serif font-light;
@@ -39,6 +40,9 @@ section.is-padded {
 
 a {
     @apply underline;
+    &:hover {
+        @apply text-red-700;
+    }
 }
 
 #page-body {
@@ -49,19 +53,6 @@ a {
         @apply px-4 md:px-8 py-10;
 
         }
-    }
-    & nav#sidebar {
-        @apply hidden lg:block;
-        @apply lg:relative;
-        @apply lg:w-1/4;
-        @apply z-50;
-        & #sidebar-content {
-            @apply flex flex-col gap-2;
-            @apply text-xl;
-            @apply sticky top-28;
-        }
-
-
     }
     & #page-content {
         @apply bg-gray-50;

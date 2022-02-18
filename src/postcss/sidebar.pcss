@@ -1,0 +1,51 @@
+#page-body {
+    & nav#sidebar {
+        @apply hidden lg:block;
+        /* @apply lg:relative; */
+        @apply lg:w-1/4;
+        @apply z-50;
+        @apply px-4;
+        & #sidebar-content {
+            @apply sticky top-28;
+        }
+        & #sidebar-content ul {
+            @apply flex flex-col gap-2;
+        }
+        & #sidebar-content ul {
+            @apply text-lg;
+            @apply mt-2 pt-2 first:mt-0 first:pt-0;
+            @apply gap-0;
+            /* @apply leading-4; */
+            @apply border-t-2 first:border-t-0 border-gray-300 border-dashed;
+            & span {
+                @apply last:opacity-0 opacity-100;
+            }
+            & svg {
+                @apply h-8 w-8 inline-block -mr-1 relative -top-0.5;
+                @apply text-red-600;
+            }
+            &.minor {
+                @apply text-sm;
+                & svg {
+                    @apply h-6 w-6
+                }
+            }
+            & li {
+                @apply py-0.5;
+                & a {
+                    @apply flex-grow;
+                }
+                @apply flex flex-row flex-nowrap gap-2;
+                &.active {
+                    & span {
+                        @apply last:opacity-100;
+                    }
+                    @apply font-bold;
+                    & a {
+                        @apply text-left;
+                    }
+                }
+            }
+        }
+    }
+}

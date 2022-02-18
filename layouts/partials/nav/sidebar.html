@@ -1,24 +1,43 @@
 <nav id="sidebar" >
-    <div id="sidebar-content" class="is-sticky-on-side">
-    <a class="hover:text-red-600 underline"
-        href="{{ .Site.BaseURL | relLangURL }}">
-        <span class="text-red-600">
-            {{ partial "heroicons/outline/home.svg" "h-8 w-8 inline-block -mr-1 relative -top-0.5"}}
-        </span>
-        Home
-    </a>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <a
-        class="hover:text-red-600 underline in-mobile-nav
-            sidebar-nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}
-        "
-        href="{{ .URL }}" title="{{ .Title }}">
-        <span class="text-red-600">
-            {{ partial "heroicons/outline/hashtag.svg" "h-8 w-8 inline-block -mr-1 relative -top-0.5"}}
-        </span>
-        {{ .Name }}
-    </a>
-    {{ end }}
+    <div id="sidebar-content">
+        <ul data-mobile-nav="true">
+            <li>
+                <span>
+                    {{ partial "heroicons/outline/home.svg" }}
+                </span>
+                <a
+                    class="in-mobile-nav"
+                    href="{{ .Site.BaseURL | relLangURL }}"
+                >
+                    {{ T "link-home" }}
+                </a>
+            </li>
+
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                {{ partial "nav/sidebar-link-icon.html" (dict "currentPage" $currentPage "menuEntry" . "menu" "main") }}
+            {{ end }}
+        </ul>
+
+        <ul>
+            {{ if .Site.IsMultiLingual }}
+                {{ range $.Translations }}
+                    <li >
+                        <span>
+                            {{ partial "heroicons/outline/translate.svg" }}
+                        </span>
+                        <a class="in-mobile-nav" title="{{ .Language.LanguageName }}" href="{{ .Permalink }}">
+                            {{ .Language.LanguageName }}
+                        </a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+
+        <ul class="minor">
+            {{ range .Site.Menus.minor }}
+                {{ partial "nav/sidebar-link-icon.html" (dict "currentPage" $currentPage "menuEntry" . "menu" "minor") }}
+            {{ end }}
+        </ul>
     </div>
 </nav>
