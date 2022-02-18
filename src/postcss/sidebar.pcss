@@ -17,7 +17,7 @@
     @apply h-16 w-16 overflow-hidden;
     left: 50vw;
     transform: translateX(-50%);
-    & a {
+    & > div {
         @apply absolute block;
         top: 50%;
         left: 50%;
@@ -31,11 +31,22 @@ nav.main-page-nav {
         /* @apply flex flex-col place-items-center;
         @apply h-full; */
         @apply bg-white/80 rounded-md;
-        @apply px-4;
+        @apply px-2 py-2;
         @apply place-self-center;
         & ul {
             @apply text-left;
             @apply px-4;
+            font-size: 6vw;
+            @apply sm:text-2xl;
+            @apply border-gray-400;
+            &.minor {
+                font-size: 4vw;
+                @apply sm:text-lg;
+                @apply flex flex-row flex-wrap;
+                & li {
+                    @apply mr-2 last:mr-0;
+                }
+            }
         }
         & li {
             @apply my-2;

@@ -3,8 +3,7 @@
     :class="$store.mobileNavigationStore.open ? 'bg-red-700' : 'bg-gray-900'"
     x-data=""
 >
-    <a
-        href="#"
+    <div
         @click.prevent="$store.mobileNavigationStore.toggle()"
     >
         <template x-if="!$store.mobileNavigationStore.open">
@@ -13,12 +12,12 @@
         <template x-if="$store.mobileNavigationStore.open">
             {{ partial "heroicons/outline/x.svg" }}
         </template>
-    </a>
+    </div>
 </div>
 
 <div
     id="mobile-nav-overlay"
-    class="bg-white/80"
+    class="bg-gray-700/60"
     x-data=""
     x-show="$store.mobileNavigationStore.open"
     x-transition:enter="transition ease-out duration-150"
