@@ -7,13 +7,23 @@
 {{ end }}
 
 <li class='{{ $i.Get "class"}}'>
-    <span>
+    <span
+        class="in-mobile-nav-icon"
+        data-for="{{ .menuEntry.Title | urlize }}"
+    >
         {{ partial "heroicons/outline/hashtag.svg" }}
     </span>
-    <a class="in-mobile-nav" href="{{ .menuEntry.URL }}" title="{{ .menuEntry.Title }}">
+    <a
+        class="in-mobile-nav"
+        href="{{ .menuEntry.URL }}"
+        title="{{ .menuEntry.Title }}"
+        data-nav-id="{{ .menuEntry.Title | urlize }}"
+    >
         {{ .menuEntry.Name }}
     </a>
-    <span>
-        {{ partial "heroicons/outline/chevron-right.svg" }}
-    </span>
+    {{ if eq .currentPage.IsHome false }}
+        <span>
+            {{ partial "heroicons/outline/chevron-right.svg" }}
+        </span>
+    {{ end }}
 </li>

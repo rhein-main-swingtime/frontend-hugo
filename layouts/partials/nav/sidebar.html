@@ -1,43 +1,7 @@
 <nav id="sidebar" >
-    <div id="sidebar-content">
-        <ul data-mobile-nav="true">
-            <li>
-                <span>
-                    {{ partial "heroicons/outline/home.svg" }}
-                </span>
-                <a
-                    class="in-mobile-nav"
-                    href="{{ .Site.BaseURL | relLangURL }}"
-                >
-                    {{ T "link-home" }}
-                </a>
-            </li>
-
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
-                {{ partial "nav/sidebar-link-icon.html" (dict "currentPage" $currentPage "menuEntry" . "menu" "main") }}
-            {{ end }}
-        </ul>
-
-        <ul>
-            {{ if .Site.IsMultiLingual }}
-                {{ range $.Translations }}
-                    <li >
-                        <span>
-                            {{ partial "heroicons/outline/translate.svg" }}
-                        </span>
-                        <a class="in-mobile-nav" title="{{ .Language.LanguageName }}" href="{{ .Permalink }}">
-                            {{ .Language.LanguageName }}
-                        </a>
-                    </li>
-                {{ end }}
-            {{ end }}
-        </ul>
-
-        <ul class="minor">
-            {{ range .Site.Menus.minor }}
-                {{ partial "nav/sidebar-link-icon.html" (dict "currentPage" $currentPage "menuEntry" . "menu" "minor") }}
-            {{ end }}
-        </ul>
+    <div id="sidebar-content" >
+        <nav class="main-page-nav">
+            {{ partial "nav/main-navigation-content.html" . }}
+        </nav>
     </div>
 </nav>
