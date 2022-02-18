@@ -3,8 +3,8 @@
 <html>
     {{- partial "header.html" . -}}
     <body
-        x-data=""
-        :class="$store.mobileNavigationStore.open ? 'overflow-hidden' : ''"
+    :class="$store.mobileNavigationStore.open ? 'overflow-hidden' : ''"
+    x-data=""
     >
         {{ if not (eq .Kind "home") }}
             {{- partial "page/page-header.html" . -}}
