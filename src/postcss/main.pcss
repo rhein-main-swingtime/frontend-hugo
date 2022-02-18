@@ -100,15 +100,28 @@ a.is-internal-link {
     }
 }
 
+#mast-head-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    & h1::after {
+        content: ": ";
+        @apply -ml-1;
+    }
+}
+
 #page-mast-head {
     @apply sticky w-screen top-0;
     @apply z-100;
     @apply shadow-md;
-    & .rmst-bg {
+    & .invert {
         filter: invert(1);
+    }
+    & .rmst-bg {
+        /* filter: invert(1); */
         background-repeat: no-repeat;
         background-position: right top;
-        opacity: .1
+        opacity: .2
     }
     /* background-image: url(img/rmst-logo.svg); */
 }
