@@ -1,6 +1,7 @@
 const translations = siteTranslations || window.siteTranslations || {}
 
 function getLang (): string {
+    return window.siteLang;
     const long: string = navigator.language || navigator.userLanguage
     const short = long.substring(0, 2)
     return Object.keys(translations).includes(long) ? long : short
