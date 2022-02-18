@@ -3,8 +3,7 @@
     :class="$store.mobileNavigationStore.open ? 'bg-red-700' : 'bg-gray-900'"
     x-data=""
 >
-    <a
-        href="#"
+    <div
         @click.prevent="$store.mobileNavigationStore.toggle()"
     >
         <template x-if="!$store.mobileNavigationStore.open">
@@ -13,7 +12,7 @@
         <template x-if="$store.mobileNavigationStore.open">
             {{ partial "heroicons/outline/x.svg" }}
         </template>
-    </a>
+    </div>
 </div>
 
 <div
