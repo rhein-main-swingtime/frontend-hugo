@@ -14,6 +14,20 @@
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
     {{ end }}
     <!-- <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script> -->
+
+    {{ $typescript := resources.Get "scripts/main.ts" | babel | js.Build }}
+    {{ $alpine := resources.Get "scripts/alpine.js" | babel | js.Build  }}
+    {{ $bundle := slice $typescript $alpine | resources.Concat "scripts/bundle.js" }}
+    {{ $minified := $bundle }}
+
+    {{ if .Site.IsServer }}
+        {{ $minified :=  $bundle | resources.Minify }}
+    {{ end }}
+
+    {{ $secureJS := $minified | resources.Fingerprint "sha512" }}
+
+    <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" defer></script>
+
     {{ partial "data/translations.html" . }}
     {{ partial "data/settings.html" . }}
 </head>
