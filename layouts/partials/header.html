@@ -13,7 +13,7 @@
         {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
     {{ end }}
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
     {{ partial "data/translations.html" . }}
     {{ partial "data/settings.html" . }}
 </head>
