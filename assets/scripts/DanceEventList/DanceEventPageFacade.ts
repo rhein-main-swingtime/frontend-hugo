@@ -4,14 +4,23 @@ import { Filters } from './Filters'
 import { FavoritesStore } from '../Store/FavoritesStore'
 import danceEvent from '../DTO/DanceEvent'
 import { Stores } from '../Settings/Stores'
+import { Collection } from './Collection'
 
 function updateSearchQuery (search: string): void {
-    const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname + search
+    const values = search.split('::')
+    search = (values.pop() || '').replace('?', '')
+    const page = values[0] || pageList
+    const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname +
+        '?' + [page, search].join('::&')
     window.history.pushState({ path: newurl }, '', newurl)
 }
 
+const pageFavorites = 'favorites'
+const pageList = 'events'
+
 export default function create () {
-    const list = new EventList()
+    const collection = new Collection()
+    const list = new EventList(collection)
     const filters = new Filters()
     const favStore: FavoritesStore = Alpine.store(Stores.FavoriteStore)
 
@@ -32,7 +41,6 @@ export default function create () {
                 : s
         },
         handleFav (danceEvent: danceEvent) {
-
             favStore.toggle(danceEvent)
             if (this.filters.onlyFavorites && !favStore.danceEventIdsInCollection.includes(danceEvent.id.toString())) {
                 this.list.removeEvent(danceEvent.id)

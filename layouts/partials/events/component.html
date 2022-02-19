@@ -14,15 +14,17 @@
     {{ partial "events/filter-bar.html" . }}
     </div>
 
-    <template x-if="filters.onlyFavorites">
-        <div class="col-span-8 sm:order-1">
-            {{ partial "events/favorites-list.html" . }}
-        </div>
-    </template>
+    <div class="col-span-8 sm:order-1">
+        <template x-if="filters.onlyFavorites">
+            <div name="favorites">
+                {{ partial "events/favorites-list.html" . }}
+            </div>
+        </template>
 
-    <template x-if="!filters.onlyFavorites">
-        <div class="col-span-8 sm:order-1">
-            {{ partial "events/full-list.html" . }}
-        </div>
-    </template>
+        <template x-if="!filters.onlyFavorites">
+            <div name="full-list">
+                {{ partial "events/full-list.html" . }}
+            </div>
+        </template>
+    </div>
 </div>

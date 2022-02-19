@@ -2,7 +2,7 @@ import { createDanceEventFromJson } from '../DTO/DanceEvent'
 import { fetchEventsBySearch } from './FetchEventList'
 
 function getSharedEventIdsFromUrl () {
-    return window.location.search.replace('?', '').split('|')
+    return window.location.search.replace('?', '').split(':')
         .map(i => parseInt(i))
         .filter(i => i > 0)
 }

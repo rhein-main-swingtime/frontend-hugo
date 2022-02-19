@@ -22,9 +22,6 @@ export class Filters {
     public fromDate: string | false = false
     public toDate: string | false = false
 
-    public constructor () {
-    }
-
     private getCheckedByUrl (category: string, name: string): boolean {
         return window.location.search.includes(encodeURIComponent(category) + '[]=' + encodeURIComponent(name))
     }
