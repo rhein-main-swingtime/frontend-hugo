@@ -106,7 +106,7 @@ export class EventList {
         params.push('limit=' + this.fetchInterval)
         this.preloadersVisible = this.fetchInterval
 
-        const apiResponse = await FetchEventList(params)
+        const apiResponse = await FetchEventList(params) || []
         apiResponse.danceEvents.forEach(
             (e) => {
                 this.collection.addEvent(createDanceEventFromJson(e))
