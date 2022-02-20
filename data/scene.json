@@ -18,14 +18,14 @@
             "name": "Swing Out d'or Wiesbaden",
             "public": true,
             "face_group": "222069277804935",
-            "desc": {},
+
             "area": "Wiesbaden",
             "category": "facebook-group"
         },
         {
             "name": "Swing In Mainz",
             "face_group": "317930771663002",
-            "desc": {},
+
             "public": true,
             "area": "Mainz",
             "category": "facebook-group"
@@ -35,7 +35,7 @@
             "face_group": "202862923090162",
             "area": "Darmstadt",
             "public": true,
-            "desc": {},
+
             "category": "facebook-group"
         },
         {
@@ -64,7 +64,7 @@
             "name": "Swing Is Just Around The Corner",
             "area": "Frankfurt",
             "face_group": "680509751994581",
-            "desc": {},
+
             "public": true,
             "category": "facebook-group"
         },
@@ -72,7 +72,7 @@
             "name": "Frankfurt Blues Dancing",
             "area": "Frankfurt",
             "face_group": "395357990544635",
-            "desc": {},
+
             "public": true,
             "category": "facebook-group"
         },
@@ -80,7 +80,7 @@
             "name": "Hop The Main",
             "area": "Frankfurt",
             "face_group": "48505773375",
-            "desc": {},
+
             "public": true,
             "category": "facebook-group"
         },
@@ -88,14 +88,14 @@
             "name": "Balboa in Frankfurt",
             "area": "Frankfurt",
             "face_group": "392286414141165",
-            "desc": {},
+
             "public": false,
             "category": "facebook-group"
         },
         {
             "name": "Shag-Time Rhein-Main",
             "face_group": "862588183758717",
-            "desc": {},
+
             "public": false,
             "area": "Rhein-Main",
             "category": "facebook-group"

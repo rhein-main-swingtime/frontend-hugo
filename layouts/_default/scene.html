@@ -35,8 +35,17 @@
                     </a>
                 </article>
             </template>
+            {{
+                $lang := .Lang
+            }}
             {{ range sort $.Site.Data.scene.items "name" "asc" }}
-                {{ partial "scene/item" . }}
+                {{ partial
+                    "scene/item"
+                    (dict
+                        "context" .
+                        "lang" $lang
+                    )
+                }}
             {{ end }}
         </div>
 

@@ -1,34 +1,33 @@
 <article
     class="lg:min-h-[15rem] is-card"
     x-transition
-    x-init="bar.registerElement({{ . | jsonify }})"
-    x-show="bar.isVisible({{ . | jsonify }})"
+    x-init="bar.registerElement({{ .context | jsonify }})"
+    x-show="bar.isVisible({{ .context | jsonify }})"
 >
+
+    <!-- <pre>
+        {{ . | jsonify }}
+    </pre> -->
+
     <div class="flex flex-col">
         <h4 class="text-4xl text-center font-thin my-4">
-            {{ .name }}
+            {{ .context.name }}
         </h4>
         <div class="mb-8 text-center">
             <span class="font-light text-sm bg-gray-500 text-white py-1 px-2 rounded">
-                {{ i18n (printf "scene-%s" .category) }}
+                {{ i18n (printf "scene-%s" .context.category) }}
             </span>
         </div>
 
         <div class="class mt-auto grid text-sm contact">
-            <p>TODO: description with lang: {{ .Site.Lang }}</p>
-
-
-            {{ if isset . "desc"}}
-            {{.desc.de}}
-            {{ else }}
-            WTF?!
-            {{ .Site.Data.scene.defaults.desc.de }}
+            {{ if isset .context "desc"}}
+                {{ index .context.desc .lang }}
             {{ end }}
 
-            {{ if isset . "face_group"}}
-            <a href='https://facebook.com/groups/{{ printf .face_group }}'
+            {{ if isset .context "face_group"}}
+            <a href='https://facebook.com/groups/{{ printf .context.face_group }}'
                 target="_blank">
-                facebook.com/{{printf .face_group}}
+                facebook.com/{{printf .context.face_group}}
             </a>
             {{ end }}
         </div>
