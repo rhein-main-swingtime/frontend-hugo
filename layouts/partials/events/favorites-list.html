@@ -1,4 +1,4 @@
-<div class="col-span-8 relative min-h-screen space-y-4">
+<div class="col-span-8 relative space-y-4">
     <template
         x-for="id in $store.favoriteStore.danceEventIdsInCollection"
         :key="'fav' + id"
@@ -16,4 +16,12 @@
             </template>
         </div>
     </template>
+
+    <!-- fallback -->
+    <div
+        class="is-card"
+        x-show="$store.favoriteStore.danceEventIdsInCollection.length === 0"
+    >
+        {{ T "event-page-no-favorites" }}
+    </div>
 </div>
