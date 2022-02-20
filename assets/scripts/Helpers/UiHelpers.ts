@@ -1,4 +1,4 @@
-export function elementOffset (el: HTMLElement) {
+export function elementOffset (el: HTMLElement | Element) {
     const rect = el.getBoundingClientRect()
     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop

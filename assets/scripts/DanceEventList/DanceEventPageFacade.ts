@@ -66,7 +66,6 @@ export default function create () {
         isDanceEvent: function (e: Object) {
             return e instanceof DanceEvent
         },
-
         fetchSharedEvent: FetchSharedEvents
     }
 }

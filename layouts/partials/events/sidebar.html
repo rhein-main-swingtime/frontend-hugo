@@ -1,5 +1,8 @@
 <div
     class="is-card is-sticky-on-side space-y-2"
+    x-data="{}"
+    x-intersect:enter="$store.mobileNavigationStore.unregisterBackToTop()"
+    x-intersect:leave="$store.mobileNavigationStore.registerBackToTop(filters.getScrollToTopHandler())"
 >
     <div class="flex w-full border-b-2 border-gray-200 py-2 text-lg">
         <label
@@ -46,6 +49,4 @@
     >
         {{ partial "events/favorites-bar" }}
     </div>
-
-
 </div>
