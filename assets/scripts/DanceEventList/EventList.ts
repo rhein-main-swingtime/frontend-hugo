@@ -30,7 +30,7 @@ function getEventsByDate (this: EventList, date: string): DanceEvent[] {
     return this.eventsInDates[date] || []
 }
 export class EventList {
-    public readonly fetchInterval = 6
+    public readonly fetchLimit = 25
     public preloadersVisible: number = 0
     public state: 'nothing-found' | 'more-available' | 'end-reached' | 'updating' = 'updating'
     public eventsInDates: {[key: string]: DanceEvent[]} = {}
@@ -103,8 +103,8 @@ export class EventList {
     }
 
     private async handleLoading (params: string[] = []) {
-        params.push('limit=' + this.fetchInterval)
-        this.preloadersVisible = this.fetchInterval
+        params.push('limit=' + this.fetchLimit)
+        this.preloadersVisible = this.fetchLimit
 
         const apiResponse = await FetchEventList(params) || []
         apiResponse.danceEvents.forEach(
@@ -113,7 +113,7 @@ export class EventList {
                 this.preloadersVisible = this.preloadersVisible - 1
             })
 
-        if (this.preloadersVisible === this.fetchInterval) {
+        if (this.preloadersVisible === this.fetchLimit) {
             this.state = 'nothing-found'
         } else if (this.preloadersVisible > 0) {
             this.state = 'end-reached'
@@ -132,7 +132,7 @@ export class EventList {
         if (this.collection.count > 0) {
             this.collection.reset()
         }
-        this.preloadersVisible = this.fetchInterval
+        this.preloadersVisible = this.fetchLimit
         this.handleLoading()
         this.initialized = true
     }
