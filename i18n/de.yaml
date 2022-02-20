@@ -1,5 +1,9 @@
 close:
   other: Schließen
+main-menu-open:
+  other: Menu
+main-menu-close:
+  other: Schließen
 event-category-class:
   other: Kurs
 event-category-socials:
