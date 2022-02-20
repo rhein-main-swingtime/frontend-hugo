@@ -80,5 +80,17 @@ share-link-whatsapp-cta:
   other: Whatsapp
 share-qr:
   other: Scannen
+share-link-copied:
+  other: Kopiert
+event-share-links-headline:
+  other: Versenden
+event-share-copy-headline:
+  other: Link kopieren
+event-filters-reset:
+  other: Filter zurücksetzen
+close:
+  other: Schließen
+scene-facebook-group:
+  other: Facebook Gruppe
 teasers-also-relevant:
   other: 'Das könnte dich auch interessieren:'

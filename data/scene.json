@@ -1,0 +1,104 @@
+{
+    "defaults": {
+        "desc": {
+            "de": "rund ums Swing-Tanzen in ",
+            "en": "all about Swing-Dancing in "
+        },
+        "url": "https://facebook.com/groups/{face_group}"
+    },
+    "items": [
+        {
+            "name": "Swing In Frankfurt Am Main",
+            "public": false,
+            "face_group": "1442899695957970",
+            "area": "Frankfurt",
+            "category": "facebook-group"
+        },
+        {
+            "name": "Swing Out d'or Wiesbaden",
+            "public": true,
+            "face_group": "222069277804935",
+
+            "area": "Wiesbaden",
+            "category": "facebook-group"
+        },
+        {
+            "name": "Swing In Mainz",
+            "face_group": "317930771663002",
+
+            "public": true,
+            "area": "Mainz",
+            "category": "facebook-group"
+        },
+        {
+            "name": "Darmstadt Swing & Friends",
+            "face_group": "202862923090162",
+            "area": "Darmstadt",
+            "public": true,
+
+            "category": "facebook-group"
+        },
+        {
+            "name": "Rhein-Main goes Workshop",
+            "desc": {
+                "en": "for organizing trips to international workshops cooperatively",
+                "de": "zum koordinieren von Fahrten zu internationalen Workshops"
+            },
+            "face_group": "Rheinmaingoesworkshop",
+            "public": false,
+            "area": "Rhein-Main",
+            "category": "facebook-group"
+        },
+        {
+            "name": "Swing Attacke",
+            "desc": {
+                "de": "Spontanes Swing-Tanzen umsonst und draußen",
+                "en": "Random, out-door, free social swing dancing"
+            },
+            "face_group": "490692287651143",
+            "area": "Frankfurt",
+            "public": false,
+            "category": "facebook-group"
+        },
+        {
+            "name": "Swing Is Just Around The Corner",
+            "area": "Frankfurt",
+            "face_group": "680509751994581",
+
+            "public": true,
+            "category": "facebook-group"
+        },
+        {
+            "name": "Frankfurt Blues Dancing",
+            "area": "Frankfurt",
+            "face_group": "395357990544635",
+
+            "public": true,
+            "category": "facebook-group"
+        },
+        {
+            "name": "Hop The Main",
+            "area": "Frankfurt",
+            "face_group": "48505773375",
+
+            "public": true,
+            "category": "facebook-group"
+        },
+        {
+            "name": "Balboa in Frankfurt",
+            "area": "Frankfurt",
+            "face_group": "392286414141165",
+
+            "public": false,
+            "category": "facebook-group"
+        },
+        {
+            "name": "Shag-Time Rhein-Main",
+            "face_group": "862588183758717",
+
+            "public": false,
+            "area": "Rhein-Main",
+            "category": "facebook-group"
+        }
+    ]
+}

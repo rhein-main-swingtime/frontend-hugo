@@ -1,0 +1,55 @@
+{{ define "main" }}
+    {{- partial "page/main-content" . -}}
+
+    <div
+        id="generic-filter-test"
+        class="filterable"
+        x-data="{
+            bar: RMST_TS.filterBar({
+                filterable: [
+                    'area', 'category'
+                ],
+                identifier: 'name',
+                title: 'Filter',
+                trash: 'Zurücksetzen',
+                showCategories: false,
+                translationPrefix: '{{ .Page.Layout }}' + '-'
+            })
+        }"
+    >
+
+        {{ partial "filterbar/bar" . }}
+
+        <div class="item-container">
+            <template x-if="bar.noItemsAvailable">
+                <article class="is-card py-5 lg:col-span-2 text-center">
+                    <div class="mb-4">
+                        <h2 class="text-xl font-bold">
+                            {{ T "learn-page-sorry-hl" }}
+                        </h2>
+                        {{ T "learn-page-sorry-copy" }}
+                    </div>
+                    <a href="#" class="is-button has-icon text-sm highlighted" @click="list.resetSelections()">
+                        <span>
+                            {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+                        </span>
+                        {{ T "event-filters-reset" }}
+                    </a>
+                </article>
+            </template>
+            {{
+                $lang := .Lang
+            }}
+            {{ range sort $.Site.Data.scene.items "name" "asc" }}
+                {{ partial
+                    "scene/item"
+                    (dict
+                        "context" .
+                        "lang" $lang
+                    )
+                }}
+            {{ end }}
+        </div>
+
+    </div>
+{{ end }}
