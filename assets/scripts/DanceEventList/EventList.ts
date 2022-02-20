@@ -34,7 +34,6 @@ export class EventList {
     public preloadersVisible: number = 0
     public state: 'nothing-found' | 'more-available' | 'end-reached' | 'updating' = 'updating'
     public eventsInDates: {[key: string]: DanceEvent[]} = {}
-
     public additional: string | null = null
     public initialized = false
 
@@ -44,23 +43,22 @@ export class EventList {
         this.collection = collection
     }
 
-    public reset () {
-        this.eventsInDates = {}
-        this.init()
-    }
-
     public generateQrCode (danceEvent: DanceEvent) {
         return DanceEventQr(danceEvent)
     }
 
     public getEventCount (this: EventList): number {
         let count = 0
-        Object.values(this.eventsInDates).forEach((e) => { count += e.length })
+        Object.values(this.collection.eventsInDates).forEach((e) => { count += e.length })
         return count
     }
 
     get isLoading (): boolean {
         return this.preloadersVisible > 0
+    }
+
+    getFromCollection (id: number) {
+        return this.collection.findEvent(id) || false
     }
 
     public handleHashNavivation (id: number | string, element: HTMLElement): null | 'more' {
@@ -126,7 +124,14 @@ export class EventList {
         this.preloadersVisible = 0
     }
 
+    public reset () {
+        this.init()
+    }
+
     public async init () {
+        if (this.collection.count > 0) {
+            this.collection.reset()
+        }
         this.preloadersVisible = this.fetchInterval
         this.handleLoading()
         this.initialized = true

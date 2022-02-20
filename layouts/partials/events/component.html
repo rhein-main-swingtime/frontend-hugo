@@ -15,13 +15,13 @@
     </div>
 
     <div class="col-span-8 sm:order-1">
-        <template x-if="filters.onlyFavorites">
+        <template x-if="visiblePage === 'favorites'">
             <div name="favorites">
                 {{ partial "events/favorites-list.html" . }}
             </div>
         </template>
 
-        <template x-if="!filters.onlyFavorites">
+        <template x-if="visiblePage !== 'favorites'">
             <div name="full-list">
                 {{ partial "events/full-list.html" . }}
             </div>

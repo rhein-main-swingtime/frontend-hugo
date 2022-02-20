@@ -5,14 +5,11 @@ import { FavoritesStore } from '../Store/FavoritesStore'
 import danceEvent from '../DTO/DanceEvent'
 import { Stores } from '../Settings/Stores'
 import { Collection } from './Collection'
+import { fetchEventsById } from '../Helpers/FetchEventList'
+import DanceEvent from '../DTO/DanceEvent'
 
-function updateSearchQuery (search: string): void {
-    const values = search.split('::')
-    search = (values.pop() || '').replace('?', '')
-    const page = values[0] || pageList
-    const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname +
-        '?' + [page, search].join('::&')
-    window.history.pushState({ path: newurl }, '', newurl)
+function isFavPageVisible () {
+    return window.location.href.includes(pageFavorites + '::')
 }
 
 const pageFavorites = 'favorites'
@@ -28,24 +25,47 @@ export default function create () {
         list,
         filters,
         favoritesAvailable: favStore.hasFavorites,
+        visiblePage: (isFavPageVisible() ? pageFavorites : pageList),
+
+        switchVisiblePage: function () {
+            this.visiblePage = isFavPageVisible() ? pageList : pageFavorites
+            this.updateSearchQuery(this.filters.searchQuery || '')
+        },
+
+        updateSearchQuery: function (search: string): void {
+            const values = search.split('::')
+            search = (values.pop() || '').replace('?', '')
+            const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname +
+                '?' + [this.visiblePage, search].join('::&')
+            window.history.pushState({ path: newurl }, '', newurl)
+        },
+
         handleFilterChange: async function (value: string, oldValue: string) {
             if (value === oldValue) {
                 return
             }
-            updateSearchQuery(value)
+            this.updateSearchQuery(value)
             this.list.reset()
         },
+
         handleOpenEventSection (current: string | null, s: string): string | null {
             return current === s
                 ? null
                 : s
         },
-        handleFav (danceEvent: danceEvent) {
-            favStore.toggle(danceEvent)
-            if (this.filters.onlyFavorites && !favStore.danceEventIdsInCollection.includes(danceEvent.id.toString())) {
-                this.list.removeEvent(danceEvent.id)
+
+        getEventFromCollection: function (id: number) {
+            const danceEvent = this.list.getFromCollection(id)
+            if (danceEvent) {
+                return danceEvent
             }
+            return fetchEventsById({ id: [id] })
         },
+
+        isDanceEvent: function (e: Object) {
+            return e instanceof DanceEvent
+        },
+
         fetchSharedEvent: FetchSharedEvents
     }
 }
