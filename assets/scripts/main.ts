@@ -5,7 +5,7 @@ import { createPickster } from './DanceEventList/Dates'
 import fetchEventTeasers from './DanceEventList/Preview'
 import { setTouchBodyClass } from './Helpers/TouchDeviceDetection'
 import List from './Learn/List'
-import { createMobileNavigation } from './Navigation/Mobile'
+import MobileNavigationStore, { createMobileNavigation } from './Navigation/Mobile'
 import danceEventPageFacade from './DanceEventList/DanceEventPageFacade'
 import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 })
 
 document.addEventListener('alpine:init', () => {
-    Alpine.store('mobileNavigationStore', createMobileNavigation()) // eslint-disable-line
-    Alpine.store(Stores.FavoriteStore, new FavoritesStore())                       // eslint-disable-line
+    Alpine.store(Stores.MobileNavigationStore, new MobileNavigationStore) // eslint-disable-line
+    Alpine.store(Stores.FavoriteStore, new FavoritesStore())        // eslint-disable-line
 })

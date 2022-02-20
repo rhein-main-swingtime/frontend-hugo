@@ -1,7 +1,25 @@
 
 <div class="col-span-8 relative">
-    {{ partial "events/list-loading-overlay.html" . }}
-    <template x-if="list.dates.length === 0 && filters.onlyFavorites === false && list.showLoader === false">
+    <template x-for="(danceEvents, date) in list.collection.eventsInDates">
+        {{ partial "events/in-date.html" . }}
+    </template>
+
+    <template x-for="prl in list.preloadersVisible">
+        {{ partial "events/dance-event-preloader.html" }}
+    </template>
+
+    <template x-if="list.hasMoreAvailable">
+        <div
+            x-intersect:enter="list.loadMore()"
+            class="flex items-center justify-center space-x-2 is-tripple-dots py-8"
+        >
+            <div class="w-4 h-4 bg-red-400 rounded-full animate-bounce"></div>
+            <div class="w-4 h-4 bg-red-400 rounded-full animate-bounce"></div>
+            <div class="w-4 h-4 bg-red-400 rounded-full animate-bounce"></div>
+        </div>
+    </template>
+
+    <template x-if="list.isSorry">
         <div class="is-card">
             <h3>
                 Sorry!
@@ -12,26 +30,15 @@
         </div>
     </template>
 
-    <template x-for="date in list.dates">
-        {{ partial "events/in-date.html" . }}
-    </template>
-    <template x-if="list.initialized">
-        <template x-if="list.showLoader">
-            <div
-                x-intersect:enter="list.loadMore()"
-                class=""
-            >
-                <div class="flex items-center justify-center space-x-2 animate-bounce">
-                    <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                    <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                    <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                </div>
-            </div>
-        </template>
-        <template x-if="!list.showLoader">
-            <div>
-                Mehr hamma nich!
-            </div>
-        </template>
+    <template x-if="list.hasReachedEnd">
+        <div class="is-card">
+            <h3>
+                Keine weiteren Events gefunden
+            </h3>
+            <span>
+                Das ist alles.
+                <pre>¯\_(ツ)_/¯</pre>
+            </span>
+        </div>
     </template>
 </div>

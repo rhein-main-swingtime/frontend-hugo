@@ -1,5 +1,5 @@
 <div
-    :data-dance-event-id="event.id"
+    :data-dance-event-id="danceEvent.id"
     data-role="dance-event"
     class="h-full flex flex-col text-sm is-card"
     x-data="{notepad: RMST_TS.notepad, openSection: null}"
@@ -7,7 +7,7 @@
     <div class="mb-4">
         <h1
             class="text-xl font-bold mb-2"
-            x-text="event.summary"
+            x-text="danceEvent.summary"
         ></h1>
         <div>
             {{ partial "events/dance-event/category.html" . }}

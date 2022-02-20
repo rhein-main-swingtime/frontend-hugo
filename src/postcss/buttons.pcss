@@ -43,4 +43,93 @@
     &.is-white {
         @apply bg-gray-50 text-gray-900 border-gray-300 border;
     }
+    &.is-flex {
+        @apply flex;
+    }
+}
+
+.is-filterbar-item {
+    @apply border border-transparent rounded-md;
+    @apply relative inline-block pl-8 pt-0.5 pb-1 pr-1 ;
+    @apply text-blue-900;
+    & svg {
+        @apply absolute left-1 top-1 w-auto;
+        height: 1.5em;
+    }
+    &:hover {
+        @apply text-blue-600 border-blue-100;
+    }
+    &:active {
+        @apply text-blue-600;
+    }
+    &.is-selected {
+        @apply bg-blue-900 text-white border-blue-500;
+        &:active {
+            @apply bg-blue-600 text-white;
+        }
+        &:hover {
+            @apply bg-red-900 border-red-500 text-white;
+        }
+    }
+    &.is-check {
+        & .check {
+            @apply inline-block;
+        }
+        & .x {
+            @apply hidden;
+        }
+        &.is-selected {
+            &:hover {
+                & .check {
+                    @apply hidden;
+                }
+                & .x {
+                    @apply inline-block;
+                }
+            }
+        }
+    }
+    &.is-dropdown {
+        & svg {
+            @apply hidden;
+        }
+        & .right {
+            @apply inline-block
+        }
+        &.is-selected {
+            @apply border-transparent bg-transparent text-blue-900;
+            & .right {
+                @apply hidden
+            }
+            & .down {
+                @apply inline-block;
+            }
+            &:hover, &:active {
+                & .down {
+                    @apply hidden;
+                }
+            }
+        }
+    }
+    &.has-date {
+        @apply pl-1;
+        @apply inline-block;
+        /* @apply flex flex-row w-auto; */
+        & label {
+            @apply w-8 inline-block;
+        }
+        & input[type=date] {
+            @apply border border-gray-300 py-0.5 uppercase;
+            @apply inline-block;
+            font-size: 1em;
+        }
+        &.active {
+            @apply bg-blue-900 text-white;
+            & input[type=date] {
+                @apply border-blue-800;
+                @apply text-blue-900;
+                @apply font-bold;
+            }
+        }
+    }
 }

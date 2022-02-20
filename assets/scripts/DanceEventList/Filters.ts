@@ -1,6 +1,7 @@
 import { FavoritesStore } from '../Store/FavoritesStore'
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import { FilterApiPayload } from './../Types/EventServerApiTypes'
+import { elementOffset } from '../Helpers/UiHelpers'
 interface FilterItemInterface {
     name: string
     available: number
@@ -22,7 +23,22 @@ export class Filters {
     public fromDate: string | false = false
     public toDate: string | false = false
 
-    public constructor () {
+    public getScrollToTopHandler () {
+        return () => {
+            const target = document.querySelectorAll('[data-role=event-list-filter-bar]')[0]
+            if (!target) {
+                return
+            }
+            const offset = elementOffset(target)
+            const header = document.getElementById('page-mast-head')
+            if (header) {
+                offset.top = offset.top - header.offsetHeight
+            }
+            window.scrollTo({
+                top: offset.top,
+                behavior: 'smooth'
+            })
+        }
     }
 
     private getCheckedByUrl (category: string, name: string): boolean {

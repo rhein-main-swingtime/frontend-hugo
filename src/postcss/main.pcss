@@ -17,6 +17,8 @@ body {
     @apply text-xl;
 }
 
+[x-cloak] { display: none !important; }
+
 section.is-padded {
     @apply px-4;
 }
@@ -28,7 +30,8 @@ section.is-padded {
 }
 
 .is-tripple-dots {
-    & > .is-dot {
+    & > div {
+        animation-duration: 300ms;
         &:nth-child(2) {
             animation-delay: 100ms;
         }
@@ -56,7 +59,7 @@ a {
     }
     & #page-content {
         @apply bg-gray-50;
-        @apply pb-0;
+        /* @apply pb-0; */
     }
 }
 
@@ -112,7 +115,7 @@ a.is-internal-link {
 }
 
 #page-mast-head {
-    @apply sticky w-screen top-0;
+    @apply sticky top-0;
     @apply z-100;
     @apply shadow-md;
     & .invert {
@@ -131,15 +134,6 @@ canvas.max-w-full {
     height: auto !important;
 }
 
-input[type=date] {
-    @apply rounded-sm;
-    @apply font-sans text-xs;
-    @apply border-gray-200;
-    @apply py-0.5;
-    &.is-faded {
-        @apply text-gray-400;
-    }
-}
 .filterable {
     & .item-container {
         @apply mx-auto max-w-screen-lg;

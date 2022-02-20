@@ -1,25 +1,27 @@
-<div class="col-span-8 relative min-h-screen">
-    {{ partial "events/list-loading-overlay.html" . }}
+<div class="col-span-8 relative space-y-4 -mt-4">
+    <template
+        x-for="id in $store.favoriteStore.danceEventIdsInCollection"
+        :key="'fav' + id"
+    >
+        <div
+            x-data="{danceEvent: false}"
+            x-init="danceEvent = await getEventFromCollection(id)"
+        >
+            <template x-if="danceEvent === false">
+                {{ partial "events/dance-event-preloader.html" }}
+            </template>
 
-    <template x-if="list.dates.length === 0">
-        <div class="is-card">
-            <h3>
-                Sorry!
-            </h3>
-            <span>
-                Du hast noch keine Veranstalungen vorgemerkt.
-            </span>
+            <template x-if="danceEvent !== false">
+                {{ partial "events/dance-event.html" . }}
+            </template>
         </div>
     </template>
 
-    <template x-if="list.dates.length > 0">
-        <div class="pb-4">
-            <h2 class="text-xl font-bold">
-                {{ T "event-list-favorites" }}
-            </h2>
-        </div>
-    </template>
-    <template x-for="date in list.dates">
-        {{ partial "events/in-date.html" . }}
-    </template>
+    <!-- fallback -->
+    <div
+        class="is-card"
+        x-show="$store.favoriteStore.danceEventIdsInCollection.length === 0"
+    >
+        {{ T "event-page-no-favorites" }}
+    </div>
 </div>

@@ -8,7 +8,7 @@
             {{ T "events-shared-section-headline" }}
         </h1>
         <template x-if="sharedEvents !== null && sharedEvents.length > 0">
-            <template x-for="event in sharedEvents">
+            <template x-for="danceEvent in sharedEvents">
                 <div >
                     {{ partial "events/dance-event-full.html" . }}
                 </div>
@@ -18,7 +18,7 @@
             <h2 class="text-2xl">
                 Mehr Events
             </h2>
-            {{ partial "events/events-by-dates" . }}
+            {{ partial "events/component" . }}
         </div>
     </div>
 {{ end }}

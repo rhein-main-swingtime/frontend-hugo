@@ -1,5 +1,6 @@
-class MobileNavigation {
+export default class MobileNavigationStore {
     open: boolean = false
+    scrollToTopHandler: Function | null = null
 
     constructor () {
         this.open = false
@@ -8,8 +9,18 @@ class MobileNavigation {
     public toggle (): void {
         this.open = !this.open
     }
-}
 
-export function createMobileNavigation () {
-    return new MobileNavigation()
+    public registerBackToTop (f: Function) {
+        console.info(f, 'registering')
+        this.scrollToTopHandler = f
+    }
+
+    public unregisterBackToTop () {
+        console.info('unregistering')
+        this.scrollToTopHandler = null
+    }
+
+    get hasScrollToTop () {
+        return this.scrollToTopHandler !== null
+    }
 }
