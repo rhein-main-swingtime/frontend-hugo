@@ -1,7 +1,7 @@
 
 <div
     id="mobile-nav-overlay"
-    class="bg-gray-700/60"
+    class="bg-gray-900/70"
     x-cloak
     x-data=""
     x-show="$store.mobileNavigationStore.open"
@@ -11,6 +11,7 @@
     x-transition:leave="transition ease-in duration-150 delay-150"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
+    @click.stop="$store.mobileNavigationStore.toggle()"
 >
     <nav
         class="main-page-nav"
@@ -21,6 +22,9 @@
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100 scale-100"
         x-transition:leave-end="opacity-0 scale-80"
+        @click="(e) => {
+            $store.mobileNavigationStore.handleClickEvent(e)
+        }"
     >
         {{ partial "nav/main-navigation-content.html" . }}
     </nav>

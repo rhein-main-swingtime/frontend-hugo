@@ -10,6 +10,16 @@ export default class MobileNavigationStore {
         this.open = !this.open
     }
 
+    public handleClickEvent (e: PointerEvent) {
+        if (e.target instanceof Element) {
+            const link = e.target?.closest('li')?.querySelector('a')
+            const href = link?.getAttribute('href')
+            if (href) {
+                window.location.href = href
+            }
+        }
+    }
+
     public registerBackToTop (f: Function) {
         console.info(f, 'registering')
         this.scrollToTopHandler = f
