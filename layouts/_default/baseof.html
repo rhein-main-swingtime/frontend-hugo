@@ -25,7 +25,9 @@
             </section>
         {{ end }}
 
+        {{ partial "nav/phone" . }}
         {{ partial "nav/mobile-trigger.html" . }}
+        {{ partial "nav/to-top.html" }}
 
         {{- partial "footer.html" . -}}
     </body>
