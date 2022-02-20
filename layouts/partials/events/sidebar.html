@@ -1,0 +1,47 @@
+<div
+    class="is-card is-sticky-on-side space-y-2"
+>
+    <div class="flex w-full border-b-2 border-gray-200 py-2 text-lg font-bold">
+        <label
+            for="toggleB"
+            class="flex items-center cursor-pointer"
+            @click.prevent="switchVisiblePage()"
+        >
+            <!-- toggle -->
+            <div class="relative">
+            <!-- input -->
+            <input type="checkbox" id="toggleB" class="sr-only">
+            <!-- line -->
+            <div
+                class="block bg-gray-400 w-10 h-6 rounded-full"
+                :class="visiblePage === 'favorites' ? 'bg-blue-700' : ''"
+            ></div>
+            <!-- dot -->
+            <div
+                class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"
+                x-data=""
+                :class="visiblePage === 'favorites' ? 'translate-x-full' : ''"
+            ></div>
+            </div>
+            <!-- label -->
+            <div class="ml-3">
+                Favoriten anzeigen
+            </div>
+        </label>
+    </div>
+
+    <div
+        x-transition
+        x-show="visiblePage === 'events'">
+        {{ partial "events/filterbar" }}
+    </div>
+
+    <div
+        x-transition
+        x-show="visiblePage === 'favorites'"
+    >
+        {{ partial "events/favorites-bar" }}
+    </div>
+
+
+</div>
