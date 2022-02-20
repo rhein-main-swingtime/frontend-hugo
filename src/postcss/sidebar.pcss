@@ -128,8 +128,7 @@ nav.main-page-nav {
     }
 }
 
-#page-body {
-    & nav#sidebar {
+nav#sidebar {
         @apply hidden lg:block;
         /* @apply lg:relative; */
         @apply lg:w-1/4;
@@ -145,6 +144,9 @@ nav.main-page-nav {
             @apply text-lg;
             @apply mt-2 pt-2 first:mt-0 first:pt-0;
             @apply gap-0;
+            &.minor {
+                @apply mt-4;
+                @apply text-sm;
+            }
         }
     }
-}
