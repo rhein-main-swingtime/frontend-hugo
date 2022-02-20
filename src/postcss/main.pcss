@@ -116,18 +116,16 @@ a.is-internal-link {
 
 #page-mast-head {
     @apply sticky top-0;
-    @apply z-100;
+    @apply z-100 md:z-110;
     @apply shadow-md;
     & .invert {
         filter: invert(1);
     }
     & .rmst-bg {
-        /* filter: invert(1); */
         background-repeat: no-repeat;
         background-position: right top;
         opacity: .2
     }
-    /* background-image: url(img/rmst-logo.svg); */
 }
 
 canvas.max-w-full {
