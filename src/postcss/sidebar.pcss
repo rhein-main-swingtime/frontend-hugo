@@ -13,7 +13,7 @@
 .mobile-nav-trigger {
     @apply border py-2 px-4 border-white rounded-full;
     @apply bottom-16;
-    @apply h-16 w-16 overflow-hidden;
+    @apply overflow-hidden;
     @apply lg:hidden z-110;
     @apply fixed mx-auto shadow-md;
     left: 50vw;
@@ -27,10 +27,12 @@
     }
     &#mobile-nav-trigger {
         @apply text-gray-100 ;
+        @apply h-20 w-20;
         transform: translate(-50%, -50%);
     }
     &.is-scroll-top {
         @apply z-50;
+        @apply h-16 w-16;
         transform: translate(calc(-50% + 6rem), calc(-50% + 2rem));
         svg {
             @apply text-gray-800;
