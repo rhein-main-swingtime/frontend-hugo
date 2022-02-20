@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{- partial "page/main-content" . -}}
-    TODO: Languages "{{ .Lang }}"
+
     <div
         id="generic-filter-test"
         class="filterable"
@@ -12,6 +12,8 @@
                 identifier: 'name',
                 title: 'Filter',
                 trash: 'Zurücksetzen',
+                showCategories: false,
+                translationPrefix: '{{ .Page.Layout }}' + '-'
             })
         }"
     >
