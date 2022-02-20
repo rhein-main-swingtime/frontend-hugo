@@ -1,3 +1,10 @@
+{{ $checkItemDefault := (dict
+    "clickHandler" "item.checked = !item.checked"
+    "isCheckedIf" "item.checked"
+    "class" "text-sm"
+    "text" "item.name"
+    "textIsJs" true
+)}}
 
 <h3 class="text-lg font-bold">
     Filter
@@ -7,80 +14,62 @@
     <div class="border-t-2 border-gray-200 my-2 py-2">
         <div class="flex gap-1 flex-row flex-wrap">
             <template x-for="item in filters.itemsInCategory('city')">
-                {{ partial "events/filter-bar-item.html" . }}
+                {{
+                    partial "events/filter/check"
+                    $checkItemDefault
+                }}
             </template>
         </div>
     </div>
     <!-- Classes -->
     <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
-        <a
-            href="#"
-            @click.prevent="filters.showClasses = !filters.showClasses"
-            class="is-button has-icon text-sm relative inline-block"
-            :class="filters.showClasses ? 'active' : ''"
-        >
-            {{ T "page-dance-filters-show-class" }}
-            <template  x-if="filters.showClasses">
-                <span>
-                    {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-            <template  x-if="!filters.showClasses">
-                <span>
-                    {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-        </a>
+        {{
+            partial "events/filter/dropdown.html"
+            (dict
+                "clickHandler" "filters.showClasses = !filters.showClasses"
+                "isOpenIf" "filters.showClasses"
+                "class" "font-bold text-sm"
+                "text" (T "page-dance-filters-show-class")
+                "textIsJs" false
+            )
+        }}
     </div>
     <div x-show="filters.showClasses" class="flex gap-1 flex-row flex-wrap">
         <template x-for="item in filters.itemsInCategory('calendar')">
             <template x-if="item !== 'Social Time'">
                 <div class="flex flex-row gap-2">
-                    {{ partial "events/filter-bar-item.html" . }}
+                    {{
+                        partial "events/filter/check"
+                        $checkItemDefault
+                    }}
                 </div>
             </template>
         </template>
-        <a
-            href="#"
-            @click.prevent="filters.hideSocials = !filters.hideSocials"
-            class="is-button has-icon text-sm relative inline-block"
-            :class="filters.hideSocials ? 'active' : ''"
-        >
-            {{ T "page-dance-filters-hide-socials" }}
-            <template  x-if="filters.hideSocials">
-                <span>
-                    {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-            <template  x-if="!filters.hideSocials">
-                <span>
-                    {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-        </a>
+        {{
+            partial "events/filter/check"
+            (dict
+                "clickHandler" "filters.hideSocials = !filters.hideSocials"
+                "isCheckedIf" "filters.hideSocials"
+                "class" "text-sm"
+                "text" (T "page-dance-filters-hide-socials")
+                "textIsJs" false
+            )
+        }}
     </div>
     <!-- dates -->
     <div class="flex flex-row gap-2 border-t-2 border-gray-200 mt-1 pt-1 mb-1">
-        <a
-            href="#"
-            @click.prevent="filters.showDates = !filters.showDates"
-            class="is-button has-icon text-sm relative inline-block"
-            :class="filters.showDates ? 'active' : ''"
-        >
-            {{T "page-dance-filters-date-selection"}}
-            <template  x-if="filters.showDates">
-                <span>
-                    {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-            <template  x-if="!filters.showDates">
-                <span>
-                    {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-                </span>
-            </template>
-        </a>
+        {{
+            partial "events/filter/dropdown.html"
+            (dict
+                "clickHandler" "filters.showDates = !filters.showDates"
+                "isOpenIf" "filters.showDates"
+                "class" "font-bold text-sm"
+                "text" (T "page-dance-filters-date-selection")
+                "textIsJs" false
+            )
+        }}
     </div>
-    <div x-show="filters.showDates" class="text-sm flex flex-col gap-1">
+    <div x-show="filters.showDates" class="text-sm flex flex-col items-start gap-1">
         {{ partial
             "events/date-filter"
             (dict
@@ -107,7 +96,7 @@
     <template x-if="filters.canBeReset === true">
         <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
             <a href="#"
-                class="is-button text-sm highlighted"
+                class="is-button text-base highlighted w-full text-center mt-2"
                 @click.prevent="filters.reset()">
                 {{ T "event-filters-reset" }}
             </a>

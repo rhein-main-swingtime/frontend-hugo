@@ -1,20 +1,19 @@
 <div
-    class="relative is-button is-flex flex-row w-auto"
+    class="relative is-filterbar-item has-date"
     :class="{{ .activeWhen }} ? 'active' : ''"
 >
-<label class="w-8 inline-block" for="start">
+<label for="{{ .id }}">
     {{ .label }}
 </label>
-<div class="w-46">
-    <input
+
+<input
     type="date"
     x-model="{{ .model }}"
     id="{{ .id }} "
     name="{{ .id }}"
     :min="{{ .min }}"
     :max="{{ .max }} "
-    class="flex-grow border text-sm inline-block w-full"
+    class=""
     :class="{{ .activeWhen }} ? 'active' : ''"
 >
-</div>
 </div>

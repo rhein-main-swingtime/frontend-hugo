@@ -1,0 +1,15 @@
+<a
+    href="#"
+    @click.prevent="{{ .clickHandler }}"
+    class="text-sm is-check {{.class}} is-dropdown is-filterbar-item"
+    :class="{{ .isOpenIf }} ? 'is-selected' : ''"
+>
+    {{ if .textIsJs }}
+        <span x-text="{{ .text }}"></span>
+    {{ else }}
+        <span>{{.text}}</span>
+    {{end}}
+    {{ partial "heroicons/outline/chevron-down.svg" "down" }}
+    {{ partial "heroicons/outline/chevron-right.svg" "right" }}
+    {{ partial "heroicons/outline/x.svg" "x" }}
+</a>

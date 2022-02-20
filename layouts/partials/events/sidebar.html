@@ -1,26 +1,26 @@
 <div
     class="is-card is-sticky-on-side space-y-2"
 >
-    <div class="flex w-full border-b-2 border-gray-200 py-2 text-lg font-bold">
+    <div class="flex w-full border-b-2 border-gray-200 py-2 text-lg">
         <label
-            for="toggleB"
+            for="fav-toggle"
             class="flex items-center cursor-pointer"
             @click.prevent="switchVisiblePage()"
         >
             <!-- toggle -->
             <div class="relative">
             <!-- input -->
-            <input type="checkbox" id="toggleB" class="sr-only">
+            <input type="checkbox" id="fav-toggle" class="sr-only">
             <!-- line -->
             <div
                 class="block bg-gray-200 w-10 h-6 rounded-full"
-                :class="visiblePage === 'favorites' ? '' : ''"
+                :class="visiblePage === 'favorites' ? 'bg-blue-900' : ''"
             ></div>
             <!-- dot -->
             <div
                 class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition border border-white"
                 x-data=""
-                :class="visiblePage === 'favorites' ? 'translate-x-full bg-red-500 border-red-700' : ''"
+                :class="visiblePage === 'favorites' ? 'translate-x-full' : ''"
             ></div>
             </div>
             <!-- label -->
