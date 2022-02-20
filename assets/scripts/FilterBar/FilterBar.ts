@@ -14,7 +14,7 @@ interface GenericListConfig {
     title: string,
     trash: string | false,
     showCategories: boolean | undefined,
-    translationPrefix: string | undefined
+    i18nPrefix: string | undefined
 }
 
 class GenericFilterBar {
@@ -90,15 +90,15 @@ class GenericFilterBar {
     }
 
     public getTranslation (key: string): string {
-        if (this.config.translationPrefix === undefined) {
+        if (this.config.i18nPrefix === undefined) {
             return key
         }
 
-        if (!isTranslationDefined(this.config.translationPrefix + key)) {
-            return key.replace(this.config.translationPrefix, '')
+        const fullKey = this.config.i18nPrefix + '-' + key
+        if (!isTranslationDefined(fullKey)) {
+            return key.replace(this.config.i18nPrefix, '')
         }
-
-        return T(this.config.translationPrefix + key)
+        return T(fullKey)
     }
 
     public toggleSelection (category: string, item: string): void {
