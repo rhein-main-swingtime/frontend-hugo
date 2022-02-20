@@ -4,6 +4,10 @@
 </h3>
 <div class="border-t-2 border-gray-200 my-2 py-2 text-base">
     <em>
-        In deiner Merkliste siehst du jederzeit alle gespeicherten Events, die noch vor dir liegen.
+        {{ T
+            "page-dance-fav-intro"
+            (dict "icon" (partial "heroicons/solid/heart.svg" "is-icon is-2em text-red-500"))
+            | safeHTML
+        }}
     </em>
 </div>

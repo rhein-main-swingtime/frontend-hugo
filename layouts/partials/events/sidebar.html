@@ -13,19 +13,23 @@
             <input type="checkbox" id="toggleB" class="sr-only">
             <!-- line -->
             <div
-                class="block bg-gray-400 w-10 h-6 rounded-full"
-                :class="visiblePage === 'favorites' ? 'bg-blue-700' : ''"
+                class="block bg-gray-200 w-10 h-6 rounded-full"
+                :class="visiblePage === 'favorites' ? '' : ''"
             ></div>
             <!-- dot -->
             <div
-                class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"
+                class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition border border-white"
                 x-data=""
-                :class="visiblePage === 'favorites' ? 'translate-x-full' : ''"
+                :class="visiblePage === 'favorites' ? 'translate-x-full bg-red-500 border-red-700' : ''"
             ></div>
             </div>
             <!-- label -->
             <div class="ml-3">
-                Favoriten anzeigen
+                {{ T
+                    "page-dance-fav-show-only"
+                    (dict "icon" (partial "heroicons/solid/heart.svg" "is-icon is-1.5em h-8 w-8 text-red-500"))
+                    | safeHTML
+                }}
             </div>
         </label>
     </div>
