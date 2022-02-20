@@ -1,5 +1,7 @@
+import { FavoritesStore } from '../Store/FavoritesStore'
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import { FilterApiPayload } from './../Types/EventServerApiTypes'
+import { elementOffset } from '../Helpers/UiHelpers'
 interface FilterItemInterface {
     name: string
     available: number
@@ -15,10 +17,29 @@ export class Filters {
     public loading: boolean = true
     public initialized: boolean = false
     public showClasses: boolean = false
+    public onlyFavorites: boolean = false
     public hideSocials: boolean = false
     public showDates: boolean = false
     public fromDate: string | false = false
     public toDate: string | false = false
+
+    public getScrollToTopHandler () {
+        return () => {
+            const target = document.querySelectorAll('[data-role=event-list-filter-bar]')[0]
+            if (!target) {
+                return
+            }
+            const offset = elementOffset(target)
+            const header = document.getElementById('page-mast-head')
+            if (header) {
+                offset.top = offset.top - header.offsetHeight
+            }
+            window.scrollTo({
+                top: offset.top,
+                behavior: 'smooth'
+            })
+        }
+    }
 
     private getCheckedByUrl (category: string, name: string): boolean {
         return window.location.search.includes(encodeURIComponent(category) + '[]=' + encodeURIComponent(name))
@@ -41,6 +62,7 @@ export class Filters {
         this.fromDate = false
         this.toDate = false
         this.showDates = false
+        this.onlyFavorites = false
     }
 
     get canBeReset () {
@@ -81,7 +103,14 @@ export class Filters {
         return out
     }
 
+    /**
+     * Sets the initial state of the filters from the current search parameters
+     *
+     * @private
+     */
     private setStateFromSearchParams () {
+        this.onlyFavorites = window.location.search.includes('onlyFavorites=true')
+
         this.showClasses = window.location.search.includes('calendar[]=') ||
             window.location.search.includes('category[]=class')
 
@@ -139,18 +168,21 @@ export class Filters {
 
         response.json().then(
             (payload: FilterApiPayload) => {
-                const filters: FilterSettings = {}
-                for (const [category, items] of Object.entries(payload.filters)) {
-                    const filterCategory: FilterItemInterface[] = []
-                    items.filter(i => i.name !== 'Social Time').forEach(i => filterCategory.push({
-                        name: i.name,
-                        available: i.available,
-                        checked: this.getCheckedByUrl(category, i.name)
-                    }))
-                    filters[category] = filterCategory
-                }
-                this._filters = filters
                 this.setStateFromSearchParams()
+                if (payload.filters) {
+                    const filters: FilterSettings = {}
+                    for (const [category, items] of Object.entries(payload.filters)) {
+                        const filterCategory: FilterItemInterface[] = []
+                        items.filter(i => i.name !== 'Social Time').forEach(i => filterCategory.push({
+                            name: i.name,
+                            available: i.available,
+                            checked: this.getCheckedByUrl(category, i.name)
+                        }))
+                        filters[category] = filterCategory
+                    }
+                    this._filters = filters
+                }
+
                 this.loading = false
                 this.initialized = true
             }
@@ -180,6 +212,11 @@ export class Filters {
         }
 
         let out: string[] = []
+
+        if (this.onlyFavorites) {
+            return '?' + 'onlyFavorites=true'
+        }
+
         out = this.handleQueryClasses(out)
         out = this.handleQuerySocials(out)
 

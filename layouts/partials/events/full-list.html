@@ -1,58 +1,44 @@
-<div
-    data-role="event-list"
-    id="dance-event-list"
-    class="sm:grid-cols-12 gap-4 sm:grid flex flex-col"
-    x-data="RMST_TS.danceEventPageFacade()"
-    x-init="function() {
-        list.init();
-        filters.init();
-        $watch('filters.searchQuery', (val, old) => handleFilterChange(val, old));
-    }"
->
 
-    <div data-role="event-list-filter-bar" class="sm:col-span-4 sm:order-2">
-    {{ partial "events/filter-bar.html" . }}
-    </div>
+<div class="col-span-8 relative">
+    <template x-for="(danceEvents, date) in list.collection.eventsInDates">
+        {{ partial "events/in-date.html" . }}
+    </template>
 
-    <div class="col-span-8 sm:order-1">
+    <template x-for="prl in list.preloadersVisible">
+        {{ partial "events/dance-event-preloader.html" }}
+    </template>
 
-    <div
-        class="col-span-8 relative min-h-screen"
-    >
-        {{ partial "events/list-loading-overlay.html" . }}
-        <template x-if="list.dates.length === 0">
-            <div class="is-card">
-                <h3>
-                    Sorry!
-                </h3>
-                <span>
-                    Leider haben wir für diese Suche nichts gefunden
-                </span>
-            </div>
-        </template>
-
-        <template x-for="date in list.dates">
-            {{ partial "events/list.html" . }}
-        </template>
-        <template x-if="list.initialized">
-            <template x-if="list.showLoader">
-                <div
-                    x-intersect:enter="list.loadMore()"
-                    class=""
-                >
-                    <div class="flex items-center justify-center space-x-2 animate-bounce">
-                        <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                        <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                        <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-                    </div>
-                </div>
-            </template>
-            <template x-if="!list.showLoader">
-                <div>
-                    Mehr hamma nich!
-                </div>
-            </template>
-        </template>
+    <template x-if="list.hasMoreAvailable">
+        <div
+            x-intersect:enter="list.loadMore()"
+            class="flex items-center justify-center space-x-2 is-tripple-dots py-8"
+        >
+            <div class="w-4 h-4 bg-red-400 rounded-full animate-bounce"></div>
+            <div class="w-4 h-4 bg-red-400 rounded-full animate-bounce"></div>
+            <div class="w-4 h-4 bg-red-400 rounded-full animate-bounce"></div>
         </div>
-    </div>
+    </template>
+
+    <template x-if="list.isSorry">
+        <div class="is-card">
+            <h3>
+                Sorry!
+            </h3>
+            <span>
+                Leider haben wir für diese Suche nichts gefunden
+            </span>
+        </div>
+    </template>
+
+    <template x-if="list.hasReachedEnd">
+        <div class="is-card">
+            <h3>
+                Keine weiteren Events gefunden
+            </h3>
+            <span>
+                Das ist alles.
+                <pre>¯\_(ツ)_/¯</pre>
+            </span>
+        </div>
+    </template>
 </div>

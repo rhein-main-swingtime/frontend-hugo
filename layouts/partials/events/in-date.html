@@ -1,9 +1,11 @@
-<div class="px-0 mb-12 last:mb-0  border-t-4 border-gray-200 border-dashed first:border-t-0">
+<div
+    class="px-0 mb-12 last:mb-0  border-t-4 border-gray-200 border-dashed first:border-t-0"
+>
     <h1
         class="text-xl font-bold px-2 pt-2 mb-2"
         x-text="list.dateFromString(date)"
     ></h1>
-    <template x-for="event in list.getEventsByDate(date)">
+    <template x-for="danceEvent in danceEvents">
         {{ partial "events/dance-event.html" . }}
     </template>
 </div>

@@ -1,24 +1,27 @@
 
+{{ $bgImg := ("/img/rmst-logo.svg" | relURL) }}
 <section
     id="page-mast-head"
     class="bg-gray-900 page-{{ .Page.Type }}"
 >
-    <div class="container mx-auto max-w-screen-xl flex text-gray-50 relative z-10 pt-1 pb-2 px-8">
+    <div
+        class="container mx-auto max-w-screen-xl
+            flex text-gray-50 relative z-10
+            pt-1 pb-1 px-2
+            sm:px-8 lg:px-4
+        ">
         <div
-            class="rmst-bg absolute top-0 left-0 right-0 bottom-0 z-0"
-            style='background-image: url({{ "/img/rmst-logo.svg" | relURL }});' >
+            class="rmst-bg absolute top-0 left-0 right-0 bottom-0 z-0 invert"
+            style='background-image: url({{ $bgImg }});' >
         </div>
-        <div class="relative z-10 flex flex-col offset">
-            <div id="mast-head-title" class="text-gray-50 flex-grow mb-4">
-                <h1 class="text-4xl font-light">
-                    {{ partial "heroicons/outline/hashtag.svg" "is-icon is-1em text-red-500 -mr-1" }}
-                    {{ .Page.Title }}
-                </h1>
-                {{ if (isset .Params "subtitle") }}
-                    <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
-                {{ end }}
-            </div>
-            {{ partial "nav/mobile-nav-content.html" . }}
+        <div id="mast-head-title" class="text-gray-50 flex-grow mb-2">
+            <h1 class="text-2xl font-light inline sm:block">
+                {{ partial "heroicons/outline/hashtag.svg" "is-icon is-1em text-red-500 -mr-1" }}
+                {{ .Page.Title }}
+            </h1>
+            {{ if (isset .Params "subtitle") }}
+                <h2 class="font-light text-lg inline sm:block">{{ .Params.subtitle }}</h2>
+            {{ end }}
         </div>
     </div>
 </section>

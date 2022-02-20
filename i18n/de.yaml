@@ -1,45 +1,79 @@
-learn-school:
-  other: Tanzschule
-learn-teacher:
-  other: Lehrer
-learn-uni:
-  other: Hochschulsport
-learn-club:
-  other: Verein
-learn-page-sorry-hl:
-  other: Sorry!
-learn-page-sorry-copy:
-  other: Leider haben wir für diese Kombination nichts gefunden
-event-is-saved:
-  other: Gemerkt
-event-is-not-saved:
-  other: Merken
-event-share:
-  other: Teilen
-event-share-copy:
-  other: Schau mal, auf RMSwing.de
-event-more-information:
-  other: Mehr infos
-event-category-socials:
-  other: Social Dance
+close:
+  other: Schließen
 event-category-class:
   other: Kurs
+event-category-socials:
+  other: Social Dance
+event-directions:
+  other: Karte öffnen
+page-dance-fav-show-only:
+  other: Nur {{ .icon }} anzeigen
+page-dance-fav-intro:
+  other: "Hier findest du jederzeit alle Veranstaltungen, die du mit einem {{ .icon }} markiert hast."
+
+page-dance-filters-show-class:
+  other: Auch Kurse anzeigen
+page-dance-filters-hide-socials:
+  other: Socials ausblenden
+page-dance-filters-date-selection:
+  other: Datum einschränken
+page-dance-filters-date-from:
+  other: Von
+page-dance-filters-date-to:
+  other: Bis
+
+event-filters-reset:
+  other: Filter zurücksetzen
 event-headline-description:
   other: Beschreibung
 event-headline-location:
   other: Addresse
 event-headline-time:
   other: Datum und Uhrzeit
-event-directions:
-  other: Karte öffnen
+event-is-not-saved:
+  other: Merken
+event-is-saved:
+  other: Aufheben
+event-list-favorites:
+  other: Deine gemerkten Veranstaltungen
 event-location-not-set:
   other: Keine Addresse eingetragen
-share-link-whatsapp-cta:
-  other: Whatsapp
-share-link-telegram-cta:
-  other: Telegram
+event-more-information:
+  other: Mehr infos
+event-page-no-favorites:
+  other: Du hast noch keine Favoriten hinterlegt. Schau dir einfach ein paar Events an, benutze das ❤️-Symbol um dir Socials und Kurse hier zu hinterlegen.
+event-share:
+  other: Teilen
+event-share-copy:
+  other: Schau mal, auf RMSwing.de
+event-share-copy-headline:
+  other: Link kopieren
+event-share-links-headline:
+  other: Versenden
+homepage-cta-all-socials:
+  other: Alle Socials im Rhein Main Gebiet
+learn-club:
+  other: Verein
+learn-page-sorry-copy:
+  other: Leider haben wir für diese Kombination nichts gefunden
+learn-page-sorry-hl:
+  other: Sorry!
+learn-school:
+  other: Tanzschule
+learn-teacher:
+  other: Lehrer
+learn-uni:
+  other: Hochschulsport
+link-home:
+  other: Home
+share-link-copied:
+  other: Kopiert
 share-link-mail-cta:
   other: Mail
+share-link-telegram-cta:
+  other: Telegram
+share-link-whatsapp-cta:
+  other: Whatsapp
 share-qr:
   other: Scannen
 share-link-copied:
@@ -54,3 +88,5 @@ close:
   other: Schließen
 scene-facebook-group:
   other: Facebook Gruppe
+teasers-also-relevant:
+  other: 'Das könnte dich auch interessieren:'

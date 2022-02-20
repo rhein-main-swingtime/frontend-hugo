@@ -1,24 +1,7 @@
 <nav id="sidebar" >
-    <div id="sidebar-content" class="is-sticky-on-side">
-    <a class="hover:text-red-600 underline"
-        href="{{ .Site.BaseURL | relLangURL }}">
-        <span class="text-red-600">
-            {{ partial "heroicons/outline/home.svg" "h-8 w-8 inline-block -mr-1 relative -top-0.5"}}
-        </span>
-        Home
-    </a>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <a
-        class="hover:text-red-600 underline in-mobile-nav
-            sidebar-nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}
-        "
-        href="{{ .URL }}" title="{{ .Title }}">
-        <span class="text-red-600">
-            {{ partial "heroicons/outline/hashtag.svg" "h-8 w-8 inline-block -mr-1 relative -top-0.5"}}
-        </span>
-        {{ .Name }}
-    </a>
-    {{ end }}
+    <div id="sidebar-content" >
+        <nav class="main-page-nav">
+            {{ partial "nav/main-navigation-content.html" . }}
+        </nav>
     </div>
 </nav>

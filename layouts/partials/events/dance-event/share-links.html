@@ -4,7 +4,7 @@
     </h4>
     <div class="text-base flex-col flex" x-init="console.log(event, 'event')">
         <a
-            :href="event.shareLinks.mail"
+            :href="danceEvent.shareLinks.mail"
             target="_blank"
             class="mb-2"
         >
@@ -12,7 +12,7 @@
             {{ i18n "share-link-mail-cta" }}
         </a>
         <a
-            :href="event.shareLinks.whatsapp"
+            :href="danceEvent.shareLinks.whatsapp"
             target="_blank"
             class="mb-2"
         >
@@ -20,7 +20,7 @@
             {{ i18n "share-link-whatsapp-cta" }}
         </a>
         <a
-            :href="event.shareLinks.telegram"
+            :href="danceEvent.shareLinks.telegram"
             target="_blank"
             class=""
         >
@@ -28,7 +28,7 @@
             {{ i18n "share-link-telegram-cta" }}
         </a>
         <div class="mt-2">
-            <a href="#" @click.prevent="event.copyToClipboard()">
+            <a href="#" @click.prevent="danceEvent.copyToClipboard()">
                 {{ partial "heroicons/solid/clipboard-copy.svg" "is-icon is-1em"}}
                 {{ T "event-share-copy-headline" }}
             </a>
@@ -36,15 +36,15 @@
                 <input
                     type="text"
                     class="inline-block flex-shrink text-sm overflow-x-hidden px-2 py-0.5 bg-gray-100 border-dashed"
-                    :name="'copy-' + event.id"
-                    :value="event.shareUrl"
+                    :name="'copy-' + danceEvent.id"
+                    :value="danceEvent.shareUrl"
                     readonly
                 />
-                <a class="is-button block text-sm" href="#" @click.prevent="event.copyToClipboard()">
-                    <template x-if="!event.wasCopied">
+                <a class="is-button block text-sm" href="#" @click.prevent="danceEvent.copyToClipboard()">
+                    <template x-if="!danceEvent.wasCopied">
                         {{ partial "heroicons/solid/clipboard-copy.svg" "h-5 w-5"}}
                     </template>
-                    <template x-if="event.wasCopied">
+                    <template x-if="danceEvent.wasCopied">
                         {{ partial "heroicons/solid/check.svg" "h-5 w-5"}}
                     </template>
                 </a>

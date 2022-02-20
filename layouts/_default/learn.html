@@ -1,0 +1,32 @@
+{{ define "main" }}
+    {{- partial "page/main-content" . -}}
+
+    <div
+        id="generic-filter-test"
+        class="filterable"
+        x-data="{
+            bar: RMST_TS.filterBar({
+                filterable: [
+                    'city', 'category'
+                ],
+                identifier: 'name',
+                title: 'Filter',
+                trash: 'Zurücksetzen',
+                showCategories: false,
+                translationPrefix: '{{ .Page.Layout }}' + '-'
+            })
+        }"
+    >
+
+        {{ partial "filterbar/bar" . }}
+
+        <div class="item-container">
+            {{ partial "filterbar/sorry" }}
+
+            {{ range sort $.Site.Data.learn "name" "asc" }}
+                {{ partial "learn/item" . }}
+            {{ end }}
+        </div>
+
+    </div>
+{{ end }}

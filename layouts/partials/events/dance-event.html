@@ -1,17 +1,16 @@
 <div
-    :data-dance-event-id="event.id"
-    :id="'dance-event-id-' + event.id"
+    :data-dance-event-id="danceEvent.id"
+    :id="'dance-event-id-' + danceEvent.id"
     data-role="dance-event"
     class="h-full flex flex-col text-sm is-card"
     x-data="{
-        notepad: RMST_TS.notepad,
         openSection: null
     }"
-    x-init="openSection = list.handleHashNavivation(event.id, $refs.element)"
+    x-init="openSection = list.handleHashNavivation(danceEvent.id, $refs.element)"
     x-ref="element"
 >
     <h1 class="text-lg bold font-bold">
-        <span x-text="event.summary"></span>
+        <span x-text="danceEvent.summary"></span>
     </h1>
     <div class="my-2">
         {{ partial "events/dance-event/category.html" . }}

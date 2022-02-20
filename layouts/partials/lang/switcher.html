@@ -1,0 +1,12 @@
+{{ if .Site.IsMultiLingual }}
+  <ul>
+    {{ range $.Translations }}
+        <li >
+          {{ partial "heroicons/solid/translate.svg" "is-icon is-1em text-red-500" }}
+            <a title="{{ .Language.LanguageName }}" href="{{ .Permalink }}">
+                {{ .Language.LanguageName }}
+            </a>
+        </li>
+    {{ end }}
+  </ul>
+{{ end }}

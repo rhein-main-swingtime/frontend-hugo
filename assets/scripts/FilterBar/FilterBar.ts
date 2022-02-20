@@ -1,3 +1,5 @@
+import T, { isTranslationDefined } from '../i18n/T'
+
 interface GenericListCategoryConfig {
     items: string[]
     exclusive: boolean
@@ -10,7 +12,9 @@ interface GenericListConfig {
     identifier: string,
     filterable: string[],
     title: string,
-    trash: string | false
+    trash: string | false,
+    showCategories: boolean | undefined,
+    translationPrefix: string | undefined
 }
 
 class GenericFilterBar {
@@ -81,6 +85,22 @@ class GenericFilterBar {
         return this.visibleIds.length === 0
     }
 
+    get categoriesVisibleInBar (): boolean {
+        return this.config.showCategories === true
+    }
+
+    public getTranslation (key: string): string {
+        if (this.config.translationPrefix === undefined) {
+            return key
+        }
+
+        if (!isTranslationDefined(this.config.translationPrefix + key)) {
+            return key.replace(this.config.translationPrefix, '')
+        }
+
+        return T(this.config.translationPrefix + key)
+    }
+
     public toggleSelection (category: string, item: string): void {
         if (this.filters[category] === undefined) {
             throw Error(category + ' is not a valid category in this context')
@@ -93,6 +113,16 @@ class GenericFilterBar {
                 } else {
                     this.filters[category][f] = false
                 }
+            }
+        )
+    }
+
+    public resetSelections (): void {
+        Object.keys(this.filters).forEach(
+            (c) => {
+                Object.keys(this.filters[c]).forEach(item => {
+                    this.filters[c][item] = false
+                })
             }
         )
     }

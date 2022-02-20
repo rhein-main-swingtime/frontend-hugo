@@ -4,10 +4,23 @@ import { createDanceEventFromJson } from '../DTO/DanceEvent'
 
 interface eventSearchRequestInterface {
     id?: number[] | string[] | number | string
-    q?: string
 }
 
-export async function fetchEventsBySearch (params: eventSearchRequestInterface) {
+function persistResponse (search: string, json: any) {
+    sessionStorage.setItem(search, JSON.stringify(json))
+}
+
+function getSearchFromCache (search: string) {
+    try {
+        const payload: DanceEventPayload[] = JSON.parse(sessionStorage.getItem(search) || '')
+        return payload.map(e => createDanceEventFromJson(e))
+    } catch {
+        sessionStorage.removeItem(search)
+    }
+    return null
+}
+
+export async function fetchEventsById (params: eventSearchRequestInterface) {
     const url = new URL(RMSTApiUrls.eventSearch)
     const parts = []
     for (const [key, value] of Object.entries(params)) {
@@ -22,9 +35,24 @@ export async function fetchEventsBySearch (params: eventSearchRequestInterface) 
     }
     url.search = (parts.length > 0 ? '?' : '') + parts.join('&')
 
+    const fromCache = getSearchFromCache(url.toString())
+    if (fromCache) {
+        console.info(fromCache, 'found in cache')
+        return fromCache
+    }
+
     return fetch(url.toString())
         .then((response) => response.json())
-        .then((r: DanceEventPayload[]) => { return r.map((de) => { return createDanceEventFromJson(de) }) })
+        .then((r) => {
+            persistResponse(url.toString(), r)
+            return r
+        })
+        .then((r: DanceEventPayload[]) => {
+            return r.map((de) => { return createDanceEventFromJson(de) })
+        }).then(e => {
+            console.log(e, 'fetched from api')
+            return e
+        })
 }
 
 export default async function fetchEventList (params: string[] = []) {

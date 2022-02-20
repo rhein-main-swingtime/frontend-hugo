@@ -1,0 +1,17 @@
+<!-- Events -->
+<div class="my-16">
+    <h2 class="text-2xl font-light">
+        Deine nächsten Socials:
+    </h2>
+    {{ partial "events/homepage-preview-block" .}}
+    <div class="text-right w-full">
+    {{ with .Site.GetPage "tanzen" }}
+        <a
+        href="{{ .Permalink }}"
+        class="is-button is-xl is-white">
+            {{ T "homepage-cta-all-socials" }}
+            {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em" }}
+        </a>
+    {{ end }}
+    </div>
+</div>

@@ -1,9 +1,9 @@
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-import { uniq } from 'lodash'
 import DanceEventQr from './DanceEventQr'
 import FetchEventList from '../Helpers/FetchEventList'
 import { elementOffset } from '../Helpers/UiHelpers'
 import { convertStringToDate, getLocalizedDate } from '../Helpers/DateHelper'
+import { Collection } from './Collection'
 
 function addEvent (this: EventList, e: DanceEvent) {
     const key = [
@@ -18,49 +18,47 @@ function addEvent (this: EventList, e: DanceEvent) {
     this.eventsInDates[key].push(e)
 }
 
+function removeEvent (this: EventList, id: number) {
+    Object.keys(this.eventsInDates).forEach((date) => {
+        this.eventsInDates[date] = Object.values(this.eventsInDates[date]).filter((danceEvent) => {
+            return danceEvent.id !== id
+        })
+    })
+}
+
 function getEventsByDate (this: EventList, date: string): DanceEvent[] {
     return this.eventsInDates[date] || []
 }
-
-function getEventCount (this: EventList): number {
-    let count = 0
-    Object.values(this.eventsInDates).forEach((e) => { count += e.length })
-    return count
-}
-
-async function loadMore (this: EventList) {
-    const apiResponse = await FetchEventList(['skip=' + this.getEventCount()])
-    this.dates = uniq(this.dates.concat(Object.keys(apiResponse.dates)).sort())
-    apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
-    this.showLoader = apiResponse.danceEvents.length > 0
-}
-
 export class EventList {
-    public dates: string[] = []
+    public readonly fetchLimit = 25
+    public preloadersVisible: number = 0
+    public state: 'nothing-found' | 'more-available' | 'end-reached' | 'updating' = 'updating'
     public eventsInDates: {[key: string]: DanceEvent[]} = {}
-    public showLoader: boolean = false
-    public isLoading: boolean = false
-
-    public addEvent = addEvent
-    public getEventsByDate = getEventsByDate
-    public getEventCount = getEventCount
-    public loadMore = loadMore
     public additional: string | null = null
     public initialized = false
 
-    public reset () {
-        this.dates = []
-        this.eventsInDates = {}
-        this.init()
-        this.showLoader = false
+    private collection: Collection
+
+    constructor (collection: Collection) {
+        this.collection = collection
     }
 
     public generateQrCode (danceEvent: DanceEvent) {
         return DanceEventQr(danceEvent)
     }
 
-    get noEventsAvailable () : boolean {
-        return this.dates.length === 0
+    public getEventCount (this: EventList): number {
+        let count = 0
+        Object.values(this.collection.eventsInDates).forEach((e) => { count += e.length })
+        return count
+    }
+
+    get isLoading (): boolean {
+        return this.preloadersVisible > 0
+    }
+
+    getFromCollection (id: number) {
+        return this.collection.findEvent(id) || false
     }
 
     public handleHashNavivation (id: number | string, element: HTMLElement): null | 'more' {
@@ -84,17 +82,58 @@ export class EventList {
         return 'more'
     }
 
+    get isSorry (): boolean {
+        return this.state === 'nothing-found'
+    }
+
+    get hasMoreAvailable (): boolean {
+        return this.state === 'more-available'
+    }
+
+    get hasReachedEnd (): boolean {
+        return this.state === 'end-reached'
+    }
+
     public dateFromString (s: string): string {
         return getLocalizedDate(convertStringToDate(s))
     }
 
+    public loadMore () {
+        this.handleLoading(['skip=' + this.collection.count])
+    }
+
+    private async handleLoading (params: string[] = []) {
+        params.push('limit=' + this.fetchLimit)
+        this.preloadersVisible = this.fetchLimit
+
+        const apiResponse = await FetchEventList(params) || []
+        apiResponse.danceEvents.forEach(
+            (e) => {
+                this.collection.addEvent(createDanceEventFromJson(e))
+                this.preloadersVisible = this.preloadersVisible - 1
+            })
+
+        if (this.preloadersVisible === this.fetchLimit) {
+            this.state = 'nothing-found'
+        } else if (this.preloadersVisible > 0) {
+            this.state = 'end-reached'
+        } else {
+            this.state = 'more-available'
+        }
+
+        this.preloadersVisible = 0
+    }
+
+    public reset () {
+        this.init()
+    }
+
     public async init () {
-        this.isLoading = true
-        const apiResponse = await FetchEventList()
-        this.dates = Object.keys(apiResponse.dates).sort()
-        apiResponse.danceEvents.forEach(e => this.addEvent(createDanceEventFromJson(e)))
-        this.showLoader = this.getEventCount() > 0
+        if (this.collection.count > 0) {
+            this.collection.reset()
+        }
+        this.preloadersVisible = this.fetchLimit
+        this.handleLoading()
         this.initialized = true
-        this.isLoading = false
     }
 }

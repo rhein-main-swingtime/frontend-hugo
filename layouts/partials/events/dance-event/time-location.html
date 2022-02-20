@@ -1,11 +1,11 @@
 <div class="mb-3">
     {{ partial "events/dance-event/date-time-small.html" . }}
-    <template x-if="event.location">
+    <template x-if="danceEvent.location">
         <div class="flex flex-row">
             <div class="pr-1">
                 {{ partial "heroicons/outline/location-marker.svg" "is-icon is-base"}}
             </div>
-            <div x-html="event.location"></div>
+            <div x-html="danceEvent.location"></div>
         </div>
     </template>
 </div>

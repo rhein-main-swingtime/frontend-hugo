@@ -1,10 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import "card.pcss";
-@import "learn.pcss";
-@import "buttons.pcss";
-@import "icons.pcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./card.pcss";
+@import "./learn.pcss";
+@import "./buttons.pcss";
+@import "./icons.pcss";
+@import "./sidebar.pcss";
 
 html {
     @apply font-serif font-light;
@@ -15,6 +16,8 @@ body {
     @apply bg-gray-50;
     @apply text-xl;
 }
+
+[x-cloak] { display: none !important; }
 
 section.is-padded {
     @apply px-4;
@@ -27,7 +30,8 @@ section.is-padded {
 }
 
 .is-tripple-dots {
-    & > .is-dot {
+    & > div {
+        animation-duration: 300ms;
         &:nth-child(2) {
             animation-delay: 100ms;
         }
@@ -39,6 +43,9 @@ section.is-padded {
 
 a {
     @apply underline;
+    &:hover {
+        @apply text-red-700;
+    }
 }
 
 #page-body {
@@ -50,21 +57,9 @@ a {
 
         }
     }
-    & nav#sidebar {
-        @apply hidden lg:block;
-        @apply lg:relative;
-        @apply lg:w-1/4;
-        @apply z-50;
-        & #sidebar-content {
-            @apply flex flex-col gap-2;
-            @apply text-xl;
-            @apply sticky top-28;
-        }
-
-
-    }
     & #page-content {
         @apply bg-gray-50;
+        /* @apply pb-0; */
     }
 }
 
@@ -109,46 +104,45 @@ a.is-internal-link {
     }
 }
 
-#page-mast-head {
-    @apply sticky w-screen top-0;
-    @apply z-110;
-    @apply shadow-md;
-    & .rmst-bg {
-        filter: invert(1);
-        background-repeat: no-repeat;
-        background-position: right top;
-        opacity: .1
+#mast-head-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    & h1::after {
+        content: ": ";
+        @apply -ml-1;
     }
-    /* background-image: url(img/rmst-logo.svg); */
 }
 
-#mobile-nav-trigger {
-    @apply lg:hidden z-110;
-    @apply border py-2 px-4 border-gray-600 rounded-full;
-    @apply text-gray-100 fixed bottom-8 mx-auto left-16 shadow-lg;
-    @apply text-xl;
-    left: 50vw;
-    transform: translateX(-50%);
-
+#page-mast-head {
+    @apply sticky top-0;
+    @apply z-100;
+    @apply shadow-md;
+    & .invert {
+        filter: invert(1);
+    }
+    & .rmst-bg {
+        /* filter: invert(1); */
+        background-repeat: no-repeat;
+        background-position: right top;
+        opacity: .2
+    }
+    /* background-image: url(img/rmst-logo.svg); */
 }
 
 canvas.max-w-full {
     height: auto !important;
 }
 
-input[type=date] {
-    @apply rounded-sm;
-    @apply font-sans text-xs;
-    @apply border-gray-200;
-    @apply py-0.5;
-    &.is-faded {
-        @apply text-gray-400;
-    }
-}
 .filterable {
     & .item-container {
         @apply mx-auto max-w-screen-lg;
         @apply gap-6 flex flex-col;
         @apply lg:grid lg:grid-cols-2;
     }
+}
+
+.is-sticky-on-side {
+    @apply sticky;
+    @apply sm:top-20;
 }
