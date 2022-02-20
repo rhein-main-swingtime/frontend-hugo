@@ -2,7 +2,6 @@ import FetchSharedEvents from '../Helpers/FetchSharedEvents'
 import { EventList } from './EventList'
 import { Filters } from './Filters'
 import { FavoritesStore } from '../Store/FavoritesStore'
-import danceEvent from '../DTO/DanceEvent'
 import { Stores } from '../Settings/Stores'
 import { Collection } from './Collection'
 import { fetchEventsById } from '../Helpers/FetchEventList'
@@ -54,12 +53,14 @@ export default function create () {
                 : s
         },
 
-        getEventFromCollection: function (id: number) {
+        getEventFromCollection: async function (id: number) {
             const danceEvent = this.list.getFromCollection(id)
             if (danceEvent) {
                 return danceEvent
             }
-            return fetchEventsById({ id: [id] })
+            // this call returns an array, however we're sure to only get as single element,
+            // so let's just grap the last one and be done with it.
+            return (await fetchEventsById({ id: [id] })).pop()
         },
 
         isDanceEvent: function (e: Object) {

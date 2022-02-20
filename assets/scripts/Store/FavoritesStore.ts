@@ -25,13 +25,11 @@ export class FavoritesStore {
     }
 
     public toggle (danceEvent: DanceEvent) {
-        console.log(danceEvent, 'toggeling')
         if (this.isSaved(danceEvent)) {
             this.remove(danceEvent.id)
         } else {
             this.add(danceEvent)
         }
-        console.log(this.collection, 'collection')
     }
 
     public remove (id: number) {

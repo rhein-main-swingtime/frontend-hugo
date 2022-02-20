@@ -11,20 +11,11 @@ function persistResponse (search: string, json: any) {
 }
 
 function getSearchFromCache (search: string) {
-    const payload: DanceEventPayload | DanceEventPayload[] = JSON.parse(sessionStorage.getItem(search) || '') || null
-    if (payload) {
-        try {
-            if (Array.isArray(payload)) {
-                if (payload.length > 1) {
-                    return payload.map((de) => { return createDanceEventFromJson(de) })
-                }
-                return createDanceEventFromJson(payload[0])
-            } else {
-                return createDanceEventFromJson(payload)
-            }
-        } catch {
-            sessionStorage.removeItem(search)
-        }
+    try {
+        const payload: DanceEventPayload[] = JSON.parse(sessionStorage.getItem(search) || '')
+        return payload.map(e => createDanceEventFromJson(e))
+    } catch {
+        sessionStorage.removeItem(search)
     }
     return null
 }
@@ -46,7 +37,7 @@ export async function fetchEventsById (params: eventSearchRequestInterface) {
 
     const fromCache = getSearchFromCache(url.toString())
     if (fromCache) {
-        console.log(fromCache, 'fromCache')
+        console.info(fromCache, 'found in cache')
         return fromCache
     }
 
@@ -57,12 +48,9 @@ export async function fetchEventsById (params: eventSearchRequestInterface) {
             return r
         })
         .then((r: DanceEventPayload[]) => {
-            if (r.length < 2) {
-                return createDanceEventFromJson(r[0])
-            }
             return r.map((de) => { return createDanceEventFromJson(de) })
         }).then(e => {
-            console.log(e, 'from api')
+            console.log(e, 'fetched from api')
             return e
         })
 }
