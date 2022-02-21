@@ -1,8 +1,10 @@
 baseURL: 'https://hugo.rmswing.de'
 title: 'Rhein Main Swing Time'
 
-defaultContentLanguage: de
+params:
+    googleMapsQuery: https://www.google.com/maps/search/
 
+defaultContentLanguage: de
 languages:
   en:
     title: Rhein Main Swing Time
