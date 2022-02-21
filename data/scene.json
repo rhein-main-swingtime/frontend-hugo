@@ -6,6 +6,20 @@
         },
         "url": "https://facebook.com/groups/{face_group}"
     },
+    "config": {
+        "cardLayout": "scene",
+        "itemClasses": "learn-item lg:min-h-[15rem] is-card",
+        "filterable": [
+            "category",
+            "area"
+        ],
+        "identifier": "name",
+        "sortBy": "name",
+        "sortDirection": "asc",
+        "showCategories": false,
+        "i18nPrefix": "learn",
+        "title": "Filter"
+    },
     "items": [
         {
             "name": "Swing In Frankfurt Am Main",
@@ -18,14 +32,12 @@
             "name": "Swing Out d'or Wiesbaden",
             "public": true,
             "face_group": "222069277804935",
-
             "area": "Wiesbaden",
             "category": "facebook-group"
         },
         {
             "name": "Swing In Mainz",
             "face_group": "317930771663002",
-
             "public": true,
             "area": "Mainz",
             "category": "facebook-group"
@@ -35,7 +47,6 @@
             "face_group": "202862923090162",
             "area": "Darmstadt",
             "public": true,
-
             "category": "facebook-group"
         },
         {
@@ -64,7 +75,6 @@
             "name": "Swing Is Just Around The Corner",
             "area": "Frankfurt",
             "face_group": "680509751994581",
-
             "public": true,
             "category": "facebook-group"
         },
@@ -72,7 +82,6 @@
             "name": "Frankfurt Blues Dancing",
             "area": "Frankfurt",
             "face_group": "395357990544635",
-
             "public": true,
             "category": "facebook-group"
         },
@@ -80,7 +89,6 @@
             "name": "Hop The Main",
             "area": "Frankfurt",
             "face_group": "48505773375",
-
             "public": true,
             "category": "facebook-group"
         },
@@ -88,14 +96,12 @@
             "name": "Balboa in Frankfurt",
             "area": "Frankfurt",
             "face_group": "392286414141165",
-
             "public": false,
             "category": "facebook-group"
         },
         {
             "name": "Shag-Time Rhein-Main",
             "face_group": "862588183758717",
-
             "public": false,
             "area": "Rhein-Main",
             "category": "facebook-group"
