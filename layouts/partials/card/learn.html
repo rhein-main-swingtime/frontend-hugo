@@ -1,0 +1,51 @@
+{{ $addr := (cond (isset .context "address") "has-address" "has-no-address") }}
+<div class="flex flex-col {{$addr}}">
+    <h3 class="text-4xl text-center font-thin my-4">
+        {{ .context.name }}
+    </h3>
+    <div class="mb-8 text-center">
+        <pre>
+        </pre>
+        <span class="font-light text-sm bg-gray-500 text-white py-1 px-2 rounded">
+            {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+        </span>
+    </div>
+    <div class="class mt-auto grid text-sm contact">
+        <div class="physical">
+            {{ range .context.address }}
+            <span class="block">
+                {{ . }}
+            </span>
+            {{ end }}
+            {{ if isset . "address"}}
+            <a href='https://www.google.com/maps/search/?api=1&{{ querify "query" (delimit .context.address ", ") }}'
+                target="_blank">
+                Maps Link
+            </a>
+            {{ end }}
+        </div>
+        <div class="virtual">
+            {{ range $index, $val := .context.contact }}
+                <div class="{{ $index }}">
+                    {{ $partialPath := printf "contact/%s.html" $index }}
+                    {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                    {{ partial $partialPath . }}
+                    {{ else }}
+                    {{ $val }}
+                    {{ end }}
+                </div>
+            {{ end }}
+            {{ range $index, $val := .context.socialmedia }}
+                <div class="{{ $index }}">
+                    {{ $partialPath := printf "simpleicons.org/%s.svg" $index }}
+                    {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+                    {{ partial ( printf "%s" $partialPath ) "inline-block w-4 h-4" }}
+                    {{ end }}
+                    <a href="{{ $val }}" target="_blank">
+                        {{ $index }}
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

@@ -11,7 +11,7 @@ import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
 import DanceEventQr from './DanceEventList/DanceEventQr'
 import { Input } from 'postcss'
-import GenericFilterBarFactory from './FilterBar/FilterBar'
+import GenericFilterBarFactory, { createFilterBarInstance } from './FilterBar/FilterBar'
 import T from './i18n/T'
 import { Stores } from './Settings/Stores'
 
@@ -33,7 +33,8 @@ window.RMST_TS = {
     eventFilters: Filters,
     FetchSharedEvents,
     DanceEventQr,
-    filterBar: GenericFilterBarFactory
+    filterBar: GenericFilterBarFactory,
+    createFilterBarInstance
 }
 
 window.T = T

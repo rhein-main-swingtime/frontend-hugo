@@ -1,0 +1,38 @@
+{{ $data := (index $.Site.Data .Page.Params.dataSrc ) }}
+<div
+  id="generic-filter-test"
+  class="filterable"
+  x-data="RMST_TS.createFilterBarInstance({{ $data.config | jsonify }})"
+>
+  {{ partial "filterbar/bar" . }}
+
+
+  <div class="item-container">
+    {{ $cardLayout := $data.config.cardLayout }}
+    {{ $classes := $data.config.itemClasses }}
+    {{ $i18nPrefix := index $data.config "i18nPrefix" }}
+    {{ $lang := .Page.Lang }}
+    {{ range
+      sort
+      $data.items $data.config.sortBy
+      $data.config.sortDirection
+    }}
+      <article
+        class="{{ $classes }}"
+        x-transition
+        x-init="registerElement({{ .|jsonify }})"
+        x-show="isVisible({{ .|jsonify }})"
+      >
+        {{ partial
+          (printf "card/%s" $cardLayout)
+          (dict
+          "context" .
+          "i18nPrefix" $i18nPrefix
+          "lang" $lang
+          )
+        }}
+      </article>
+    {{ end }}
+    {{ partial "filterbar/sorry" }}
+  </div>
+</div>
