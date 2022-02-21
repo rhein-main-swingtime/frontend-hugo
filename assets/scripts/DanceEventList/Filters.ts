@@ -1,7 +1,6 @@
-import { FavoritesStore } from '../Store/FavoritesStore'
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import { FilterApiPayload } from './../Types/EventServerApiTypes'
-import { elementOffset } from '../Helpers/UiHelpers'
+import scrollToElement from '../Helpers/scrollToElement'
 interface FilterItemInterface {
     name: string
     available: number
@@ -29,15 +28,7 @@ export class Filters {
             if (!target) {
                 return
             }
-            const offset = elementOffset(target)
-            const header = document.getElementById('page-mast-head')
-            if (header) {
-                offset.top = offset.top - header.offsetHeight
-            }
-            window.scrollTo({
-                top: offset.top,
-                behavior: 'smooth'
-            })
+            return scrollToElement(target)
         }
     }
 

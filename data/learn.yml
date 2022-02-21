@@ -6,12 +6,12 @@ config:
     # classes will be set on the <article> element of the card
     itemClasses: learn-item lg:min-h-[15rem] is-card
     filterable:             # Filters will be created for every one of those
-        - city
         - category
+        - city
     identifier: name        # Needs to be unique, and exist on every item
     sortBy: name            # Field used for sorting of items
     sortDirection: asc      # Sort direction
-    showCategories: false   #
+    showCategories: true    #
     i18nPrefix: learn       # can be used within the card template, to fetch translations
     title: Filter           # actually, this should come from the translations too @todo
 
@@ -150,7 +150,6 @@ items:
         name: Diana & Michael
         city: Frankfurt
         category: teacher
-        contact:
         socialmedia:
             facebook: 'https://www.facebook.com/groups/495469870660120'
     -

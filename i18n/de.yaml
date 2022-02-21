@@ -1,31 +1,13 @@
 close:
   other: Schließen
-main-menu-open:
-  other: Menu
-main-menu-close:
-  other: Schließen
+cta-open-in-google-maps:
+  other: Mit Google Maps öffnen
 event-category-class:
   other: Kurs
 event-category-socials:
   other: Social Dance
 event-directions:
   other: Karte öffnen
-page-dance-fav-show-only:
-  other: Nur {{ .icon }} anzeigen
-page-dance-fav-intro:
-  other: "Hier findest du jederzeit alle Veranstaltungen, die du mit einem {{ .icon }} markiert hast."
-
-page-dance-filters-show-class:
-  other: Auch Kurse anzeigen
-page-dance-filters-hide-socials:
-  other: Socials ausblenden
-page-dance-filters-date-selection:
-  other: Datum einschränken
-page-dance-filters-date-from:
-  other: Von
-page-dance-filters-date-to:
-  other: Bis
-
 event-filters-reset:
   other: Filter zurücksetzen
 event-headline-description:
@@ -56,8 +38,16 @@ event-share-links-headline:
   other: Versenden
 homepage-cta-all-socials:
   other: Alle Socials im Rhein Main Gebiet
+learn-category:
+  other: Kategorie
+learn-city:
+  other: Stadt
 learn-club:
   other: Verein
+learn-facebook:
+  other: Facebook
+learn-instagram:
+  other: Instagram
 learn-page-sorry-copy:
   other: Leider haben wir für diese Kombination nichts gefunden
 learn-page-sorry-hl:
@@ -68,8 +58,30 @@ learn-teacher:
   other: Lehrer
 learn-uni:
   other: Hochschulsport
+learn-youtube:
+  other: Youtube
 link-home:
   other: Home
+main-menu-close:
+  other: Schließen
+main-menu-open:
+  other: Menu
+page-dance-fav-intro:
+  other: Hier findest du jederzeit alle Veranstaltungen, die du mit einem {{ .icon }} markiert hast.
+page-dance-fav-show-only:
+  other: Nur {{ .icon }} anzeigen
+page-dance-filters-date-from:
+  other: Von
+page-dance-filters-date-selection:
+  other: Datum einschränken
+page-dance-filters-date-to:
+  other: Bis
+page-dance-filters-hide-socials:
+  other: Socials ausblenden
+page-dance-filters-show-class:
+  other: Auch Kurse anzeigen
+scene-facebook-group:
+  other: Facebook Gruppe
 share-link-copied:
   other: Kopiert
 share-link-mail-cta:
@@ -80,17 +92,5 @@ share-link-whatsapp-cta:
   other: Whatsapp
 share-qr:
   other: Scannen
-share-link-copied:
-  other: Kopiert
-event-share-links-headline:
-  other: Versenden
-event-share-copy-headline:
-  other: Link kopieren
-event-filters-reset:
-  other: Filter zurücksetzen
-close:
-  other: Schließen
-scene-facebook-group:
-  other: Facebook Gruppe
 teasers-also-relevant:
   other: 'Das könnte dich auch interessieren:'

@@ -14,6 +14,7 @@ import { Input } from 'postcss'
 import GenericFilterBarFactory, { createFilterBarInstance } from './FilterBar/FilterBar'
 import T from './i18n/T'
 import { Stores } from './Settings/Stores'
+import scrollToElement from './Helpers/scrollToElement'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -34,7 +35,10 @@ window.RMST_TS = {
     FetchSharedEvents,
     DanceEventQr,
     filterBar: GenericFilterBarFactory,
-    createFilterBarInstance
+    createFilterBarInstance,
+    createScrollToElement (el: Element) {
+        return scrollToElement(el)
+    }
 }
 
 window.T = T

@@ -14,10 +14,11 @@ html {
 
 body {
     @apply bg-gray-50;
-    @apply text-xl;
 }
 
-[x-cloak] { display: none !important; }
+[x-cloak] {
+    display: none !important;
+}
 
 section.is-padded {
     @apply px-4;
@@ -46,6 +47,9 @@ a {
     &:hover {
         @apply text-red-700;
     }
+    &.is-thin-decoration {
+        text-decoration-thickness: 2px;
+    }
 }
 
 #page-body {
@@ -53,8 +57,7 @@ a {
     & > .container {
         @apply flex flex-row;
         & > * {
-        @apply px-4 md:px-8 py-10;
-
+            @apply px-4 md:px-8 py-10;
         }
     }
     & #page-content {
@@ -63,6 +66,15 @@ a {
     }
 }
 
+.card-container {
+    @apply sm:grid-cols-12 gap-4 sm:grid flex flex-col mt-8;
+    & .card-container-sidebar {
+        @apply sm:col-span-4 sm:order-2;
+    }
+    & .card-container-main {
+        @apply col-span-8 sm:order-1;
+    }
+}
 
 a.is-internal-link {
     @apply underline;
@@ -86,7 +98,7 @@ a.is-internal-link {
         @apply border-t border-gray-200;
     }
     .dance-event-preview-item {
-     @apply py-4;
+        @apply py-4;
         & > * {
             @apply mb-2;
         }
@@ -124,7 +136,7 @@ a.is-internal-link {
     & .rmst-bg {
         background-repeat: no-repeat;
         background-position: right top;
-        opacity: .2
+        opacity: 0.2;
     }
 }
 
