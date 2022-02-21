@@ -11,12 +11,10 @@ export default class MobileNavigationStore {
     }
 
     public registerBackToTop (f: Function) {
-        console.info(f, 'registering')
         this.scrollToTopHandler = f
     }
 
     public unregisterBackToTop () {
-        console.info('unregistering')
         this.scrollToTopHandler = null
     }
 

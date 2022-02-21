@@ -1,4 +1,4 @@
-<div class="flex flex-wrap gap-2 my-2 is-card shadow-sm mb-4">
+<div class="is-card is-sticky-on-side space-y-2">
   <div class="mr-4 font-bold">
     <div class="mb-2">
       {{ partial "heroicons/outline/filter.svg" "is-icon is-1em" }}
@@ -10,24 +10,15 @@
           <span x-text="key"></span>
         </template>
         <template x-for="(selected, name) in category">
-          <a
-            href="#"
-            class="is-button has-icon text-sm relative mb-2 mr-2"
-            :class="selected ? 'active' : ''"
-            @click.prevent="toggleSelection(key, name)"
-          >
-            <template x-if="selected">
-              <span>
-                {{ partial "heroicons/outline/x.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-              </span>
-            </template>
-            <template x-if="!selected">
-              <span>
-                {{ partial "heroicons/outline/check.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-              </span>
-            </template>
-            <span x-text="getTranslation(name)"></span>
-          </a>
+          {{ partial "events/filter/check"
+            (dict
+            "clickHandler" "toggleSelection(key, name)"
+            "isCheckedIf" "selected"
+            "class" "text-sm"
+            "text" "getTranslation(name)"
+            "textIsJs" true
+            )
+          }}
         </template>
       </span>
     </template>
