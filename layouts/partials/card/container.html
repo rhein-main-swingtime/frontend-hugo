@@ -12,7 +12,7 @@
     {{ partial "filterbar/bar" . }}
   </aside>
 
-  <div class="card-container-main">
+  <div class="card-container-main space-y-4">
     {{ $cardLayout := $data.config.cardLayout }}
     {{ $classes := $data.config.itemClasses }}
     {{ $i18nPrefix := index $data.config "i18nPrefix" }}

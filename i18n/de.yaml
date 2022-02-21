@@ -68,6 +68,10 @@ learn-teacher:
   other: Lehrer
 learn-uni:
   other: Hochschulsport
+learn-category:
+  other: Kategorie
+learn-city:
+  other: Stadt
 link-home:
   other: Home
 share-link-copied:

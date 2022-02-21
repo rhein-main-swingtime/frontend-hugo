@@ -7,7 +7,10 @@
     <template x-for="(category, key) in filters">
       <span class="m-0" :class="!categoriesVisibleInBar ? 'inline' : 'block'">
         <template x-if="categoriesVisibleInBar">
-          <span x-text="key"></span>
+          <div
+            class="border-t-2 border-gray-200 mt-4 pt-2"
+            x-text="getTranslation(key)"
+          ></div>
         </template>
         <template x-for="(selected, name) in category">
           {{ partial "events/filter/check"
