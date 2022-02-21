@@ -1,3 +1,7 @@
 {
     "typescript.suggest.autoImports": true,
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
