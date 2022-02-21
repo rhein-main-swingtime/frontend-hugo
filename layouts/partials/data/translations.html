@@ -1,11 +1,7 @@
-{{ range $.Translations }}
-  {{ . }}
-{{ end }}
-
 <script type="text/javascript">
     var siteLang = "{{ .Site.Language.Lang }}"
-    var siteTranslations = {
-        de: JSON.parse({{ jsonify $.Site.Data.de }}),
-        en: JSON.parse({{ jsonify $.Site.Data.en }}),
-    }
+    var siteTranslations = {}
+    {{ range .Site.Languages }}
+    siteTranslations[{{.Lang}}] = {{ (index $.Site.Data .Lang )  | jsonify }}
+    {{ end }}
 </script>
