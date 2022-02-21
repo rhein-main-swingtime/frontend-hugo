@@ -1,43 +1,41 @@
 {{ define "main" }}
-    {{- partial "page/main-content" . -}}
+  {{- partial "page/main-content" . -}}
 
-    {{ $data := (index $.Site.Data .Page.Params.dataSrc )}}
+  {{ $data := (index $.Site.Data .Page.Params.dataSrc ) }}
 
-    <div
-        id="generic-filter-test"
-        class="filterable"
-        x-data="{
-            bar: RMST_TS.filterBar({{ $data.config | jsonify }})
-        }"
-    >
 
-        {{ partial "filterbar/bar" . }}
+  <div
+    id="generic-filter-test"
+    class="filterable"
+    x-data="RMST_TS.createFilterBarInstance({{ $data.config | jsonify }})"
+  >
+    {{ partial "filterbar/bar" . }}
 
-        <div class="item-container">
-            {{ partial "filterbar/sorry" }}
-            {{ $cardLayout := $data.config.cardLayout }}
-            {{ $classes := $data.config.itemClasses }}
-            {{ range
-                sort
-                    $data.items $data.config.sortBy
-                    $data.config.sortDirection
-            }}
-                <article
-                    class="{{$classes}}"
-                    x-transition
-                    x-init="bar.registerElement({{.|jsonify}})"
-                    x-show="bar.isVisible({{.|jsonify}})"
-                >
-                    {{ partial
-                        (printf "card/%s" $cardLayout)
-                        (dict
-                            "context" .
-                            "i18nPrefix" $data.config.i18nPrefix
-                        )
-                    }}
-                </article>
-            {{ end }}
-        </div>
 
+    <div class="item-container">
+      {{ $cardLayout := $data.config.cardLayout }}
+      {{ $classes := $data.config.itemClasses }}
+      {{ range
+        sort
+        $data.items $data.config.sortBy
+        $data.config.sortDirection
+      }}
+        <article
+          class="{{ $classes }}"
+          x-transition
+          x-init="registerElement({{ .|jsonify }})"
+          x-show="isVisible({{ .|jsonify }})"
+        >
+          {{ partial
+            (printf "card/%s" $cardLayout)
+            (dict
+            "context" .
+            "i18nPrefix" $data.config.i18nPrefix
+            )
+          }}
+        </article>
+      {{ end }}
+      {{ partial "filterbar/sorry" }}
     </div>
+  </div>
 {{ end }}

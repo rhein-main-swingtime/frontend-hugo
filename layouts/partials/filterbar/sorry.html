@@ -1,16 +1,20 @@
-<template x-if="bar.noItemsAvailable">
-    <article class="is-card py-5 lg:col-span-2 text-center">
-        <div class="mb-4">
-            <h2 class="text-xl font-bold">
-                {{ T "learn-page-sorry-hl" }}
-            </h2>
-            {{ T "learn-page-sorry-copy" }}
-        </div>
-        <a href="#" class="is-button has-icon text-sm highlighted" @click="bar.resetSelections()">
-            <span>
-                {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
-            </span>
-            Zurücksetzen
-        </a>
-    </article>
+<template x-if="noItemsAvailable">
+  <article class="is-card py-5 lg:col-span-2 text-center">
+    <div class="mb-4">
+      <h2 class="text-xl font-bold">
+        {{ T "learn-page-sorry-hl" }}
+      </h2>
+      {{ T "learn-page-sorry-copy" }}
+    </div>
+    <a
+      href="#"
+      class="is-button has-icon text-sm highlighted"
+      @click="resetSelections()"
+    >
+      <span>
+        {{ partial "heroicons/outline/trash.svg" "inline-block w-6 h-6 absolute left-1 top-0.5" }}
+      </span>
+      Zurücksetzen
+    </a>
+  </article>
 </template>
