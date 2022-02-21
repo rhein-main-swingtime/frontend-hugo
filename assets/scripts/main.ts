@@ -20,6 +20,7 @@ declare global {
     interface Window { // eslint-disable-line
         RMST_TS: Object;
         T: Function;
+        siteTranslations: {[key: string]: string[]}
     }
 }
 
@@ -42,6 +43,7 @@ window.RMST_TS = {
 }
 
 window.T = T
+window.siteTranslations = {}
 
 document.addEventListener('DOMContentLoaded', function (event) {
     setTouchBodyClass()
