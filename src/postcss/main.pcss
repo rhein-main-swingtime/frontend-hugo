@@ -156,3 +156,22 @@ canvas.max-w-full {
     @apply sticky;
     @apply sm:top-20;
 }
+
+.content-body.has-toc {
+    @apply grid grid-cols-1 sm:grid-cols-12;
+    & > .toc-container {
+        @apply hidden sm:block;
+        @apply sm:col-span-3;
+        & ul {
+            @apply space-y-2 pl-4;
+            @apply list-disc;
+        }
+        & > div {
+            @apply pl-4;
+            @apply border-l-2 border-gray-300 border-dashed
+        }
+    }
+    & > article {
+        @apply sm:col-span-9;
+    }
+}

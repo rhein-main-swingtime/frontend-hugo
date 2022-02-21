@@ -15,6 +15,7 @@ import GenericFilterBarFactory, { createFilterBarInstance } from './FilterBar/Fi
 import T from './i18n/T'
 import { Stores } from './Settings/Stores'
 import scrollToElement from './Helpers/scrollToElement'
+import TocWrapper from './Helpers/TocWrapper'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -38,6 +39,9 @@ window.RMST_TS = {
     createFilterBarInstance,
     createScrollToElement (el: Element) {
         return scrollToElement(el)
+    },
+    createTocWrapper (el: any) {
+        return TocWrapper(el)
     }
 }
 
