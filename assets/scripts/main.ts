@@ -21,7 +21,9 @@ declare global {
     interface Window { // eslint-disable-line
         RMST_TS: Object;
         T: Function;
-        siteTranslations: {[key: string]: string[]}
+        siteTranslations: {[key: string]: {
+            [key: string]: string
+        }}
     }
 }
 
