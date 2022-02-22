@@ -46,7 +46,6 @@ window.RMST_TS = {
 }
 
 window.T = T
-window.siteTranslations = {}
 
 document.addEventListener('DOMContentLoaded', function (event) {
     setTouchBodyClass()
