@@ -35,7 +35,7 @@ interface ContentItemInterface {
     [key: number | string] : string | number | Object
 }
 
-export function createFilterBarInstance (config: GenericListConfig) {
+export default function createFilterBarInstance (config: GenericListConfig) {
     return {
         config,
         filters: {},
