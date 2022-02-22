@@ -1,5 +1,6 @@
 import { elementOffset } from './UiHelpers'
 
+// @todo naming sucks here, this does not scroll, but returns a function -> refactor
 export default function (el: Element) {
     return () => {
         const offset = elementOffset(el)
