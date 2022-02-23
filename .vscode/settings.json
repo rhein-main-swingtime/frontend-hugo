@@ -1,0 +1,16 @@
+{
+    "typescript.suggest.autoImports": true,
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "editor.quickSuggestions": false,
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    "[yaml]": {
+        "editor.tabSize": 2
+    }
+}

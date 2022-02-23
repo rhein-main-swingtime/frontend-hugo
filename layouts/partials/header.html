@@ -1,20 +1,26 @@
 <head>
-    <title>{{ .Page.Title}} | {{ .Site.Title}}</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&display=swap"
+    rel="stylesheet"
+  />
 
-    {{ $styles := resources.Get "css/main.css"}}
-    {{ if .Site.IsServer }}
-        <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
-    {{ else }}
-        {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
-    {{ end }}
+  {{ $styles := resources.Get "css/main.css" }}
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  {{ else }}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link
+      rel="stylesheet"
+      href="{{ $styles.RelPermalink }}"
+      s
+      integrity="{{ $styles.Data.Integrity }}"
+    />
+  {{ end }}
 
-    {{ partial "data/translations.html" . }}
-    {{ partial "data/settings.html" . }}
-    {{ partial "header/matomo.html" }}
+  {{ partial "header/matomo.html" }}
 </head>

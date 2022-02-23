@@ -1,34 +1,27 @@
-<div
-    id="mobile-nav-trigger"
-    :class="$store.mobileNavigationStore.open ? 'bg-red-700' : 'bg-gray-900'"
-    x-data=""
->
-    <a
-        class="flex flex-row gap-2"
-        href="#"
-        @click.prevent="$store.mobileNavigationStore.toggle()"
-    >
-        <div>
-            <template x-if="!$store.mobileNavigationStore.open">
-                {{ partial "heroicons/outline/menu.svg" "h-8" }}
-            </template>
-            <template x-if="$store.mobileNavigationStore.open">
-                {{ partial "heroicons/outline/x.svg" "h-8" }}
-            </template>
-        </div>
-        <div class="hidden">
-            <span
-                class="uppercase text-2xl font-light"
-                x-text="!$store.mobileNavigationStore.open ? 'Navigieren' : 'Schließen'"
-            >
-            </span>
-        </div>
-    </a>
-</div>
 
 <div
-    name="nav-overlay"
-    class="bg-white/30 backdrop-blur-sm top-0 left-0 w-screen h-screen fixed z-100 lg:hidden"
+    id="mobile-nav-overlay"
+    class="bg-gray-700/60"
+    x-cloak
     x-data=""
-    :class="$store.mobileNavigationStore.open ? '' : 'hidden'"
-></div>
+    x-show="$store.mobileNavigationStore.open"
+    x-transition:enter="transition ease-out duration-150"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-150 delay-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+>
+    <nav
+        class="main-page-nav"
+        x-show="$store.mobileNavigationStore.open"
+        x-transition:enter="transition ease-out duration-300 delay-150"
+        x-transition:enter-start="opacity-0 scale-80"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-80"
+    >
+        {{ partial "nav/main-navigation-content.html" . }}
+    </nav>
+</div>

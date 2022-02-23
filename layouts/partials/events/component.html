@@ -1,0 +1,29 @@
+<div
+  data-role="event-list"
+  id="dance-event-list"
+  class="card-container"
+  x-data="RMST_TS.danceEventPageFacade()"
+  x-init="function() {
+        list.init();
+        filters.init();
+        $watch('filters.searchQuery', (val, old) => handleFilterChange(val, old));
+    }"
+>
+  <div data-role="event-list-filter-bar" class="card-container-sidebar">
+    {{ partial "events/sidebar.html" . }}
+  </div>
+
+  <div class="card-container-main">
+    <template x-if="visiblePage === 'favorites'">
+      <div name="favorites">
+        {{ partial "events/favorites-list.html" . }}
+      </div>
+    </template>
+
+    <template x-if="visiblePage !== 'favorites'">
+      <div name="full-list">
+        {{ partial "events/full-list.html" . }}
+      </div>
+    </template>
+  </div>
+</div>

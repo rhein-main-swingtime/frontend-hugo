@@ -1,0 +1,14 @@
+<a
+    href="#"
+    @click.prevent="{{ .clickHandler }}"
+    class="text-sm is-filterbar-item is-check {{.class}}"
+    :class="{{ .isCheckedIf }} ? 'is-selected' : ''"
+>
+    {{ if .textIsJs }}
+        <span x-text="{{ .text }}"></span>
+    {{ else }}
+        <span>{{.text}}</span>
+    {{end}}
+    {{ partial "heroicons/outline/x.svg" "x" }}
+    {{ partial "heroicons/outline/check.svg" "check" }}
+</a>

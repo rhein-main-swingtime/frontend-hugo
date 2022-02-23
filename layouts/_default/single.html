@@ -1,4 +1,7 @@
-
 {{ define "main" }}
-    {{- partial "page/main-content" . -}}
+  {{- partial "page/main-content" . -}}
+
+  {{ if .Page.Params.dataSrc }}
+    {{ partial "card/container.html" . }}
+  {{ end }}
 {{ end }}

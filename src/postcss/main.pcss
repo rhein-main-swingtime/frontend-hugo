@@ -5,6 +5,7 @@
 @import "./learn.pcss";
 @import "./buttons.pcss";
 @import "./icons.pcss";
+@import "./sidebar.pcss";
 
 html {
     @apply font-serif font-light;
@@ -13,7 +14,10 @@ html {
 
 body {
     @apply bg-gray-50;
-    @apply text-xl;
+}
+
+[x-cloak] {
+    display: none !important;
 }
 
 section.is-padded {
@@ -27,7 +31,8 @@ section.is-padded {
 }
 
 .is-tripple-dots {
-    & > .is-dot {
+    & > div {
+        animation-duration: 300ms;
         &:nth-child(2) {
             animation-delay: 100ms;
         }
@@ -39,6 +44,12 @@ section.is-padded {
 
 a {
     @apply underline;
+    &:hover {
+        @apply text-red-700;
+    }
+    &.is-thin-decoration {
+        text-decoration-thickness: 2px;
+    }
 }
 
 #page-body {
@@ -46,28 +57,24 @@ a {
     & > .container {
         @apply flex flex-row;
         & > * {
-        @apply px-4 md:px-8 py-10;
-
+            @apply px-4 md:px-8 py-10;
         }
-    }
-    & nav#sidebar {
-        @apply hidden lg:block;
-        @apply lg:relative;
-        @apply lg:w-1/4;
-        @apply z-50;
-        & #sidebar-content {
-            @apply flex flex-col gap-2;
-            @apply text-xl;
-            @apply sticky top-28;
-        }
-
-
     }
     & #page-content {
         @apply bg-gray-50;
+        /* @apply pb-0; */
     }
 }
 
+.card-container {
+    @apply sm:grid-cols-12 gap-4 sm:grid flex flex-col mt-8;
+    & .card-container-sidebar {
+        @apply sm:col-span-4 sm:order-2;
+    }
+    & .card-container-main {
+        @apply col-span-8 sm:order-1;
+    }
+}
 
 a.is-internal-link {
     @apply underline;
@@ -91,7 +98,7 @@ a.is-internal-link {
         @apply border-t border-gray-200;
     }
     .dance-event-preview-item {
-     @apply py-4;
+        @apply py-4;
         & > * {
             @apply mb-2;
         }
@@ -109,42 +116,34 @@ a.is-internal-link {
     }
 }
 
-#page-mast-head {
-    @apply sticky w-screen top-0;
-    @apply z-110;
-    @apply shadow-md;
-    & .rmst-bg {
-        filter: invert(1);
-        background-repeat: no-repeat;
-        background-position: right top;
-        opacity: .1
+#mast-head-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    & h1::after {
+        content: ": ";
+        @apply -ml-1;
     }
-    /* background-image: url(img/rmst-logo.svg); */
 }
 
-#mobile-nav-trigger {
-    @apply lg:hidden z-110;
-    @apply border py-2 px-4 border-gray-600 rounded-full;
-    @apply text-gray-100 fixed bottom-8 mx-auto left-16 shadow-lg;
-    @apply text-xl;
-    left: 50vw;
-    transform: translateX(-50%);
-
+#page-mast-head {
+    @apply sticky top-0;
+    @apply z-100 md:z-110;
+    @apply shadow-md;
+    & .invert {
+        filter: invert(1);
+    }
+    & .rmst-bg {
+        background-repeat: no-repeat;
+        background-position: right top;
+        opacity: 0.2;
+    }
 }
 
 canvas.max-w-full {
     height: auto !important;
 }
 
-input[type=date] {
-    @apply rounded-sm;
-    @apply font-sans text-xs;
-    @apply border-gray-200;
-    @apply py-0.5;
-    &.is-faded {
-        @apply text-gray-400;
-    }
-}
 .filterable {
     & .item-container {
         @apply mx-auto max-w-screen-lg;
@@ -156,4 +155,23 @@ input[type=date] {
 .is-sticky-on-side {
     @apply sticky;
     @apply sm:top-20;
+}
+
+.content-body.has-toc {
+    @apply grid grid-cols-1 sm:grid-cols-12;
+    & > .toc-container {
+        @apply hidden sm:block;
+        @apply sm:col-span-3;
+        & ul {
+            @apply space-y-2 pl-4;
+            @apply list-disc;
+        }
+        & > div {
+            @apply pl-4;
+            @apply border-l-2 border-gray-300 border-dashed
+        }
+    }
+    & > article {
+        @apply sm:col-span-9;
+    }
 }

@@ -1,6 +1,6 @@
-import { FavoritesStore } from '../Store/FavoritesStore'
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import { FilterApiPayload } from './../Types/EventServerApiTypes'
+import scrollToElement from '../Helpers/scrollToElement'
 interface FilterItemInterface {
     name: string
     available: number
@@ -22,7 +22,14 @@ export class Filters {
     public fromDate: string | false = false
     public toDate: string | false = false
 
-    public constructor () {
+    public getScrollToTopHandler () {
+        return () => {
+            const target = document.querySelectorAll('[data-role=event-list-filter-bar]')[0]
+            if (!target) {
+                return
+            }
+            return scrollToElement(target)
+        }
     }
 
     private getCheckedByUrl (category: string, name: string): boolean {

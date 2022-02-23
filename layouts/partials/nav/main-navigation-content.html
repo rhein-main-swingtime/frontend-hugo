@@ -1,0 +1,42 @@
+<ul>
+    {{ if eq .IsHome false }}
+        <li>
+            <span class="in-mobile-nav-icon" data-for="home">
+                {{ partial "heroicons/outline/home.svg" }}
+            </span>
+            <a
+                class="in-mobile-nav"
+                href="{{ .Site.BaseURL | relLangURL }}"
+                class="in-mobile-nav" data-nav-id="home"
+            >
+                {{ T "link-home" }}
+            </a>
+        </li>
+    {{ end }}
+
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        {{ partial "nav/sidebar-link-icon.html" (dict "currentPage" $currentPage "menuEntry" . "menu" "main") }}
+    {{ end }}
+</ul>
+
+<ul>
+    {{ if .Site.IsMultiLingual }}
+        {{ range $.Translations }}
+            <li>
+                <span class="in-mobile-nav-icon" data-for="{{ .Language.LanguageName | urlize }}">
+                    {{ partial "heroicons/outline/translate.svg" }}
+                </span>
+                <a class="in-mobile-nav" data-nav-id="{{ .Language.LanguageName | urlize }}" title="{{ .Language.LanguageName }}" href="{{ .Permalink }}">
+                    {{ .Language.LanguageName }}
+                </a>
+            </li>
+        {{ end }}
+    {{ end }}
+</ul>
+
+<ul class="minor">
+    {{ range .Site.Menus.minor }}
+        {{ partial "nav/sidebar-link-icon.html" (dict "currentPage" $currentPage "menuEntry" . "menu" "minor") }}
+    {{ end }}
+</ul>

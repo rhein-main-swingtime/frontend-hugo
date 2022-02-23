@@ -1,0 +1,16 @@
+
+<div
+    class=" bg-gray-200 bg-opacity-70 sm:hidden shadow-md rounded-lg px-4 py-2 fixed right-2 bottom-16"
+    x-data=""
+    x-show="$store.mobileNavigationStore.scrollToTopHandler !== null"
+    x-cloak
+    @click="$store.mobileNavigationStore.scrollToTopHandler()"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 scale-90"
+    x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-90"
+>
+    {{ partial "heroicons/outline/chevron-up.svg" "text-grey-900 is-icon h-8" }}
+</div>

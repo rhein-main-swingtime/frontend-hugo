@@ -1,3 +1,4 @@
 export const Stores = {
-    FavoriteStore: 'favoriteStore'
+    FavoriteStore: 'favoriteStore',
+    MobileNavigationStore: 'mobileNavigationStore'
 }

@@ -28,11 +28,12 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}
             git checkout --force main
-            git pull
+            git fetch
+            git reset --hard origin/main
             yarn install
             yarn prod
             chmod +x ./bin/hugo
-            ./bin/hugo -d ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }}
+            ./bin/hugo --minify -d ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }}
       - name: Linking
         uses: appleboy/ssh-action@v0.1.4
         with:
@@ -43,3 +44,5 @@ jobs:
             cd ${{ secrets.DEPLOYMENT_ROOT }}
             rm ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
             ln -s frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }} ${{ secrets.PUBLIC_WEBROOT }}
+            echo "Deleting old builds (keeping 10)"
+            ls -tp | grep frontend_hugo_dist_ | grep -v '\$' | tail -n +10 | xargs -d '\n' -r rm -r --

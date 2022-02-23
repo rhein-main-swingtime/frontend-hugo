@@ -1,0 +1,79 @@
+<div class="flex flex-col">
+  <header class="space-y-4 mb-6 mt-4">
+    {{ if (isset .context.contact "web") }}
+      <a
+        class="is-thin-decoration"
+        target="_blank"
+        href="{{ .context.contact.web | safeURL }}"
+      >
+        <h1 class="text-4xl text-center font-thin">
+          {{ .context.name }}
+        </h1>
+      </a>
+    {{ else }}
+      <h1 class="text-4xl text-center font-thin">
+        {{ .context.name }}
+      </h1>
+    {{ end }}
+    <div class="mb-4 text-center">
+      <span class="text-sm bg-gray-700 text-white px-2 rounded font-bold">
+        {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+      </span>
+    </div>
+    {{ if (isset .context.desc .lang) }}
+      <div class=" border-gray-300 text-center flex justify-center">
+        <span class="prose prose-sm">
+          {{ markdownify (index .context.desc .lang) }}
+        </span>
+      </div>
+    {{ end }}
+  </header>
+
+  <div
+    class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 sm:grid-cols-12 text-base contact"
+  >
+    <div>
+      {{ range .context.address }}
+        <span class="block">
+          {{ . }}
+        </span>
+      {{ end }}
+      {{ if isset .context "address" }}
+        {{ $addressQuery := urlquery .context.address }}
+        <a
+          href="{{ site.Params.googleMapsQuery }}?api=1&query={{ $addressQuery }}"
+          target="_blank"
+          x-data="{
+
+          }"
+        >
+          {{ T "cta-open-in-google-maps" }}
+        </a>
+      {{ end }}
+    </div>
+    {{ $colSpan:= (cond (isset .context "address") "" "col-span-2 grid sm:grid-cols-2") }}
+    <div class="{{ $colSpan }} ">
+      {{ range $index, $val := .context.contact }}
+        <div class="{{ $index }}">
+          {{ $partialPath := printf "contact/%s.html" $index }}
+          {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+            {{ partial $partialPath . }}
+          {{ else }}
+            {{ $val }}
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ range $index, $val := .context.socialmedia }}
+        <div class="{{ $index }} inline-block mr-3 last:mr-0 xs:block xs:mr-0">
+          {{ $iconPath := printf "simpleicons.org/%s.svg" $index }}
+          {{ if templates.Exists ( printf "partials/%s" $iconPath ) }}
+            {{ partial ( printf "%s" $iconPath ) "inline-block w-4 h-4" }}
+          {{ end }}
+          <a href="{{ $val }}" target="_blank">
+            {{ i18n (printf "learn-%s" $index) }}
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

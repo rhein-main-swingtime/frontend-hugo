@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "budparr.language-hugo-vscode",
+        "dbaeumer.vscode-eslint",
+        "GitHub.vscode-pull-request-github"
+    ]
+}
