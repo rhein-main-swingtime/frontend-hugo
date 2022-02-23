@@ -22,7 +22,8 @@ declare global {
         T: Function;
         siteTranslations: {[key: string]: {
             [key: string]: string
-        }}
+        }},
+        siteLang: string
     }
 }
 

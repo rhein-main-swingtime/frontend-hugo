@@ -1,23 +1,22 @@
-const translations = siteTranslations || window.siteTranslations || {}
-
-function getLang (): string {
-    return window.siteLang ?? false
-}
+const translations = window.siteTranslations || {}
 
 export function isTranslationDefined (key: string): boolean {
-    console.info('Did not find translation for ' + key)
-    return translations[getLang()][key] !== undefined
+    if (!Object.keys(translations).includes(key)) {
+        console.info('Did not find translation for ' + key)
+        return false
+    }
+    return true
 }
 
 export default function (key: string, num: number | undefined = undefined) {
+    key = key.toLowerCase()
     try {
-        if (translations[getLang()][key] === undefined) {
-            console.error('key ' + key + ' is not a valid translation key')
+        if (!isTranslationDefined(key)) {
             return key
         }
     } catch (e: any) {
         console.error(e)
     }
 
-    return translations[getLang()][key].other || 'Not translated! [' + getLang() + '/' + key + ']'
+    return translations[key].other
 }
