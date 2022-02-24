@@ -1,5 +1,5 @@
-{{ partial "data/translations.html" . }}
-{{ partial "data/settings.html" . }}
+{{ partial "footer/translations.html" . }}
+{{ partial "footer/settings.html" . }}
 
 {{ if .Site.IsServer }}
   {{ $typescript := resources.Get "scripts/main.ts" | babel | js.Build  (dict "sourcemap" "inline" ) }}
