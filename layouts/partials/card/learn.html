@@ -1,11 +1,7 @@
 <div class="flex flex-col">
   <header class="space-y-4 mb-6 mt-4">
     {{ if (isset .context.contact "web") }}
-      <a
-        class="is-thin-decoration"
-        target="_blank"
-        href="{{ .context.contact.web | safeURL }}"
-      >
+      <a class="is-thin-decoration" target="_blank" href="{{ .context.contact.web | safeURL }}">
         <h1 class="text-4xl text-center font-thin">
           {{ .context.name }}
         </h1>
@@ -16,7 +12,7 @@
       </h1>
     {{ end }}
     <div class="mb-4 text-center">
-      <span class="text-sm bg-gray-700 text-white px-2 rounded font-bold">
+      <span class="text-base bg-gray-700 text-white px-2 rounded font-bold">
         {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
       </span>
     </div>
@@ -29,9 +25,7 @@
     {{ end }}
   </header>
 
-  <div
-    class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 sm:grid-cols-12 text-base contact"
-  >
+  <div class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 sm:grid-cols-12 text-base contact">
     <div>
       {{ range .context.address }}
         <span class="block">
@@ -40,13 +34,8 @@
       {{ end }}
       {{ if isset .context "address" }}
         {{ $addressQuery := urlquery .context.address }}
-        <a
-          href="{{ site.Params.googleMapsQuery }}?api=1&query={{ $addressQuery }}"
-          target="_blank"
-          x-data="{
-
-          }"
-        >
+        {{ partial "heroicons/solid/location-marker.svg" "is-icon is-1em" }}
+        <a href="{{ site.Params.googleMapsQuery }}?api=1&query={{ $addressQuery }}" target="_blank">
           {{ T "cta-open-in-google-maps" }}
         </a>
       {{ end }}
