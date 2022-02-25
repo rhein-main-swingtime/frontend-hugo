@@ -7,7 +7,7 @@ config:
     itemClasses: learn-item lg:min-h-[15rem] is-card
     filterable:             # Filters will be created for every one of those
         - category
-        - city
+        - location
     identifier: name        # Needs to be unique, and exist on every item
     sortBy: name            # Field used for sorting of items
     sortDirection: asc      # Sort direction
@@ -18,7 +18,7 @@ config:
 items:
     -
         name: Tanzschule Monika Bauer
-        city: Frankfurt
+        location: Frankfurt
         category: school
         contact:
             web: 'https://monika-bauer.de'
@@ -32,7 +32,7 @@ items:
             - 60329  Frankfurt
     -
         name: Die Tanzschule Carsten Weber
-        city: Frankfurt
+        location: Frankfurt
         category: school
         contact:
             web: 'http://die-tanzschule.de'
@@ -47,7 +47,7 @@ items:
             - D-65929 Frankfurt
     -
         name: Taktgefühl Tanzschule
-        city: Friedrichsdorf
+        location: Friedrichsdorf
         category: school
         contact:
             web: 'https://taktgefuehl.de'
@@ -61,7 +61,7 @@ items:
             - 61381 Friedrichsdorf
     -
         name: Balboa-Heiner
-        city: Darmstadt
+        location: Darmstadt
         category: school
         contact:
             web: 'https://www.balboa-heiner.de'
@@ -72,7 +72,7 @@ items:
             - 64287 Darmstadt
     -
         name: SugarfootSwing
-        city: Frankfurt
+        location: Frankfurt
         category: school
         contact:
             web: 'https://www.sugarfootswing.de'
@@ -83,7 +83,7 @@ items:
             - 60487 Frankfurt
     -
         name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
-        city: Mainz
+        location: Mainz
         category: club
         contact:
             web: 'http://www.swing-tanzen.de'
@@ -91,7 +91,7 @@ items:
             facebook: 'https://www.facebook.com/lindyhopmainz/'
     -
         name: Swing Jets
-        city: Offenbach
+        location: Offenbach
         category: club
         contact:
             web: 'https://www.swingjets.de'
@@ -101,7 +101,7 @@ items:
             youtube: 'https://www.youtube.com/channel/UCyASsBHuqfq3_qvpm800lbw'
     -
         name: FTV 1860 e.V.
-        city: Frankfurt
+        location: Frankfurt
         category: club
         contact:
             web: 'https://www.ftv1860.de/activities/lindy-hop/'
@@ -110,19 +110,19 @@ items:
             youtube: 'https://www.youtube.com/channel/UCWffDxt7I9lHjZpkI8GjFFQ'
     -
         name: FTG Sportfabrik Frankfurt
-        city: Frankfurt
+        location: Frankfurt
         category: club
         contact:
             web: 'https://www.ftg-frankfurt.de'
     -
         name: Swingin` Wiesbaden e.V.
-        city: Wiesbaden
+        location: Wiesbaden
         category: club
         contact:
             web: 'http://swinginwiesbaden.de'
     -
         name: Tanzatelier Ralf S.
-        city: Wiesbaden
+        location: Wiesbaden
         category: school
         contact:
             web: 'https://www.tanzatelier.info'
@@ -134,7 +134,7 @@ items:
             - 65195 Wiesbaden
     -
         name: Swingin Gießen e.V.
-        city: Gießen
+        location: Gießen
         category: club
         contact:
             web: 'https://lindyhop-giessen.de'
@@ -142,19 +142,19 @@ items:
             facebook: 'https://www.facebook.com/lindyhopgiessen/'
     -
         name: Salty & Strick
-        city: Frankfurt
+        location: Frankfurt
         category: teacher
         contact:
             mail: ausderzeitgefallen@gmail.com
     -
         name: Diana & Michael
-        city: Frankfurt
+        location: Frankfurt
         category: teacher
         socialmedia:
             facebook: 'https://www.facebook.com/groups/495469870660120'
     -
         name: Goethe Uni
-        city: Frankfurt
+        location: Frankfurt
         category: uni
         desc:
             de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
@@ -163,7 +163,7 @@ items:
             web: 'https://zfh-db.sport.uni-frankfurt.de/angebote/aktueller_zeitraum/index.html'
     -
         name: TU Darmstadt
-        city: Darmstadt
+        location: Darmstadt
         category: uni
         desc:
             de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
@@ -172,7 +172,9 @@ items:
             web: 'https://online-anmeldung.usz.tu-darmstadt.de/sportarten/aktueller_zeitraum/index.html#bs_as'
     -
         name: Sunny Side Swing
-        city: Darmstadt
+        location:
+            - Darmstadt
+            - online
         category: school
         desc:
             de: 'Swingtanzen in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solokurse'

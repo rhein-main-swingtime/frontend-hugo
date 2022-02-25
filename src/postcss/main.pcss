@@ -175,3 +175,29 @@ canvas.max-w-full {
         @apply sm:col-span-9;
     }
 }
+
+
+/* shortcodes */
+.is-infobox {
+    @apply border border-gray-400 border-dashed;
+    @apply bg-gray-200;
+    @apply pl-1 py-1 px-4;
+    @apply flex flex-row;
+
+    & .inner {
+        & h1 {
+            @apply text-lg;
+            @apply mb-1;
+        }
+        & > p {
+            @apply first:mt-2 first-of-type:mt-1;
+        }
+    }
+    & span.has-icon {
+        @apply pr-2;
+        & > svg {
+            @apply h-8 w-8 text-red-800;
+        }
+    }
+
+}
