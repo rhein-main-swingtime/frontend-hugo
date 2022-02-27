@@ -6,6 +6,8 @@ import { Stores } from '../Settings/Stores'
 import { Collection } from './Collection'
 import { fetchEventsById } from '../Helpers/FetchEventList'
 import DanceEvent from '../DTO/DanceEvent'
+import RedirectionPermissionHelper from '../Helpers/RedirectionPermissionHelper'
+import { createPopper } from '@popperjs/core'
 
 function isFavPageVisible () {
     return window.location.href.includes(pageFavorites + '::')
@@ -66,6 +68,23 @@ export default function create () {
         isDanceEvent: function (e: Object) {
             return e instanceof DanceEvent
         },
-        fetchSharedEvent: FetchSharedEvents
+        fetchSharedEvent: FetchSharedEvents,
+
+        handleForwarding: function (e: Element, target: string) {
+            console.log(e)
+            console.log(target)
+            const helper = new RedirectionPermissionHelper()
+            console.log(helper.isForwardingPermitted('google'))
+
+            const element = document.createElement('div')
+            element.classList.add('p-2', 'absolute')
+            element.appendChild(
+                document.createTextNode('Hallo, test123')
+            )
+            document.appendChild(element)
+
+
+            createPopper(e, element, { placement: 'auto' })
+        }
     }
 }

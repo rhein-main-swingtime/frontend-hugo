@@ -1,36 +1,28 @@
-
 {{ $logo := ("/img/rmst-logo.svg" | relURL) }}
-<section
-    id="page-mast-head"
-    class="bg-gray-900 page-{{ .Page.Type }} md:z-110"
->
-    <div
-        class="container mx-auto max-w-screen-xl
+<section id="page-mast-head" class="bg-gray-900 page-{{ .Page.Type }} md:z-110">
+  <div
+    class="container mx-auto max-w-screen-xl
             flex flex-row items-start gap-4
             text-gray-50 relative pt-1 pb-1 px-2
             sm:px-8 lg:px-4
         ">
-        <div
-            class="rmst-bg absolute top-0 left-0 right-0 bottom-0 z-0 invert"
-            style='background-image: url({{ $logo }});' >
-        </div>
-        <a href="#" class="flex flex-col pt-2">
-            <img src="{{$logo}}" class="invert h-12"  />
-        </a>
-        <div id="mast-head-title" class="text-gray-50 flex-grow mb-2">
-            <h1 class="text-2xl font-light inline sm:block">
-                {{ partial "heroicons/outline/hashtag.svg" "is-icon is-1em text-red-500 -mr-1" }}
-                {{ .Page.Title }}
-            </h1>
-            {{ if (isset .Params "subtitle") }}
-                <h2 class="font-light text-lg inline sm:block">{{ .Params.subtitle }}</h2>
-            {{ end }}
-        </div>
-        {{ partial "nav/tablet" }}
+    <div class="rmst-bg absolute top-0 left-0 right-0 bottom-0 z-0 invert" style="background-image: url({{ $logo }});"></div>
+    <a href="#" class="flex flex-col pt-2">
+      <img src="{{ $logo }}" class="invert h-12" />
+    </a>
+    <div id="mast-head-title" class="text-gray-50 flex-grow mb-2">
+      <h1 class="text-2xl font-light inline sm:block">
+        {{ partial "heroicons/outline/hashtag.svg" "is-icon is-1em text-red-500 -mr-1" }}
+        {{ .Page.Title }}
+      </h1>
+      {{ if (isset .Params "subtitle") }}
+        <h2 class="font-light text-lg inline sm:block">{{ .Params.subtitle }}</h2>
+      {{ end }}
     </div>
+    {{ partial "nav/tablet" }}
+  </div>
 </section>
 
 <template x-if="$store.mobileNavigationStore.open" x-transition>
-<div
-class="fixed top-0 bottom-0 left-0 right-0 bg-gray-500 opacity-20 z-100 filter backdrop-blur-md"> </div>
+  <div class="fixed top-0 bottom-0 left-0 right-0 bg-gray-500 opacity-20 z-100 filter backdrop-blur-md"></div>
 </template>

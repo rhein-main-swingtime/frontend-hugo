@@ -1,6 +1,6 @@
 export interface DanceEventPayload {
     id: number
-    foreignUrl: string
+    foreign_url: string         // eslint-disable-line
     source: string
     creator: string
     location: string
