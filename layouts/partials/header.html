@@ -11,7 +11,7 @@
   {{ $robots :="index,follow" }}
   {{ if .Page.Params.robots }}
     {{ $robots = .Page.Params.robots }}
-  {{ end }}"
+  {{ end }}
   <meta name="robots" content="{{ $robots }}" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
