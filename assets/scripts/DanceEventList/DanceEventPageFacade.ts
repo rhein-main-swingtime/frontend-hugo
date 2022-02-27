@@ -77,14 +77,12 @@ export default function create () {
             console.log(helper.isForwardingPermitted('google'))
 
             const element = document.createElement('div')
-            element.classList.add('p-2', 'absolute')
+            element.classList.add('p-2', 'absolute', 'bg-white', 'border-gray-200', 'border', 'rounded', 'shadow-sm')
             element.appendChild(
                 document.createTextNode('Hallo, test123')
             )
-            document.appendChild(element)
-
-
-            createPopper(e, element, { placement: 'auto' })
+            e.parentElement?.insertBefore(element, e)
+            createPopper(e, element, { placement: 'top' })
         }
     }
 }

@@ -1,27 +1,24 @@
-
 <div
-    id="mobile-nav-overlay"
-    class="bg-gray-700/60"
-    x-cloak
-    x-data=""
+  id="mobile-nav-overlay"
+  class="bg-gray-700/60"
+  x-cloak
+  x-data=""
+  x-show="$store.mobileNavigationStore.open"
+  x-transition:enter="transition ease-out duration-150"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition ease-in duration-150 delay-150"
+  x-transition:leave-start="opacity-100"
+  x-transition:leave-end="opacity-0">
+  <nav
+    class="main-page-nav"
     x-show="$store.mobileNavigationStore.open"
-    x-transition:enter="transition ease-out duration-150"
-    x-transition:enter-start="opacity-0"
+    x-transition:enter="transition ease-out duration-300 delay-150"
+    x-transition:enter-start="opacity-0 scale-80"
     x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="transition ease-in duration-150 delay-150"
-    x-transition:leave-start="opacity-100"
-    x-transition:leave-end="opacity-0"
->
-    <nav
-        class="main-page-nav"
-        x-show="$store.mobileNavigationStore.open"
-        x-transition:enter="transition ease-out duration-300 delay-150"
-        x-transition:enter-start="opacity-0 scale-80"
-        x-transition:enter-end="opacity-100 scale-100"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100 scale-100"
-        x-transition:leave-end="opacity-0 scale-80"
-    >
-        {{ partial "nav/main-navigation-content.html" . }}
-    </nav>
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-80">
+    {{ partial "nav/main-navigation-content.html" . }}
+  </nav>
 </div>
