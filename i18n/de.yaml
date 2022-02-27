@@ -1,7 +1,16 @@
-close:
+# How to work with this file:
+# - Keep content alphabetically sorted,
+#   this makes keep languages in sync much easiers
+# - try to group translations via prefixes (e.g. 'learn-', 'event-')
+# - use '__' (double underscore) for tralnslations which are used globally
+#   Why? It's quick to type and will be on top after sorting
+
+__toc:
+  other: Inhalt
+__close:
   other: Schließen
 cta-open-in-google-maps:
-  other: Mit Google Maps öffnen
+  other: Karte öffnen
 event-category-class:
   other: Kurs
 event-category-socials:
@@ -44,7 +53,11 @@ learn-city:
   other: Stadt
 learn-club:
   other: Verein
-learn-facebook-group:
+learn-location:
+  other: Ort
+learn-online:
+  other: Online Kurse
+learn-facebook:
   other: Facebook
 learn-instagram:
   other: Instagram

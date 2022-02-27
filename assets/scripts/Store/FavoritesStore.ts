@@ -6,7 +6,12 @@ export class FavoritesStore {
     private storageKey = 'RMST:eventSave'
 
     constructor () {
-        const serialized: DanceEventPayload[] = JSON.parse(String(window.localStorage.getItem(this.storageKey))) || []
+        const parsed = JSON.parse(String(window.localStorage.getItem(this.storageKey))) || []
+        let serialized: DanceEventPayload[] = []
+        if (!Array.isArray(parsed)) {
+            serialized = Object.values(serialized)
+        }
+
         serialized.forEach(element => {
             this.collection.push(createDanceEventFromJson(element))
         })

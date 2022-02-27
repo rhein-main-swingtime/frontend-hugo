@@ -6,7 +6,9 @@
       "files": ["*.html"],
       "options": {
         "parser": "go-template",
-        "tabWidth": 2
+        "tabWidth": 2,
+        "bracketSameLine": true,
+        "printWidth": 220
       }
     }
   ],

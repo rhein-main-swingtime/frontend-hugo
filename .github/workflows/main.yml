@@ -28,7 +28,8 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.BASE_FOLDER }}
             git checkout --force main
-            git pull
+            git fetch
+            git reset --hard origin/main
             yarn install
             yarn prod
             chmod +x ./bin/hugo

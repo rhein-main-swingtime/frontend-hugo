@@ -1,0 +1,18 @@
+{{ partial "footer/translations.html" . }}
+{{ partial "footer/settings.html" . }}
+
+{{ if .Site.IsServer }}
+  {{ $typescript := resources.Get "scripts/main.ts" | babel | js.Build  (dict "sourcemap" "inline" ) }}
+  {{ $alpine := resources.Get "scripts/alpine.js" | babel | js.Build }}
+  {{ $secureTS := $typescript | resources.Fingerprint "sha512" }}
+  {{ $secureAlpine:= $alpine | resources.Fingerprint "sha512" }}        <script type="text/javascript" src="{{ $secureTS.Permalink }}" integrity="{{ $secureTS.Data.Integrity }}" defer></script>
+      <script type="text/javascript" src="{{ $secureAlpine.Permalink }}" integrity="{{ $secureAlpine.Data.Integrity }}" defer></script>
+  {{ else }}
+      {{ $typescript := resources.Get "scripts/main.ts" | babel | js.Build  (dict "sourcemap" "inline" ) }}
+      {{ $alpine := resources.Get "scripts/alpine.js" | babel | js.Build  }}
+      {{ $bundle := slice $typescript $alpine | resources.Concat "scripts/bundle.js" }}
+      {{ $minified := $bundle }}
+      {{ $minified :=  $bundle | resources.Minify }}
+      {{ $secureJS := $minified | resources.Fingerprint "sha512" }}
+      <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" defer></script>
+{{ end }}

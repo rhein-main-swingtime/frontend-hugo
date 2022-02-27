@@ -32,10 +32,10 @@ interface FilterBarInterface {
 }
 
 interface ContentItemInterface {
-    [key: number | string] : string | number | Object
+    [key: number | string] : string | number | string[]
 }
 
-export function createFilterBarInstance (config: GenericListConfig) {
+export default function createFilterBarInstance (config: GenericListConfig) {
     return {
         config,
         filters: {},
@@ -49,13 +49,19 @@ export function createFilterBarInstance (config: GenericListConfig) {
             return (element: ContentItemInterface) => {
                 let out = true
                 this.config.filterable.forEach((f) => {
-                    if (out === false) {
+                    const selected = this.getSelectedFiltersInCategory(this.filters, f)
+                    if (out === false || selected === null) {
                         return
                     }
 
-                    const selected = this.getSelectedFiltersInCategory(this.filters, f)
-                    if (selected !== null && element[f] !== selected) {
-                        out = false
+                    const val = element[f]
+                    switch (typeof val) {
+                    case 'string':
+                    case 'number':
+                        out = (val === selected)
+                        break
+                    default:
+                        out = val.includes(selected.toString())
                     }
                 })
 
@@ -86,7 +92,11 @@ function registerElement (this: FilterBarInterface, element: any) {
         }
 
         if (this.filters[k][element[k]] === undefined) {
-            this.filters[k][element[k]] = false
+            if (Array.isArray(element[k])) {
+                element[k].forEach((i: string) => { this.filters[k][i] = false })
+            } else {
+                this.filters[k][element[k]] = false
+            }
         }
     })
 }

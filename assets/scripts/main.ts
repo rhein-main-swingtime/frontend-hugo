@@ -5,28 +5,31 @@ import { createPickster } from './DanceEventList/Dates'
 import fetchEventTeasers from './DanceEventList/Preview'
 import { setTouchBodyClass } from './Helpers/TouchDeviceDetection'
 import List from './Learn/List'
-import MobileNavigationStore, { createMobileNavigation } from './Navigation/Mobile'
+import MobileNavigationStore from './Navigation/Mobile'
 import danceEventPageFacade from './DanceEventList/DanceEventPageFacade'
 import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
 import DanceEventQr from './DanceEventList/DanceEventQr'
-import { Input } from 'postcss'
-import GenericFilterBarFactory, { createFilterBarInstance } from './FilterBar/FilterBar'
+import createFilterBarInstance from './FilterBar/FilterBar'
 import T from './i18n/T'
 import { Stores } from './Settings/Stores'
 import scrollToElement from './Helpers/scrollToElement'
+import TocWrapper from './Helpers/TocWrapper'
 
 declare global {
     interface Window { // eslint-disable-line
         RMST_TS: Object;
         T: Function;
+        siteTranslations: {[key: string]: {
+            [key: string]: string
+        }},
+        siteLang: string
     }
 }
 
 window.RMST_TS = {
     LearnList: List,
     fetchEventTeasers,
-    createMobileNavigation: createMobileNavigation,
     createPickster,
     notepad: new FavoritesStore(),
     danceEventPageFacade,
@@ -34,10 +37,12 @@ window.RMST_TS = {
     eventFilters: Filters,
     FetchSharedEvents,
     DanceEventQr,
-    filterBar: GenericFilterBarFactory,
     createFilterBarInstance,
     createScrollToElement (el: Element) {
         return scrollToElement(el)
+    },
+    createTocWrapper (el: any) {
+        return TocWrapper(el)
     }
 }
 

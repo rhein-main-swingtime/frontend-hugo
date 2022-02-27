@@ -1,0 +1,8 @@
+{{ $translations := (jsonify (index $.Site.Data .Site.Language.Lang )) }}
+
+<script type="text/javascript">
+    var siteLang = "{{ .Site.Language.Lang }}";
+    var siteTranslations = JSON.parse(
+      {{$translations}}
+    );
+</script>
