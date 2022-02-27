@@ -26,4 +26,6 @@
     {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" s integrity="{{ $styles.Data.Integrity }}" />
   {{ end }}
+
+  {{ partial "header/matomo.html" }}
 </head>
