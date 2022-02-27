@@ -1,9 +1,9 @@
 ---
-title: Szene
-subtitle: Treffpunkte, Gruppen, Social Media
+title: Scene
+subtitle: Meeting places, groups, social media
 menu: main
 weight: 20
-layout: scene
+dataSrc: scene
 translationKey: scene
 ---
 Lorem ipsum

@@ -1,2 +1,96 @@
+close:
+  other: Close
+cta-open-in-google-maps:
+  other: Open with Google Maps
+event-category-class:
+  other: Class
+event-category-socials:
+  other: Social Dance
+event-directions:
+  other: Open Map
+event-filters-reset:
+  other: Reset Filter
+event-headline-description:
+  other: Description
+event-headline-location:
+  other: Address
+event-headline-time:
+  other: Date & Time
+event-is-not-saved:
+  other: Pin
+event-is-saved:
+  other: Aufheben
+event-list-favorites:
+  other: Your pinned events
+event-location-not-set:
+  other: No Address set
+event-more-information:
+  other: More
+event-page-no-favorites:
+  other: You don't have any favorites set. Have a look at some events, use the ❤️-icon to pin classes and social events.
+event-share:
+  other: Share
+event-share-copy:
+  other: Have a look at RMSwing.de
+event-share-copy-headline:
+  other: Copy Link
+event-share-links-headline:
+  other: Send
+homepage-cta-all-socials:
+  other: All Social events in Rhein-Main area
+learn-category:
+  other: Category
+learn-city:
+  other: City
+learn-club:
+  other: Club
+learn-facebook-group:
+  other: Facebook
+learn-instagram:
+  other: Instagram
+learn-page-sorry-copy:
+  other: Sorry, there is nothing left in this combination.
+learn-page-sorry-hl:
+  other: Sorry!
+learn-school:
+  other: Dancing school
+learn-teacher:
+  other: Teacher
+learn-uni:
+  other: High-school-sport
+learn-youtube:
+  other: Youtube
+link-home:
+  other: Home
+main-menu-close:
+  other: Close
+main-menu-open:
+  other: Menu
+page-dance-fav-intro:
+  other: Here you'll find all events that you marked with a {{ .icon }}.
+page-dance-fav-show-only:
+  other: Show only {{ .icon }}
+page-dance-filters-date-from:
+  other: From
+page-dance-filters-date-selection:
+  other: Restrict date
+page-dance-filters-date-to:
+  other: To
+page-dance-filters-hide-socials:
+  other: Hide Socials
+page-dance-filters-show-class:
+  other: Also show classes
 scene-facebook-group:
   other: Facebook group
+share-link-copied:
+  other: Copied
+share-link-mail-cta:
+  other: Mail
+share-link-telegram-cta:
+  other: Telegram
+share-link-whatsapp-cta:
+  other: Whatsapp
+share-qr:
+  other: Scan
+teasers-also-relevant:
+  other: 'You might also be interested in:'
