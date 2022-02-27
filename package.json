@@ -44,12 +44,14 @@
   },
   "scripts": {
     "dev": "concurrently \"npm:watch\" \"npm:hugo-dev-server\"",
+    "preview-watch": "concurrently \"npm:watch\" \"npm:hugo-watch\"",
     "development": "mix",
     "watch": "mix watch",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "prod": "npm run production",
     "production": "mix --production",
-    "hugo-dev-server": "hugo server -D"
+    "hugo-dev-server": "hugo server -D",
+    "hugo-watch": "hugo --watch"
   }
 }
