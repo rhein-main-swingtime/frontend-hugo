@@ -24,6 +24,7 @@ export default class RedirectionPermissionHelper {
     }
 
     public isForwardingPermitted (linkTarget: string): boolean {
-        return this.getValue(linkTarget) === 'yes'
+        const key = (new URL(linkTarget)).hostname
+        return this.getValue(key) === 'yes'
     }
 }

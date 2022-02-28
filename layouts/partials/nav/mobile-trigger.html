@@ -1,5 +1,15 @@
+{{ $transitions := `
+  x-transition:enter="transition ease-out duration-300 delay-150"
+  x-transition:enter-start="opacity-0 scale-80"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition ease-in duration-150"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-80"`
+}}
+
+
 <div
-  id="mobile-nav-overlay"
+  id="nav-overlay"
   class="bg-gray-700/60"
   x-cloak
   x-data=""
@@ -10,15 +20,10 @@
   x-transition:leave="transition ease-in duration-150 delay-150"
   x-transition:leave-start="opacity-100"
   x-transition:leave-end="opacity-0">
-  <nav
-    class="main-page-nav"
-    x-show="$store.mobileNavigationStore.open"
-    x-transition:enter="transition ease-out duration-300 delay-150"
-    x-transition:enter-start="opacity-0 scale-80"
-    x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="transition ease-in duration-150"
-    x-transition:leave-start="opacity-100 scale-100"
-    x-transition:leave-end="opacity-0 scale-80">
+  <nav class="main-page-nav is-in-overlay" x-show="$store.mobileNavigationStore.isMobileNavOpen" {{ $transitions }}>
     {{ partial "nav/main-navigation-content.html" . }}
+  </nav>
+  <nav class="is-in-overlay" x-show="$store.mobileNavigationStore.isForwardingNoticeOpen" {{ $transitions }}>
+    <div>Tralala</div>
   </nav>
 </div>

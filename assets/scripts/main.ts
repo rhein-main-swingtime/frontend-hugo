@@ -23,7 +23,10 @@ declare global {
         siteTranslations: {[key: string]: {
             [key: string]: string
         }},
-        siteLang: string
+        siteLang: string,
+        _paq: {
+            push: Function
+        }
     }
 }
 

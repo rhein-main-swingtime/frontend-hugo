@@ -70,19 +70,20 @@ export default function create () {
         },
         fetchSharedEvent: FetchSharedEvents,
 
-        handleForwarding: function (e: Element, target: string) {
-            console.log(e)
-            console.log(target)
+        handleForwarding: function (event: MouseEvent, target: string) {
             const helper = new RedirectionPermissionHelper()
-            console.log(helper.isForwardingPermitted('google'))
 
-            const element = document.createElement('div')
-            element.classList.add('p-2', 'absolute', 'bg-white', 'border-gray-200', 'border', 'rounded', 'shadow-sm')
-            element.appendChild(
-                document.createTextNode('Hallo, test123')
-            )
-            e.parentElement?.insertBefore(element, e)
-            createPopper(e, element, { placement: 'top' })
+            if (!helper.isForwardingPermitted(target)) {
+                event.preventDefault()
+            }
+
+            // const element = document.createElement('div')
+            // element.classList.add('p-2', 'absolute', 'bg-white', 'border-gray-200', 'border', 'rounded', 'shadow-sm')
+            // element.appendChild(
+            //     document.createTextNode('Hallo, test123')
+            // )
+            // e.parentElement?.insertBefore(element, e)
+            // createPopper(e, element, { placement: 'top' })
         }
     }
 }

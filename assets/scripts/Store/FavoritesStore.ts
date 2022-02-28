@@ -1,5 +1,6 @@
 import { DanceEventPayload } from '../Types/EventServerApiTypes'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
+import trackEvent from '../Helpers/TrackingHelper'
 
 export class FavoritesStore {
     collection: DanceEvent[] = []
@@ -31,18 +32,30 @@ export class FavoritesStore {
 
     public toggle (danceEvent: DanceEvent) {
         if (this.isSaved(danceEvent)) {
-            this.remove(danceEvent.id)
+            this.remove(danceEvent.id, danceEvent.summary)
         } else {
             this.add(danceEvent)
         }
     }
 
-    public remove (id: number) {
+    public remove (id: number, name: string) {
+        trackEvent({
+            category: 'danceEventFavorite',
+            action: 'remove',
+            name: name,
+            value: id
+        })
         this.collection = this.collection.filter(e => e.id !== id)
         this.save()
     }
 
     public add (danceEvent: DanceEvent) {
+        trackEvent({
+            category: 'danceEventFavorite',
+            action: 'add',
+            name: danceEvent.summary,
+            value: danceEvent.id
+        })
         this.collection.push(danceEvent)
         this.save()
     }

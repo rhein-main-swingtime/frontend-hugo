@@ -1,5 +1,5 @@
 
-#mobile-nav-overlay {
+#nav-overlay {
     @apply backdrop-blur-sm;
     @apply top-0 left-0;
     @apply w-screen h-screen fixed z-100 lg:hidden;
@@ -7,6 +7,13 @@
     @apply block;
     @apply flex flex-col;
     @apply place-content-around;
+
+    & .is-in-overlay {
+        @apply bg-white/95 rounded-md;
+        @apply px-2 py-2;
+        @apply place-self-center z-110;
+        max-width: calc(100vw - 3rem);
+    }
 }
 
 .mobile-nav-trigger {
@@ -45,13 +52,9 @@
 }
 
 nav.main-page-nav {
-    #mobile-nav-overlay & {
+    #nav-overlay & {
         /* @apply flex flex-col place-items-center;
         @apply h-full; */
-        @apply bg-white/80 rounded-md;
-        @apply px-2 py-2;
-        @apply place-self-center z-110;
-        max-width: calc(100vw - 3rem);
         & ul {
             @apply text-left;
             @apply px-4;

@@ -1,11 +1,11 @@
-<div class="text-right mt-auto flex flex-row justify-end gap-2" x-init="console.log(danceEvent)">
+<div class="text-right mt-auto grid grid-cols-2 sm:flex sm:flex-row justify-end gap-2 whitespace-nowrap">
   <!-- open externally -->
-  <a class="is-button" target="_blank" @click.prevent="handleForwarding($el, danceEvent.foreignUrl)" :href="danceEvent.foreignUrl">
+  <a class="is-button text-center" target="_blank" @click.prevent="handleForwarding($event, danceEvent.foreignUrl)" :href="danceEvent.foreignUrl">
     {{ partial "simpleicons.org/googlecalendar.svg" "is-icon is-base" }}
-    Download
+    Einbinden
   </a>
 
-  <a href="#" class="is-button" @click.prevent="$store.favoriteStore.toggle(danceEvent)">
+  <a href="#" class="is-button text-center" @click.prevent="$store.favoriteStore.toggle(danceEvent)">
     <template x-if="!$store.favoriteStore.isSaved(danceEvent)">
       <span>
         {{ partial "heroicons/outline/heart.svg" "is-icon is-base" }}
@@ -19,11 +19,11 @@
       </span>
     </template>
   </a>
-  <a href="#" class="is-button" :class="openSection === 'share' ? 'active' : ''" @click.prevent="openSection = handleOpenEventSection(openSection, 'share')">
+  <a href="#" class="is-button text-center" :class="openSection === 'share' ? 'active' : ''" @click.prevent="openSection = handleOpenEventSection(openSection, 'share')">
     {{ partial "heroicons/outline/share.svg" "is-icon is-base" }}
     {{ i18n "event-share" }}
   </a>
-  <a href="#" class="is-button no-underline" :class="openSection === 'more' ? 'active' : ''" @click.prevent="openSection = handleOpenEventSection(openSection, 'more')">
+  <a href="#" class="is-button no-underline text-center" :class="openSection === 'more' ? 'active' : ''" @click.prevent="openSection = handleOpenEventSection(openSection, 'more')">
     {{ i18n "event-more-information" }}
     {{ partial "heroicons/outline/chevron-down.svg" "is-icon is-1em" }}
   </a>
