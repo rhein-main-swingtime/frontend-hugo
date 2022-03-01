@@ -1,5 +1,5 @@
-<div id="{{ .context.name | urlize }}" class="flex flex-col gap-4">
-  {{/* {{ partial (printf "simpleicons.org/%s.svg" .context.category) "is-icon is-1em text-white" }} */}}
+<div id="{{ .context.name | urlize }}" class="flex flex-col gap-4 relative opac">
+  {{ partial (printf "simpleicons.org/%s.svg" .context.category) "absolute -top-8 -right-8 h-24 w-24 opacity-5" }}
   <h4 class=" text-xl">
     {{ partial "heroicons/solid/hashtag.svg" "is-icon is-1em text-red-500" }}
     {{ .context.name }}
