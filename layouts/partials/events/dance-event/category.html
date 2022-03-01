@@ -1,15 +1,14 @@
 <span
-    class="is-badge"
-    :class="
+  class="is-badge text-gray-50"
+  :class="
         danceEvent.category === 'socials'
         ? 'bg-red-700 border-red-900'
-        : 'bg-green-700 border-green-900'
-    "
->
-    <span x-show="danceEvent.isSocial">
-        {{ i18n "event-category-socials"}}
-    </span>
-    <span x-show="danceEvent.isClass">
-        {{ i18n "event-category-class"}}
-    </span>
+        : 'bg-green-700 border-green-900 '
+    ">
+  <span x-show="danceEvent.isSocial">
+    {{ i18n "event-category-socials" }}
+  </span>
+  <span x-show="danceEvent.isClass">
+    {{ i18n "event-category-class" }}
+  </span>
 </span>

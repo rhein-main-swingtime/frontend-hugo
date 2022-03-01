@@ -90,7 +90,10 @@ a.is-internal-link {
 }
 
 .is-badge {
-    @apply rounded px-2 inline-block border text-white text-base shadow-inner;
+    @apply px-2 py-0.5 rounded ml-1 first:ml-0 border;
+    &.with-dark-bg {
+        @apply bg-gray-700 text-white border-gray-300;
+    }
 }
 
 .dance-event-previews {
