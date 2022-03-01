@@ -1,25 +1,31 @@
-<div class="flex flex-col">
-  <h4 class="text-4xl text-center font-thin my-4">
+<div class="flex flex-col gap-4">
+  {{/* {{ partial (printf "simpleicons.org/%s.svg" .context.category) "is-icon is-1em text-white" }} */}}
+  <h4 class=" text-xl">
+    {{ partial "heroicons/solid/hashtag.svg" "is-icon is-1em text-red-500" }}
     {{ .context.name }}
   </h4>
-  <div class="mb-8 text-center">
-    <span class="font-light text-sm bg-gray-500 text-white py-1 px-2 rounded">
+  <div>
+    <span class="is-badge with-dark-bg text-sm">
       {{ i18n (printf "scene-%s" .context.category) }}
+      {{ if eq false .context.public }}
+        {{ partial "heroicons/outline/lock-closed.svg" "is-icon is-1em" }}
+      {{ end }}
     </span>
   </div>
-
-  <div class="class mt-auto grid text-sm contact">
-    {{ if isset .context "desc" }}
-      {{ index .context.desc .lang }}
-    {{ end }}
-
-    {{ if isset .context "face_group" }}
-      <a
-        href="https://facebook.com/groups/{{ printf .context.face_group }}"
-        target="_blank"
-      >
-        facebook.com/{{ printf .context.face_group }}
-      </a>
-    {{ end }}
+  {{ if isset .context.desc .lang }}
+    <div class="p-2 border-t-2 border-b-2 border-dashed border-gray-200 -mx-4 px-6">
+      <b>{{ i18n "scene-description" }}</b><br />
+      {{ markdownify (index .context.desc .lang) }}
+    </div>
+  {{ end }}
+  <div class="text-right">
+    <a href="{{ .context.url }}" target="_blank" class="font-bold">
+      {{ replace
+        (i18n "scene-goto")
+        "%TARGET%"
+        (humanize .context.category)
+      }}
+    </a>
+    {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1.5em text-red-500" }}
   </div>
 </div>

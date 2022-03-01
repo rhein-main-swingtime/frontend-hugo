@@ -3,12 +3,11 @@
         "desc": {
             "de": "rund ums Swing-Tanzen in ",
             "en": "all about Swing-Dancing in "
-        },
-        "url": "https://facebook.com/groups/{face_group}"
+        }
     },
     "config": {
         "cardLayout": "scene",
-        "itemClasses": "learn-item lg:min-h-[15rem] is-card",
+        "itemClasses": "is-card",
         "filterable": [
             "category",
             "area"
@@ -17,94 +16,129 @@
         "sortBy": "name",
         "sortDirection": "asc",
         "showCategories": false,
-        "i18nPrefix": "learn",
+        "i18nPrefix": "scene",
         "title": "Filter"
     },
     "items": [
         {
             "name": "Swing In Frankfurt Am Main",
             "public": false,
-            "face_group": "1442899695957970",
+            "url": "https://facebook.com/groups/1442899695957970",
             "area": "Frankfurt",
-            "category": "facebook-group"
+            "category": "facebook"
         },
         {
             "name": "Swing Out d'or Wiesbaden",
             "public": true,
-            "face_group": "222069277804935",
+            "url": "https://facebook.com/groups/222069277804935",
             "area": "Wiesbaden",
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "de": "Der Sommer ist im Kommen und damit auch die nächste Saison der legendären Swing-Out d'Ors."
+            }
         },
         {
             "name": "Swing In Mainz",
-            "face_group": "317930771663002",
+            "url": "https://facebook.com/groups/317930771663002",
             "public": true,
             "area": "Mainz",
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "de": "Swing high in Mainz - we love music, we love dance and we love to share it! Parties, Workshops, Tanzen am Rhein, Tipps und Links... Alles ist möglich in Deinem Mainz! Zum Austauschen darüber und Vernetzen ist diese Gruppe gedacht."
+            }
         },
         {
             "name": "Darmstadt Swing & Friends",
-            "face_group": "202862923090162",
+            "url": "https://facebook.com/groups/202862923090162",
             "area": "Darmstadt",
             "public": true,
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "de": "Diese Gruppe dient dem Informationsaustausch zu Swingtanz, Balboa, Blues & Co in Darmstadt und Umgebung (friends). Es dürfen gerne Events vorgestellt, Kurse beworben und z.B. auch Mitfahrgelegenheiten oder Anmeldepartner gesucht/angeboten werden. Es ist, was wir draus machen."
+            }
         },
         {
             "name": "Rhein-Main goes Workshop",
             "desc": {
                 "en": "for organizing trips to international workshops cooperatively",
-                "de": "zum koordinieren von Fahrten zu internationalen Workshops"
+                "de": "Ihr seid aus dem Rhein-Main-Gebiet? Wieder mal einen tollen Workshop verpasst, weil ihr zu spät davon gehört habt? Die ersten drei Minuten der Registrierung verschlafen, nach denen der Workshop leider schon voll war? Oder einfach keine Lust, alleine auf einem Swing-Event aufzutauchen? Dem soll diese Gruppe Abhilfe verschaffen."
             },
-            "face_group": "Rheinmaingoesworkshop",
+            "url": "https://facebook.com/groups/Rheinmaingoesworkshop",
             "public": false,
             "area": "Rhein-Main",
-            "category": "facebook-group"
+            "category": "facebook"
         },
         {
-            "name": "Swing Attacke",
+            "name": "SWING ATTACKE",
             "desc": {
-                "de": "Spontanes Swing-Tanzen umsonst und draußen",
+                "de": "Draußen tanzen an schönen Orten macht Spaß und soll immer wieder stattfinden! Die Gruppe dient als Plattform zum Austausch und Organisieren von spontanen nicht kommerziellen Swing-Tanz-Zusammenkünften in Frankfurt und Umgebung. Jeder ist eingeladen seine Ideen dazu hier zu posten.",
                 "en": "Random, out-door, free social swing dancing"
             },
-            "face_group": "490692287651143",
+            "url": "https://facebook.com/groups/490692287651143",
             "area": "Frankfurt",
             "public": false,
-            "category": "facebook-group"
+            "category": "facebook"
         },
         {
             "name": "Swing Is Just Around The Corner",
             "area": "Frankfurt",
-            "face_group": "680509751994581",
+            "url": "https://facebook.com/groups/680509751994581",
             "public": true,
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "en": "The corner is German Rhein-Main Area with cities like Frankfurt, Wiesbaden, Darmstadt, Mainz, Aschaffenburg, Friedberg and all between. Only for Swing dancers and related events: Balboa, Lindyhop, Colegiated Shag, Charleston. Swing Music Events/Concerts where its not forbidden to dance to the music.",
+                "de": "The corner is German Rhein-Main Area with cities like Frankfurt, Wiesbaden, Darmstadt, Mainz, Aschaffenburg, Friedberg and all between. Only for Swing dancers and related events: Balboa, Lindyhop, Colegiated Shag, Charleston. Swing Music Events/Concerts where its not forbidden to dance to the music."
+            }
         },
         {
             "name": "Frankfurt Blues Dancing",
             "area": "Frankfurt",
-            "face_group": "395357990544635",
+            "url": "https://facebook.com/groups/395357990544635",
             "public": true,
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "de": "Informationen über Blues-Tanzveranstaltungen in Frankfurt und Umgebung. We are small but growing community - watch this spot.",
+                "en": "Blues dancing events in Frankfurt. We are small but growing community - watch this spot."
+            }
         },
         {
             "name": "Hop The Main",
             "area": "Frankfurt",
-            "face_group": "48505773375",
+            "url": "https://facebook.com/groups/48505773375",
             "public": true,
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "de": "Die Gruppe befasst sich mit Swing und Swing-Tanzen (Balboa, Jitterbug, Lindy Hop, Boogie-Woogie, etc.) rund um das Rhein-Main-Gebiet in Deutschland. Ob Musiker, Tänzer oder andere Interessierte...sie sind alle sehr herzlich willkommen, der Gruppe beizutreten."
+            }
         },
         {
             "name": "Balboa in Frankfurt",
             "area": "Frankfurt",
-            "face_group": "392286414141165",
+            "url": "https://facebook.com/groups/392286414141165",
             "public": false,
-            "category": "facebook-group"
+            "category": "facebook"
         },
         {
             "name": "Shag-Time Rhein-Main",
-            "face_group": "862588183758717",
+            "url": "https://facebook.com/groups/862588183758717",
             "public": false,
             "area": "Rhein-Main",
-            "category": "facebook-group"
+            "category": "facebook",
+            "desc": {
+                "en": "This group is dedicated to Balboa Events, Classes and Workshops in and arounf Frankfurt. Please refrain from posting other Events.",
+                "de": "In dieser Gruppe geht es Balboa-Veranstaltungen und Kurse im Rhein-Main Gebiet: Frankfurt, Darmstadt, Wiesbaden, Mainz usw."
+            }
+        },
+        {
+            "name": "LindyHop Social im Lilium",
+            "url": "https://signal.group/#CjQKIG0iR1v9AVJfV81zgnuSG1fexyi0iPsT-eaHgPnnlHriEhD-IB9JP5Udfpt60ix_X6WZ",
+            "public": true,
+            "area": "Frankfurt",
+            "category": "signal",
+            "desc": {
+                "en": "Der Social findet derzeit Indoors im Keller des Restaurants Lilium (Leipzigerstrasse 4 im Innenhof) statt. Dort gibt es Holzboden und es kann gelüftet werden.",
+                "de": "Der Social findet derzeit Indoors im Keller des Restaurants Lilium (Leipzigerstrasse 4 im Innenhof) statt. Dort gibt es Holzboden und es kann gelüftet werden."
+            }
         }
     ]
 }
