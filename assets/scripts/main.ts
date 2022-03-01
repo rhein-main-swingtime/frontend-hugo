@@ -5,7 +5,6 @@ import { createPickster } from './DanceEventList/Dates'
 import fetchEventTeasers from './DanceEventList/Preview'
 import { setTouchBodyClass } from './Helpers/TouchDeviceDetection'
 import List from './Learn/List'
-import MobileNavigationStore from './Navigation/Mobile'
 import danceEventPageFacade from './DanceEventList/DanceEventPageFacade'
 import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
@@ -15,6 +14,7 @@ import T from './i18n/T'
 import { Stores } from './Settings/Stores'
 import scrollToElement from './Helpers/scrollToElement'
 import TocWrapper from './Helpers/TocWrapper'
+import MobileNavigationStore from './Store/Mobile'
 
 declare global {
     interface Window { // eslint-disable-line
@@ -23,7 +23,10 @@ declare global {
         siteTranslations: {[key: string]: {
             [key: string]: string
         }},
-        siteLang: string
+        siteLang: string,
+        _paq: {
+            push: Function
+        }
     }
 }
 

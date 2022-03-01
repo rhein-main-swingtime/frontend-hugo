@@ -46,7 +46,7 @@ class DanceEvent implements DancEventInterface {
         payload: DanceEventPayload
     ) {
         this.id = payload.id
-        this.foreignUrl = payload.foreignUrl
+        this.foreignUrl = payload.foreign_url
         this.source = payload.source
         this.creator = payload.creator
         this.location = payload.location

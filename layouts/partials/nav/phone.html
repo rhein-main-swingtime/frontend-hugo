@@ -1,21 +1,20 @@
 <div
-    @click.prevent="$store.mobileNavigationStore.toggle()"
-    class="fixed right-2 bottom-2 bg-gray-900 bg-opacity-85 text-white text-2xl z-110 rounded-lg px-4 py-2 shadow-md border-black-400 border md:hidden"
->
-    <template x-if="!$store.mobileNavigationStore.open">
-        <div class="flex flex-row">
-            <div>
-                {{ T "main-menu-open" }}
-            </div>
-            {{ partial "heroicons/outline/menu.svg" "text-white is-icon h-8" }}
-        </div>
-    </template>
-    <template x-if="$store.mobileNavigationStore.open">
-        <div class="flex flex-row">
-            <div>
-                {{ T "main-menu-close" }}
-            </div>
-            {{ partial "heroicons/outline/x.svg" "text-white is-icon h-8" }}
-        </div>
-    </template>
+  @click.prevent="$store.mobileNavigationStore.toggle($store.mobileNavigationStore.navIdMobileNav)"
+  class="fixed right-2 bottom-2 bg-gray-900 bg-opacity-85 text-white text-2xl z-110 rounded-lg px-4 py-2 shadow-md border-black-400 border md:hidden">
+  <template x-if="!$store.mobileNavigationStore.open">
+    <div class="flex flex-row">
+      <div>
+        {{ T "main-menu-open" }}
+      </div>
+      {{ partial "heroicons/outline/menu.svg" "text-white is-icon h-8" }}
+    </div>
+  </template>
+  <template x-if="$store.mobileNavigationStore.open">
+    <div class="flex flex-row">
+      <div>
+        {{ T "main-menu-close" }}
+      </div>
+      {{ partial "heroicons/outline/x.svg" "text-white is-icon h-8" }}
+    </div>
+  </template>
 </div>

@@ -6,6 +6,8 @@ import { Stores } from '../Settings/Stores'
 import { Collection } from './Collection'
 import { fetchEventsById } from '../Helpers/FetchEventList'
 import DanceEvent from '../DTO/DanceEvent'
+import RedirectionPermissionHelper from '../Helpers/RedirectionPermissionHelper'
+import { createPopper } from '@popperjs/core'
 
 function isFavPageVisible () {
     return window.location.href.includes(pageFavorites + '::')

@@ -1,7 +1,7 @@
 ---
 title: Mitmachen
 subtitle: Mach mit :)
-menu: main
+menu: minor
 weight: 30
 translationKey: get_involved
 toc: true
