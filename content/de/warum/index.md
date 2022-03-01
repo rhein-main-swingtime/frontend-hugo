@@ -36,7 +36,7 @@ Wir finden die Szene im Rhein Main Gebiet ❤️ und möchten mit **rmswing.de**
 
 Für uns ist es auch ein Anliegen alle wichtigen Infos frei verfügbar zu haben.
 
-Wiso muss man bei Facebook registriert sein um Tanzevents für das nächste Wochenende, Workshops oder Festivals zu finden oder eigene Kurse oder Veranstaltungen anzubieten?
+Wieso muss man bei Facebook registriert sein um Tanzevents für das nächste Wochenende, Workshops oder Festivals zu finden oder eigene Kurse oder Veranstaltungen anzubieten?
 
 Um hier Veranstaltungen zu finden oder anzubieten muss man nirgendwo Mitglied werden, sich tracken lassen oder mehr Daten angeben als wirklich notwendig ist.
 
