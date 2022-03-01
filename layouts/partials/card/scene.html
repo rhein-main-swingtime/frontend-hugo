@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4">
+<div id="{{ .context.name | urlize }}" class="flex flex-col gap-4">
   {{/* {{ partial (printf "simpleicons.org/%s.svg" .context.category) "is-icon is-1em text-white" }} */}}
   <h4 class=" text-xl">
     {{ partial "heroicons/solid/hashtag.svg" "is-icon is-1em text-red-500" }}
@@ -13,13 +13,13 @@
     </span>
   </div>
   {{ if isset .context.desc .lang }}
-    <div class="p-2 border-t-2 border-b-2 border-dashed border-gray-200 -mx-4 px-6">
+    <div class="p-2 border-t-2 border-b-2 border-dashed border-gray-200 -mx-4 px-4">
       <b>{{ i18n "scene-description" }}</b><br />
       {{ markdownify (index .context.desc .lang) }}
     </div>
   {{ end }}
   <div class="text-right">
-    <a href="{{ .context.url }}" target="_blank" class="font-bold">
+    <a href="{{ .context.url }}" target="_blank" class="font-bold text-sm">
       {{ replace
         (i18n "scene-goto")
         "%TARGET%"
