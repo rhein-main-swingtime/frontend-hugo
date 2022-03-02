@@ -120,7 +120,11 @@
             "area": "Frankfurt",
             "url": "https://facebook.com/groups/392286414141165",
             "public": false,
-            "category": "facebook"
+            "category": "facebook",
+            "desc": {
+                "de": "In dieser Gruppe geht es Balboa-Veranstaltungen und Kurse im Rhein-Main Gebiet: Frankfurt, Darmstadt, Wiesbaden, Mainz usw.",
+                "en": "This group is dedicated to Balboa Events, Classes and Workshops in and arounf Frankfurt. Please refrain from posting other Events."
+            }
         },
         {
             "name": "Shag-Time Rhein-Main",
