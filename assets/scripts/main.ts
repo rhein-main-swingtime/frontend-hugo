@@ -4,7 +4,6 @@ import { FavoritesStore } from './Store/FavoritesStore'
 import { createPickster } from './DanceEventList/Dates'
 import fetchEventTeasers from './DanceEventList/Preview'
 import { setTouchBodyClass } from './Helpers/TouchDeviceDetection'
-import List from './Learn/List'
 import danceEventPageFacade from './DanceEventList/DanceEventPageFacade'
 import { Filters } from './DanceEventList/Filters'
 import FetchSharedEvents from './Helpers/FetchSharedEvents'
@@ -31,7 +30,6 @@ declare global {
 }
 
 window.RMST_TS = {
-    LearnList: List,
     fetchEventTeasers,
     createPickster,
     notepad: new FavoritesStore(),
