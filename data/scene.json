@@ -34,7 +34,8 @@
             "area": "Wiesbaden",
             "category": "facebook",
             "desc": {
-                "de": "Der Sommer ist im Kommen und damit auch die nächste Saison der legendären Swing-Out d'Ors."
+                "de": "Der Sommer ist im Kommen und damit auch die nächste Saison der legendären Swing-Out d'Ors.",
+                "en": "Summer is coming and with that also the next season of the legendary Swing-Out d'Ors"
             }
         },
         {
@@ -44,7 +45,8 @@
             "area": "Mainz",
             "category": "facebook",
             "desc": {
-                "de": "Swing high in Mainz - we love music, we love dance and we love to share it! Parties, Workshops, Tanzen am Rhein, Tipps und Links... Alles ist möglich in Deinem Mainz! Zum Austauschen darüber und Vernetzen ist diese Gruppe gedacht."
+                "de": "Swing high in Mainz - we love music, we love dance and we love to share it! Parties, Workshops, Tanzen am Rhein, Tipps und Links... Alles ist möglich in Deinem Mainz! Zum Austauschen darüber und Vernetzen ist diese Gruppe gedacht.",
+                "en": "Swing high in Mainz - we love music, we love dance and we love to share it! Parties, workshops, dancing on the Rhine, tips and links... Everything is possible in your Mainz! This group is for sharing and networking."
             }
         },
         {
@@ -54,13 +56,14 @@
             "public": true,
             "category": "facebook",
             "desc": {
-                "de": "Diese Gruppe dient dem Informationsaustausch zu Swingtanz, Balboa, Blues & Co in Darmstadt und Umgebung (friends). Es dürfen gerne Events vorgestellt, Kurse beworben und z.B. auch Mitfahrgelegenheiten oder Anmeldepartner gesucht/angeboten werden. Es ist, was wir draus machen."
+                "de": "Diese Gruppe dient dem Informationsaustausch zu Swingtanz, Balboa, Blues & Co in Darmstadt und Umgebung (friends). Es dürfen gerne Events vorgestellt, Kurse beworben und z.B. auch Mitfahrgelegenheiten oder Anmeldepartner gesucht/angeboten werden. Es ist, was wir draus machen.",
+                "en": "This group is for the exchange of information about swing dance, balboa, blues & co in Darmstadt and surroundings (friends). Events may be presented, courses advertised and e.g. also rides or registration partners searched/offered. It is what we make of it."
             }
         },
         {
             "name": "Rhein-Main goes Workshop",
             "desc": {
-                "en": "for organizing trips to international workshops cooperatively",
+                "en": "forAre you from the Rhine-Main area? Missed another great workshop because you heard about it too late? Slept through the first three minutes of registration, after which the workshop was unfortunately already full? Or just don't feel like showing up alone at a swing event? This group is here to remedy that.",
                 "de": "Ihr seid aus dem Rhein-Main-Gebiet? Wieder mal einen tollen Workshop verpasst, weil ihr zu spät davon gehört habt? Die ersten drei Minuten der Registrierung verschlafen, nach denen der Workshop leider schon voll war? Oder einfach keine Lust, alleine auf einem Swing-Event aufzutauchen? Dem soll diese Gruppe Abhilfe verschaffen."
             },
             "url": "https://facebook.com/groups/Rheinmaingoesworkshop",
@@ -72,7 +75,7 @@
             "name": "SWING ATTACKE",
             "desc": {
                 "de": "Draußen tanzen an schönen Orten macht Spaß und soll immer wieder stattfinden! Die Gruppe dient als Plattform zum Austausch und Organisieren von spontanen nicht kommerziellen Swing-Tanz-Zusammenkünften in Frankfurt und Umgebung. Jeder ist eingeladen seine Ideen dazu hier zu posten.",
-                "en": "Random, out-door, free social swing dancing"
+                "en": "Dancing outside in beautiful places is fun and should happen again and again! The group serves as a platform to exchange and organize spontaneous non-commercial swing dance gatherings in Frankfurt and the surrounding area. Everyone is invited to post their ideas here."
             },
             "url": "https://facebook.com/groups/490692287651143",
             "area": "Frankfurt",
@@ -98,7 +101,7 @@
             "category": "facebook",
             "desc": {
                 "de": "Informationen über Blues-Tanzveranstaltungen in Frankfurt und Umgebung. We are small but growing community - watch this spot.",
-                "en": "Blues dancing events in Frankfurt. We are small but growing community - watch this spot."
+                "en": "Information about blues dance events in Frankfurt and surroundings. We are small but growing community - watch this spot."
             }
         },
         {
@@ -108,7 +111,8 @@
             "public": true,
             "category": "facebook",
             "desc": {
-                "de": "Die Gruppe befasst sich mit Swing und Swing-Tanzen (Balboa, Jitterbug, Lindy Hop, Boogie-Woogie, etc.) rund um das Rhein-Main-Gebiet in Deutschland. Ob Musiker, Tänzer oder andere Interessierte...sie sind alle sehr herzlich willkommen, der Gruppe beizutreten."
+                "de": "Die Gruppe befasst sich mit Swing und Swing-Tanzen (Balboa, Jitterbug, Lindy Hop, Boogie-Woogie, etc.) rund um das Rhein-Main-Gebiet in Deutschland. Ob Musiker, Tänzer oder andere Interessierte...sie sind alle sehr herzlich willkommen, der Gruppe beizutreten.",
+                "en": "The group is concerned with swing and swing dancing (Balboa, Jitterbug, Lindy Hop, Boogie-Woogie, etc.) around the Rhine-Main area in Germany. Musicians, dancers or other interested people...they are all very welcome to join the group."
             }
         },
         {
@@ -125,8 +129,8 @@
             "area": "Rhein-Main",
             "category": "facebook",
             "desc": {
-                "en": "This group is dedicated to Balboa Events, Classes and Workshops in and arounf Frankfurt. Please refrain from posting other Events.",
-                "de": "In dieser Gruppe geht es Balboa-Veranstaltungen und Kurse im Rhein-Main Gebiet: Frankfurt, Darmstadt, Wiesbaden, Mainz usw."
+                "en": "The idea is to support the Doubletime Collegiate Shag a little bit more and to learn it in Frankfurt and the surrounding area!",
+                "de": "Die Idee ist es den Doubletime Collegiate Shag etwas mehr zu unterstützen bzw. ihn auch in Frankfurt und Umgebung zu lernen!"
             }
         },
         {
@@ -136,7 +140,7 @@
             "area": "Frankfurt",
             "category": "signal",
             "desc": {
-                "en": "Der Social findet derzeit Indoors im Keller des Restaurants Lilium (Leipzigerstrasse 4 im Innenhof) statt. Dort gibt es Holzboden und es kann gelüftet werden.",
+                "en": "The social is currently held indoors in the basement of the restaurant Lilium (Leipzigerstrasse 4 in the courtyard). There is wooden floor and the room can be ventilated.",
                 "de": "Der Social findet derzeit Indoors im Keller des Restaurants Lilium (Leipzigerstrasse 4 im Innenhof) statt. Dort gibt es Holzboden und es kann gelüftet werden."
             }
         }
