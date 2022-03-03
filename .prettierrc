@@ -8,7 +8,7 @@
         "parser": "go-template",
         "tabWidth": 2,
         "bracketSameLine": true,
-        "printWidth": 220
+        "printWidth": 121
       }
     }
   ],

@@ -1,105 +1,98 @@
 {{ $checkItemDefault := (dict
-    "clickHandler" "item.checked = !item.checked"
-    "isCheckedIf" "item.checked"
-    "class" "text-sm"
-    "text" "item.name"
-    "textIsJs" true
-)}}
+  "clickHandler" "item.checked = !item.checked"
+  "isCheckedIf" "item.checked"
+  "class" "text-sm"
+  "text" "item.name"
+  "textIsJs" true
+  )
+}}
 
-<h3 class="text-lg font-bold">
-    Filter
-</h3>
-<form class="text">
-    <!-- cities -->
-    <div class="border-t-2 border-gray-200 my-2 py-2">
-        <div class="flex gap-1 flex-row flex-wrap">
-            <template x-for="item in filters.itemsInCategory('city')">
-                {{
-                    partial "events/filter/check"
-                    $checkItemDefault
-                }}
-            </template>
+
+<h3 class="text-lg font-bold">Filter</h3>
+<form class="text" x-data="{}" @click="$nextTick(() => { trackEventClick($event) })">
+  <!-- cities -->
+  <div class="border-t-2 border-gray-200 my-2 py-2">
+    <div class="flex gap-1 flex-row flex-wrap">
+      <template x-for="item in filters.itemsInCategory('city')">
+        {{ partial "events/filter/check"
+          $checkItemDefault
+        }}
+      </template>
+    </div>
+  </div>
+  <!-- Classes -->
+  <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
+    {{ partial "events/filter/dropdown.html"
+      (dict
+      "clickHandler" "filters.showClasses = !filters.showClasses"
+      "isOpenIf" "filters.showClasses"
+      "class" "font-bold text-sm"
+      "text" (T "page-dance-filters-show-class")
+      "textIsJs" false
+      )
+    }}
+  </div>
+  <div x-show="filters.showClasses" class="flex gap-1 flex-row flex-wrap">
+    <template x-for="item in filters.itemsInCategory('calendar')">
+      <template x-if="item !== 'Social Time'">
+        <div class="flex flex-row gap-2">
+          {{ partial "events/filter/check"
+            $checkItemDefault
+          }}
         </div>
-    </div>
-    <!-- Classes -->
-    <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
-        {{
-            partial "events/filter/dropdown.html"
-            (dict
-                "clickHandler" "filters.showClasses = !filters.showClasses"
-                "isOpenIf" "filters.showClasses"
-                "class" "font-bold text-sm"
-                "text" (T "page-dance-filters-show-class")
-                "textIsJs" false
-            )
-        }}
-    </div>
-    <div x-show="filters.showClasses" class="flex gap-1 flex-row flex-wrap">
-        <template x-for="item in filters.itemsInCategory('calendar')">
-            <template x-if="item !== 'Social Time'">
-                <div class="flex flex-row gap-2">
-                    {{
-                        partial "events/filter/check"
-                        $checkItemDefault
-                    }}
-                </div>
-            </template>
-        </template>
-        {{
-            partial "events/filter/check"
-            (dict
-                "clickHandler" "filters.hideSocials = !filters.hideSocials"
-                "isCheckedIf" "filters.hideSocials"
-                "class" "text-sm"
-                "text" (T "page-dance-filters-hide-socials")
-                "textIsJs" false
-            )
-        }}
-    </div>
-    <!-- dates -->
-    <div class="flex flex-row gap-2 border-t-2 border-gray-200 mt-1 pt-1 mb-1">
-        {{
-            partial "events/filter/dropdown.html"
-            (dict
-                "clickHandler" "filters.showDates = !filters.showDates"
-                "isOpenIf" "filters.showDates"
-                "class" "font-bold text-sm"
-                "text" (T "page-dance-filters-date-selection")
-                "textIsJs" false
-            )
-        }}
-    </div>
-    <div x-show="filters.showDates" class="text-sm flex flex-col items-start gap-1">
-        {{ partial
-            "events/date-filter"
-            (dict
-                "label" (T "page-dance-filters-date-from")
-                "model" "filters.fromDate"
-                "id" "start-date"
-                "min" "filters.minMaxDates.minFrom"
-                "max" "filters.minMaxDates.maxFrom"
-                "activeWhen" "filters.fromDate"
-            )
-        }}
-        {{ partial
-            "events/date-filter"
-            (dict
-                "label" (T "page-dance-filters-date-to")
-                "model" "filters.toDate"
-                "id" "end-date"
-                "min" "filters.minMaxDates.minTo"
-                "max" "filters.minMaxDates.maxTo"
-                "activeWhen" "filters.toDate"
-            )
-        }}
-    </div>
-    <template x-if="filters.canBeReset === true">
-        <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
-            <a href="#"
-                class="is-button text-base highlighted w-full text-center mt-2"
-                @click.prevent="filters.reset()">
-                {{ T "event-filters-reset" }}
-            </a>
-        </div>
+      </template>
     </template>
+    {{ partial "events/filter/check"
+      (dict
+      "clickHandler" "filters.hideSocials = !filters.hideSocials"
+      "isCheckedIf" "filters.hideSocials"
+      "class" "text-sm"
+      "text" (T "page-dance-filters-hide-socials")
+      "textIsJs" false
+      )
+    }}
+  </div>
+  <!-- dates -->
+  <div class="flex flex-row gap-2 border-t-2 border-gray-200 mt-1 pt-1 mb-1">
+    {{ partial "events/filter/dropdown.html"
+      (dict
+      "clickHandler" "filters.showDates = !filters.showDates"
+      "isOpenIf" "filters.showDates"
+      "class" "font-bold text-sm"
+      "text" (T "page-dance-filters-date-selection")
+      "textIsJs" false
+      )
+    }}
+  </div>
+  <div x-show="filters.showDates" class="text-sm flex flex-col items-start gap-1">
+    {{ partial
+      "events/date-filter"
+      (dict
+      "label" (T "page-dance-filters-date-from")
+      "model" "filters.fromDate"
+      "id" "start-date"
+      "min" "filters.minMaxDates.minFrom"
+      "max" "filters.minMaxDates.maxFrom"
+      "activeWhen" "filters.fromDate"
+      )
+    }}
+    {{ partial
+      "events/date-filter"
+      (dict
+      "label" (T "page-dance-filters-date-to")
+      "model" "filters.toDate"
+      "id" "end-date"
+      "min" "filters.minMaxDates.minTo"
+      "max" "filters.minMaxDates.maxTo"
+      "activeWhen" "filters.toDate"
+      )
+    }}
+  </div>
+  <template x-if="filters.canBeReset === true">
+    <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
+      <a href="#" class="is-button text-base highlighted w-full text-center mt-2" @click.prevent="filters.reset()">
+        {{ T "event-filters-reset" }}
+      </a>
+    </div>
+  </template>
 </form>

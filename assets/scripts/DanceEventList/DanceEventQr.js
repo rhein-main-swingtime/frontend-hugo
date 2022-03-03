@@ -1,9 +1,4 @@
 import QRCode from 'qrcode'
-
-/**
- *
- * @param {DanceEvent} danceEvent
- */
 export default function (danceEvent) {
     const canvas = document.getElementById('dance-event-qr-' + danceEvent.id)
     QRCode.toCanvas(
@@ -15,7 +10,6 @@ export default function (danceEvent) {
         },
         function (error) {
             if (error) console.error(error)
-            console.log('success!')
         }
     )
 }

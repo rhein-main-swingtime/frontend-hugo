@@ -7,7 +7,8 @@
         openSection: null
     }"
   x-init="openSection = list.handleHashNavivation(danceEvent.id, $refs.element)"
-  x-ref="element">
+  x-ref="element"
+  @click="$nextTick(() => { trackEventClick($event) })">
   <h1 class="text-lg bold font-bold">
     <span x-text="danceEvent.summary"></span>
   </h1>

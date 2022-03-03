@@ -1,6 +1,14 @@
 <div class="text-right mt-auto flex flex-row justify-end gap-2 whitespace-nowrap">
   <!-- Google Calender -->
-  <a class="is-button text-center" target="_blank" :href="danceEvent.foreignUrl">
+  <a
+    class="is-button text-center"
+    target="_blank"
+    :href="danceEvent.foreignUrl"
+    data-matomo="true"
+    data-matomo-category="danceEventInteraction"
+    :data-matomo-name="danceEvent.summary"
+    data-matomo-action="cta:googlecal:goto"
+    :data-matomo-value="danceEvent.id">
     {{ partial "simpleicons.org/googlecalendar.svg" "is-icon is-base" }}
     <span class="hidden sm:inline">{{ i18n "event-download-web" }}</span>
   </a>
@@ -22,12 +30,29 @@
     </template>
   </a>
   <!-- share -->
-  <a href="#" class="is-button text-center" :class="openSection === 'share' ? 'active' : ''" @click.prevent="openSection = handleOpenEventSection(openSection, 'share')">
+  <a
+    href="#"
+    class="is-button text-center"
+    :class="openSection === 'share' ? 'active' : ''"
+    @click.prevent="openSection = handleOpenEventSection(openSection, 'share')"
+    data-matomo="true"
+    data-matomo-category="danceEventInteraction"
+    :data-matomo-name="danceEvent.summary"
+    :data-matomo-action="'section:share:' + (openSection === 'share' ? 'open' : 'close')"
+    :data-matomo-value="danceEvent.id">
     {{ partial "heroicons/outline/share.svg" "is-icon is-base" }}
     {{ i18n "event-share" }}
   </a>
   <!-- more infos -->
-  <a href="#" class="is-button no-underline text-center" :class="openSection === 'more' ? 'active' : ''" @click.prevent="openSection = handleOpenEventSection(openSection, 'more')">
+  <a
+    href="#"
+    class="is-button no-underline text-center"
+    :class="openSection === 'more' ? 'active' : ''"
+    @click.prevent="openSection = handleOpenEventSection(openSection, 'more')"
+    data-matomo-category="danceEventInteraction"
+    :data-matomo-name="danceEvent.summary"
+    :data-matomo-action="'section:more:' + (openSection === 'more' ? 'open' : 'close')"
+    :data-matomo-value="danceEvent.id">
     {{ i18n "event-more-information" }}
     {{ partial "heroicons/outline/chevron-down.svg" "is-icon is-1em" }}
   </a>
