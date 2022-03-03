@@ -8,6 +8,7 @@ import { fetchEventsById } from '../Helpers/FetchEventList'
 import DanceEvent from '../DTO/DanceEvent'
 import RedirectionPermissionHelper from '../Helpers/RedirectionPermissionHelper'
 import { createPopper } from '@popperjs/core'
+import trackEvent, { trackingEventInterface } from '../Helpers/TrackingHelper'
 
 function isFavPageVisible () {
     return window.location.href.includes(pageFavorites + '::')
@@ -68,6 +69,21 @@ export default function create () {
         isDanceEvent: function (e: Object) {
             return e instanceof DanceEvent
         },
-        fetchSharedEvent: FetchSharedEvents
+        fetchSharedEvent: FetchSharedEvents,
+        trackEventClick (e: MouseEvent, dE: DanceEvent) {
+            const target = e.target
+            if (!(target instanceof HTMLElement) || target?.dataset.matomo === undefined) {
+                return
+            }
+
+            const payload: trackingEventInterface = {
+                category: 'danceEventInteraction',
+                action: target.dataset.matomoAction || '',
+                name: target.dataset.matomoName || '',
+                value: parseInt(target.dataset.matomoValue!) || 0
+            }
+
+            trackEvent(payload)
+        }
     }
 }

@@ -1,6 +1,6 @@
 import { DanceEventPayload } from '../Types/EventServerApiTypes'
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
-import trackEvent from '../Helpers/TrackingHelper'
+import trackEvent, { trackingEventInterface } from '../Helpers/TrackingHelper'
 
 export class FavoritesStore {
     collection: DanceEvent[] = []
@@ -31,11 +31,21 @@ export class FavoritesStore {
     }
 
     public toggle (danceEvent: DanceEvent) {
+        const eventTracking : trackingEventInterface = {
+            category: 'danceEventFavorite',
+            name: danceEvent.summary,
+            value: danceEvent.id,
+            action: ''
+        }
+
         if (this.isSaved(danceEvent)) {
+            eventTracking.action = 'add'
             this.remove(danceEvent.id, danceEvent.summary)
         } else {
+            eventTracking.action = 'remove'
             this.add(danceEvent)
         }
+        trackEvent(eventTracking)
     }
 
     public remove (id: number, name: string) {

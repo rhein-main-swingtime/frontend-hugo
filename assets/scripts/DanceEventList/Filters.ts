@@ -1,6 +1,7 @@
 import RMSTApiUrls from '../Settings/RMSTApiUrls'
 import { FilterApiPayload } from './../Types/EventServerApiTypes'
 import scrollToElement from '../Helpers/scrollToElement'
+import trackEvent from '../Helpers/TrackingHelper'
 interface FilterItemInterface {
     name: string
     available: number
@@ -13,11 +14,11 @@ interface FilterSettings {
 
 export class Filters {
     public _filters: FilterSettings = {}
+    public _showClasses: boolean = false
     public loading: boolean = true
     public initialized: boolean = false
-    public showClasses: boolean = false
     public onlyFavorites: boolean = false
-    public hideSocials: boolean = false
+    public _hideSocials: boolean = false
     public showDates: boolean = false
     public fromDate: string | false = false
     public toDate: string | false = false
@@ -78,6 +79,34 @@ export class Filters {
                 : today),
             maxTo: max
         }
+    }
+
+    get showClasses (): boolean {
+        return this._showClasses
+    }
+
+    set showClasses (val: boolean) {
+        trackEvent({
+            category: 'eventfilter',
+            action: 'showClasses',
+            value: (+val) // converts val to number
+        })
+
+        this._showClasses = val
+    }
+
+    get hideSocials () {
+        return this._hideSocials
+    }
+
+    set hideSocials (val: boolean) {
+        trackEvent({
+            category: 'eventfilter',
+            action: 'hideSocials',
+            value: (+val) // converts val to number
+        })
+
+        this._hideSocials = val
     }
 
     private getParamsAsObject () {
