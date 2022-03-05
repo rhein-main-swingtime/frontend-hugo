@@ -1,33 +1,28 @@
 {{ define "main" }}
 
-{{ partial "homepage/hero" . }}
+  {{ partial "homepage/hero" . }}
 
-<section id="divider" class="is-padded py-12 text-center bg-gray-700 text-white shadow-inner">
-  <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
-  {{ if (isset .Params "subtitle") }}
+
+  <section id="divider" class="is-padded py-12 text-center bg-gray-700 text-white shadow-inner">
+    <h1 class="text-4xl font-light">{{ .Page.Title }}</h1>
+    {{ if (isset .Params "subtitle") }}
       <h2 class="font-light text-2xl">{{ .Params.subtitle }}</h2>
-  {{ end }}
-</section>
+    {{ end }}
+  </section>
 
-<section class="bg-gray-50 py-12 is-padded">
-  <div class="container is-default">
+  <section class="bg-gray-50 py-12 is-padded">
+    <div class="container is-default flex flex-col">
+      {{ partial "nav/teaser-grid.html" . }}
 
-    {{ partial "nav/teaser-grid.html" . }}
 
-    <div class="text-sm mt-8 text-center">
-      {{ range .Site.Menus.minor }}
-      <a
-        class="inline-block mr-4 last:mr-0"
-        href="{{ .URL }}"
-      >
-      {{ .Title }}
-      {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
-      </a>
-    {{end}}
+      <div class="text-sm mt-8 text-center">
+        {{ range .Site.Menus.minor }}
+          <a class="inline-block mr-4 last:mr-0" href="{{ .URL }}">
+            {{ .Title }}
+            {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
+          </a>
+        {{ end }}
+      </div>
     </div>
-
-  </div>
-</section>
-
-
+  </section>
 {{ end }}

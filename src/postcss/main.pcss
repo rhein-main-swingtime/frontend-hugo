@@ -16,6 +16,10 @@ body {
     @apply bg-gray-50;
 }
 
+* {
+    @apply box-border;
+}
+
 [x-cloak] {
     display: none !important;
 }
@@ -27,7 +31,6 @@ section.is-padded {
 .container.is-default {
     @apply mx-auto flex max-w-screen-xl;
     @apply lg:px-0;
-    @apply flex-col;
 }
 
 .is-tripple-dots {
@@ -62,6 +65,7 @@ a {
     }
     & #page-content {
         @apply bg-gray-50;
+        @apply w-full lg:w-3/4;
         /* @apply pb-0; */
     }
 }
@@ -123,10 +127,6 @@ a.is-internal-link {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    & h1::after {
-        content: ": ";
-        @apply -ml-1;
-    }
 }
 
 #page-mast-head {
@@ -160,33 +160,46 @@ canvas.max-w-full {
     @apply sm:top-20;
 }
 
-.content-body.has-toc {
-    @apply grid grid-cols-1 sm:grid-cols-12;
-    & > .toc-container {
-        @apply hidden sm:block;
-        @apply sm:col-span-3;
-        & ul {
-            @apply space-y-2 pl-4;
-            @apply list-disc;
+.content-body {
+    /*
+    &.has-toc {
+        @apply grid grid-cols-1 sm:grid-cols-12;
+        & > .toc-container {
+            @apply hidden sm:block;
+            @apply sm:col-span-3;
+            & ul {
+                @apply space-y-2 pl-4;
+                @apply list-disc;
+            }
+            & > div {
+                @apply pl-4;
+                @apply border-l-2 border-gray-300 border-dashed
+            }
         }
-        & > div {
-            @apply pl-4;
-            @apply border-l-2 border-gray-300 border-dashed
+        & > article {
+            @apply sm:col-span-9;
         }
     }
-    & > article {
-        @apply sm:col-span-9;
+    */
+    &.with-teaser {
+        @apply grid grid-cols-1 lg:grid-cols-12 lg:gap-4;
+        & > .is-teaser {
+            @apply lg:col-span-4;
+        }
+        & > .main {
+            @apply lg:col-span-8;
+        }
     }
+
+
 }
 
 
 /* shortcodes */
-.is-infobox {
-    @apply border border-gray-400 border-dashed;
-    @apply bg-gray-200;
+.is-box {
+    @apply border  border-dashed;
     @apply pl-1 py-1 px-4;
     @apply flex flex-row;
-
     & .inner {
         & h1 {
             @apply text-lg;
@@ -199,8 +212,25 @@ canvas.max-w-full {
     & span.has-icon {
         @apply pr-2;
         & > svg {
-            @apply h-8 w-8 text-red-800;
+            @apply h-8 w-8;
         }
     }
+    &.is-info {
+        @apply border-gray-400 bg-gray-200;
+        & span.has-icon {
+            & > svg {
+                @apply text-red-800;
+            }
+        }
+    }
+    &.is-teaser {
+        @apply bg-gray-800 border-blue-400 rounded;
+        @apply text-white;
+        & * {
+            color: inherit;
+        }
+        & svg {
 
+        }
+    }
 }

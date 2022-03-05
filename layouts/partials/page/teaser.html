@@ -1,0 +1,16 @@
+<aside class="is-teaser is-card prose prose-sm">
+  {{ if isset . "icon" }}
+    {{ $icon := (printf "heroicons/%s.svg" .icon) }}
+    {{ partial $icon "is-teaser-icon" }}
+  {{ end }}
+  <div class="inner">
+    <h1 class="text-lg font-bold">{{ .headline }}</h1>
+    {{ markdownify .body }}
+    <p>
+      <a href="{{ relLangURL .cta.url }}">
+        {{ .cta.copy }}
+        {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
+      </a>
+    </p>
+  </div>
+</aside>

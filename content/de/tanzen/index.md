@@ -6,5 +6,16 @@ menu: main
 weight: 10
 layout: socials
 translationKey: dance_events
+
+teaser:
+    headline: RMSwing für die Hosentasche?
+    icon: outline/calendar
+    body: Wir bieten dir einen Kalender, den du bequem direkt auf deinem Smartphone immer dabei haben kannst.
+    cta:
+        url: "/kalender"
+        copy: Hier erfährst du mehr
+
 ---
-Lorem ipsum
+# Komm tanzen
+
+hier bekommst du den Überblick über die Swingtanz Events in der Rhein Main Region!

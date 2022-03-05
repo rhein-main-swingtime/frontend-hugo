@@ -2,12 +2,20 @@
 {{ if .Params.toc }}
   {{ $addClass = "has-toc" }}
 {{ end }}
+{{ if .Params.teaser }}
+  {{ $addClass = (printf "%s with-teaser" $addClass ) }}
+{{ end }}
 <section class="content-body {{ $addClass }}">
   <article class="main">
     <div class="prose">
       {{ .Content }}
     </div>
   </article>
+
+  {{ if .Params.teaser }}
+    {{ partial "page/teaser.html" .Params.teaser }}
+  {{ end }}
+
   {{ if (.Params.toc) }}
     {{ partial "page/toc.html" . }}
   {{ end }}
