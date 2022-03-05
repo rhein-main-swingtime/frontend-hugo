@@ -1,44 +1,43 @@
 {{ $currentPage := . }}
 <div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    {{ range .Site.Menus.main }}
-    {{if
-        and
-        (eq false ($currentPage.IsMenuCurrent "main" . ))
-        (eq false ($currentPage.IsMenuCurrent "main" . ))
-    }}
-        <div
-            x-data="{url: '{{ .URL }}'}"
-            x-on:click="() => {
+  {{ range .Site.Menus.main }}
+    {{ if
+      and
+      (eq false ($currentPage.IsMenuCurrent "main" . ))
+      (eq false ($currentPage.IsMenuCurrent "main" . ))
+      }}
+      <div
+        x-data="{url: '{{ .URL }}'}"
+        x-on:click="() => {
                 window.location.href = url
             }"
-            class="is-card flex flex-col
+        class="is-card flex flex-col
                 hover:cursor-pointer hover:scale-105 hover:shadow-md
                 active:scale-95 active:shadow-inner
-            "
-        >
-            <div class="text-gray-900">
-                <div class="flex flex-row font-bold">
-                {{ partial "heroicons/solid/hashtag.svg" "text-red-700 h-7 w-7 inline-block relative top-0.5"}}
-                <h1 class="text-2xl">
-                    {{ .Title }}
-                </h1>
-                </div>
-                {{ if (isset .Page.Params "subtitle") }}
-                <div class="text-base">
-                    {{ .Page.Params.subtitle }}
-                </div>
-                {{ end}}
+            ">
+        <div class="text-gray-900">
+          <div class="flex flex-row font-bold">
+            {{ partial "heroicons/solid/hashtag.svg" "text-red-700 h-7 w-7 inline-block relative top-0.5" }}
+            <h1 class="text-2xl">
+              {{ .Title }}
+            </h1>
+          </div>
+          {{ if (isset .Page.Params "subtitle") }}
+            <div class="text-base">
+              {{ .Page.Params.subtitle }}
             </div>
-            <div class="mt-auto">
-                {{/*  {{ .Page.Params.teaser }}  */}}
-                <div class="mt-4 text-right text-sm">
-                <a href="{{ .URL }}" class="">
-                    Mehr lesen
-                    {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
-                </a>
-                </div>
-            </div>
+          {{ end }}
         </div>
-        {{ end }}
+        <div class="mt-auto">
+          {{/* {{ .Page.Params.teaser }} */}}
+          <div class="mt-4 text-right text-sm">
+            <a href="{{ .URL }}" class="">
+              Mehr lesen
+              {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
+            </a>
+          </div>
+        </div>
+      </div>
     {{ end }}
+  {{ end }}
 </div>
