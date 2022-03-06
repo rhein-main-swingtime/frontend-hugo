@@ -91,12 +91,16 @@ page-dance-filters-hide-socials:
   other: Socials ausblenden
 page-dance-filters-show-class:
   other: Auch Kurse anzeigen
+scene-area:
+  other: Ort
+scene-category:
+  other: Kategorie
 scene-description:
   other: 'Beschreibung:'
 scene-facebook:
   other: Facebook-Gruppe
 scene-goto:
-  other: "%TARGET% öffnen"
+  other: '%TARGET% öffnen'
 scene-signal:
   other: Signal-Gruppe
 share-link-copied:
@@ -111,8 +115,3 @@ share-qr:
   other: Scannen
 teasers-also-relevant:
   other: 'Das könnte dich auch interessieren:'
-
-scene-category:
-  other: Kategorie
-scene-area:
-  other: Ort
