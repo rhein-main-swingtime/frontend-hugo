@@ -1,5 +1,5 @@
-<div>
-  <aside class="is-teaser is-card prose prose-sm">
+<div class="is-teaser">
+  <aside class="is-card prose prose-sm">
     {{ if isset . "icon" }}
       {{ $icon := (printf "heroicons/%s.svg" .icon) }}
       {{ partial $icon "is-teaser-icon" }}
