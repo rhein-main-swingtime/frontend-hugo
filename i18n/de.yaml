@@ -111,3 +111,8 @@ share-qr:
   other: Scannen
 teasers-also-relevant:
   other: 'Das könnte dich auch interessieren:'
+
+scene-category:
+  other: Kategorie
+scene-area:
+  other: Ort

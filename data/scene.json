@@ -15,7 +15,7 @@
         "identifier": "name",
         "sortBy": "name",
         "sortDirection": "asc",
-        "showCategories": false,
+        "showCategories": true,
         "i18nPrefix": "scene",
         "title": "Filter"
     },
