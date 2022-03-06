@@ -12,7 +12,7 @@
     </div>
   </article>
 
-  {{ if .Params.teaser }}
+  {{ if isset .Params "teaser" }}
     {{ partial "page/teaser.html" .Params.teaser }}
   {{ end }}
 
