@@ -3,6 +3,8 @@ __close:
   other: Schließen
 __open:
   other: Öffnen
+__open-page:
+  other: Seite öffnen
 __toc:
   other: Inhalt
 cta-open-in-google-maps:
@@ -77,6 +79,14 @@ main-menu-close:
   other: Schließen
 main-menu-open:
   other: Menu
+music-band:
+  other: Band / Gruppe
+music-dj:
+  other: DJ
+music-solo:
+  other: Solo Musiker
+music-category:
+  other: Kategorie
 page-dance-fav-intro:
   other: Hier findest du jederzeit alle Veranstaltungen, die du mit einem {{ .icon }} markiert hast.
 page-dance-fav-show-only:
