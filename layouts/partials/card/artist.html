@@ -1,0 +1,31 @@
+{{ $iconClasses := "is-icon is-1.5em text-red-500" }}
+
+
+<div id="{{ .context.name | urlize }}" class="flex flex-col gap-4 relative opac">
+  <header class="text-center space-y-4">
+    <h4 class="text-4xl text-center font-thin">
+      {{ .context.name }}
+    </h4>
+    <div>
+      <span class="is-badge with-dark-bg">
+        {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+      </span>
+    </div>
+  </header>
+  {{ if .context.contact.web }}
+    <div class="text-right">
+      <a href="{{ .context.contact.web }}" target="_blank" class="font-bold text-sm">
+        {{ i18n "__open-page" }}
+      </a>
+      {{ partial "heroicons/solid/chevron-double-right.svg" $iconClasses }}
+    </div>
+  {{ end }}
+  {{ if .context.contact.mail }}
+    <div class="text-right">
+      <a href="mailto{{ .context.contact.mail }}" target="_blank" class="font-bold text-sm">
+        {{ .context.contact.mail }}
+      </a>
+      {{ partial "heroicons/outline/mail.svg" $iconClasses }}
+    </div>
+  {{ end }}
+</div>

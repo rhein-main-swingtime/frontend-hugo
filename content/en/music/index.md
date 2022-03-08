@@ -4,6 +4,6 @@ subtitle: Bands und DJs
 menu: main
 layout: music
 weight: 20
-translationKey: music
+translationKey: artists
 ---
 Hier kommt die Musik

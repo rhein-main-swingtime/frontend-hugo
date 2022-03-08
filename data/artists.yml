@@ -1,0 +1,80 @@
+config:
+    # References a file in partials/cards,
+    # e.g. "partials/cards/learn.html"
+    # This will be used for rendering
+    cardLayout: artist
+    # classes will be set on the <article> element of the card
+    itemClasses: is-card
+    filterable:             # Filters will be created for every one of those
+        - category
+    identifier: name        # Needs to be unique, and exist on every item
+    sortBy: name            # Field used for sorting of items
+    sortDirection: asc      # Sort direction
+    showCategories: false   #
+    i18nPrefix: music       # can be used within the card template, to fetch translations
+    title: Filter           # actually, this should come from the translations too @todo
+
+
+items:
+    -
+        name: IKS Big Band
+        contact:
+            web: https://iks-jazz.de/big-band
+        location: Rüsselsheim
+        category: band
+
+    -
+        name: Jubilee Jumpers
+        location: Frankfurt
+        contact:
+            web: "http://jubileejumpers.de"
+        category: band
+
+    -
+        name: Maurice Kühn's SWINGKOMBINAT
+        contact:
+            web: "http://www.mauricekuehn.de/swingkombinat/"
+        category: band
+
+    -
+        name: Trio HEF zu Viert
+        contact:
+            web: "http://triohef.de"
+        category: band
+
+    -
+        name: Schallplattenunterhalter Kaiser L
+        contact:
+            web: "http://music.jumpinjive.com/html/aktuell.htm"
+        socialmedia:
+            facebook: "https://facebook.com/DJKaiserL"
+        location: Frankfurt
+        category: dj
+
+    -
+        name: Jo van Nelsen
+        contact:
+            web: "http://jovannelsen.de/aktuelle-programme/schellack-dj"
+        location: Frankfurt
+        category: dj
+
+    -
+        name: Die Schwindler
+        contact:
+            web: http://www.jazzsalon.de/index.html/dieschwindler.com/schwindler/
+        location: Frankfurt
+        category: band
+
+    -
+        name: Swing Belleville
+        contact:
+            web: https://www.swing-belleville.de/
+        location: Frankfurt
+        category: band
+
+    -
+        name: Eric the Goodsoul
+        contact:
+            mail: eric@goodsoul.de
+        location: Frankfurt
+        category: dj
