@@ -10,7 +10,7 @@ config:
     identifier: name        # Needs to be unique, and exist on every item
     sortBy: name            # Field used for sorting of items
     sortDirection: asc      # Sort direction
-    showCategories: true    #
+    showCategories: false   #
     i18nPrefix: music       # can be used within the card template, to fetch translations
     title: Filter           # actually, this should come from the translations too @todo
 
@@ -66,7 +66,7 @@ items:
         category: band
 
     -
-        name: Swing Bellevielle
+        name: Swing Belleville
         contact:
             web: https://www.swing-belleville.de/
         location: Frankfurt
