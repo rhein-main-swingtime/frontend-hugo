@@ -12,7 +12,7 @@ teaser:
     body: Wir bieten dir einen Kalender, den du bequem direkt auf deinem Smartphone immer dabei haben kannst.
     icon: outline/calendar
     cta:
-        url: "/kalender"
+        url: "/tanzen/kalender"
         copy: Hier erfährst du mehr
 
 ---

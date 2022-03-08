@@ -2,28 +2,25 @@
 {{ $i.Set "class" "" }}
 {{ $i.Set "icon" "heroicons/outline/hashtag.svg" }}
 
-{{if or (.currentPage.IsMenuCurrent .menu .menuEntry ) (.currentPage.HasMenuCurrent .menu .menuEntry) }}
-    {{ $i.Set "class" "active" }}
+{{ if .currentPage.IsMenuCurrent .menu .menuEntry }}
+  {{ $i.Set "class" "active" }}
 {{ end }}
 
-<li class='{{ $i.Get "class"}}'>
-    <span
-        class="in-mobile-nav-icon"
-        data-for="{{ .menuEntry.Title | urlize }}"
-    >
-        {{ partial "heroicons/outline/hashtag.svg" }}
+
+<li class="{{ $i.Get "class" }}">
+  <span class="in-mobile-nav-icon" data-for="{{ .menuEntry.Title | urlize }}">
+    {{ partial "heroicons/outline/hashtag.svg" }}
+  </span>
+  <a
+    class="in-mobile-nav"
+    href="{{ .menuEntry.URL }}"
+    title="{{ .menuEntry.Title }}"
+    data-nav-id="{{ .menuEntry.Title | urlize }}">
+    {{ .menuEntry.Name }}
+  </a>
+  {{ if eq .currentPage.IsHome false }}
+    <span>
+      {{ partial "heroicons/outline/chevron-right.svg" }}
     </span>
-    <a
-        class="in-mobile-nav"
-        href="{{ .menuEntry.URL }}"
-        title="{{ .menuEntry.Title }}"
-        data-nav-id="{{ .menuEntry.Title | urlize }}"
-    >
-        {{ .menuEntry.Name }}
-    </a>
-    {{ if eq .currentPage.IsHome false }}
-        <span>
-            {{ partial "heroicons/outline/chevron-right.svg" }}
-        </span>
-    {{ end }}
+  {{ end }}
 </li>
