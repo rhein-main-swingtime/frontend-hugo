@@ -7,7 +7,7 @@ translationKey: get_involved
 toc: true
 ---
 # Hey, schön, dass du da bist!
-Wir betreiben diese Seite, weil wir gerne tanzen, gerne basteln und die Szene im Rhein Main Gebiet ❤️ finden! Genau wie Tanzen vom gemeinsamen gemeinsamen Austausch lebt, freuen wir uns für diese über Austausch oder tatkräftige Unterstützung!
+Wir betreiben diese Seite, weil wir gerne tanzen, gerne basteln und die Szene im Rhein Main Gebiet ❤️ finden! Genau wie Tanzen vom gemeinsamen Austausch lebt, freuen wir uns hier über Austausch oder tatkräftige Unterstützung!
 
 Triffte eines dieser Statements auf dich zu? Dann melde dich einfach bei uns unter [hallo@rmswing.de](mailto:hallo@rmswing.de).
 
