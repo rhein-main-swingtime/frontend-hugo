@@ -78,3 +78,9 @@ items:
             mail: eric@goodsoul.de
         location: Frankfurt
         category: dj
+
+    -
+        name: Jonas and his Jivin’ Five
+        contact:
+            web: https://www.jonaslohse.de/
+        category: band
