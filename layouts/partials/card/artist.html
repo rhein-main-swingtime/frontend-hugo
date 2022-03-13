@@ -1,6 +1,5 @@
 {{ $iconClasses := "is-icon is-1.5em text-red-500" }}
 
-
 <div id="{{ .context.name | urlize }}" class="flex flex-col gap-4 relative opac">
   <header class="text-center space-y-4">
     <h4 class="text-4xl text-center font-thin">
@@ -8,7 +7,11 @@
     </h4>
     <div>
       <span class="is-badge with-dark-bg">
-        {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+        {{ if isset .context "category_alt" }}
+            {{ .context.category_alt }}
+        {{ else }}
+            {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+        {{ end }}
       </span>
     </div>
   </header>
