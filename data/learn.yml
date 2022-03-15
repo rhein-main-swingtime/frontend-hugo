@@ -139,7 +139,8 @@ items:
         contact:
             web: 'https://lindyhop-giessen.de'
             mail: info@lindyhop-giessen.de
-            facebook: 'https://www.facebook.com/lindyhopgiessen/'
+        socialmedia:
+            facebook: 'https://facebook.com/lindyhopgiessen'
     -
         name: Salty & Strick
         location: Frankfurt
@@ -151,7 +152,7 @@ items:
         location: Frankfurt
         category: teacher
         socialmedia:
-            facebook: 'https://www.facebook.com/groups/495469870660120'
+            facebook: 'https://facebook.com/groups/495469870660120'
     -
         name: Goethe Uni
         location: Frankfurt
@@ -179,7 +180,13 @@ items:
         desc:
             de: 'Swingtanzen in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solokurse'
             en: 'Swingdancing in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solo classes'
+        socialmedia:
+            facebook: 'https://facebook.com/swingindarmstadt'
+            instagram: 'https://instagram.com/sunnysideswingstudio'
         contact:
             web: 'https://www.sunnysideswing.de'
             mail: info@sunnysideswing.de
-            facebook: 'https://www.facebook.com/swingindarmstadt'
+            tel: 0179/7425147
+        address:
+            - Rheinstraße 22
+            - 64283 Darmstadt
