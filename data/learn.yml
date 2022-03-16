@@ -68,6 +68,7 @@ items:
             tel: 0170/9074149
             mail: info@balboa-heiner.de
         address:
+            - Balboa-Heiner
             - Dieburger Str. 194
             - 64287 Darmstadt
     -
@@ -188,5 +189,6 @@ items:
             mail: info@sunnysideswing.de
             tel: 0179/7425147
         address:
+            - Sunny Side Swing
             - Rheinstraße 22
             - 64283 Darmstadt
