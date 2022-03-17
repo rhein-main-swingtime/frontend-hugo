@@ -192,3 +192,11 @@ items:
             - Sunny Side Swing
             - Rheinstraße 22
             - 64283 Darmstadt
+    -
+        name: Marcus und Annina
+        location:
+            - Frankfurt
+        category: school
+        contact:
+            mail: kontakt@lindyhoplernen.de
+            facebook: 'https://www.facebook.com/gettoknowswing/?ref=page_internal'
