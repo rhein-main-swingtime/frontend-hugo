@@ -33,7 +33,7 @@
         </span>
       {{ end }}
       {{ if isset .context "address" }}
-        {{ $addressQuery := urlquery .context.address }}
+        {{ $addressQuery := urlquery (delimit .context.address " ") }}
         {{ partial "heroicons/solid/location-marker.svg" "is-icon is-1em" }}
         <a href="{{ site.Params.googleMapsQuery }}?api=1&query={{ $addressQuery }}" target="_blank">
           {{ T "cta-open-in-google-maps" }}

@@ -68,6 +68,7 @@ items:
             tel: 0170/9074149
             mail: info@balboa-heiner.de
         address:
+            - Balboa-Heiner
             - Dieburger Str. 194
             - 64287 Darmstadt
     -
@@ -76,11 +77,11 @@ items:
         category: school
         contact:
             web: 'https://www.sugarfootswing.de'
-            tel: 0170/9074149
             mail: info@sugarfootswing.de
         address:
-            - Leipziger Straße 56
-            - 60487 Frankfurt
+            - Zentrum Zeitlos
+            - Hungener Str. 5
+            - 60389 Frankfurt am Main
     -
         name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
         location: Mainz
@@ -139,7 +140,8 @@ items:
         contact:
             web: 'https://lindyhop-giessen.de'
             mail: info@lindyhop-giessen.de
-            facebook: 'https://www.facebook.com/lindyhopgiessen/'
+        socialmedia:
+            facebook: 'https://facebook.com/lindyhopgiessen'
     -
         name: Salty & Strick
         location: Frankfurt
@@ -151,7 +153,7 @@ items:
         location: Frankfurt
         category: teacher
         socialmedia:
-            facebook: 'https://www.facebook.com/groups/495469870660120'
+            facebook: 'https://facebook.com/groups/495469870660120'
     -
         name: Goethe Uni
         location: Frankfurt
@@ -179,10 +181,17 @@ items:
         desc:
             de: 'Swingtanzen in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solokurse'
             en: 'Swingdancing in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solo classes'
+        socialmedia:
+            facebook: 'https://facebook.com/swingindarmstadt'
+            instagram: 'https://instagram.com/sunnysideswingstudio'
         contact:
             web: 'https://www.sunnysideswing.de'
             mail: info@sunnysideswing.de
-            facebook: 'https://www.facebook.com/swingindarmstadt'
+            tel: 0179/7425147
+        address:
+            - Sunny Side Swing
+            - Rheinstraße 22
+            - 64283 Darmstadt
     -
         name: Marcus und Annina
         location:
