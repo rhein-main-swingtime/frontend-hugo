@@ -183,3 +183,11 @@ items:
             web: 'https://www.sunnysideswing.de'
             mail: info@sunnysideswing.de
             facebook: 'https://www.facebook.com/swingindarmstadt'
+    -
+        name: Marcus und Annina
+        location:
+            - Frankfurt
+        category: school
+        contact:
+            mail: kontakt@lindyhoplernen.de
+            facebook: 'https://www.facebook.com/gettoknowswing/?ref=page_internal'
