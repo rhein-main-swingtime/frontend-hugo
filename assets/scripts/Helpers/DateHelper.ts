@@ -20,7 +20,10 @@ function getLocalDateFormat (d: Date): Intl.DateTimeFormat {
 }
 
 export function convertStringToDate (s: string): Date {
-    return new Date(s)
+    // This always uses the local time of the visitors system
+    const date = new Date(s)
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset())
+    return date
 }
 
 export function isCurrentYear (d: Date): boolean {
