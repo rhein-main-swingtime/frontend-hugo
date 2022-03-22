@@ -11,14 +11,15 @@ export default function trackEvent (e: trackingEventInterface): void {
         console.info('_paq method not found')
         return
     }
-    if (location.host.includes('localhost')) {
-        console.info('tracking event', e)
-    }
 
-    window._paq.push([
-        e.category,
-        e.action,
-        e.name,
-        e.value
-    ])
+    try {
+        window._paq.push([
+            e.category.toString(),
+            e.action.toString(),
+            e.name,
+            e.value
+        ])
+    } catch (e) {
+        console.error(e)
+    }
 }
