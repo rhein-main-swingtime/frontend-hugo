@@ -13,8 +13,9 @@ export default function trackEvent (e: trackingEventInterface): void {
     }
 
     const payload = [
-        e.category.toString(),
-        e.action.toString(),
+        'trackEvent',
+        e.category,
+        e.action,
         e.name,
         e.value
     ]
