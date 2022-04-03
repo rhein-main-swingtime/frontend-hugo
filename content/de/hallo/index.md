@@ -17,5 +17,5 @@ Was war das noch gleich für ein Tanz? Du hast uns also beim Swingtanzen beobach
 
 Gemeinsamen haben diese Tänze, dass das Führen und Folgen geschlechterunabhängig ist und es keine feste Figurenfolge gibt, sondern viel improvisiert wird.
 
-Natürlich kann man das trotzdem lernen und hier auf der Seite findest Du auch wo Du das {{< absLangURL path="lernen"  >}}
+Natürlich kann man das trotzdem lernen und hier auf der Seite findest Du auch wo Du das {{< absLangURL path="lernen" >}}
 Lernen kannst. Und mit den neuen Kenntnissen kannst Du auch schon die Hauptfunktion dieser Seite nutzen und die nächsten Veranstaltung zum gemeinsamen Tanzen finden.
