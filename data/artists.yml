@@ -85,3 +85,8 @@ items:
         contact:
             web: https://www.jonaslohse.de/
         category: band
+    -
+        name: Foxy and the Jazz Hounds
+        contact:
+            web: foxy-jazzhounds.de
+        category: band
