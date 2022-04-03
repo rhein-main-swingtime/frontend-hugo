@@ -21,9 +21,9 @@ teaser:
 Hier findest du deinen Guide zu den anstehenden Swingtanz Events im Rhein Main Gebiet.
 
 Über die Filter kannst du deine Suche jederzeit einschränken und hast auch Zugriff auf Kurse bei verschiedenen Tanzschulen und Vereinen.
-
+<!--
 {{<info>}}
 # Bitte beachte
 
 Wir versuchen unser bestes dir hier immer eine möglichst komplette Auswahl zur Verfügung zu stellen, trotzdem kann immer mal etwas verloren gehen. Falls du etwas vermisst, oder einen Fehler gefunden hast, lass es uns einfach wissen unter [hallo@rmswingde](mailto:hallo@rmswing.de)
-{{</info>}}
+{{</info>}} -->
