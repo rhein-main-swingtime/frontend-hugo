@@ -33,11 +33,17 @@
         </span>
       {{ end }}
       {{ if isset .context "address" }}
-        {{ $addressQuery := urlquery (delimit .context.address " ") }}
         {{ partial "heroicons/solid/location-marker.svg" "is-icon is-1em" }}
-        <a href="{{ site.Params.googleMapsQuery }}?api=1&query={{ $addressQuery }}" target="_blank">
-          {{ T "cta-open-in-google-maps" }}
-        </a>
+        {{ $address := (delimit .context.address " ") }}
+        <div
+          x-data="{
+          address: '{{ $address }}',
+          mapsPrefix:'{{ site.Params.googleMapsQuery }}'
+        }">
+          <a x-bind:href="mapsPrefix + encodeURIComponent(address)" target="_blank">
+            {{ T "cta-open-in-google-maps" }}
+          </a>
+        </div>
       {{ end }}
     </div>
     {{ $colSpan:= (cond (isset .context "address") "" "col-span-2 grid sm:grid-cols-2") }}
