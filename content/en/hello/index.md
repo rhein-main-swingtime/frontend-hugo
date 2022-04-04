@@ -2,7 +2,7 @@
 title: 👋 Hallo
 subtitle: und viel Spaß!
 menu: minor
-weight: 10
+weight: 50
 translationKey: hello
 description: Du hast uns bei Swing Tanzen gesehen und willst mehr erfahren?
 keywords:
@@ -21,9 +21,9 @@ If you asked yourself what we're actually dancing, then the answer might be "Lin
 
 These are all dances from the big family of swing dances. Primarily - but not exclusively -  these are danced to Jazz music of the years between the early 1920ies up until roughly the 1950ies.
 
-*If you're curious about the history: Others have written much better an in depth about this than we could do here. [Below](#history) we provide some further reading for you.*
+**If you're curious about the history:** Others have written much better an in depth about this than we could do here. [Below](#history) we have collected few links to further reading for you.*
 
-Swing dancing has evolved a few fixed routines (like the Shim Sham), however it's primarly danced as a *Social Dance*. This means that usualy it's not danced as a fixed routine but rather improvised together to the music. Every dance couple usually consists of a *lead* and a *follow*. Both of these roles are open to every gender.
+Swing dancing has evolved a some fixed routines (like the Shim Sham), however it's primarly danced as a *Social Dance*. This means that usualy it's not danced as a fixed routine but rather improvised together to the music. Every dance couple normaly consists of a *lead* and a *follow*. Both of these roles are open to every gender.
 
 The goal is always to have fun together dancing!
 
