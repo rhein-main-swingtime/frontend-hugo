@@ -21,7 +21,9 @@ Falls du dich gefragt hast, was wir eigentlich tanzen, dann ist die Antwort verm
 
 Da dabei handelt es sich um Tänzen aus der Familie der Swing-Tänze. Diese werden vorzugsweise - aber nicht nur - zu Jazz-Musik aus den Jahren von ungefähr 1920 bis in die 1950er getanzt.
 
-*Falls dich die Geschichte interessiert: Andere haben das sehr viel besser aufgeschrieben als wir das könnten. [Weiter unten](#geschichte) haben wir dir dazu einige weiterführende Links zusammengestellt*
+{{<info>}}
+Falls dich die Geschichte interessiert: Andere haben das sehr viel besser aufgeschrieben als wir das könnten. [Weiter unten](#geschichte) haben wir dir dazu einige weiterführende Links zusammengestellt
+{{</info>}}
 
 Auch wenn es feste Routinen wie z.B. den Shim Sham gibt, wird Swing hauptsächlich als *Social Dance* getanzt. Dabei werden keine festen Choreographien "abgetanzt", sondern es wird gemeinsam zur Musik improvisiert. Dabei gibt es in jedem Tanzpaar einen *Lead* (oder Führenden) und einen *Follow* (oder Folgenden). Beide Rolle steht dabei natürlich jedem Geschlecht offen. Ergo sprechen wir auch nicht mehr von "der Dame" oder "dem Herren".
 
