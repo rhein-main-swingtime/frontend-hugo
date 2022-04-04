@@ -2,7 +2,7 @@
 title: 👋 Hallo
 subtitle: und viel Spaß!
 menu: minor
-weight: 10
+weight: 50
 translationKey: hello
 description: Du hast uns bei Swing Tanzen gesehen und willst mehr erfahren?
 keywords:
@@ -21,7 +21,7 @@ Falls du dich gefragt hast, was wir eigentlich tanzen, dann ist die Antwort verm
 
 Da dabei handelt es sich um Tänzen aus der Familie der Swing-Tänze. Diese werden vorzugsweise - aber nicht nur - zu Jazz-Musik aus den Jahren von ungefähr 1920 bis in die 1950er getanzt.
 
-*Falls dich die Geschichte interessiert: Andere haben das sehr viel besser aufgeschrieben als wir das könnten. [Weiter unten](#geschichte) haben wir dir dazu ein Paar weiterführende Links zusammengestellt*
+*Falls dich die Geschichte interessiert: Andere haben das sehr viel besser aufgeschrieben als wir das könnten. [Weiter unten](#geschichte) haben wir dir dazu einige weiterführende Links zusammengestellt*
 
 Auch wenn es feste Routinen wie z.B. den Shim Sham gibt, wird Swing hauptsächlich als *Social Dance* getanzt. Dabei werden keine festen Choreographien "abgetanzt", sondern es wird gemeinsam zur Musik improvisiert. Dabei gibt es in jedem Tanzpaar einen *Lead* (oder Führenden) und einen *Follow* (oder Folgenden). Beide Rolle steht dabei natürlich jedem Geschlecht offen. Ergo sprechen wir auch nicht mehr von "der Dame" oder "dem Herren".
 
@@ -39,7 +39,7 @@ Am besten schaust du einfach mal in die [Liste]({{< ref "/lernen/index.md" >}} "
 
 Hier kommt man zusammen, quatscht, tanzt und hat Spaß. In aller Regel wechselt man regelmäßig den Tanzpartner, so daß auch nichts dagegen spricht, alleine auf einen Social zu gehen. Sogar, wenn man niemanden kennt. Tatsächlich ist es super, um neue Leute kennen zu lernen.
 
- Man muss kein bestimmtes Level erreicht haben um zum Social Dance zu gehen, ganz im Gegenteil gibt es auf vielen Socials auch *Taster* also kurze Einführungen ins Swing Tanzen, die typischerweise zwischen 30 Minuten und einer Stunde dauern und dir ein paar erste Schritte mit auf den Weg geben.
+Man muss kein bestimmtes Level erreicht haben um zum Social Dance zu gehen, ganz im Gegenteil gibt es auf vielen Socials auch *Taster* also kurze Einführungen ins Swing Tanzen, die typischerweise zwischen 30 Minuten und einer Stunde dauern und dir ein paar erste Schritte mit auf den Weg geben.
 
 Wir haben eine Seite auf der du [immer die nächsten Socials findest]({{< ref "/tanzen" >}}). Schau am besten direkt vorbei und komm tanzen!
 
