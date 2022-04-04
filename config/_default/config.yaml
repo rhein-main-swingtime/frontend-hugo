@@ -2,7 +2,7 @@ baseURL: 'https://hugo.rmswing.de'
 title: 'Rhein Main Swing Time'
 
 params:
-    googleMapsQuery: https://www.google.com/maps/search/
+    googleMapsQuery: https://www.google.com/maps/search/?api=1&query=
 
 defaultContentLanguage: de
 languages:
