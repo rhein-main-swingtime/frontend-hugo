@@ -1,10 +1,10 @@
 ---
-title: Swing tanzen im Rhein-Main Gebiet
-subtitle: Alles, was du wissen musst!
+title: Swing dancing in the Rhein-Main area
+subtitle: Everything, you need to know
 eventTeasers:
     limit: 3
     category:
       - socials
 ---
 
-Bei uns findest du alle wichtigen Infos zum Swing Tanzen im Rhein-Main Gebiet, ganz egal ob du gerade angefangen hast, schon seit vielen Jahren tanzt, auf der Suche nach einer Tanzschule bist oder den nächsten Social finden willst.
+This is your guide to all important information about swing dancing in the Rhein-Main area, no matter if you're just starting out, have been dancing for years, are looking for classes or the next social.
