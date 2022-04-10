@@ -28,7 +28,7 @@ weight: 20
 # Multilingual pages are linked by this field, needs to be unique site-wide
 translationKey: why_motivation
 ---
-# *"Facebook habe ich sowieso nur noch zum Tanzen"*
+## *"Facebook habe ich sowieso nur noch zum Tanzen"*
 
 -- Unbekannt, aber häufig.
 
@@ -45,7 +45,5 @@ Und dabei bleibt's auch. Versprochen.
 {{<info>}}
 # Schamlose Werbung:
 
-Wir freuen uns sehr über tatkräftige Unterstützung!
-
-Wenn du hier mitmachen willst, schau doch mal [hier]({{< ref "/mitmachen" >}} "Mitmachen") vorbei
+Wir freuen uns sehr über tatkräftige Unterstützung! [Mitmachen]({{< ref "../../../mitmachen/index.md" >}} "Mitmachen")
 {{</info>}}
