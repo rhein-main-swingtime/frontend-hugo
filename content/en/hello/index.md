@@ -38,7 +38,7 @@ Here people come together to dance, talk and have fun. Usually people change dan
 
 You also don't have to have reached a certain level in dance skills. Just the opposite, many socials feature a *taster*, meaning a short introduction (typically between 30 minutes and 1 hour), which will teach you a couple of steps to try out after.
 
-We have a page [with all the socials]({{< ref "/dance/index.md" >}}). Just have a look and come dance with us!
+We have a page [with all the socials]({{< ref "/dance" >}}). Just have a look and come dance with us!
 
 ## Learn
 

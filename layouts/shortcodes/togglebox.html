@@ -1,0 +1,28 @@
+<article x-data="{open: false}" class="bg-white border border-solid border-slate-100 py-2 px-4 last-of-type:mb-4">
+  <div class="flex flex-row border-b border-b-gray-200">
+    <h1 class="text-lg flex-grow mb-1 font-normal">
+      {{ .Get "hl" }}
+    </h1>
+    <a href="#" class="flex-shrink" @click.prevent="open = !open">
+      <template x-if="!open">
+        {{ partial "heroicons/solid/chevron-down.svg" "is-icon h-8 w-8 text-red-500" }}
+      </template>
+      <template x-if="open">
+        {{ partial "heroicons/solid/chevron-up.svg" "is-icon h-8 w-8 text-red-500" }}
+      </template>
+    </a>
+  </div>
+  <div class="">
+    <div class="" :class="!open ? 'line-clamp-2' : ''">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+  <a class="block" @click.prevent="open = !open">
+    <template x-if="!open">
+      <span>mehr lesen </span>
+    </template>
+    <template x-if="open">
+      <span>einklappen </span>
+    </template>
+  </a>
+</article>

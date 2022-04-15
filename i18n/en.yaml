@@ -1,3 +1,5 @@
+__open-page:
+  other: Open
 close:
   other: Close
 cta-open-in-google-maps:
@@ -37,27 +39,31 @@ event-share-copy-headline:
 event-share-links-headline:
   other: Send
 homepage-cta-all-socials:
-  other: All Social events in Rhein-Main area
+  other: All upcoming socials
 learn-category:
   other: Category
 learn-city:
-  other: City
+  other: Locality
 learn-club:
   other: Club
-learn-facebook-group:
+learn-facebook:
   other: Facebook
 learn-instagram:
   other: Instagram
+learn-location:
+  other: Locality
+learn-online:
+  other: Online classes
 learn-page-sorry-copy:
-  other: Sorry, there is nothing left in this combination.
+  other: We could not find any entries for this combination
 learn-page-sorry-hl:
   other: Sorry!
 learn-school:
-  other: Dancing school
+  other: School
 learn-teacher:
   other: Teacher
 learn-uni:
-  other: High-school-sport
+  other: University sports
 learn-youtube:
   other: Youtube
 link-home:
@@ -66,6 +72,14 @@ main-menu-close:
   other: Close
 main-menu-open:
   other: Menu
+music-band:
+  other: Band
+music-category:
+  other: Category
+music-dj:
+  other: DJ
+music-solo:
+  other: Solo musician
 page-dance-fav-intro:
   other: Here you'll find all events that you marked with a {{ .icon }}.
 page-dance-fav-show-only:
@@ -80,8 +94,18 @@ page-dance-filters-hide-socials:
   other: Hide Socials
 page-dance-filters-show-class:
   other: Also show classes
-scene-facebook-group:
-  other: Facebook group
+scene-area:
+  other: Locality
+scene-category:
+  other: Category
+scene-description:
+  other: 'Description:'
+scene-facebook:
+  other: Facebook
+scene-goto:
+  other: Open %TARGET%
+scene-signal:
+  other: Signal
 share-link-copied:
   other: Copied
 share-link-mail-cta:
@@ -94,3 +118,6 @@ share-qr:
   other: Scan
 teasers-also-relevant:
   other: 'You might also be interested in:'
+
+homepage-next-socials:
+  other: "Your upcoming socials:"
