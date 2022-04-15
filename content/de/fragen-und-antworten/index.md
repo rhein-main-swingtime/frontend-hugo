@@ -10,7 +10,7 @@ description: Häufige Fragen und Antworten
 ... und deswegen habe wir dir hier ein paar Fragen und Antworten zusammen gestellt.
 
 {{<togglebox hl="Was muss ich können, um auf eine Swing Party zu gehen?">}}
-Ob du zu einem Social gehen kannst und solltest hängt nicht daran, wie gut du schon tanzen kannst, sondern daran ob du Lust hast zu einem Social zu gehen, oder nicht.
+Ob du zu einem Social gehen kannst und solltest hängt nicht daran, wie gut du schon tanzen kannst, sondern daran ob du Lust hast zu einem Social zu gehen, oder nicht. Wirklich! So einfach ist das!
 
 Generell stehen Social Dances allen offen, häufig gibt es auch einen Taster - also eine kleine Einführung ins Swing tanzen - am Anfang, die meistens von erfahrenen Tänzern:innen aus der Szene gegeben wird. Das gelernte kannst du dann direkt ausprobieren!
 {{</togglebox>}}
@@ -18,7 +18,7 @@ Generell stehen Social Dances allen offen, häufig gibt es auch einen Taster - a
 {{<togglebox hl="Tragt ihr alle Vintage Kleidung?">}}
 Für einige Tänzer:innen ist dies tatsächlich wichtig und es ist auch Teil der Szene, es ist aber keine Voraussetzung um auf Parties Spaß zu haben und schöne Tänze zu verbringen.
 
-Du solltest primär die Kleidung wählen, in der du dich wohl fühlst. Gerade bei größeren Parties darf es auch ruhig etwas formaler oder ausgefallener sein, schließlich ist dein Outfit auch immer Teil des ersten Eindrucks, den du auf jemanden machst.
+Du solltest primär die Kleidung wählen, in der du dich wohl fühlst. Gerade bei größeren Parties darf es auch ruhig etwas formaler oder ausgefallener sein, schließlich ist dein Outfit auch immer Teil des ersten Eindrucks, den du auf deinen neuen Tanzpartner machst.
 
 Swing Parties sind aber primär Tanzveranstaltungen und keine Kostümparties. Also wähle im Zweifel im Kleidung, in der du dich bewegen kannst und den Abend über wohl fühlst. Im Zweifel schadet es auch nicht, sich ein paar frische T-Shirts für mitzunehmen. Wir schwitzen alle!
 {{</togglebox>}}
@@ -41,4 +41,19 @@ Verabschiedet sich dein Gegenüber schon nach einem Song, bedeutet das aber aber
 Das wichtigste zum Schluss: **Seid nett zueinander**. Tanzen soll Spaß machen und lebt vom gegenseitigen Austausch.
 
 Es schadet nicht, dein Gegenüber auch ein Mal anzulächeln und in die Augen zu schauen. Falls du Angst hast aufdringlich rüber zu kommen, ist ein einfacher Trick, deinem Gegenüber über die Schulter zu schauen anstatt ständig in die Augen zu starren.
+
+Damit hast du zusätzlich auch noch den Blinden Winkel deines Partners im Blick und kanns aufpassen, das ihr niemanden anrempelt!
 {{</togglebox>}}
+
+{{<togglebox hl="Ich habe ein Lindyhop Video im Netz gesehen, das sieht furchbar akrobatisch aus!">}}
+Lindyhop zu tanzen kann mit Sicherheit eine ganz schön Schweiss treibende Sache sein. Trotzdem musst du nicht wahnsinnig athletisch oder akrobatisch sein, um zu einer Swing Party zu gehen. Tatsächlich sind Würfe und Sprünge auf vollen Tanzflächen auch eher ungerne gesehen, das Verletzungsrisiko für andere Tänzer ist beträchtlich und die meisten solcher Figuren (auch "Aerials" genannt), verlangen ein eingespieltes Team.
+
+Viele Videos, die du im Netz findest, sind Vorführungen, oder Wettbewerbe. Diese sind naturgemäß viel ausgefallener, akrobatischer und athletischer als Social Dances, bei denen es eher um den gemeinsamen Spaß am Tanzen und der Musik geht.
+{{</togglebox>}}
+
+{{<info>}}
+
+# Vermisst du eine Info?
+
+Lass es uns wissen unter <a href="mailto:hallo@rmswing.de">hallo@rmswing.de</a>
+{{</info>}}

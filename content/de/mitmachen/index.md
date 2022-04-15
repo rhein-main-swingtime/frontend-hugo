@@ -4,7 +4,7 @@ menu: minor
 weight: 30
 translationKey: get_involved
 toc: true
-draft: false
+draft: true
 ---
 # Hey, schön, dass du da bist!
 

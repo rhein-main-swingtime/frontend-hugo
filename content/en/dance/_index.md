@@ -7,15 +7,12 @@ weight: 10
 layout: socials
 translationKey: dance_events
 
-teaser:
-    headline: RMSwing for your pocket?
-    body: We offer you a calendar, which you can take anywhere on your smartphone
-    icon: outline/calendar
-    cta:
-        url: "/dance/calendar"
-        copy: Read more
-
 ---
-Here you'll find your Guide to all upcoming swing dance events in the Rhein-Main area.
+# Come, dance!
 
-Use the filters to specify your search or access the classes and dance schools.
+Here you'll find your guide to all the upcoming swing dance events in the Rhein-Main Area. Using the filters you can modify the search and also have access to the classes of different clubs and schools.
+
+
+{{<info>}}
+**Did you know?** You can also subscribe to our google calendar. Click [here]({{<relref "/dance/calendar/index.md" >}}) to learn more.
+{{</info>}}
