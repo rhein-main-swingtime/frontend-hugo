@@ -1,43 +1,39 @@
-<div
-    class="is-card text-black is-padded drop-shadow-lg p-2 rounded-sm"
->
-    <div
-        class="h-full flex flex-col text-sm"
-    >
-        <div class="mb-4">
-            <h1
-                class="text-xl font-bold mb-2"
-                x-text="danceEvent.summary"
-            ></h1>
-            <div>
-                {{ partial "events/dance-event/city.html" . }}
-            </div>
-        </div>
-        <div class="mb-3">
-            {{ partial "events/dance-event/time-location.html" . }}
-        </div>
-        <div class="text-right mt-auto flex flex-row justify-end gap-2">
-            <a href="#" class="is-button" @click.prevent="notepad.toggle(danceEvent)">
-                <template x-if="!notepad.isSaved(danceEvent)">
-                    <span>
-                        {{ partial "heroicons/outline/heart.svg" "is-icon is-base"}}
-                        {{ i18n "event-is-not-saved" }}
-                    </span>
-                </template>
-                <template x-if="notepad.isSaved(danceEvent)">
-                    <span>
-                        {{ partial "heroicons/solid/heart.svg" "is-icon is-base text-red-500"}}
-                        {{ i18n "event-is-saved" }}
-                    </span>
-                </template>
-            </a>
-            <a
-                :href="siteSettings.eventListPage + '#' + danceEvent.id"
-                class="is-button no-underline"
-            >
-                {{ i18n "event-more-information" }}
-                {{ partial "heroicons/outline/chevron-right.svg" "is-icon is-1em" }}
-            </a>
-        </div>
+<div class="is-card text-black is-padded drop-shadow-lg p-2 rounded-sm">
+  <div class="h-full flex flex-col text-sm">
+    <div class="mb-4">
+      <h1 class="text-xl font-bold mb-2" x-text="danceEvent.summary"></h1>
+      <div>
+        {{ partial "events/dance-event/city.html" . }}
+      </div>
     </div>
+    <div class="mb-3">
+      {{ partial "events/dance-event/time-location.html" . }}
+    </div>
+    <div class="text-right mt-auto flex flex-row justify-end gap-2">
+      <a href="#" class="is-button" @click.prevent="notepad.toggle(danceEvent)">
+        <template x-if="!notepad.isSaved(danceEvent)">
+          <span>
+            {{ partial "heroicons/outline/heart.svg" "is-icon is-base" }}
+            {{ i18n "event-is-not-saved" }}
+          </span>
+        </template>
+        <template x-if="notepad.isSaved(danceEvent)">
+          <span>
+            {{ partial "heroicons/solid/heart.svg" "is-icon is-base text-red-500" }}
+            {{ i18n "event-is-saved" }}
+          </span>
+        </template>
+      </a>
+      {{ $url := "tanzen" }}
+      {{ if eq .Site.Language.Lang "en" }}
+        {{ $url = "dance" }}
+      {{ end }}
+      {{ with .Site.GetPage $url }}
+        <a :href="'{{ .Permalink }}#' + danceEvent.id" class="is-button no-underline">
+          {{ i18n "event-more-information" }}
+          {{ partial "heroicons/outline/chevron-right.svg" "is-icon is-1em" }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
 </div>

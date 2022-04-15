@@ -26,11 +26,6 @@ module:
     - source: data
       target: data
 
-goldmark:
-  parser:
-    renderer:
-        unsafe: true
-
 security:
   enableInlineShortcodes: false
   exec:

@@ -1,17 +1,16 @@
 <div
-    id="event-preview"
-    x-data="{ teasers: [], previews: {{ .Params.eventTeasers.limit }}, notepad: RMST_TS.notepad }"
-    x-init="teasers = await RMST_TS.fetchEventTeasers({{ .Params.eventTeasers | jsonify }})"
-    class="flex flex-col lg:grid lg:grid-cols-3 gap-3 my-6"
->
-    <template x-if="teasers.length < previews">
-        <template x-for="i in previews">
-            {{ partial "events/loading.html" }}
-        </template>
+  id="event-preview"
+  x-data="{ teasers: [], previews: {{ .Params.eventTeasers.limit }}, notepad: RMST_TS.notepad }"
+  x-init="teasers = await RMST_TS.fetchEventTeasers({{ .Params.eventTeasers | jsonify }})"
+  class="flex flex-col lg:grid lg:grid-cols-3 gap-3 my-6">
+  <template x-if="teasers.length < previews">
+    <template x-for="i in previews">
+      {{ partial "events/loading.html" }}
     </template>
-    <template x-if="teasers.length === previews">
-        <template x-for="danceEvent in teasers">
-            {{ partial "events/homepage.html" }}
-        </template>
+  </template>
+  <template x-if="teasers.length === previews">
+    <template x-for="danceEvent in teasers">
+      {{ partial "events/homepage.html" . }}
     </template>
+  </template>
 </div>

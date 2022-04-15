@@ -21,7 +21,7 @@ event-headline-time:
 event-is-not-saved:
   other: Pin
 event-is-saved:
-  other: Aufheben
+  other: Unpin
 event-list-favorites:
   other: Your pinned events
 event-location-not-set:
@@ -40,6 +40,8 @@ event-share-links-headline:
   other: Send
 homepage-cta-all-socials:
   other: All upcoming socials
+homepage-next-socials:
+  other: 'Your upcoming socials:'
 learn-category:
   other: Category
 learn-city:
@@ -118,6 +120,3 @@ share-qr:
   other: Scan
 teasers-also-relevant:
   other: 'You might also be interested in:'
-
-homepage-next-socials:
-  other: "Your upcoming socials:"

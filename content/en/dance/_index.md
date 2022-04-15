@@ -6,6 +6,7 @@ menu: main
 weight: 10
 layout: socials
 translationKey: dance_events
+slug: dance
 
 ---
 # Come, dance!

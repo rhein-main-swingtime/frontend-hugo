@@ -3,7 +3,11 @@
   <h2 class="text-4xl font-light">{{ T "homepage-next-socials" }}</h2>
   {{ partial "events/homepage-preview-block" . }}
   <div class="text-right w-full">
-    {{ with .Site.GetPage "tanzen" }}
+    {{ $url := "tanzen" }}
+    {{ if eq .Site.Language.Lang "en" }}
+      {{ $url = "dance" }}
+    {{ end }}
+    {{ with .Site.GetPage $url }}
       <a href="{{ .Permalink }}" class="text-white text-2xl">
         {{ T "homepage-cta-all-socials" }}
         {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
