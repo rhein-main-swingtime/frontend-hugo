@@ -71,4 +71,16 @@
       {{ end }}
     </div>
   </div>
+  {{ if .context.calendar }}
+    <div class="mt-4 text-right">
+      {{ $url := "/tanzen" }}
+      {{ if eq .lang "en" }}
+        {{ $url = "/dance" }}
+      {{ end }}
+      <a href="{{ ref .pageContext $url }}?calendar[]={{ .context.calendar }}" class="font-bold">
+        {{ T "learn-open-classes" }}
+        {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
+      </a>
+    </div>
+  {{ end }}
 </div>

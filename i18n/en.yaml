@@ -1,3 +1,4 @@
+---
 __open-page:
   other: Open
 close:
@@ -56,6 +57,8 @@ learn-location:
   other: Locality
 learn-online:
   other: Online classes
+learn-open-classes:
+  other: Show classes
 learn-page-sorry-copy:
   other: We could not find any entries for this combination
 learn-page-sorry-hl:

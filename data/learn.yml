@@ -30,6 +30,7 @@ items:
             - Tanzschule Monika Bauer
             - Kaiserstr. 42
             - 60329  Frankfurt
+        calendar: "Monika%20Bauer"
     -
         name: Die Tanzschule Carsten Weber
         location: Frankfurt
@@ -45,6 +46,7 @@ items:
             - die tanzschule C. Weber GmbH
             - Bolongarostraße 113
             - D-65929 Frankfurt
+        calendar: "Die%20Tanzschule%20Carsten%20Weber"
     -
         name: Taktgefühl Tanzschule
         location: Friedrichsdorf
@@ -82,6 +84,7 @@ items:
             - Zentrum Zeitlos
             - Hungener Str. 5
             - 60389 Frankfurt am Main
+        calendar: "SugarfootSwing"
     -
         name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
         location: Mainz
@@ -100,6 +103,7 @@ items:
             facebook: 'https://www.facebook.com/swingjets/'
             instagram: 'https://www.instagram.com/swingjets/'
             youtube: 'https://www.youtube.com/channel/UCyASsBHuqfq3_qvpm800lbw'
+        calendar: SwingJets
     -
         name: FTV 1860 e.V.
         location: Frankfurt
@@ -109,6 +113,7 @@ items:
         socialmedia:
             facebook: 'https://www.facebook.com/ftv1860'
             youtube: 'https://www.youtube.com/channel/UCWffDxt7I9lHjZpkI8GjFFQ'
+        calendar: "Jazz%20an%20Zeil%20und%20Zoo%20FTV"
     -
         name: FTG Sportfabrik Frankfurt
         location: Frankfurt
@@ -192,6 +197,7 @@ items:
             - Sunny Side Swing
             - Rheinstraße 22
             - 64283 Darmstadt
+        calendar: Sunny%20Side%20Swing
     -
         name: Marcus und Annina
         location:

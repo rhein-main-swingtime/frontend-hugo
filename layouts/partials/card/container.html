@@ -2,13 +2,11 @@
 <div
   id="generic-filter-test"
   class="card-container"
-  x-data="RMST_TS.createFilterBarInstance({{ $data.config | jsonify }})"
->
+  x-data="RMST_TS.createFilterBarInstance({{ $data.config | jsonify }})">
   <aside
     class="card-container-sidebar"
     x-intersect:enter="$store.mobileNavigationStore.unregisterBackToTop()"
-    x-intersect:leave="$store.mobileNavigationStore.registerBackToTop(RMST_TS.createScrollToElement($el))"
-  >
+    x-intersect:leave="$store.mobileNavigationStore.registerBackToTop(RMST_TS.createScrollToElement($el))">
     {{ partial "filterbar/bar" . }}
   </aside>
 
@@ -17,6 +15,7 @@
     {{ $classes := $data.config.itemClasses }}
     {{ $i18nPrefix := index $data.config "i18nPrefix" }}
     {{ $lang := .Page.Lang }}
+    {{ $pageContext := . }}
     {{ range
       sort
       $data.items $data.config.sortBy
@@ -26,14 +25,14 @@
         class="{{ $classes }}"
         x-transition
         x-init="registerElement({{ .|jsonify }})"
-        x-show="isVisible({{ .|jsonify }})"
-      >
+        x-show="isVisible({{ .|jsonify }})">
         {{ partial
           (printf "card/%s" $cardLayout)
           (dict
           "context" .
           "i18nPrefix" $i18nPrefix
           "lang" $lang
+          "pageContext" $pageContext
           )
         }}
       </article>
