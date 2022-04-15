@@ -1,12 +1,12 @@
 ---
 title: Learn
-subtitle: Schulen, Lehrer, Vereine
-description: Finde Swing Tanzschulen, Lehrer und Vereine im Rhein Main Gebiet.
+subtitle: Schools, Teachers, Clubs
+description: Find swing dancing schools, teachers and clubs in the Rhein-Main Area
 keywords:
-    - Swing tanzen
-    - Lindy Hop
-    - Balboa
-    - Tanzen lernen
+    - Frankfurt
+    - Darmstadt
+    - Mainz
+    - Offenbach
 draft: false
 menu: main
 dataSrc: learn

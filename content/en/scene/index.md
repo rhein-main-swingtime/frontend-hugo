@@ -1,5 +1,5 @@
 ---
-title: Scene
+title: Connecting
 subtitle: Meeting places, groups, social media
 menu: main
 weight: 20
