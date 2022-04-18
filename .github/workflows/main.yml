@@ -33,7 +33,7 @@ jobs:
             yarn install
             yarn prod
             chmod +x ./bin/hugo
-            ./bin/hugo --minify -d ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }}
+            ./bin/hugo --ignoreCache --minify -d ${{ secrets.DEPLOYMENT_ROOT }}/frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }}
       - name: Linking
         uses: appleboy/ssh-action@v0.1.4
         with:
