@@ -3,7 +3,8 @@
   {{ if .Page.Params.meta_title }}
     <meta property="og:title" content="{{ .Page.Params.meta_title }}" />
   {{ else }}
-    <meta property="og:title" content="{{ .Page.Title }}{{ if ne .Title .Site.Title }}| {{ .Site.Title }}{{ end }}" />
+    <!-- prettier-ignore -->
+    <meta property="og:title" content="{{ .Page.Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}" />
   {{ end }}
   {{ with .Keywords }}
     <meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }},{{ end }}{{ $e }}{{ end }}" />
@@ -28,6 +29,6 @@
   {{ end }}
   {{ partial "header/matomo.html" }}
 
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
 </head>
