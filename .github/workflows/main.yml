@@ -42,7 +42,7 @@ jobs:
           key: ${{ secrets.DEPLOYMENT_KEY }}
           script: |
             cd ${{ secrets.DEPLOYMENT_ROOT }}
-            rm ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
+            # rm ${{ secrets.DEPLOYMENT_ROOT }}/${{ secrets.PUBLIC_WEBROOT }}
             ln -s frontend_hugo_dist_${{ github.run_number }}_${{ github.sha }} ${{ secrets.PUBLIC_WEBROOT }}
             echo "Deleting old builds (keeping 10)"
             ls -tp | grep frontend_hugo_dist_ | grep -v '\$' | tail -n +10 | xargs -d '\n' -r rm -r --
