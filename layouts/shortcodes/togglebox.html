@@ -13,17 +13,16 @@
     </a>
   </div>
   <div>
-      <template x-if="!open">
-        <div class="line-clamp-2 my-5">
-          {{ .Inner | plainify }}
-        </div>
-      </template>
-      <template x-if="open">
-        <div>
-          {{ .Inner | markdownify }}
-        </div>
-      </template>
-    </div>
+    <template x-if="!open">
+      <div class="line-clamp-2 my-5">
+        {{ .Inner | plainify }}
+      </div>
+    </template>
+    <template x-if="open">
+      <div>
+        {{ .Inner | markdownify }}
+      </div>
+    </template>
   </div>
   <a class="block" @click.prevent="open = !open">
     <template x-if="!open">
