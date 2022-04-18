@@ -5,4 +5,7 @@ menu: minor
 weight: 20
 translationKey: data_protection
 ---
-Lorem ipsum tralala
+
+# Data Protection
+
+Please see the [German version of this page](/datenschutz/)
