@@ -12,9 +12,17 @@
       </template>
     </a>
   </div>
-  <div class="">
-    <div class="" :class="!open ? 'line-clamp-2' : ''">
-      {{ .Inner | markdownify }}
+  <div>
+      <template x-if="!open">
+        <div class="line-clamp-2 my-5">
+          {{ .Inner | plainify }}
+        </div>
+      </template>
+      <template x-if="open">
+        <div>
+          {{ .Inner | markdownify }}
+        </div>
+      </template>
     </div>
   </div>
   <a class="block" @click.prevent="open = !open">
