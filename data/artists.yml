@@ -90,3 +90,11 @@ items:
         contact:
             web: http://foxy-jazzhounds.de
         category: band
+    -
+        name: Balduin | Electro Swing
+        contact:
+            web: http://www.balduinmusic.de/
+            mail: mail@balduinmusic.de
+            youtube: https://www.youtube.com/balduinofficial    # Does not work yet
+            instagram: https://www.instagram.com/balduinmusic/  # Does not work yet
+        category: band
