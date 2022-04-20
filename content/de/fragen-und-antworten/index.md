@@ -9,18 +9,18 @@ description: Häufige Fragen und Antworten
 # Es gibt viel zu wissen...
 ... und deswegen habe wir dir hier ein paar Fragen und Antworten zusammen gestellt.
 
-{{<togglebox hl="Was muss ich können, um auf eine Swing Party zu gehen?">}}
+{{<togglebox hl="Was muss ich können, um auf eine Swing-Party zu gehen?">}}
 Ob du zu einem Social gehen kannst und solltest hängt nicht daran, wie gut du schon tanzen kannst, sondern daran ob du Lust hast zu einem Social zu gehen, oder nicht. Wirklich! So einfach ist das!
 
-Generell stehen Social Dances allen offen, häufig gibt es auch einen Taster - also eine kleine Einführung ins Swing tanzen - am Anfang, die meistens von erfahrenen Tänzern:innen aus der Szene gegeben wird. Das gelernte kannst du dann direkt ausprobieren!
+Generell stehen Social-Dances allen offen, häufig gibt es auch einen Taster - also eine kleine Einführung ins Swing tanzen - am Anfang, die meistens von erfahrenen Tänzern:innen aus der Szene gegeben wird. Das gelernte kannst du dann direkt ausprobieren!
 {{</togglebox>}}
 
-{{<togglebox hl="Tragt ihr alle Vintage Kleidung?">}}
-Für einige Tänzer:innen ist dies tatsächlich wichtig und es ist auch Teil der Szene, es ist aber keine Voraussetzung um auf Parties Spaß zu haben und schöne Tänze zu verbringen.
+{{<togglebox hl="Tragt ihr alle Vintage-Kleidung?">}}
+Für einige ist dies tatsächlich wichtig und es ist auch Teil der Szene, es ist aber keine Voraussetzung um auf Parties Spaß und schöne Tänze zu haben.
 
 Du solltest primär die Kleidung wählen, in der du dich wohl fühlst. Gerade bei größeren Parties darf es auch ruhig etwas formaler oder ausgefallener sein, schließlich ist dein Outfit auch immer Teil des ersten Eindrucks, den du auf deinen neuen Tanzpartner machst.
 
-Swing Parties sind aber primär Tanzveranstaltungen und keine Kostümparties. Also wähle im Zweifel im Kleidung, in der du dich bewegen kannst und den Abend über wohl fühlst. Im Zweifel schadet es auch nicht, sich ein paar frische T-Shirts für mitzunehmen. Wir schwitzen alle!
+Swing-Parties sind aber primär Tanzveranstaltungen und keine Kostümparties. Also wähle im Zweifel im Kleidung, in der du dich bewegen kannst und den Abend über wohl fühlst. Es schadet auch nicht, sich ein paar frische T-Shirts für mitzunehmen. Wir schwitzen alle!
 {{</togglebox>}}
 
 {{<togglebox hl="Ich weiss nicht, wie ich mich verhalten soll. Gibt es Regeln?">}}

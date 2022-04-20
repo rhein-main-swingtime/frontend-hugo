@@ -16,10 +16,9 @@ According to german law [Telemediengesetz § 5](https://dejure.org/gesetze/TMG/5
 > 60318 Frankfurt am Main
 
 We can be contacted at [hallo@rmswing.de](mailto:hallo@rmswing.de).
-
+Or by visiting our [Signal-Group](https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO).
 
 ## Limited liability
 
 Despite great care in the compilation, we assume no liability for the correctness, completeness and up-to-date-ness of the links, lists and information.\
 If infringing or false content should be accessible via this page, please let us know. We take care of a correction immediately.
-
