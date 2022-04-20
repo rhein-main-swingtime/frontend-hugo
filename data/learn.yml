@@ -22,7 +22,7 @@ items:
         category: school
         contact:
             web: 'https://monika-bauer.de'
-            tel: 069/30034634
+            tel:
             mail: info@monika-bauer.de
         socialmedia:
             facebook: 'https://www.facebook.com/Tanzschule-Monika-Bauer-162684157077418/'
@@ -207,3 +207,13 @@ items:
             mail: kontakt@lindyhoplernen.de
         socialmedia:
             facebook: 'https://www.facebook.com/gettoknowswing/?ref=page_internal'
+    -
+        name: Kulturkurse Uni Mainz
+        desc:
+            de: Verschiedene Tanzkurse, unter anderem "Lindy Hop Basics"
+            en: Various dance classes, including "Lindy Hop Basics"
+        location:
+            - Mainz
+        category: uni
+        contact:
+            web: https://www.campus-mainz.net/kulturkurse/
