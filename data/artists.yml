@@ -98,3 +98,10 @@ items:
             youtube: https://www.youtube.com/balduinofficial    # Does not work yet
             instagram: https://www.instagram.com/balduinmusic/  # Does not work yet
         category: band
+    -
+        name: MFH Big Band
+        category: band
+        contact:
+            web: https://mvh-bigband.de/
+            mail: info@mvh-bigband.de
+            facebook: https//www.facebook.com/mvhbigband
