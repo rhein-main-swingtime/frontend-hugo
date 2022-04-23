@@ -100,8 +100,8 @@ items:
         category: band
     -
         name: MFH Big Band
+        category: band
         contact:
             web: https://mvh-bigband.de/
             mail: info@mvh-bigband.de
             facebook: https//www.facebook.com/mvhbigband
-        category: band
