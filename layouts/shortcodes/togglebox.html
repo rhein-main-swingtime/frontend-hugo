@@ -1,4 +1,4 @@
-<article x-data="{open: false}" class="bg-white border border-solid border-slate-100 py-2 px-4 mb-5">
+<article x-data="{open: false}" class="bg-white border border-solid border-slate-100 py-2 px-4 last-of-type:mb-5 pb-5">
   <div class="flex flex-row border-b border-b-gray-200">
     <h1 class="text-lg flex-grow mb-1 font-normal">
       {{ .Get "hl" }}
@@ -14,7 +14,7 @@
   </div>
   <div>
     <template x-if="!open">
-      <div class="line-clamp-2 my-5">
+      <div class="line-clamp-2 mt-5">
         {{ .Inner | plainify }}
       </div>
     </template>
