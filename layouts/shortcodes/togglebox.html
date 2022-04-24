@@ -1,6 +1,6 @@
 <article x-data="{open: false}" class="bg-white border border-solid border-slate-100 py-2 px-4 last-of-type:mb-5 pb-5">
   <div class="flex flex-row border-b border-b-gray-200">
-    <h1 class="text-lg flex-grow mb-1 font-normal">
+    <h1 @click.prevent="open = !open" class="text-lg flex-grow mb-1 font-normal cursor-pointer">
       {{ .Get "hl" }}
     </h1>
     <a href="#" class="flex-shrink" @click.prevent="open = !open">
