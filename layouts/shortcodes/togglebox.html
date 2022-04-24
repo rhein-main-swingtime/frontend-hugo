@@ -26,10 +26,10 @@
   </div>
   <a class="block" @click.prevent="open = !open">
     <template x-if="!open">
-      <span>mehr lesen </span>
+      <span>{{ partial "heroicons/solid/chevron-down.svg" "is-icon h-6 w-6" }}{{ i18n "togglebox-expand" }}</span>
     </template>
     <template x-if="open">
-      <span>einklappen </span>
+      <span>{{ partial "heroicons/solid/chevron-up.svg" "is-icon h-6 w-6" }}{{ i18n "togglebox-collapse" }}</span>
     </template>
   </a>
 </article>

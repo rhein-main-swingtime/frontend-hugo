@@ -123,3 +123,7 @@ share-qr:
   other: Scan
 teasers-also-relevant:
   other: 'You might also be interested in:'
+togglebox-expand:
+  other: read more
+togglebox-collapse:
+  other: collapse

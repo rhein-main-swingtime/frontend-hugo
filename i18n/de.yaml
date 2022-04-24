@@ -129,3 +129,7 @@ share-qr:
   other: Scannen
 teasers-also-relevant:
   other: 'Das könnte dich auch interessieren:'
+togglebox-expand:
+  other: mehr lesen
+togglebox-collapse:
+  other: einklappen
