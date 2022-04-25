@@ -5,215 +5,203 @@ config:
     cardLayout: learn
     # classes will be set on the <article> element of the card
     itemClasses: learn-item lg:min-h-[15rem] is-card
-    filterable:             # Filters will be created for every one of those
+    filterable: # Filters will be created for every one of those
         - category
         - location
-    identifier: name        # Needs to be unique, and exist on every item
-    sortBy: name            # Field used for sorting of items
-    sortDirection: asc      # Sort direction
-    showCategories: true    #
-    i18nPrefix: learn       # can be used within the card template, to fetch translations
-    title: Filter           # actually, this should come from the translations too @todo
+    identifier: name # Needs to be unique, and exist on every item
+    sortBy: name # Field used for sorting of items
+    sortDirection: asc # Sort direction
+    showCategories: true #
+    i18nPrefix: learn # can be used within the card template, to fetch translations
+    title: Filter # actually, this should come from the translations too @todo
 
 items:
-    -
-        name: Tanzschule Monika Bauer
-        location: Frankfurt
-        category: school
-        contact:
-            web: 'https://monika-bauer.de'
-            tel:
-            mail: info@monika-bauer.de
-        socialmedia:
-            facebook: 'https://www.facebook.com/Tanzschule-Monika-Bauer-162684157077418/'
-        address:
-            - Tanzschule Monika Bauer
-            - Kaiserstr. 42
-            - 60329  Frankfurt
-        calendar: "Monika Bauer"
-    -
-        name: Die Tanzschule Carsten Weber
-        location: Frankfurt
-        category: school
-        contact:
-            web: 'http://die-tanzschule.de'
-            tel: 069/302976
-        socialmedia:
-            facebook: 'https://www.facebook.com/dieTanzschule.C.Weber'
-            instagram: 'https://www.instagram.com/dietanzschule/'
-            youtube: 'https://www.youtube.com/user/DieTanze'
-        address:
-            - die tanzschule C. Weber GmbH
-            - Bolongarostraße 113
-            - D-65929 Frankfurt
-        calendar: "Die Tanzschule Carsten Weber"
-    -
-        name: Taktgefühl Tanzschule
-        location: Friedrichsdorf
-        category: school
-        contact:
-            web: 'https://taktgefuehl.de'
-            tel: 06172/6895599
-            mail: hallo@taktgefühl.de
-        socialmedia:
-            facebook: 'https://www.facebook.com/taktgefuehltanzschule'
-        address:
-            - Taktgefühl Tanzschule
-            - Edouard-Desor-Straße 2
-            - 61381 Friedrichsdorf
-    -
-        name: Balboa-Heiner
-        location: Darmstadt
-        category: school
-        contact:
-            web: 'https://www.balboa-heiner.de'
-            tel: 0170/9074149
-            mail: info@balboa-heiner.de
-        address:
-            - Balboa-Heiner
-            - Dieburger Str. 194
-            - 64287 Darmstadt
-    -
-        name: SugarfootSwing
-        location: Frankfurt
-        category: school
-        contact:
-            web: 'https://www.sugarfootswing.de'
-            mail: info@sugarfootswing.de
-        address:
-            - Zentrum Zeitlos
-            - Hungener Str. 5
-            - 60389 Frankfurt am Main
-        calendar: "SugarfootSwing"
-    -
-        name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
-        location: Mainz
-        category: club
-        contact:
-            web: 'http://www.swing-tanzen.de'
-        socialmedia:
-            facebook: 'https://www.facebook.com/lindyhopmainz/'
-    -
-        name: Swing Jets
-        location: Offenbach
-        category: club
-        contact:
-            web: 'https://www.swingjets.de'
-        socialmedia:
-            facebook: 'https://www.facebook.com/swingjets/'
-            instagram: 'https://www.instagram.com/swingjets/'
-            youtube: 'https://www.youtube.com/channel/UCyASsBHuqfq3_qvpm800lbw'
-        calendar: SwingJets
-    -
-        name: FTV 1860 e.V.
-        location: Frankfurt
-        category: club
-        contact:
-            web: 'https://www.ftv1860.de/activities/lindy-hop/'
-        socialmedia:
-            facebook: 'https://www.facebook.com/ftv1860'
-            youtube: 'https://www.youtube.com/channel/UCWffDxt7I9lHjZpkI8GjFFQ'
-        calendar: "Jazz an Zeil und Zoo FTV"
-    -
-        name: FTG Sportfabrik Frankfurt
-        location: Frankfurt
-        category: club
-        contact:
-            web: 'https://www.ftg-frankfurt.de'
-    -
-        name: Swingin` Wiesbaden e.V.
-        location: Wiesbaden
-        category: club
-        contact:
-            web: 'http://swinginwiesbaden.de'
-    -
-        name: Tanzatelier Ralf S.
-        location: Wiesbaden
-        category: school
-        contact:
-            web: 'https://www.tanzatelier.info'
-            mail: info@Tanzatelier.info
-            tel: 0611/9886858
-        address:
-            - ADTV Tanzschule – Tanzatelier Ralf S.
-            - Albrecht-Dürer-Str.4
-            - 65195 Wiesbaden
-    -
-        name: Swingin Gießen e.V.
-        location: Gießen
-        category: club
-        contact:
-            web: 'https://lindyhop-giessen.de'
-            mail: info@lindyhop-giessen.de
-        socialmedia:
-            facebook: 'https://facebook.com/lindyhopgiessen'
-    -
-        name: Salty & Strick
-        location: Frankfurt
-        category: teacher
-        contact:
-            mail: ausderzeitgefallen@gmail.com
-    -
-        name: Diana & Michael
-        location: Frankfurt
-        category: teacher
-        socialmedia:
-            facebook: 'https://facebook.com/groups/495469870660120'
-    -
-        name: Goethe Uni
-        location: Frankfurt
-        category: uni
-        desc:
-            de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
-            en: 'New class every semster, availability may vary.'
-        contact:
-            web: 'https://zfh-db.sport.uni-frankfurt.de/angebote/aktueller_zeitraum/index.html'
-    -
-        name: TU Darmstadt
-        location: Darmstadt
-        category: uni
-        desc:
-            de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
-            en: 'New class every semster, availability may vary.'
-        contact:
-            web: 'https://online-anmeldung.usz.tu-darmstadt.de/sportarten/aktueller_zeitraum/index.html#bs_as'
-    -
-        name: Sunny Side Swing
-        location:
-            - Darmstadt
-            - online
-        category: school
-        desc:
-            de: 'Swingtanzen in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solokurse'
-            en: 'Swingdancing in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solo classes'
-        socialmedia:
-            facebook: 'https://facebook.com/swingindarmstadt'
-            instagram: 'https://instagram.com/sunnysideswingstudio'
-        contact:
-            web: 'https://www.sunnysideswing.de'
-            mail: info@sunnysideswing.de
-            tel: 0179/7425147
-        address:
-            - Sunny Side Swing
-            - Rheinstraße 22
-            - 64283 Darmstadt
-        calendar: Sunny Side Swing
-    -
-        name: Marcus und Annina
-        location:
-            - Frankfurt
-        category: school
-        contact:
-            mail: kontakt@lindyhoplernen.de
-        socialmedia:
-            facebook: 'https://www.facebook.com/gettoknowswing/?ref=page_internal'
-    -
-        name: Kulturkurse Uni Mainz
-        desc:
-            de: Verschiedene Tanzkurse, unter anderem "Lindy Hop Basics"
-            en: Various dance classes, including "Lindy Hop Basics"
-        location:
-            - Mainz
-        category: uni
-        contact:
-            web: https://www.campus-mainz.net/kulturkurse/
+    - name: Tanzschule Monika Bauer
+      location: Frankfurt
+      category: school
+      contact:
+          web: "https://monika-bauer.de"
+          tel:
+          mail: info@monika-bauer.de
+      socialmedia:
+          facebook: "https://www.facebook.com/Tanzschule-Monika-Bauer-162684157077418/"
+      address:
+          - Tanzschule Monika Bauer
+          - Kaiserstr. 42
+          - 60329  Frankfurt
+      calendar: "Monika%20Bauer"
+    - name: Die Tanzschule Carsten Weber
+      location: Frankfurt
+      category: school
+      contact:
+          web: "http://die-tanzschule.de"
+          tel: 069/302976
+      socialmedia:
+          facebook: "https://www.facebook.com/dieTanzschule.C.Weber"
+          instagram: "https://www.instagram.com/dietanzschule/"
+          youtube: "https://www.youtube.com/user/DieTanze"
+      address:
+          - die tanzschule C. Weber GmbH
+          - Bolongarostraße 113
+          - D-65929 Frankfurt
+      calendar: "Die%20Tanzschule%20Carsten%20Weber"
+    - name: Taktgefühl Tanzschule
+      location: Friedrichsdorf
+      category: school
+      contact:
+          web: "https://taktgefuehl.de"
+          tel: 06172/6895599
+          mail: hallo@taktgefühl.de
+      socialmedia:
+          facebook: "https://www.facebook.com/taktgefuehltanzschule"
+      address:
+          - Taktgefühl Tanzschule
+          - Edouard-Desor-Straße 2
+          - 61381 Friedrichsdorf
+    - name: Balboa-Heiner
+      location: Darmstadt
+      category: school
+      contact:
+          web: "https://www.balboa-heiner.de"
+          tel: 0170/9074149
+          mail: info@balboa-heiner.de
+      address:
+          - Balboa-Heiner
+          - Dieburger Str. 194
+          - 64287 Darmstadt
+    - name: SugarfootSwing
+      location: Frankfurt
+      category: school
+      contact:
+          web: "https://www.sugarfootswing.de"
+          mail: info@sugarfootswing.de
+      address:
+          - Zentrum Zeitlos
+          - Hungener Str. 5
+          - 60389 Frankfurt am Main
+      calendar: "SugarfootSwing"
+    - name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
+      location: Mainz
+      category: club
+      contact:
+          web: "http://www.swing-tanzen.de"
+      socialmedia:
+          facebook: "https://www.facebook.com/lindyhopmainz/"
+    - name: Swing Jets
+      location: Offenbach
+      category: club
+      contact:
+          web: "https://www.swingjets.de"
+      socialmedia:
+          facebook: "https://www.facebook.com/swingjets/"
+          instagram: "https://www.instagram.com/swingjets/"
+          youtube: "https://www.youtube.com/channel/UCyASsBHuqfq3_qvpm800lbw"
+      calendar: SwingJets
+    - name: FTV 1860 e.V.
+      location: Frankfurt
+      category: club
+      contact:
+          web: "https://www.ftv1860.de/activities/lindy-hop/"
+      socialmedia:
+          facebook: "https://www.facebook.com/ftv1860"
+          youtube: "https://www.youtube.com/channel/UCWffDxt7I9lHjZpkI8GjFFQ"
+      calendar: "Jazz%20an%20Zeil%20und%20Zoo%20FTV"
+    - name: FTG Sportfabrik Frankfurt
+      location: Frankfurt
+      category: club
+      contact:
+          web: "https://www.ftg-frankfurt.de"
+    - name: Swingin` Wiesbaden e.V.
+      location: Wiesbaden
+      category: club
+      contact:
+          web: "http://swinginwiesbaden.de"
+    - name: Tanzatelier Ralf S.
+      location: Wiesbaden
+      category: school
+      contact:
+          web: "https://www.tanzatelier.info"
+          mail: info@Tanzatelier.info
+          tel: 0611/9886858
+      address:
+          - ADTV Tanzschule – Tanzatelier Ralf S.
+          - Albrecht-Dürer-Str.4
+          - 65195 Wiesbaden
+    - name: Swingin Gießen e.V.
+      location: Gießen
+      category: club
+      contact:
+          web: "https://lindyhop-giessen.de"
+          mail: info@lindyhop-giessen.de
+      socialmedia:
+          facebook: "https://facebook.com/lindyhopgiessen"
+    - name: Salty & Strick
+      location: Frankfurt
+      category: teacher
+      contact:
+          mail: ausderzeitgefallen@gmail.com
+    - name: Diana & Michael
+      location: Frankfurt
+      category: teacher
+      socialmedia:
+          facebook: "https://facebook.com/groups/495469870660120"
+    - name: Goethe Uni
+      location: Frankfurt
+      category: uni
+      desc:
+          de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
+          en: "New class every semster, availability may vary."
+      contact:
+          web: "https://zfh-db.sport.uni-frankfurt.de/angebote/aktueller_zeitraum/index.html"
+    - name: TU Darmstadt
+      location: Darmstadt
+      category: uni
+      desc:
+          de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
+          en: "New class every semster, availability may vary."
+      contact:
+          web: "https://online-anmeldung.usz.tu-darmstadt.de/sportarten/aktueller_zeitraum/index.html#bs_as"
+    - name: Sunny Side Swing
+      location:
+          - Darmstadt
+          - online
+      category: school
+      desc:
+          de: "Swingtanzen in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solokurse"
+          en: "Swingdancing in Darmstadt | Lindy Hop, Charleston, Shag, Balboa - Partner & Solo classes"
+      socialmedia:
+          facebook: "https://facebook.com/swingindarmstadt"
+          instagram: "https://instagram.com/sunnysideswingstudio"
+      contact:
+          web: "https://www.sunnysideswing.de"
+          mail: info@sunnysideswing.de
+          tel: 0179/7425147
+      address:
+          - Sunny Side Swing
+          - Rheinstraße 22
+          - 64283 Darmstadt
+      calendar: Sunny%20Side%20Swing
+    - name: Marcus und Annina
+      location:
+          - Frankfurt
+      category: school
+      contact:
+          mail: kontakt@lindyhoplernen.de
+      socialmedia:
+          facebook: "https://www.facebook.com/gettoknowswing/?ref=page_internal"
+    - name: Kulturkurse Uni Mainz
+      desc:
+          de: Verschiedene Tanzkurse, unter anderem "Lindy Hop Basics"
+          en: Various dance classes, including "Lindy Hop Basics"
+      location:
+          - Mainz
+      category: uni
+      contact:
+          web: https://www.campus-mainz.net/kulturkurse/
+    - name: Lindy Farr
+      location:
+          - Mainz
+      category: teacher
+      contact:
+          mail: lindy_farr@web.de
+          tel: +491733216651
