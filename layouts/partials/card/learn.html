@@ -13,7 +13,11 @@
     {{ end }}
     <div class="mb-4 text-center">
       <span class="is-badge with-dark-bg">
-        {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+        {{ if isset .context.display.category .lang }}
+          {{ index .context.display.category .lang }}
+        {{ else }}
+          {{ T (delimit (slice .i18nPrefix .context.category) "-" ) }}
+        {{ end }}
       </span>
     </div>
     {{ if (isset .context.desc .lang) }}

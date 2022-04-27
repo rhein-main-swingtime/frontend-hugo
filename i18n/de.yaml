@@ -1,135 +1,135 @@
 ---
 __close:
-  other: Schließen
+    other: Schließen
 __open:
-  other: Öffnen
+    other: Öffnen
 __open-page:
-  other: Seite öffnen
+    other: Seite öffnen
 __toc:
-  other: Inhalt
+    other: Inhalt
 cta-open-in-google-maps:
-  other: Karte öffnen
+    other: Karte öffnen
 event-category-class:
-  other: Kurs
+    other: Kurs
 event-category-socials:
-  other: Social Dance
+    other: Social Dance
 event-directions:
-  other: Karte öffnen
+    other: Karte öffnen
 event-download-web:
-  other: Google Kalender öffnen
+    other: Google Kalender öffnen
 event-filters-reset:
-  other: Filter zurücksetzen
+    other: Filter zurücksetzen
 event-headline-description:
-  other: Beschreibung
+    other: Beschreibung
 event-headline-location:
-  other: Addresse
+    other: Addresse
 event-headline-time:
-  other: Datum und Uhrzeit
+    other: Datum und Uhrzeit
 event-is-not-saved:
-  other: Merken
+    other: Merken
 event-is-saved:
-  other: Aufheben
+    other: Aufheben
 event-list-favorites:
-  other: Deine gemerkten Veranstaltungen
+    other: Deine gemerkten Veranstaltungen
 event-location-not-set:
-  other: Keine Addresse eingetragen
+    other: Keine Addresse eingetragen
 event-more-information:
-  other: Mehr infos
+    other: Mehr infos
 event-page-no-favorites:
-  other: Du hast noch keine Favoriten hinterlegt. Schau dir einfach ein paar Events an, benutze das ❤️-Symbol um dir Socials und Kurse hier zu hinterlegen.
+    other: Du hast noch keine Favoriten hinterlegt. Schau dir einfach ein paar Events an, benutze das ❤️-Symbol um dir Socials und Kurse hier zu hinterlegen.
 event-share:
-  other: Teilen
+    other: Teilen
 event-share-copy:
-  other: Schau mal, auf RMSwing.de
+    other: Schau mal, auf RMSwing.de
 event-share-copy-headline:
-  other: Link kopieren
+    other: Link kopieren
 event-share-links-headline:
-  other: Versenden
+    other: Versenden
 homepage-cta-all-socials:
-  other: Alle Socials
+    other: Alle Socials
 homepage-next-socials:
-  other: Deine nächsten Social Dances
+    other: Deine nächsten Social Dances
 learn-category:
-  other: Kategorie
+    other: Kategorie
 learn-city:
-  other: Stadt
+    other: Stadt
 learn-club:
-  other: Verein
+    other: Verein
 learn-facebook:
-  other: Facebook
+    other: Facebook
 learn-instagram:
-  other: Instagram
+    other: Instagram
 learn-location:
-  other: Ort
+    other: Ort
 learn-online:
-  other: Online Kurse
+    other: Online Kurse
 learn-page-sorry-copy:
-  other: Leider haben wir für diese Kombination nichts gefunden
+    other: Leider haben wir für diese Kombination nichts gefunden
 learn-page-sorry-hl:
-  other: Sorry!
+    other: Sorry!
 learn-school:
-  other: Tanzschule
+    other: Tanzschule
 learn-teacher:
-  other: Lehrer
+    other: Lehrer:innen
 learn-uni:
-  other: Hochschulsport
+    other: Hochschulsport
 learn-youtube:
-  other: Youtube
+    other: Youtube
 learn-open-classes:
-  other: Kurse öffnen
+    other: Kurse öffnen
 link-home:
-  other: Home
+    other: Home
 main-menu-close:
-  other: Schließen
+    other: Schließen
 main-menu-open:
-  other: Menu
+    other: Menu
 music-band:
-  other: Band / Gruppe
+    other: Band / Gruppe
 music-category:
-  other: Kategorie
+    other: Kategorie
 music-dj:
-  other: DJ
+    other: DJ
 music-solo:
-  other: Solo Musiker
+    other: Solo Musiker
 page-dance-fav-intro:
-  other: Hier findest du jederzeit alle Veranstaltungen, die du mit einem {{ .icon }} markiert hast.
+    other: Hier findest du jederzeit alle Veranstaltungen, die du mit einem {{ .icon }} markiert hast.
 page-dance-fav-show-only:
-  other: Nur {{ .icon }} anzeigen
+    other: Nur {{ .icon }} anzeigen
 page-dance-filters-date-from:
-  other: Von
+    other: Von
 page-dance-filters-date-selection:
-  other: Datum einschränken
+    other: Datum einschränken
 page-dance-filters-date-to:
-  other: Bis
+    other: Bis
 page-dance-filters-hide-socials:
-  other: Socials ausblenden
+    other: Socials ausblenden
 page-dance-filters-show-class:
-  other: Auch Kurse anzeigen
+    other: Auch Kurse anzeigen
 scene-area:
-  other: Ort
+    other: Ort
 scene-category:
-  other: Kategorie
+    other: Kategorie
 scene-description:
-  other: 'Beschreibung:'
+    other: "Beschreibung:"
 scene-facebook:
-  other: Facebook-Gruppe
+    other: Facebook-Gruppe
 scene-goto:
-  other: '%TARGET% öffnen'
+    other: "%TARGET% öffnen"
 scene-signal:
-  other: Signal-Gruppe
+    other: Signal-Gruppe
 share-link-copied:
-  other: Kopiert
+    other: Kopiert
 share-link-mail-cta:
-  other: Mail
+    other: Mail
 share-link-telegram-cta:
-  other: Telegram
+    other: Telegram
 share-link-whatsapp-cta:
-  other: Whatsapp
+    other: Whatsapp
 share-qr:
-  other: Scannen
+    other: Scannen
 teasers-also-relevant:
-  other: 'Das könnte dich auch interessieren:'
+    other: "Das könnte dich auch interessieren:"
 togglebox-expand:
-  other: mehr lesen
+    other: mehr lesen
 togglebox-collapse:
-  other: einklappen
+    other: einklappen
