@@ -9,10 +9,10 @@ description: Häufige Fragen und Antworten
 # Es gibt viel zu wissen...
 ... und deswegen habe wir dir hier ein paar Fragen und Antworten zusammen gestellt.
 
-{{<togglebox hl="Was muss ich können, um auf eine Swing-Party zu gehen?">}}
+{{<togglebox hl="Was muss ich können, um auf eine Swing-Tanz-Party zu gehen?">}}
 Ob du zu einem Social gehen kannst und solltest hängt nicht daran, wie gut du schon tanzen kannst, sondern daran ob du Lust hast zu einem Social zu gehen, oder nicht. Wirklich! So einfach ist das!
 
-Generell stehen Social-Dances allen offen, häufig gibt es auch einen Taster - also eine kleine Einführung ins Swing tanzen - am Anfang, die meistens von erfahrenen Tänzern:innen aus der Szene gegeben wird. Das gelernte kannst du dann direkt ausprobieren!
+Generell stehen Social-Dances allen offen, häufig gibt es auch einen Taster - also eine kleine Einführung ins Swing tanzen - am Anfang, die meistens von erfahrenen Tänzer:innen aus der Szene gegeben wird. Das gelernte kannst du dann direkt ausprobieren!
 {{</togglebox>}}
 
 {{<togglebox hl="Tragt ihr alle Vintage-Kleidung?">}}
@@ -28,7 +28,9 @@ Das ist eine gute Frage und tatsächlich auch eine, die immer wieder diskutiert 
 
 **Es ist völlig normal, Menschen zu fragen, ob sie mit dir tanzen wollen.** Das kann - gerade am Anfang - ungewohnt, aufregend oder auch etwas beängstigend sein. Trotzdem können wir dich nur ermutigend, Leute anzusprechen. Besonders wenn du noch niemanden kennst. Dies ist auch völlig unabhängig davon, welchem Geschlecht du angehörst.
 
-**Generell gilt auch, sowohl Männer als auch Frauen können führen und folgen. Auch gleichgeschlechtliche Tanzpaare sind völlig normal.** Wir sprechen in der Szene auch nicht von "Der Dame" oder "Dem Herrn", sondern von "Lead" und "Follow", um an dieser Stelle keine falschen Vorstellungen aufkommen zu lassen. Auch wenn unseren Tänze aus dem frühen 20 Jhd. stammen, sind wir eine moderne Szene ;).
+**Generell gilt auch, sowohl Männer als auch Frauen können führen und/oder folgen. Auch gleichgeschlechtliche Tanzpaare sind völlig normal.** Wir sprechen in der Szene auch nicht von "Der Dame" oder "Dem Herrn", sondern von "Lead" und "Follow", um an dieser Stelle keine falschen Vorstellungen aufkommen zu lassen. Auch wenn unseren Tänze aus dem frühen 20 Jhd. stammen, sind wir eine moderne Szene ;).
+
+**Passt aufeinander auf!** Bei Platzmangel versucht es mit *kleineren* Schritten. Wer auch immer gerade führt, sollte den Partner weder in ein anderes Paar schieben noch im letzen Moment zu sich reissen. Versucht die Füße unterm Körper zu lassen. Wenn so mal ein Bobbes kollidiert gehöhrt es sich nachzusehen ob alle unversehrt sind und sich zu entschuldigen. Gegebenenfalls fragt nach Hilfe beim Veranstalter.
 
 **Wirst du zu einem Tanz aufgefordert, ist es immer völlig OK nein zu sagen.** Denke aber bitte daran, dass da jemand vielleicht gerade etwas Mut sammeln musste und nun eine Abfuhr bekommen hat, dich zwei Sekunden später mit jemanden anderen auf der Tanzfläche zu sehen, kann für die fragende Person ganz schön frustrierend sein.
 
@@ -45,10 +47,10 @@ Es schadet nicht, dein Gegenüber auch ein Mal anzulächeln und in die Augen zu 
 Damit hast du zusätzlich auch noch den Blinden Winkel deines Partners im Blick und kanns aufpassen, das ihr niemanden anrempelt!
 {{</togglebox>}}
 
-{{<togglebox hl="Ich habe ein Lindyhop Video im Netz gesehen, das sieht furchbar akrobatisch aus!">}}
-Lindyhop zu tanzen kann mit Sicherheit eine ganz schön Schweiss treibende Sache sein. Trotzdem musst du nicht wahnsinnig athletisch oder akrobatisch sein, um zu einer Swing Party zu gehen. Tatsächlich sind Würfe und Sprünge auf vollen Tanzflächen auch eher ungerne gesehen, das Verletzungsrisiko für andere Tänzer ist beträchtlich und die meisten solcher Figuren (auch "Aerials" genannt), verlangen ein eingespieltes Team.
+{{<togglebox hl="Ich habe ein Lindyhop-Video im Netz gesehen, das sieht furchbar akrobatisch aus!">}}
+Lindyhop zu tanzen kann mit Sicherheit eine ganz schön Schweiss treibende Sache sein. Trotzdem musst du nicht wahnsinnig athletisch oder akrobatisch sein, um zu einer Swing-Tanz-Party zu gehen. Tatsächlich sind Würfe und Sprünge auf vollen Tanzflächen auch eher ungerne gesehen, das Verletzungsrisiko für andere Tänzer ist beträchtlich und die meisten solcher Figuren (auch "Aerials" genannt), verlangen ein eingespieltes Team.
 
-Viele Videos, die du im Netz findest, sind Vorführungen, oder Wettbewerbe. Diese sind naturgemäß viel ausgefallener, akrobatischer und athletischer als Social Dances, bei denen es eher um den gemeinsamen Spaß am Tanzen und der Musik geht.
+Viele Videos, die du im Netz findest, sind Vorführungen, oder Wettbewerbe. Diese sind naturgemäß viel ausgefallener, akrobatischer und athletischer als Social-Dances, bei denen es eher um den gemeinsamen Spaß am Tanzen und der Musik geht.
 {{</togglebox>}}
 
 {{<info>}}

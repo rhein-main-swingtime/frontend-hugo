@@ -1,10 +1,10 @@
 ---
-title: 👋 Hallo
-subtitle: und viel Spaß!
+title: 👋 Hello
+subtitle: and have fun!
 menu: minor
 weight: 50
 translationKey: hello
-description: Du hast uns bei Swing Tanzen gesehen und willst mehr erfahren?
+description: You saw us Swing dancing and want to know more?
 keywords:
     - Jazz tanzen
     - Szene

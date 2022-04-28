@@ -32,7 +32,7 @@ translationKey: why_motivation
 
 -- Unbekannt, aber häufig.
 
-Wir finden die Szene im Rhein Main Gebiet ❤️ und möchten mit **rmswing.de** eine Plattform schaffen, die alle wichtigsten Infos bündelt und auch mit der Szene wachsen kann.
+Wir finden die Szene im Rhein-Main-Gebiet ❤️ und möchten mit **rmswing.de** eine Plattform schaffen, die alle wichtigsten Infos bündelt und auch mit der Szene wachsen kann.
 
 Für uns ist es auch ein Anliegen alle wichtigen Infos frei verfügbar zu haben.
 

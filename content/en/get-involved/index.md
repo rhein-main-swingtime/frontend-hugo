@@ -24,7 +24,7 @@ Mega! 🚀🙌🤩
 
 Wir pflegen aktuell alle Socials im Rahmen eines Google-Kalenders, der hier eingebunden wird.
 
-Wenn du Kurse oder Workshops anbieten willst, können wir die Daten direkt von dir einbinden, aktuell benutzen wir dafür ebenfalls Google Kalender, andere Varianten könnten wir aber auch einbauen. [Schreib uns einfach an!](mailto:hallo@rmswing.de)
+Wenn du Kurse oder Workshops anbieten willst, können wir die Daten direkt von dir einbinden, aktuell benutzen wir dafür ebenfalls Google-Kalender, andere Varianten könnten wir aber auch einbauen. [Schreib uns einfach an!](mailto:hallo@rmswing.de)
 
 ## Ich habe Bock mit euch zu coden!
 Du kannst schon etwas (oder etwas mehr) Programmierung und hast Lust mit uns an dieser Seite zu Arbeiten?

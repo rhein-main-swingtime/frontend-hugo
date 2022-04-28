@@ -1,11 +1,11 @@
 ---
 title: Künstler
-subtitle: Musiker, Bands und DJs
+subtitle: Swing-Bands, -DJs & Co.
 menu: main
 weight: 20
 translationKey: artists
 dataSrc: artists
 ---
-# Swing Musik im Rhein Main Gebiet
+# Swing-Musik im Rhein-Main-Gebiet
 
-Auf dieser Seite findest du eine Übersicht von einzelnen Musikern, Bands und DJs.
+Hier findest du eine kleine Übersicht von einzelnen lokalen Bands, DJs und anderen die Musik zum Swing-Tanzen machen.

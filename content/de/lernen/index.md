@@ -1,7 +1,7 @@
 ---
 title: Tanzen lernen
-subtitle: Schulen, Lehrer, Vereine
-description: Finde Swing Tanzschulen, Lehrer und Vereine im Rhein Main Gebiet.
+subtitle: Schulen, Lehrende, Vereine
+description: Finde Swing-Tanzschulen, Lehrende und Vereine im Rhein-Main-Gebiet.
 keywords:
     - Swing tanzen
     - Lindy Hop
@@ -15,7 +15,7 @@ translationKey: learn
 ---
 # Lerne Swing tanzen!
 
-Hier findest du Tanzschulen, Vereine und Lehrer aus dem Rhein Main Gebiet. Benutze einfach die Filter, wenn du deine Suche eingrenzen willst.
+Hier findest du Tanzschulen, Vereine und Lehrende aus dem Rhein-Main-Gebiet. Benutze einfach die Filter, wenn du deine Suche eingrenzen willst.
 
 {{<info>}}
 # Hinweis
