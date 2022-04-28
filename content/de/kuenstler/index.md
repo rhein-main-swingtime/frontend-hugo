@@ -1,6 +1,6 @@
 ---
 title: Künstler
-subtitle: Swing-Bands, -DJs & Co.
+subtitle: Swing-Bands, -DJs, Musiker:innen & Co.
 menu: main
 weight: 20
 translationKey: artists
