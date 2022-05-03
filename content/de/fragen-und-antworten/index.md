@@ -30,13 +30,13 @@ Das ist eine gute Frage und tatsächlich auch eine, die immer wieder diskutiert 
 
 **Generell gilt auch, sowohl Männer als auch Frauen können führen und/oder folgen. Auch gleichgeschlechtliche Tanzpaare sind völlig normal.** Wir sprechen in der Szene auch nicht von "Der Dame" oder "Dem Herrn", sondern von "Lead" und "Follow", um an dieser Stelle keine falschen Vorstellungen aufkommen zu lassen. Auch wenn unseren Tänze aus dem frühen 20 Jhd. stammen, sind wir eine moderne Szene ;).
 
-**Passt aufeinander auf!** Bei Platzmangel versucht es mit *kleineren* Schritten. Wer auch immer gerade führt, sollte den Partner weder in ein anderes Paar schieben noch im letzen Moment zu sich reissen. Versucht die Füße unterm Körper zu lassen. Wenn so mal ein Bobbes kollidiert gehöhrt es sich nachzusehen ob alle unversehrt sind und sich zu entschuldigen. Gegebenenfalls fragt nach Hilfe beim Veranstalter.
+**Passt aufeinander auf!** Bei Platzmangel versucht es mit *kleineren* Schritten. Wer auch immer gerade führt, sollte die Partnerin oder den Partner weder in ein anderes Paar schieben noch im letzen Moment zu sich reissen. Versucht die Füße unterm Körper zu lassen. Wenn so mal ein Bobbes kollidiert gehöhrt es sich nachzusehen ob alle unversehrt sind und sich zu entschuldigen. Gegebenenfalls fragt nach Hilfe beim Veranstalty.
 
 **Wirst du zu einem Tanz aufgefordert, ist es immer völlig OK nein zu sagen.** Denke aber bitte daran, dass da jemand vielleicht gerade etwas Mut sammeln musste und nun eine Abfuhr bekommen hat, dich zwei Sekunden später mit jemanden anderen auf der Tanzfläche zu sehen, kann für die fragende Person ganz schön frustrierend sein.
 
 Andersherum gilt aber auch: **Aktzeptiere Absagen** und versuch es einfach bei jemand anderem. "Ok, vielleicht ja später." ist eine völlig normale Antwort. Eine Absage sollte nie ein Anlass sein zu diskutieren oder mehrmals nachzuhaken.
 
-**In Deutschland ist es gängig zwei Songs am Stück miteinander zu Tanzen**, bevor man sich einen neuen Partner sucht. Wenn der Tanz besonders gut war, oder man viel Spaß hatte, kann man auch mal einen dritten dran hängen, danach sollte man sich aber normalerweise weiterbewegen. Ein einfaches "Vielen Dank", reicht dabei völlig.
+**In Deutschland ist es gängig zwei Songs am Stück miteinander zu Tanzen**, bevor du dir jemanden neues suchst. Das ist aber keine festgeschriebene Regel. Regional ist das tatsächlich komplett unterschiedlich! Frag einfach obs noch einer sein darf! Wenn der Tanz besonders gut war, oder ihr viel Spaß hattet, kanns auch ein dritter werden aber selten mehr. Ein einfaches "Vielen Dank" zum Abschied reicht dabei völlig.
 
 Verabschiedet sich dein Gegenüber schon nach einem Song, bedeutet das aber aber auch nicht schlechtes. Vielleicht möchte die Person etwas trinken, sich etwas frisch machem, oder braucht einfach eine Pause.
 
@@ -48,9 +48,11 @@ Damit hast du zusätzlich auch noch den Blinden Winkel deines Partners im Blick 
 {{</togglebox>}}
 
 {{<togglebox hl="Ich habe ein Lindyhop-Video im Netz gesehen, das sieht furchbar akrobatisch aus!">}}
-Lindyhop zu tanzen kann mit Sicherheit eine ganz schön Schweiss treibende Sache sein. Trotzdem musst du nicht wahnsinnig athletisch oder akrobatisch sein, um zu einer Swing-Tanz-Party zu gehen. Tatsächlich sind Würfe und Sprünge auf vollen Tanzflächen auch eher ungerne gesehen, das Verletzungsrisiko für andere Tänzer ist beträchtlich und die meisten solcher Figuren (auch "Aerials" genannt), verlangen ein eingespieltes Team.
+Swingtänze können mit Sicherheit eine ganz schön Schweiss-treibende Sache sein. Trotzdem musst du nicht wahnsinnig athletisch oder akrobatisch sein, um zu einer Swing-Tanz-Party zu gehen. Tatsächlich sind Würfe und Sprünge auf vollen Tanzflächen auch eher ungern gesehen. Das Verletzungsrisiko für sich und andere ist beträchtlich und die meisten solcher Figuren (auch "Aerials" genannt), verlangen ein eingespieltes Team.
 
 Viele Videos, die du im Netz findest, sind Vorführungen, oder Wettbewerbe. Diese sind naturgemäß viel ausgefallener, akrobatischer und athletischer als Social-Dances, bei denen es eher um den gemeinsamen Spaß am Tanzen und der Musik geht.
+
+Wir wollen ja meist auch ein paar Stunden und mit möglichst vielen tanzen. Das geht am besten wenn wir unsere Energie gut einteilen anstatt möglichst viele "crazy moves" in jedem Tanz unterzubringen.
 {{</togglebox>}}
 
 {{<info>}}
