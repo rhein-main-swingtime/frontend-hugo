@@ -1,10 +1,10 @@
 ---
-title: Artists
+title: Music
 subtitle: Musicians, Bands and DJs
 menu: main
 weight: 20
 translationKey: artists
-dataSrc: artists
+dataSrc: music
 ---
 # Swing music in the Rhein-Main area
 

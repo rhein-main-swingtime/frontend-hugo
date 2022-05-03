@@ -1,10 +1,10 @@
 ---
-title: Künstler
+title: Musik
 subtitle: Swing-Bands, -DJs, Musiker:innen & Co.
 menu: main
 weight: 20
 translationKey: artists
-dataSrc: artists
+dataSrc: music
 ---
 # Swing-Musik im Rhein-Main-Gebiet
 
