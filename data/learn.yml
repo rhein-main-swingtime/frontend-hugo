@@ -202,6 +202,10 @@ items:
       location:
           - Mainz
       category: teacher
+      display:
+          category:
+              de: Lehrerin
+              en: Teacher
       contact:
           mail: lindy_farr@web.de
           tel: 0173/3216651

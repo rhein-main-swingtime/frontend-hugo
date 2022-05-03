@@ -4,7 +4,7 @@ subtitle: und viel Spaß!
 menu: minor
 weight: 50
 translationKey: hello
-description: Du hast uns bei Swing Tanzen gesehen und willst mehr erfahren?
+description: Du hast uns beim Swing-Tanzen gesehen und willst mehr erfahren?
 keywords:
     - Jazz tanzen
     - Szene
@@ -25,13 +25,13 @@ Da dabei handelt es sich um Tänzen aus der Familie der Swing-Tänze. Diese werd
 Falls dich die Geschichte interessiert: Andere haben das sehr viel besser aufgeschrieben als wir das könnten. [Weiter unten](#geschichte) haben wir dir dazu einige weiterführende Links zusammengestellt
 {{</info>}}
 
-Auch wenn es feste Routinen wie z.B. den Shim Sham gibt, wird Swing hauptsächlich als *Social Dance* getanzt. Dabei werden keine festen Choreographien "abgetanzt", sondern es wird gemeinsam zur Musik improvisiert. Dabei gibt es in jedem Tanzpaar einen *Lead* (oder Führenden) und einen *Follow* (oder Folgenden). Beide Rolle steht dabei natürlich jedem Geschlecht offen. Ergo sprechen wir auch nicht mehr von "der Dame" oder "dem Herren".
+Auch wenn es feste Routinen wie z.B. den Shim Sham gibt, wird Swing hauptsächlich als *Social-Dance* getanzt. Dabei werden keine festen Choreographien "abgetanzt", sondern es wird gemeinsam zur Musik improvisiert. Dabei gibt es in jedem Tanzpaar einen *Lead* (oder Führenden) und einen *Follow* (oder Folgenden). Beide Rolle steht dabei natürlich jedem Geschlecht offen. Ergo sprechen wir auch nicht mehr von "der Dame" oder "dem Herren".
 
 Hauptziel ist es, gemeinsam Spaß beim Tanzen zu haben!
 
 ## Lernen
 
-Hoffentlich haben wir deine Neugier geweckt! Im Rhein-Main Gebiet gibt es einige Vereine, Lehrer und Tanzschulen, die sich freuen würden, dir ein paar ersten Schritt beizubringen!
+Hoffentlich haben wir deine Neugier geweckt! Im Rhein-Main-Gebiet gibt es einige Vereine, Lehrer und Tanzschulen, die sich freuen würden, dir ein paar ersten Schritt beizubringen!
 
 Am besten schaust du einfach mal in die [Liste]({{< ref "/lernen/index.md" >}} "Liste").
 
@@ -41,7 +41,7 @@ Am besten schaust du einfach mal in die [Liste]({{< ref "/lernen/index.md" >}} "
 
 Hier kommt man zusammen, quatscht, tanzt und hat Spaß. In aller Regel wechselt man regelmäßig den Tanzpartner, so daß auch nichts dagegen spricht, alleine auf einen Social zu gehen. Sogar, wenn man niemanden kennt. Tatsächlich ist es super, um neue Leute kennen zu lernen.
 
-Man muss kein bestimmtes Level erreicht haben um zum Social Dance zu gehen, ganz im Gegenteil gibt es auf vielen Socials auch *Taster* also kurze Einführungen ins Swing Tanzen, die typischerweise zwischen 30 Minuten und einer Stunde dauern und dir ein paar erste Schritte mit auf den Weg geben.
+Man muss kein bestimmtes Level erreicht haben um zum Social Dance zu gehen, ganz im Gegenteil gibt es auf vielen Socials auch *Taster* also kurze Einführungen ins Swing-Tanzen, die typischerweise zwischen 30 Minuten und einer Stunde dauern und dir ein paar erste Schritte mit auf den Weg geben.
 
 Wir haben eine Seite auf der du [immer die nächsten Socials findest]({{< ref "/tanzen" >}}). Schau am besten direkt vorbei und komm tanzen!
 
