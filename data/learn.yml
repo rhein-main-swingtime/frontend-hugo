@@ -29,7 +29,7 @@ items:
           - Tanzschule Monika Bauer
           - Kaiserstr. 42
           - 60329  Frankfurt
-      calendar: "Monika%20Bauer"
+      calendar: "Monika Bauer"
     - name: Die Tanzschule Carsten Weber
       location: Frankfurt
       category: school
@@ -44,7 +44,7 @@ items:
           - die tanzschule C. Weber GmbH
           - Bolongarostraße 113
           - D-65929 Frankfurt
-      calendar: "Die%20Tanzschule%20Carsten%20Weber"
+      calendar: "Die Tanzschule Carsten Weber"
     - name: Taktgefühl Tanzschule
       location: Friedrichsdorf
       category: school
@@ -105,7 +105,7 @@ items:
       socialmedia:
           facebook: "https://www.facebook.com/ftv1860"
           youtube: "https://www.youtube.com/channel/UCWffDxt7I9lHjZpkI8GjFFQ"
-      calendar: "Jazz%20an%20Zeil%20und%20Zoo%20FTV"
+      calendar: "Jazz an Zeil und Zoo FTV"
     - name: FTG Sportfabrik Frankfurt
       location: Frankfurt
       category: club
@@ -180,7 +180,7 @@ items:
           - Sunny Side Swing
           - Rheinstraße 22
           - 64283 Darmstadt
-      calendar: Sunny%20Side%20Swing
+      calendar: Sunny Side Swing
     - name: Marcus und Annina
       location:
           - Frankfurt
