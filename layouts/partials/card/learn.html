@@ -77,7 +77,7 @@
       {{ if eq .lang "en" }}
         {{ $url = "/dance" }}
       {{ end }}
-      <a href="{{ ref .pageContext $url }}?calendar[]={{ .context.calendar }}" class="font-bold">
+      <a href="{{ ref .pageContext $url }}?calendar[]={{ htmlUnescape .context.calendar }}" class="font-bold">
         {{ T "learn-open-classes" }}
         {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1em text-red-500" }}
       </a>
