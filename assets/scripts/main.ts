@@ -49,10 +49,29 @@ window.RMST_TS = {
 
 window.T = T
 
+let scrollTarget: null | HTMLElement = null;
+function handleAnchorInUrl() {
+    const anchor = window.location.hash.replace('#', '')
+    history.pushState(
+        "",
+        document.title,
+        window.location.pathname + window.location.search
+    );
+    if (!anchor) {
+        return;
+    }
+
+    scrollTarget = document.getElementById(anchor);
+}
+handleAnchorInUrl();
+
 document.addEventListener('DOMContentLoaded', function (event) {
     setTouchBodyClass()
-    // const pickster = new Pickster()
-    // console.log(pickster.datesInMonth(2021, 9))
+
+    if (scrollTarget) {
+        const scrollFunction = scrollToElement(scrollTarget)
+        scrollFunction()
+    }
 })
 
 document.addEventListener('alpine:init', () => {
