@@ -5,103 +5,94 @@ config:
     cardLayout: artist
     # classes will be set on the <article> element of the card
     itemClasses: is-card
-    filterable:             # Filters will be created for every one of those
+    filterable: # Filters will be created for every one of those
         - category
-    identifier: name        # Needs to be unique, and exist on every item
-    sortBy: name            # Field used for sorting of items
-    sortDirection: asc      # Sort direction
-    showCategories: false   #
-    i18nPrefix: music       # can be used within the card template, to fetch translations
-    title: Filter           # actually, this should come from the translations too @todo
-
+    identifier: name # Needs to be unique, and exist on every item
+    sortBy: name # Field used for sorting of items
+    sortDirection: asc # Sort direction
+    showCategories: false #
+    i18nPrefix: music # can be used within the card template, to fetch translations
+    title: Filter # actually, this should come from the translations too @todo
 
 items:
-    -
-        name: IKS Big Band
-        contact:
-            web: https://iks-jazz.de/big-band
-        location: Rüsselsheim
-        category: band
+    - name: IKS Big Band
+      contact:
+          web: https://iks-jazz.de/big-band
+      location: Rüsselsheim
+      category: band
 
-    -
-        name: Jubilee Jumpers
-        location: Frankfurt
-        contact:
-            web: "http://jubileejumpers.de"
-        category: band
+    - name: Jubilee Jumpers
+      location: Frankfurt
+      contact:
+          web: "http://jubileejumpers.de"
+      category: band
 
-    -
-        name: Maurice Kühn's SWINGKOMBINAT
-        contact:
-            web: "http://www.mauricekuehn.de/swingkombinat/"
-        category: band
+    - name: Maurice Kühn's SWINGKOMBINAT
+      contact:
+          web: "http://www.mauricekuehn.de/swingkombinat/"
+      category: band
 
-    -
-        name: Trio HEF zu Viert
-        contact:
-            web: "http://triohef.de"
-        category: band
+    - name: Trio HEF zu Viert
+      contact:
+          web: "http://triohef.de"
+      category: band
 
-    -
-        name: Schallplattenunterhalter Kaiser L
-        contact:
-            web: "http://music.jumpinjive.com/html/aktuell.htm"
-        socialmedia:
-            facebook: "https://facebook.com/DJKaiserL"
-        location: Frankfurt
-        category: dj
-        category_alt: Schallplattenunterhalter
+    - name: Schallplattenunterhalter Kaiser L
+      contact:
+          web: "http://music.jumpinjive.com/html/aktuell.htm"
+      socialmedia:
+          facebook: "https://facebook.com/DJKaiserL"
+      location: Frankfurt
+      category: dj
+      category_alt: Schallplattenunterhalter
 
-    -
-        name: Jo van Nelsen
-        contact:
-            web: "http://jovannelsen.de/aktuelle-programme/schellack-dj"
-        location: Frankfurt
-        category: dj
+    - name: Jo van Nelsen
+      contact:
+          web: "http://jovannelsen.de/aktuelle-programme/schellack-dj"
+      location: Frankfurt
+      category: dj
 
-    -
-        name: Die Schwindler
-        contact:
-            web: http://www.jazzsalon.de/index.html/dieschwindler.com/schwindler/
-        location: Frankfurt
-        category: band
+    - name: Die Schwindler
+      contact:
+          web: http://www.jazzsalon.de/index.html/dieschwindler.com/schwindler/
+      location: Frankfurt
+      category: band
 
-    -
-        name: Swing Belleville
-        contact:
-            web: https://www.swing-belleville.de/
-        location: Frankfurt
-        category: band
+    - name: Swing Belleville
+      contact:
+          web: https://www.swing-belleville.de/
+      location: Frankfurt
+      category: band
 
-    -
-        name: Eric the Goodsoul
-        contact:
-            mail: eric@goodsoul.de
-        location: Frankfurt
-        category: dj
+    - name: Eric the Goodsoul
+      contact:
+          mail: eric@goodsoul.de
+      location: Frankfurt
+      category: dj
 
-    -
-        name: Jonas and his Jivin’ Five
-        contact:
-            web: https://www.jonaslohse.de/
-        category: band
-    -
-        name: Foxy and the Jazz Hounds
-        contact:
-            web: http://foxy-jazzhounds.de
-        category: band
-    -
-        name: Balduin | Electro Swing
-        contact:
-            web: http://www.balduinmusic.de/
-            mail: mail@balduinmusic.de
-            youtube: https://www.youtube.com/balduinofficial    # Does not work yet
-            instagram: https://www.instagram.com/balduinmusic/  # Does not work yet
-        category: band
-    -
-        name: MFH Big Band
-        category: band
-        contact:
-            web: https://mvh-bigband.de/
-            mail: info@mvh-bigband.de
-            facebook: https//www.facebook.com/mvhbigband
+    - name: Jonas and his Jivin’ Five
+      contact:
+          web: https://www.jonaslohse.de/
+      category: band
+    - name: Foxy and the Jazz Hounds
+      contact:
+          web: http://foxy-jazzhounds.de
+      category: band
+    - name: Balduin | Electro Swing
+      contact:
+          web: http://www.balduinmusic.de/
+          mail: mail@balduinmusic.de
+          youtube: https://www.youtube.com/balduinofficial # Does not work yet
+          instagram: https://www.instagram.com/balduinmusic/ # Does not work yet
+      category: band
+    - name: MFH Big Band
+      category: band
+      contact:
+          web: https://mvh-bigband.de/
+          mail: info@mvh-bigband.de
+          facebook: https//www.facebook.com/mvhbigband
+    - name: Michele Alberti Trio
+      contact:
+          web: www.michele-alberti-trio.de
+          mail: info@michele-alberti-trio.de
+      category: band
