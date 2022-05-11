@@ -181,12 +181,13 @@ items:
           - Rheinstraße 22
           - 64283 Darmstadt
       calendar: Sunny Side Swing
-    - name: Marcus und Annina
+    - name: Marcus Weis
       location:
           - Frankfurt
       category: school
       contact:
-          mail: kontakt@lindyhoplernen.de
+          web: https://lindyhoplernen.de
+          tel: 0176/87854551
       socialmedia:
           facebook: "https://www.facebook.com/gettoknowswing/?ref=page_internal"
     - name: Kulturkurse Uni Mainz
