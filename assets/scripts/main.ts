@@ -49,7 +49,7 @@ window.RMST_TS = {
 
 window.T = T
 
-let scrollTarget: null | HTMLElement = null;
+let scrollTarget: string;
 function handleAnchorInUrl() {
     const anchor = window.location.hash.replace('#', '')
     history.pushState(
@@ -57,21 +57,34 @@ function handleAnchorInUrl() {
         document.title,
         window.location.pathname + window.location.search
     );
+
+    console.log(anchor)
+
     if (!anchor) {
         return;
     }
 
-    scrollTarget = document.getElementById(anchor);
+    scrollTarget = anchor;
 }
 handleAnchorInUrl();
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    setTouchBodyClass()
+function handleScrollToElementOnPageLoad() {
+    const scrollTargetElement = document.getElementById(scrollTarget)
 
-    if (scrollTarget) {
-        const scrollFunction = scrollToElement(scrollTarget)
+    if (scrollTargetElement) {
+        const scrollFunction = scrollToElement(scrollTargetElement)
         scrollFunction()
     }
+}
+
+document.addEventListener('DOMContentLoaded', function (event) {
+    setTouchBodyClass()
+    handleScrollToElementOnPageLoad()
+})
+
+document.addEventListener('dance-events-loaded', function() {
+    const scrollTargetElement = document.getElementById(scrollTarget)
+    handleScrollToElementOnPageLoad()
 })
 
 document.addEventListener('alpine:init', () => {
