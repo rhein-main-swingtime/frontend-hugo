@@ -29,7 +29,7 @@
         {{ $url = "dance" }}
       {{ end }}
       {{ with .Site.GetPage $url }}
-        <a :href="'{{ .Permalink }}#' + danceEvent.id" class="is-button no-underline">
+        <a :href="'{{ .Permalink }}#dance-event-id-' + danceEvent.id" class="is-button no-underline">
           {{ i18n "event-more-information" }}
           {{ partial "heroicons/outline/chevron-right.svg" "is-icon is-1em" }}
         </a>

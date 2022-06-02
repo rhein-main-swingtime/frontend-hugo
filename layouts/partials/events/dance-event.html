@@ -6,7 +6,7 @@
   x-data="{
         openSection: null
     }"
-  x-init="openSection = list.handleHashNavivation(danceEvent.id, $refs.element)"
+  x-init="openSection = list.triggerScrollTo()"
   x-ref="element"
   @click="$nextTick(() => { trackEventClick($event) })">
   <h1 class="text-lg bold font-bold">

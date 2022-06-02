@@ -61,25 +61,9 @@ export class EventList {
         return this.collection.findEvent(id) || false
     }
 
-    public handleHashNavivation (id: number | string, element: HTMLElement): null | 'more' {
-        if (window.location.hash !== '#' + id) {
-            return null
-        }
-
-        setTimeout(
-            () => {
-                const offset = elementOffset(element)
-                const header = document.getElementById('page-mast-head')
-                if (header) {
-                    offset.top = offset.top - header.offsetHeight
-                }
-                window.scrollTo({
-                    top: offset.top,
-                    behavior: 'smooth'
-                })
-            }, 250
-        )
-        return 'more'
+    public triggerScrollTo (): void {
+        const loadedEvent = new Event('dance-events-loaded')
+        document.dispatchEvent(loadedEvent);
     }
 
     get isSorry (): boolean {

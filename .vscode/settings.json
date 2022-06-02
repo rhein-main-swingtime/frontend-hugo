@@ -7,7 +7,11 @@
     "[markdown]": {
         "editor.unicodeHighlight.ambiguousCharacters": false,
         "editor.unicodeHighlight.invisibleCharacters": false,
-        "editor.quickSuggestions": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
         "editor.wordWrap": "wordWrapColumn"
     },
     "[yaml]": {
