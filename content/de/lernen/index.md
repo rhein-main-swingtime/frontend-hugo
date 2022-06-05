@@ -15,7 +15,7 @@ translationKey: learn
 ---
 # Lerne Swing tanzen!
 
-Hier findest du Tanzschulen, Vereine und Lehrende aus dem Rhein-Main-Gebiet. Benutze einfach die Filter, wenn du deine Suche eingrenzen willst.
+Hier findest du Tanzschulen, Vereine und Lehrende aus dem Rhein-Main-Gebiet. Benutze die Filter, wenn du die Suche eingrenzen willst.
 
 {{<info>}}
 # Hinweis

@@ -9,24 +9,22 @@ description: Häufige Fragen und Antworten
 # Es gibt viel zu wissen...
 ... und deswegen habe wir dir hier ein paar Fragen und Antworten zusammen gestellt.
 
-{{<togglebox hl="Was muss ich können, um auf eine Swing-Tanz-Party zu gehen?">}}
+{{<togglebox hl="Was muss ich können, um auf eine Swingtanz-Party zu gehen?">}}
 Ob du zu einem Social gehen kannst und solltest hängt nicht daran, wie gut du schon tanzen kannst, sondern daran ob du Lust hast zu einem Social zu gehen, oder nicht. Wirklich! So einfach ist das!
 
-Generell stehen Social-Dances allen offen, häufig gibt es auch einen Taster - also eine kleine Einführung ins Swing tanzen - am Anfang, die meistens von erfahrenen Tänzer:innen aus der Szene gegeben wird. Das gelernte kannst du dann direkt ausprobieren!
+Generell stehen Social Dances allen offen, häufig gibt es auch einen Tas – also eine kleine Einführung ins Swing tanzen – am Anfang, die meistens von erfahrenen Tänzer:innen aus der Szene gegeben wird. Das Gelernte kannst du dann direkt ausprobieren!
 {{</togglebox>}}
 
 {{<togglebox hl="Tragt ihr alle Vintage-Kleidung?">}}
-Für einige ist dies tatsächlich wichtig und es ist auch Teil der Szene, es ist aber keine Voraussetzung um auf Parties Spaß und schöne Tänze zu haben.
+Für Einige gehört das unbedingt dazu, es ist aber keine Voraussetzung, um auf Parties Spaß und schöne Tänze zu haben.
 
-Du solltest primär die Kleidung wählen, in der du dich wohl fühlst. Gerade bei größeren Parties darf es auch ruhig etwas formaler oder ausgefallener sein, schließlich ist dein Outfit auch immer Teil des ersten Eindrucks, den du auf deinen neuen Tanzpartner machst.
-
-Swing-Parties sind aber primär Tanzveranstaltungen und keine Kostümparties. Also wähle im Zweifel im Kleidung, in der du dich bewegen kannst und den Abend über wohl fühlst. Es schadet auch nicht, sich ein paar frische T-Shirts für mitzunehmen. Wir schwitzen alle!
+Swingparties sind aber primär Tanzveranstaltungen und keine Kostümparties. Also wähle im Zweifel im Kleidung, in der du dich bewegen kannst und den Abend über wohl fühlst. Es schadet auch nicht, sich ein paar frische T-Shirts für mitzunehmen. Wir schwitzen alle!
 {{</togglebox>}}
 
-{{<togglebox hl="Ich weiss nicht, wie ich mich verhalten soll. Gibt es Regeln?">}}
+{{<togglebox hl="Ich weiß nicht, wie ich mich verhalten soll. Gibt es Regeln?">}}
 Das ist eine gute Frage und tatsächlich auch eine, die immer wieder diskutiert wird. Wir wollen uns hier nicht anmaßen, den Tanz-Knigge zu schreiben, aber ein paar einfache Ratschläge können wir dir mit auf den Weg geben:
 
-**Es ist völlig normal, Menschen zu fragen, ob sie mit dir tanzen wollen.** Das kann - gerade am Anfang - ungewohnt, aufregend oder auch etwas beängstigend sein. Trotzdem können wir dich nur ermutigend, Leute anzusprechen. Besonders wenn du noch niemanden kennst. Dies ist auch völlig unabhängig davon, welchem Geschlecht du angehörst.
+**Es ist völlkommen üblich, dass wir uns gegenseitig fragen, ob wir miteinander tanzen wollen.** Das kann – gerade am Anfang – ungewohnt, aufregend oder auch etwas beängstigend sein. Trotzdem können wir dich nur ermutigen, Leute anzusprechen. Besonders wenn du noch niemanden kennst. Dies ist auch völlig unabhängig davon, welchem Geschlecht du angehörst.
 
 **Generell gilt auch, sowohl Männer als auch Frauen können führen und/oder folgen. Auch gleichgeschlechtliche Tanzpaare sind völlig normal.** Wir sprechen in der Szene auch nicht von "Der Dame" oder "Dem Herrn", sondern von "Lead" und "Follow", um an dieser Stelle keine falschen Vorstellungen aufkommen zu lassen. Auch wenn unseren Tänze aus dem frühen 20 Jhd. stammen, sind wir eine moderne Szene ;).
 
@@ -36,7 +34,7 @@ Das ist eine gute Frage und tatsächlich auch eine, die immer wieder diskutiert 
 
 Andersherum gilt aber auch: **Aktzeptiere Absagen** und versuch es einfach bei jemand anderem. "Ok, vielleicht ja später." ist eine völlig normale Antwort. Eine Absage sollte nie ein Anlass sein zu diskutieren oder mehrmals nachzuhaken.
 
-**In Deutschland ist es gängig zwei Songs am Stück miteinander zu Tanzen**, bevor du dir jemanden neues suchst. Das ist aber keine festgeschriebene Regel. Regional ist das tatsächlich komplett unterschiedlich! Frag einfach obs noch einer sein darf! Wenn der Tanz besonders gut war, oder ihr viel Spaß hattet, kanns auch ein dritter werden aber selten mehr. Ein einfaches "Vielen Dank" zum Abschied reicht dabei völlig.
+**In Deutschland ist es gängig, zwei Songs am Stück miteinander zu tanzen**, bevor du dir jemanden neues suchst. Das ist aber keine festgeschriebene Regel. Regional ist das tatsächlich komplett unterschiedlich! Frag einfach obs noch einer sein darf! Wenn der Tanz besonders gut war, oder ihr viel Spaß hattet, kanns auch ein dritter werden aber selten mehr. Ein einfaches "Vielen Dank" zum Abschied reicht dabei völlig.
 
 Verabschiedet sich dein Gegenüber schon nach einem Song, bedeutet das aber aber auch nicht schlechtes. Vielleicht möchte die Person etwas trinken, sich etwas frisch machem, oder braucht einfach eine Pause.
 
