@@ -1,6 +1,6 @@
 ---
-title: Komm tanzen
-subtitle: Deine Veranstaltungen im Rhein-Main-Gebiet
+title: Veranstaltungen
+subtitle: Deine Socials und Kurse im Rhein-Main-Gebiet
 hp-title: Alle Social-Dances
 menu: main
 weight: 10

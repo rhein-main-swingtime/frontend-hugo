@@ -1,6 +1,6 @@
 ---
-title: Dance with us
-subtitle: Your socials in the Rhein-Main area
+title: Events
+subtitle: Your socials and classes in the Rhein-Main area
 hp-title: All social dances
 menu: main
 weight: 10
