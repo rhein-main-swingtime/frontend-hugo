@@ -12,7 +12,7 @@ description: Häufige Fragen und Antworten
 {{<togglebox hl="Was muss ich können, um auf eine Swingtanz-Party zu gehen?">}}
 Ob du zu einem Social gehen kannst und solltest hängt nicht daran, wie gut du schon tanzen kannst, sondern daran ob du Lust hast zu einem Social zu gehen, oder nicht. Wirklich! So einfach ist das!
 
-Generell stehen Social Dances allen offen, häufig gibt es auch einen Tas – also eine kleine Einführung ins Swing tanzen – am Anfang, die meistens von erfahrenen Tänzer:innen aus der Szene gegeben wird. Das Gelernte kannst du dann direkt ausprobieren!
+Generell stehen Social Dances allen offen, häufig gibt es auch einen Taster – also eine kleine Einführung ins Swing tanzen – am Anfang, die meistens von erfahrenen Tänzer:innen aus der Szene gegeben wird. Das Gelernte kannst du dann direkt ausprobieren!
 {{</togglebox>}}
 
 {{<togglebox hl="Tragt ihr alle Vintage-Kleidung?">}}
