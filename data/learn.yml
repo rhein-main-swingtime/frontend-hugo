@@ -139,6 +139,7 @@ items:
       location: Frankfurt
       category: teacher
       contact:
+          web: "https://www.ausderzeitgefallen.de/"
           mail: ausderzeitgefallen@gmail.com
     - name: Diana & Michael
       location: Frankfurt
