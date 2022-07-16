@@ -1,6 +1,6 @@
 ---
 title: Events
-subtitle: Your socials and classes in the Rhein-Main area
+subtitle: Social dances & classes in the Rhein-Main area
 hp-title: All social dances
 menu: main
 weight: 10

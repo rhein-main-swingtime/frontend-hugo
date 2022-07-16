@@ -7,7 +7,7 @@ dataSrc: scene
 translationKey: scene
 ---
 
-# Get connected
+# Get connected!
 
 You'll find that the swing scene both globally and in the Rhein Main Area is organizes itself within different thematic groups on Facebook and other social media or messengers.
 
