@@ -96,3 +96,13 @@ items:
           web: https://www.michele-alberti-trio.de
           mail: info@michele-alberti-trio.de
       category: band
+    - name: Cora
+      contact:
+          mail: cora.stein@gmx.de
+      location: Frankfurt
+      category: dj
+    - name: Christian
+      contact:
+          mail: tack.christian.tack@googlemail.com
+      location: Frankfurt
+      category: dj
