@@ -106,3 +106,9 @@ items:
           mail: tack.christian.tack@googlemail.com
       location: Frankfurt
       category: dj
+    - name: Strick
+      contact:
+          web: "https://www.ausderzeitgefallen.de/"
+          mail: ausderzeitgefallen@gmail.com
+      location: Frankfurt
+      category: dj
