@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./fonts.css";
 @import "./card.pcss";
 @import "./learn.pcss";
 @import "./buttons.pcss";
@@ -88,7 +89,8 @@ a.is-internal-link {
     background-image: url(/img/wintery-sunburst.svg);
     background-size: cover;
     background-position: center center;
-    & #site-logo {}
+    & #site-logo {
+    }
 }
 
 .is-badge {
@@ -188,10 +190,7 @@ canvas.max-w-full {
             @apply lg:col-span-8;
         }
     }
-
-
 }
-
 
 /* shortcodes */
 .is-box {
@@ -228,7 +227,6 @@ canvas.max-w-full {
             color: inherit;
         }
         & svg {
-
         }
     }
 }
