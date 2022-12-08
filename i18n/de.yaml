@@ -22,7 +22,7 @@ event-filters-reset:
 event-headline-description:
     other: Beschreibung
 event-headline-location:
-    other: Addresse
+    other: Adresse
 event-headline-time:
     other: Datum und Uhrzeit
 event-is-not-saved:
@@ -32,7 +32,7 @@ event-is-saved:
 event-list-favorites:
     other: Deine gemerkten Veranstaltungen
 event-location-not-set:
-    other: Keine Addresse eingetragen
+    other: Keine Adresse eingetragen
 event-more-information:
     other: Mehr infos
 event-page-no-favorites:
