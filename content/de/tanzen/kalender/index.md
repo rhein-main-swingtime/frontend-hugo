@@ -21,7 +21,7 @@ Das sollte dich zu deinem Google-Kalender bringen, wo du das Hinzufügen bestät
 
 ## Ohne Google-Konto
 
-Falls du kein Google-Konto hast, kannst du unseren Kalender trotzdem benutzen. Unter folgendem Link findest du die ".ics-Addresse" des Kalenders:
+Falls du kein Google-Konto hast, kannst du unseren Kalender trotzdem benutzen. Unter folgendem Link findest du die ".ics-Adresse" des Kalenders:
 
 [ICS File](https://calendar.google.com/calendar/ical/s1nbnfmv1lnfc013iuuqg94oo8%40group.calendar.google.com/public/basic.ics)
 
