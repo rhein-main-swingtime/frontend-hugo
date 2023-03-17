@@ -114,7 +114,7 @@ items:
       category: dj
     - name: Die Katzen
       contact:
-          web: "www.diekatzen-music.de"
+          web: "https://www.diekatzen-music.de"
           mail: diekatzen.mainz@yahoo.com
       location: Mainz
       category: band
