@@ -112,3 +112,9 @@ items:
           mail: ausderzeitgefallen@gmail.com
       location: Frankfurt
       category: dj
+    - name: Die Katzen
+      contact:
+          web: "www.diekatzen-music.de"
+          mail: diekatzen.mainz@yahoo.com
+      location: Mainz
+      category: band
