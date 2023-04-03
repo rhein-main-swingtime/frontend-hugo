@@ -2,7 +2,7 @@
 title: Swingtanzen im Rhein-Main-Gebiet
 subtitle: Alles, was du wissen musst!
 eventTeasers:
-    limit: 3
+    limit: 6
     category:
       - socials
 ---
