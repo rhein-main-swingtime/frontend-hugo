@@ -1,6 +1,22 @@
 ---
 __open-page:
   other: Open
+__monday_short:
+    other: Mon
+__tuesday_short:
+    other: Tue
+__wednesday_short:
+    other: Wed
+__thursday_short:
+    other: Thu
+__friday_short:
+    other: Fri
+__saturday_short:
+    other: Sat
+__sunday_short:
+    other: Sun
+page-dance-filters-restrict-days:
+    other: limit days of the week
 close:
   other: Close
 cta-open-in-google-maps:

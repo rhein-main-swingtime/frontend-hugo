@@ -22,6 +22,7 @@ export class Filters {
     public showDates: boolean = false
     public fromDate: string | false = false
     public toDate: string | false = false
+    public weekDays: string[] = []
 
     public getScrollToTopHandler () {
         return () => {
@@ -55,6 +56,7 @@ export class Filters {
         this.toDate = false
         this.showDates = false
         this.onlyFavorites = false
+        this.weekDays = []
     }
 
     get canBeReset () {
@@ -148,7 +150,19 @@ export class Filters {
             this.toDate = params.to![0] || false
         }
 
-        this.showDates = (this.toDate !== false || this.fromDate !== false)
+        if (window.location.search.includes('weekday[]')) {
+            window.location.search.split('&').filter(
+                (element) => element.includes('weekday[]')
+            ).forEach((wd) => {
+                console.log(wd)
+                let e = wd.split('=')[1] || false
+                if (e !== false) {
+                    this.weekDays.push(String(e))
+                }
+            })
+        }
+
+        this.showDates = (this.toDate !== false || this.fromDate !== false || this.weekDays.length > 0)
     }
 
     private handleQueryClasses (out: string[]): string[] {
@@ -174,6 +188,18 @@ export class Filters {
         }
 
         return out
+    }
+
+    public handleWeekday(day: string): void {
+        if (this.weekDays.includes(day)) {
+            this.weekDays = this.weekDays.filter((e) => e !== day)
+            return;
+        }
+        this.weekDays.push(day)
+    }
+
+    get isDayChecked() {
+        return (day: string) => this.weekDays.includes(day)
     }
 
     public async init () {
@@ -252,6 +278,11 @@ export class Filters {
                 out.push('to=' + this.toDate)
             }
         }
+
+        this.weekDays.forEach(
+            (i) => {
+                out.push(`weekday[]=${i}`)
+            })
 
         if (out.length === 0) {
             return ''

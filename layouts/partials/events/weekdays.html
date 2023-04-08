@@ -1,0 +1,29 @@
+<div
+      x-data="{
+        weekdays: [
+          {id: '1', name: '{{ T "__monday_short" }}'},
+          {id: '2', name: '{{ T "__tuesday_short" }}'},
+          {id: '3', name: '{{ T "__wednesday_short" }}'},
+          {id: '4', name: '{{ T "__thursday_short" }}'},
+          {id: '5', name: '{{ T "__friday_short" }}'},
+          {id: '6', name: '{{ T "__saturday_short" }}'},
+          {id: '0', name: '{{ T "__sunday_short" }}'},
+        ]
+      }"
+      class="relative is-filterbar-item has-date"
+      :class="filters.toDate ? 'active' : ''">
+      <div class="text-sm">{{ T "page-dance-filters-restrict-days" }}</div>
+      <template x-for="weekday in weekdays" :key="weekday.id">
+        <span class="inline-block">
+          <input
+            type="checkbox"
+            :id="'weekday' + weekday.id"
+            name="weekday"
+            :value="weekday.id"
+            :checked="filters.isDayChecked(weekday.id)"
+            @click="filters.handleWeekday(weekday.id)" />
+          <label class="font-semibold text-xs" x-text="weekday.name" :for="'weekday' + weekday.id"></label>
+        </span>
+      </template>
+    </div>
+  </div>

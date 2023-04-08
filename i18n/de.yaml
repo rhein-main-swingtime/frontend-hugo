@@ -7,6 +7,20 @@ __open-page:
     other: Seite öffnen
 __toc:
     other: Inhalt
+__monday_short:
+    other: Mo
+__tuesday_short:
+    other: Di
+__wednesday_short:
+    other: Mi
+__thursday_short:
+    other: Do
+__friday_short:
+    other: Fr
+__saturday_short:
+    other: Sa
+__sunday_short:
+    other: So
 cta-open-in-google-maps:
     other: Karte öffnen
 event-category-class:
@@ -105,6 +119,8 @@ page-dance-filters-hide-socials:
     other: Socials ausblenden
 page-dance-filters-show-class:
     other: Auch Kurse anzeigen
+page-dance-filters-restrict-days:
+    other: Wochentage einschränken
 scene-area:
     other: Ort
 scene-category:
