@@ -23,7 +23,7 @@
     "lodash": "^4.17.21",
     "postcss": "^8.4.13",
     "postcss-cli": "^9.0.2",
-    "postcss-import": "^14.0.2",
+    "postcss-import": "^15.1.0",
     "postcss-nested": "^5.0.6",
     "qrcode": "^1.5.0",
     "tailwindcss": "3",
