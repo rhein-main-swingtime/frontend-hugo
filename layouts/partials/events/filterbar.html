@@ -87,7 +87,7 @@
       "activeWhen" "filters.toDate"
       )
     }}
-  </div>
+    {{ partial "events/weekdays" }}
   <template x-if="filters.canBeReset === true">
     <div class="flex flex-row gap-2 border-t-2 border-gray-200  mt-1 pt-1 mb-1">
       <a href="#" class="is-button text-base highlighted w-full text-center mt-2" @click.prevent="filters.reset()">

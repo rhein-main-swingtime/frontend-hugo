@@ -62,3 +62,17 @@ export function getLocalizedTime (t: Date): string {
 export function getLocalizedDate (d: Date): string {
     return getLocalDateFormat(d).format(d)
 }
+
+// export function getAllWeekdays(): {number: string} {
+
+//     let date = new Date();
+//     let out = {};
+
+//     for (let i = -1; i < 7; i++) {
+
+//         out[date.getDay()] = getLocalDateFormat(date).format('w')
+//     }
+
+//     return out;
+
+// }
