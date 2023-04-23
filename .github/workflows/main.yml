@@ -10,7 +10,7 @@ on:
   #pull_request:
     #branches: [ master ]
   schedule:
-    - cron:  '30 2 * * *' # everyday at 02:30
+    - cron:  '30 2 * * WED' # every wednesday at 02:30
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
