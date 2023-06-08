@@ -50,6 +50,15 @@ Dancing Lindy Hope can by all means be a pretty sweaty affair. Even so, you don'
 Many videos you'll find online are presentations or competitions and not representative of social dances, which are much more about shared enjoyment of the dance and music than about showing off.
 {{</togglebox>}}
 
+{{<togglebox hl="How was that again with the dancing ban? (on some german public holidays)">}}
+In **Hessen:**:\
+Public dance events are prohibited on public holidays from 4 a.m. to 12 p.m., on Good Friday and Holy Saturday from 12 a.m. and on the day of national mourning and the Sunday of the Dead from 4 a.m. The ban also applies on Maundy Thursday from 4 a.m. and on Christmas Eve from 5 p.m. (Translated from [source](https://innen.hessen.de/Buerger-Staat/Feiertage/Veranstaltungen-an-Sonn-und-Feiertagen/Tanz-Sport-Zirkusveranstaltungen-und-Gesellschaftsjagden))
+
+**Rheinland-Pfalz:**:\
+Public dance events are prohibited from Maundy Thursday 4:00 a.m. to Easter Sunday 4:00 p.m., on All Saints’ Day, on the day of memorial service and on the Sunday of the dead from 4:00 a.m. and from the day before Christmas Day 1:00 p.m. to Christmas Day 4:00 p.m. (Translated from [source](https://landesrecht.rlp.de/bsrp/document/jlr-FeiertGRPpP8))
+{{</togglebox>}}
+
+
 {{<info>}}
 
 # Are you missing any information?

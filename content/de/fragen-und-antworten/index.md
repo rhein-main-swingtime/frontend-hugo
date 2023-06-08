@@ -53,6 +53,16 @@ Viele Videos, die du im Netz findest, sind Vorführungen, oder Wettbewerbe. Dies
 Wir wollen ja meist auch ein paar Stunden und mit möglichst vielen tanzen. Das geht am besten wenn wir unsere Energie gut einteilen anstatt möglichst viele "crazy moves" in jedem Tanz unterzubringen.
 {{</togglebox>}}
 
+{{<togglebox hl="Wie war das nochmal mit dem Tanzverbot? (an stillen Feiertagen)">}}
+In **Hessen:**:\
+Öffentliche Tanzveranstaltungen sind an den gesetzlichen Feiertagen von 4 bis 12 Uhr, am Karfreitag und Karsamstag von 0 Uhr an sowie am Volkstrauertag und Totensonntag von 4 Uhr an verboten. Das Tanzverbot gilt auch am Gründonnerstag von 4 Uhr an und am Heiligabend von 17 Uhr an. ([Quelle](https://innen.hessen.de/Buerger-Staat/Feiertage/Veranstaltungen-an-Sonn-und-Feiertagen/Tanz-Sport-Zirkusveranstaltungen-und-Gesellschaftsjagden))
+
+
+**Rheinland-Pfalz:**:\
+Öffentliche Tanzveranstaltungen sind verboten von Gründonnerstag 4.00 Uhr bis Ostersonntag 16.00 Uhr, am Allerheiligentag, am Volkstrauertag und am Totensonntag jeweils ab 4.00 Uhr und vom Tag vor dem 1. Weihnachtstag 13.00 Uhr bis zum 1. Weihnachtstag 16.00 Uhr. ([Quelle](https://landesrecht.rlp.de/bsrp/document/jlr-FeiertGRPpP8))
+{{</togglebox>}}
+
+
 {{<info>}}
 
 # Vermisst du eine Info?
