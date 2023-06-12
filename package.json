@@ -17,7 +17,7 @@
     "@types/lodash": "^4.14.182",
     "alpinejs": "^3.10.2",
     "autoprefixer": "^10.4.7",
-    "concurrently": "^7.0.0",
+    "concurrently": "^8.2.0",
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.39",
     "lodash": "^4.17.21",
