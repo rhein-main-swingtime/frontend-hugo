@@ -111,6 +111,10 @@ items:
       category: club
       contact:
           web: "https://www.ftg-frankfurt.de"
+      desc:
+        de: Auch für Nichtmitglieder! Auf der website nach "Premium-Kurse" suchen. Es gibt Lindy Hop & Solo Jazz.
+        en: Also vor non-members! Lool for "Premium-Kurse" on the website. There is Lindy Hop & Solo Jazz.
+
     - name: Swingin` Wiesbaden e.V.
       location: Wiesbaden
       category: club
