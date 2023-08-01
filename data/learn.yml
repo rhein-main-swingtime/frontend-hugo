@@ -215,3 +215,17 @@ items:
       contact:
           mail: lindy_farr@web.de
           tel: 0173/3216651
+
+    - name: Giuseppina Galloro
+      location: Frankfurt
+      desc:
+          de: Lindy Hop, Solo Jazz, Charleston 20s & 30s, Funk & Soul, Show
+          en: Lindy Hop, Solo Jazz, Charleston 20s & 30s, Funk & Soul, Show
+      category: teacher
+      display:
+          category:
+              de: Lehrerin
+              en: Teacher
+      contact:
+          web: https://dieblauestunde.net
+          mail: giu@dieblauestunde.net
