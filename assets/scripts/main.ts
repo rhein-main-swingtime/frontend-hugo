@@ -49,10 +49,42 @@ window.RMST_TS = {
 
 window.T = T
 
+let scrollTarget: string;
+function handleAnchorInUrl() {
+    const anchor = window.location.hash.replace('#', '')
+    history.pushState(
+        "",
+        document.title,
+        window.location.pathname + window.location.search
+    );
+
+    console.log(anchor)
+
+    if (!anchor) {
+        return;
+    }
+
+    scrollTarget = anchor;
+}
+handleAnchorInUrl();
+
+function handleScrollToElementOnPageLoad() {
+    const scrollTargetElement = document.getElementById(scrollTarget)
+
+    if (scrollTargetElement) {
+        const scrollFunction = scrollToElement(scrollTargetElement)
+        scrollFunction()
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function (event) {
     setTouchBodyClass()
-    // const pickster = new Pickster()
-    // console.log(pickster.datesInMonth(2021, 9))
+    handleScrollToElementOnPageLoad()
+})
+
+document.addEventListener('dance-events-loaded', function() {
+    const scrollTargetElement = document.getElementById(scrollTarget)
+    handleScrollToElementOnPageLoad()
 })
 
 document.addEventListener('alpine:init', () => {
