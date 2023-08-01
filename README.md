@@ -9,10 +9,5 @@
   - tested: 1.22.11
 
 ## Let's start coding
-- Open 2 Terminals/Consoles in the checkout out folder
-    (yeah, 2...)
-- First terminal:
   - `yarn install`
-  - `yarn watch`
-- Second terminal:
-  - `hugo server -D`
+  - `yarn dev`
