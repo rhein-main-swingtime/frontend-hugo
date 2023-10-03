@@ -21,7 +21,7 @@
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.39",
     "lodash": "^4.17.21",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^6.0.1",
