@@ -1,22 +1,18 @@
 <template x-if="openSection !== null">
-    <div class="openSection bg-gray-50 border-t-2 border-dashed -mx-4 -mb-4 px-4 py-4 pr-8 mt-4 relative">
-        <a
-        href="#"
-        class="is-button active text-sm absolute top-4 right-4"
-        @click.prevent="openSection = null"
-        >
-            {{ partial "heroicons/outline/x.svg" "is-icon is-1em"}}
-        </a>
-        <template x-if="openSection === 'more'">
-            <!-- More -->
-            {{ partial "events/dance-event/more.html" . }}
-        </template>
-        <!-- Share -->
-        <template x-if="openSection === 'share'">
-            <div class="grid grid-cols-2 gap-4">
-                {{ partial "events/dance-event/share-qr.html" . }}
-                {{ partial "events/dance-event/share-links.html" . }}
-            </div>
-        </template>
-    </div>
+  <div class="bg-gray-50 border-t-2 border-dashed -mx-4 -mb-4 px-4 py-4 pr-8 mt-4 relative">
+    <a href="#" class="is-button active text-sm absolute top-4 right-4" @click.prevent="openSection = null">
+      {{ partial "heroicons/outline/x.svg" "is-icon is-1em" }}
+    </a>
+    <template x-if="openSection === 'more'">
+      <!-- More -->
+      {{ partial "events/dance-event/more.html" . }}
+    </template>
+    <!-- Share -->
+    <template x-if="openSection === 'share'">
+      <div class="grid grid-cols-2 gap-4">
+        {{ partial "events/dance-event/share-qr.html" . }}
+        {{ partial "events/dance-event/share-links.html" . }}
+      </div>
+    </template>
+  </div>
 </template>

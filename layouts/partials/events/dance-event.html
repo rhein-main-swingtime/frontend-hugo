@@ -6,7 +6,7 @@
   x-data="{
         openSection: null
     }"
-  x-init="openSection = list.triggerScrollTo()"
+  x-init="list.triggerScrollTo()"
   x-ref="element"
   @click="$nextTick(() => { trackEventClick($event) })">
   <h1 class="text-lg bold font-bold">
