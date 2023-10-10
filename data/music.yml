@@ -29,12 +29,7 @@ items:
 
     - name: Maurice Kühn's SWINGKOMBINAT
       contact:
-          web: "http://www.mauricekuehn.de/swingkombinat/"
-      category: band
-
-    - name: Trio HEF zu Viert
-      contact:
-          web: "http://triohef.de"
+          web: "https://youtu.be/RTrz76FspW4"
       category: band
 
     - name: Schallplattenunterhalter Kaiser L
@@ -48,13 +43,13 @@ items:
 
     - name: Jo van Nelsen
       contact:
-          web: "http://jovannelsen.de/aktuelle-programme/schellack-dj"
+          web: "https://jovannelsen.de"
       location: Frankfurt
       category: dj
 
     - name: Die Schwindler
       contact:
-          web: http://www.jazzsalon.de/index.html/dieschwindler.com/schwindler/
+          web: https://jazzsalon.de/index.html/dieschwindler.com/schwindler
       location: Frankfurt
       category: band
 
@@ -66,7 +61,7 @@ items:
 
     - name: Eric the Goodsoul
       contact:
-          mail: eric@goodsoul.de
+          mail: ewerybody+swingdj@gmail.com
       location: Frankfurt
       category: dj
 
@@ -74,10 +69,12 @@ items:
       contact:
           web: https://www.jonaslohse.de/
       category: band
+
     - name: Foxy and the Jazz Hounds
       contact:
           web: http://foxy-jazzhounds.de
       category: band
+
     - name: Balduin | Electro Swing
       contact:
           web: http://www.balduinmusic.de/
@@ -85,33 +82,39 @@ items:
           youtube: https://www.youtube.com/balduinofficial # Does not work yet
           instagram: https://www.instagram.com/balduinmusic/ # Does not work yet
       category: band
+
     - name: MVH Big Band
       category: band
       contact:
           web: https://mvh-bigband.de/
           mail: info@mvh-bigband.de
           facebook: https//www.facebook.com/mvhbigband
+
     - name: Michele Alberti Trio
       contact:
           web: https://www.michele-alberti-trio.de
           mail: info@michele-alberti-trio.de
       category: band
+
     - name: Cora
       contact:
           mail: cora.stein@gmx.de
       location: Frankfurt
       category: dj
+
     - name: Christian
       contact:
           mail: tack.christian.tack@googlemail.com
       location: Frankfurt
       category: dj
+
     - name: Strick
       contact:
           web: "https://www.ausderzeitgefallen.de/"
           mail: ausderzeitgefallen@gmail.com
       location: Frankfurt
       category: dj
+
     - name: Die Katzen
       contact:
           web: "https://www.diekatzen-music.de"
