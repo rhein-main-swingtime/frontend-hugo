@@ -53,12 +53,6 @@ items:
       location: Frankfurt
       category: band
 
-    - name: Swing Belleville
-      contact:
-          web: https://www.swing-belleville.de/
-      location: Frankfurt
-      category: band
-
     - name: Eric the Goodsoul
       contact:
           mail: ewerybody+swingdj@gmail.com
