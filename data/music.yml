@@ -115,3 +115,13 @@ items:
           mail: diekatzen.mainz@yahoo.com
       location: Mainz
       category: band
+    - name: Michal Dallos
+      socialmedia:
+          instagram: https://www.instagram.com/dj.micha.swing/
+      location: Frankfurt
+      category: dj
+    - name: Carsten Weber
+      contact:
+          mail: nilscarsten@gmail.com
+      location: Frankfurt
+      category: dj
