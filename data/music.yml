@@ -134,3 +134,9 @@ items:
           mail: noel@pfundbuero.de
       location: Gießen
       category: dj
+
+    - name: Viv
+      contact:
+          mail: vivienne.walpert@gmail.com
+      location: Darmstadt
+      category: dj

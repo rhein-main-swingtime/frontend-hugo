@@ -220,3 +220,16 @@ items:
       contact:
           web: https://dieblauestunde.net
           mail: giu@dieblauestunde.net
+
+    - name: Vivienne Walpert
+      location: Darmstadt
+      desc:
+          de: Collegiate Shag, St. Louis Shag
+          en: Collegiate Shag, St. Louis Shag
+      category: teacher
+      display:
+          category:
+              de: Lehrerin
+              en: Teacher
+      contact:
+          mail: vivienne.walpert@gmail.com
