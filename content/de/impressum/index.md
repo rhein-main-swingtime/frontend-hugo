@@ -5,7 +5,7 @@ menu: minor
 weight: 20
 translationKey: imprint
 ---
-Diese Webseite ist ein grundsätzlich privates und nichtkommerzielles Internet-Angebot rund um die Swing-Tanz Szene im Rhein-Main-Gebiet.
+Diese Webseite ist ein grundsätzlich privates und nichtkommerzielles Internet-Angebot rund um die Swing-Tanz-Szene im Rhein-Main-Gebiet.
 
 Sie wird angeboten von Eric Werner und Felix Kakrow.
 
