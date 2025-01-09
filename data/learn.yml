@@ -233,3 +233,11 @@ items:
               en: Teacher
       contact:
           mail: vivienne.walpert@gmail.com
+
+    - name: Brian & Johanna
+      location: Wiesbaden
+      category: teacher
+      contact:
+          mail: brianundjohanna@gmail.com
+      socialmedia:
+          instagram: "https://instagram.com/brianundjohanna"
