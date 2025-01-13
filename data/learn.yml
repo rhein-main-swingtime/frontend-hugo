@@ -236,6 +236,9 @@ items:
 
     - name: Brian & Johanna
       location: Wiesbaden
+      desc:
+          de: Lindy-Hop-Workshops in Wiesbaden
+          en: Lindy Hop Workshops in Wiesbaden
       category: teacher
       contact:
           mail: brianundjohanna@gmail.com
