@@ -140,3 +140,8 @@ items:
           mail: vivienne.walpert@gmail.com
       location: Darmstadt
       category: dj
+
+    - name: The Groove Merchants
+      contact:
+          web: https://www.the-groove-merchants.des
+      category: band
