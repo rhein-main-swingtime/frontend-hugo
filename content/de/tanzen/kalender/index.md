@@ -11,7 +11,8 @@ Aktuell pflegen wir unsere Events – zusammen mit allen Helfern aus der Rhein-M
 
 ## Wenn du ein Google-Konto hast
 
-Öffne den Kalender-Link und klicke **rechts unten** auf den **Plus**-Button:
+Öffne den folgenden Link und klicke **links unten**\
+auf "**Zu Google Kalender hinzufügen**":
 
 > https://calendar.google.com/calendar/u/0/embed?src=s1nbnfmv1lnfc013iuuqg94oo8@group.calendar.google.com
 

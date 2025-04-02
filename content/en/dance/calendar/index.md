@@ -11,7 +11,8 @@ Currently we're managing (together with a trusty group of helpers) all our dance
 
 ## If you have a Google account
 
-Open the link "Our Calendar" and click on the **plus sign** in the **bottom right** corner.
+Open the following link and click on "**Add to Google Calendar**"\
+in the **bottom left** corner.
 
 > https://calendar.google.com/calendar/u/0/embed?src=s1nbnfmv1lnfc013iuuqg94oo8@group.calendar.google.com
 
