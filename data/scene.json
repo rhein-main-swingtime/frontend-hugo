@@ -138,14 +138,46 @@
             }
         },
         {
+            "name": "Swing Tanz allgemein",
+            "url": "https://signal.group/#CjQKIIUCA_5gpTlhU8FtkRVJPcJCQLaHPQLBpkIb7eymRAG0EhD8qKEibU5pQQSHNJstKIVE",
+            "public": true,
+            "area": "Frankfurt",
+            "category": "signal",
+            "desc": {
+                "en": "Chat around general Swing Dance stuff in and around Rhein-Main area. Organizing ride shares to get to events, asking for information, all that jazz.",
+                "de": "Chat fürs Swing-Tanzen im allgemeinen rund um Rhein-Main. Zum Fahrtgemeinschaften organisieren oder nach Infos zu fragen."
+            }
+        },
+        {
             "name": "Social Dance an der Alten Oper",
             "url": "https://signal.group/#CjQKIG0iR1v9AVJfV81zgnuSG1fexyi0iPsT-eaHgPnnlHriEhD-IB9JP5Udfpt60ix_X6WZ",
             "public": true,
             "area": "Frankfurt",
             "category": "signal",
             "desc": {
-                "en": "Every Wednesday evening (almost), in the middle of the city at Opernplatz at the stairs of the Alte Oper (U-Bahn Alte Oper, S-Bahn Taunusanlage)",
-                "de": "Jeden Mittwoch-Abend (fast), Mitten in der Stadt auf dem Opernplatz an der Treppe vor der Alten Oper (U-Bahn Alte Oper, S-Bahn Taunusanlage)"
+                "en": "Chat around the weekly event. - Every Wednesday evening (almost), in the middle of the city at Opernplatz at the stairs of the Alte Oper (U-Bahn Alte Oper, S-Bahn Taunusanlage)",
+                "de": "Chat für den wöchentlichen Abend. - Jeden Mittwoch-Abend (fast), Mitten in der Stadt auf dem Opernplatz an der Treppe vor der Alten Oper (U-Bahn Alte Oper, S-Bahn Taunusanlage)"
+            }
+        },
+        {
+            "name": "GünthersburgHop",
+            "url": "https://signal.group/#CjQKIG2tuV6JsJYMF18Qd-0UtQcaqfNAzJeLGAeIP-qb2HhIEhDGJ_eJrYG7TuAaSdF_6-0U",
+            "public": true,
+            "area": "Frankfurt",
+            "category": "signal",
+            "desc": {
+                "en": "Chat around the weekly event. - During the summer time in good weather, every Thursday from 6:30 p.m. in Günthersburg Park, Frankfurt (at the Café) 🎼🎶🕺🏼💃🏼🎶🎵",
+                "de": "Chat für den wöchentlichen Abend. - Während der Sommerzeit bei guten Wetter immer donnerstags ab 18:30 Uhr im Günthersburgpark, Frankfurt (am Café) 🎼🎶🕺🏼💃🏼🎶🎵"
+            }
+        },
+        {
+            "name": "RheinMainSwingTime",
+            "url": "https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO",
+            "public": true,
+            "category": "signal",
+            "desc": {
+                "en": "For all things rmswing.de-website and calendar. Want an event listed? Ther's a typo? Have questions? We're happy to help!🙂",
+                "de": "Für alles über rmswing.de-Webseite und Kalender. Willst du eine Veranstaltung eingetragen? Gibt's einen Tippfelher? Irgendwelche Fragen? Wir können wir helfen?🙂"
             }
         }
     ]
