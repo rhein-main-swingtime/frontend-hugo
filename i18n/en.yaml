@@ -115,6 +115,8 @@ page-dance-filters-hide-socials:
   other: Hide Socials
 page-dance-filters-show-class:
   other: Also show classes
+reveal-address:
+  other: Reveal address
 scene-area:
   other: Locality
 scene-category:

@@ -19,13 +19,16 @@
     </div>
   {{ end }}
   <div class="text-right">
-    <a href="{{ .context.url }}" target="_blank" class="font-bold text-sm">
+    <a href="#" class="is-button" @click.prevent="">
+        {{ partial "heroicons/solid/lock-closed.svg" "is-icon is-1em" }}
+        {{ i18n "reveal-address" }}</a>
+    <!-- <a href="{{ .context.url }}" target="_blank" class="font-bold text-sm">
       {{ replace
         (i18n "scene-goto")
         "%TARGET%"
         (humanize .context.category)
       }}
-    </a>
-    {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1.5em text-red-500" }}
+    </a> -->
+    <!-- {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1.5em text-red-500" }} -->
   </div>
 </div>
