@@ -59,7 +59,7 @@ items:
       location: Frankfurt
       category: dj
 
-    - name: Jonas and his Jivin’ Five
+    - name: Jonas and his Jivin' Five
       contact:
           web: https://www.jonaslohse.de/
       category: band
@@ -144,4 +144,9 @@ items:
     - name: The Groove Merchants
       contact:
           web: https://www.the-groove-merchants.de
+      category: band
+
+    - name: Rhein-Main Swingtett
+      contact:
+          web: http://rhein-main-swingtett.de
       category: band
