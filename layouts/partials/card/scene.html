@@ -21,18 +21,10 @@
   <div class="text-right">
     <span x-data="{ revealed: false, x1: '{{ .context.url | base64Encode }}', x2: ''}">
         <button class="is-button" x-show="!revealed" @click="revealed = true; x2 = atob(x1);">
-            {{ partial "heroicons/solid/lock-closed.svg" "is-icon is-1em" }}
-            {{ i18n "reveal-address" }}</button>
+            {{ partial "heroicons/solid/cursor-click.svg" "is-icon is-1em" }}
+            {{ T "reveal-address" }}</button>
         <a :href="x2" x-text="x2" class="is-button text-wrap" x-show="revealed" @click="revealed = true" target="_blank">
         </a>
     </span>
-    <!-- <a href="{{ .context.url }}" target="_blank" class="font-bold text-sm">
-      {{ replace
-        (i18n "scene-goto")
-        "%TARGET%"
-        (humanize .context.category)
-      }}
-    </a> -->
-    <!-- {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1.5em text-red-500" }} -->
   </div>
 </div>
