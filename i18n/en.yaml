@@ -117,6 +117,8 @@ page-dance-filters-show-class:
   other: Also show classes
 reveal-address:
   other: Reveal address
+reveal-mail:
+  other: Reveal Email-address
 scene-area:
   other: Locality
 scene-category:

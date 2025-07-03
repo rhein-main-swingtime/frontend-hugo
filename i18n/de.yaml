@@ -123,6 +123,8 @@ page-dance-filters-restrict-days:
     other: Wochentage einschränken
 reveal-address:
     other: Adresse anzeigen
+reveal-mail:
+    other: Email-Adresse anzeigen
 scene-area:
     other: Ort
 scene-category:
