@@ -16,7 +16,7 @@ ViSdP und [Telemediengesetz § 5](https://dejure.org/gesetze/TMG/5.html):
 > 60318 Frankfurt am Main
 
 Erreichen kann man uns unter: {{<reveal-mail>}}hallo@rmswing.de{{</reveal-mail>}} \
-Oder über unsere Signal-Gruppe: {{<reveal-url>}}https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO{{</reveal-url>}}.
+Oder über unsere Signal-Gruppe: {{<reveal-url>}}https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO{{</reveal-url>}}
 
 ## Haftungsausschluss
 
