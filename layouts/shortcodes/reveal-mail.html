@@ -1,10 +1,1 @@
-<span class="is-badge with-dark-bg text-sm" x-data="{ revealed: false, x1: '{{ trim (.Inner | base64Encode) "=" }}', x2: '' }">
-    <button class="reveal-btn" x-show="!revealed" @click="revealed = true; x2 = atob(x1);">
-        {{ partial "heroicons/solid/cursor-click.svg" "is-icon is-1em" }}
-        {{ T "reveal-mail" }}
-    </button>
-    <span x-show="revealed" x-transition>
-        {{ partial "heroicons/solid/mail.svg" "is-icon is-1em" }}
-        <a :href="'mailto:' + x2" x-text="x2" class="text-sm text-white" target="_blank"></a>
-    </span>
-</span>
+{{ partial "reveal-mail" .Inner }}

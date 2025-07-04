@@ -125,6 +125,8 @@ reveal-address:
     other: Adresse anzeigen
 reveal-mail:
     other: Email-Adresse anzeigen
+reveal-phone:
+    other: Telefonnummer anzeigen
 scene-area:
     other: Ort
 scene-category:

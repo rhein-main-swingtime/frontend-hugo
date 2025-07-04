@@ -119,6 +119,8 @@ reveal-address:
   other: Reveal address
 reveal-mail:
   other: Reveal Email-address
+reveal-phone:
+  other: Reveal phone number
 scene-area:
   other: Locality
 scene-category:
