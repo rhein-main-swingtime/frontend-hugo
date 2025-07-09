@@ -1,0 +1,10 @@
+<aside class="is-box is-info">
+  <span class="has-icon">
+    {{ partial "heroicons/solid/light-bulb.svg" }}
+  </span>
+  <div class="inner">
+    {{ markdownify .Inner }}<br>
+    Email: {{ partial "reveal-mail" site.Params.contactMail }}<br>
+    Signal: {{ partial "reveal-url" site.Params.contactSignal }}
+  </div>
+</aside>
