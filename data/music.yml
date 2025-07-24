@@ -150,3 +150,9 @@ items:
       contact:
           web: http://rhein-main-swingtett.de
       category: band
+
+    - name: DJ Tuxedo Junction
+      contact:
+          mail: gert.koehlbrandt@gmx.de
+      location: Frankfurt
+      category: dj
