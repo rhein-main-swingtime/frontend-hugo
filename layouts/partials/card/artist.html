@@ -26,10 +26,7 @@
   {{ end }}
   {{ if .context.contact.mail }}
     <div class="text-right">
-      <a href="mailto:{{ .context.contact.mail }}" target="_blank" class="font-bold text-sm">
-        {{ .context.contact.mail }}
-      </a>
-      {{ partial "heroicons/outline/mail.svg" $iconClasses }}
+      {{ partial "reveal-mail" .context.contact.mail }}
     </div>
   {{ end }}
 </div>

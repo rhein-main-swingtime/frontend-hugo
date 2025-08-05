@@ -17,8 +17,8 @@ translationKey: learn
 
 Here you'll find schools, clubs and teachers to help with your dance skills, no matter if you're just starting out, want to fine tune your swingout. Many teachers will also be happy to do a taster for your party guest or private lessons of any kind.
 
-{{<info>}}
+{{<info-contact>}}
 # Info
 
-Obviously we are trying our best to keep the page as up to date, as we can. However we're reliant on your help. If you spot any kind of error or feel like we missed somebody here, [please let us know.](mailto:hallo@rmswing.de)
-{{</info>}}
+Obviously we are trying our best to keep the page as up to date, as we can. However we're reliant on your help. If you spot any kind of error or feel like we missed somebody here, please let us know:
+{{</info-contact>}}

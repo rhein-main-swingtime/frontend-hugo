@@ -39,13 +39,8 @@ Stand: 18\. April 2022
 
 Felix Kakrow
 
-E-Mail-Adresse:
-
-[hallo@rmswing.de](mailto:hallo@rmswing.de)
-
-Impressum:
-
-[https://rmswing.de/impressum](https://rmswing.de/impressum)
+E-Mail-Adresse: {{<reveal-mail>}}{{<contact-mail>}}{{</reveal-mail>}}\
+Impressum: [https://rmswing.de/impressum](https://rmswing.de/impressum)
 
 ## Übersicht der Verarbeitungen
 

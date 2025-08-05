@@ -59,9 +59,9 @@ Public dance events are prohibited from Maundy Thursday 4:00 a.m. to Easter Sund
 {{</togglebox>}}
 
 
-{{<info>}}
+{{<info-contact>}}
 
 # Are you missing any information?
 
-Please let us know at <a href="mailto:hallo@rmswing.de">hallo@rmswing.de</a>
-{{</info>}}
+Please let us know via:
+{{</info-contact>}}

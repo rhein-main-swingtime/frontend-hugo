@@ -1,0 +1,10 @@
+<span class="is-badge with-dark-bg text-sm inline-block" x-data="{ revealed: false, x1: '{{ trim ( . | base64Encode) "=" }}', x2: '' }">
+    <button class="reveal-btn" x-show="!revealed" @click="revealed = true; x2 = atob(x1);">
+        {{ partial "heroicons/solid/cursor-click.svg" "is-icon is-1em" }}
+        {{ T "reveal-phone" }}
+    </button>
+    <span x-show="revealed" x-transition>
+        {{ partial "heroicons/solid/phone.svg" "is-icon is-1em" }}
+        <a :href="'tel:' + x2" x-text="x2" class="text-sm text-white inline-block" target="_blank"> </a>
+    </span>
+</span>

@@ -33,4 +33,4 @@ Most calendar apps like Outlook, Apple Calendar or Thunderbird will handle witho
 Google also offers a [web based view](https://calendar.google.com/calendar/embed?src=s1nbnfmv1lnfc013iuuqg94oo8%40group.calendar.google.com&ctz=Europe/Berlin&wkst=2&hl=de) off the calendar, which you can bookmark.
 
 For embedding into a website: [there is a Google-Calendar-Embed-Tool](https://calendar.google.com/calendar/u/0/embedhelper?src=s1nbnfmv1lnfc013iuuqg94oo8%40group.calendar.google.com&ctz=Europe%2FBerlin).\
-When put onto a public website, it'd be nice to be notified about it [via mail](mailto:hallo@rmswing.de) Thank you! 🙂
+When put onto a public website, it'd be nice to be notified about it via mail: {{<reveal-mail>}}{{<contact-mail>}}{{</reveal-mail>}} Thank you! 🙂
