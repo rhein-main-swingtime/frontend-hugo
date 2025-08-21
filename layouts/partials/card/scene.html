@@ -5,7 +5,7 @@
     {{ .context.name }}
   </h4>
   <div>
-    <span class="is-badge with-dark-bg text-sm">
+    <span class="is-badge text-sm bg-gray-200">
       {{ i18n (printf "scene-%s" .context.category) }}
       {{ if eq false .context.public }}
         {{ partial "heroicons/outline/lock-closed.svg" "is-icon is-1em" }}
