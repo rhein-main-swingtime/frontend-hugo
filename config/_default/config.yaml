@@ -3,6 +3,8 @@ title: 'Rhein Main Swing Time'
 
 params:
     googleMapsQuery: https://www.google.com/maps/search/?api=1&query=
+    contactMail: hallo@rmswing.de
+    contactSignal: https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO
 
 defaultContentLanguage: de
 languages:

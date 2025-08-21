@@ -63,9 +63,9 @@ In **Hessen:**:\
 {{</togglebox>}}
 
 
-{{<info>}}
+{{<info-contact>}}
 
 # Vermisst du eine Info?
 
-Lass es uns wissen unter <a href="mailto:hallo@rmswing.de">hallo@rmswing.de</a>
-{{</info>}}
+Lass es uns wissen per:
+{{</info-contact>}}

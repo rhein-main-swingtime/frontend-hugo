@@ -36,4 +36,4 @@ Dieses Format wird unterstützt von vielen verschiedenen Kalender-Programmen, wi
 [Den Kalender-Link](https://calendar.google.com/calendar/u/0/embed?src=s1nbnfmv1lnfc013iuuqg94oo8@group.calendar.google.com)  kannst du dir auch bookmarken und einfach die Web-Ansicht benutzen.
 
 Und zum Einbetten in eine Webseite: [gibts hier das Google-Kalender-Embedd-Tool](https://calendar.google.com/calendar/u/0/embedhelper?src=s1nbnfmv1lnfc013iuuqg94oo8%40group.calendar.google.com&ctz=Europe%2FBerlin).\
-Wenn das öffentlich ist, wäre es allerdings nett, wenn wir [per mail](mailto:hallo@rmswing.de) informiert würden 🙂
+Wenn das öffentlich ist, wäre es allerdings nett, wenn wir per Mail informiert würden {{<reveal-mail>}}{{<contact-mail>}}{{</reveal-mail>}} Danke! 🙂

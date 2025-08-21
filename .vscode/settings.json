@@ -16,5 +16,8 @@
     },
     "[yaml]": {
         "editor.tabSize": 2
+    },
+    "search.exclude": {
+        "public": true
     }
 }

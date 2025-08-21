@@ -115,6 +115,12 @@ page-dance-filters-hide-socials:
   other: Hide Socials
 page-dance-filters-show-class:
   other: Also show classes
+reveal-address:
+  other: Reveal address
+reveal-mail:
+  other: Reveal E-mail-address
+reveal-phone:
+  other: Reveal phone number
 scene-area:
   other: Locality
 scene-category:

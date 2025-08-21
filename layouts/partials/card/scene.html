@@ -19,13 +19,6 @@
     </div>
   {{ end }}
   <div class="text-right">
-    <a href="{{ .context.url }}" target="_blank" class="font-bold text-sm">
-      {{ replace
-        (i18n "scene-goto")
-        "%TARGET%"
-        (humanize .context.category)
-      }}
-    </a>
-    {{ partial "heroicons/solid/chevron-double-right.svg" "is-icon is-1.5em text-red-500" }}
+    {{ partial "reveal-url" .context.url }}
   </div>
 </div>

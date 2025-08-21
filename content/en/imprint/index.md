@@ -15,8 +15,8 @@ According to german law [Telemediengesetz § 5](https://dejure.org/gesetze/TMG/5
 > Lenaustr. 53\
 > 60318 Frankfurt am Main
 
-We can be contacted at [hallo@rmswing.de](mailto:hallo@rmswing.de).\
-Or by visiting our [Signal-Group](https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO).
+We can be contacted via:\
+{{<contact-us>}}
 
 ## Limited liability
 

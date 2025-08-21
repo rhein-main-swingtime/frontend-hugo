@@ -15,8 +15,8 @@ ViSdP und [Telemediengesetz § 5](https://dejure.org/gesetze/TMG/5.html):
 > Lenaustr. 53\
 > 60318 Frankfurt am Main
 
-Erreichen kann man uns unter [hallo@rmswing.de](mailto:hallo@rmswing.de).\
-Oder über unsere [Signal-Gruppe](https://signal.group/#CjQKIJ8whxuszImsCSQ9LfurQk79t5yMUqgRwtcMz-OJBhqhEhBusYxHyvWd3UmFBqaAfuEO).
+Erreichen kann man uns über:\
+{{<contact-us>}}
 
 ## Haftungsausschluss
 
