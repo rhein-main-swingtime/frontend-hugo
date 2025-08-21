@@ -156,3 +156,9 @@ items:
           mail: gert.koehlbrandt@gmx.de
       location: Frankfurt
       category: dj
+
+    - name: Brassette
+      contact:
+          web: https://brassette.de
+      category: band
+      location: Aschaffenburg
