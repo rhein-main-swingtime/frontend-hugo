@@ -12,7 +12,7 @@
       </h1>
     {{ end }}
     <div class="mb-4 text-center">
-      <span class="is-badge with-dark-bg">
+      <span class="is-badge bg-gray-200">
         {{ if isset .context.display.category .lang }}
           {{ index .context.display.category .lang }}
         {{ else }}
@@ -21,7 +21,7 @@
       </span>
     </div>
     {{ if (isset .context.desc .lang) }}
-      <div class=" border-gray-300 text-center flex justify-center">
+      <div class="border-gray-300 text-center flex justify-center">
         <span class="prose prose-sm">
           {{ markdownify (index .context.desc .lang) }}
         </span>
