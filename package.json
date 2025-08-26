@@ -16,7 +16,7 @@
         "@tailwindcss/typography": "0.5.15",
         "@types/lodash": "^4.17.13",
         "alpinejs": "^3.14.8",
-        "autoprefixer": "^10.4.20",
+        "autoprefixer": "^10.4.21",
         "concurrently": "^9.1.0",
         "cross-env": "^7.0.3",
         "laravel-mix": "^6.0.49",
