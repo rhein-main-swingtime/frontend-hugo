@@ -1,1 +1,11 @@
+RewriteEngine On
+
+# Redirect from swingrm.uber.space to rmswing.de
+RewriteCond %{HTTP_HOST} ^swingrm\.uber\.space$ [NC]
+RewriteRule ^(.*)$ https://rmswing.de/$1 [R=301,L]
+
+# Redirect from www.rmswing.de to rmswing.de
+RewriteCond %{HTTP_HOST} ^www\.rmswing\.de$ [NC]
+RewriteRule ^(.*)$ https://rmswing.de/$1 [R=301,L]
+
 Redirect 301 /kuenstler https://rmswing.de/musik
