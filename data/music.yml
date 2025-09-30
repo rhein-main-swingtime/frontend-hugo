@@ -162,3 +162,10 @@ items:
           web: https://brassette.de
       category: band
       location: Aschaffenburg
+
+    - name: Iso Herquist
+      contact:
+          web: https://herquist.de
+          mail: iso@herquist.de
+      category: band
+      location: Frankfurt
