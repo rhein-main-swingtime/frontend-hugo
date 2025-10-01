@@ -14,13 +14,6 @@ We run this site, because we like to dance, to tinker and we thing the Rhein-Mai
 Only the core team is looking into the e-mails though and it might happen that something slips through to the Spam-filter. In the Signal-group are also many others that can edit the calendar events. So when it's about that and it's urgent better there! :)
 {{</info-contact>}}
 
-## This site is missing content!
-Yes, that's most probably correct! Would you like to contribute some text, do graphics or videos? Record a podcasts? Just get in contact. We're super happy about new content and/or ideas!
-
-## I found a bug! Something's broken! You could do better ...
-Talk to us at a social dance, or drop us a line via mail or Signal.
-
-If you have a Github account, we'de really appreciate a little issue report or even pull request on our [frontend project](https://github.com/rhein-main-swingtime/frontend-hugo).
 
 ## I'm throwing Swing Dance parties, a concert or want to offer classes or a workshop.
 Awesome! 🚀🙌🤩 There is different things we can do:
@@ -31,15 +24,26 @@ Awesome! 🚀🙌🤩 There is different things we can do:
 
 In any case we're happy to hear what you're up to! Just send us all needed information and off we go! Important would be:
 * name of the event
-* date und times (beginning & end or duration)
+* date und times (beginning and important!: **end or duration** (or we just write anything))
 * frequencies (if applicable, every 2 weeks, 1st Sunday ...)
-* description text (rather compact if possible)
+* description text (please: rather compact if possible!)
 * links, Facebook-events, fees, prices ...
+
+
+## This site is missing content!
+Yes, that's most probably correct! Would you like to contribute some text, do graphics or videos? Record a podcasts? Just get in contact. We're super happy about new content and/or ideas!
+
+
+## I found a bug! Something's broken! You could do better ...
+Talk to us at a social dance, or drop us a line via mail or Signal.
+
+If you have a Github account, we'de really appreciate a little issue report or even pull request on our [frontend project](https://github.com/rhein-main-swingtime/frontend-hugo).
 
 
 ## I want to code with you!
 You're already into programming and want to help us developing this page?\
 Drop us a message or visit us at [GitHub](https://github.com/rhein-main-swingtime).
+
 
 ## I didn't find what I was looking for! 😒
 Happens. What is it that you want to know? Mail us and we'll see how we can do!

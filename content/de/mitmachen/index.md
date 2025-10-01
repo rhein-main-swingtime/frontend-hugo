@@ -14,16 +14,6 @@ Wir betreiben diese Seite, weil wir gerne tanzen, gerne basteln und die Szene im
 Die E-Mails liest nur das Kern-Team, da kanns aber sein, dass was vom Spam-Filter geschluckt wird. In der Signal-Gruppe sind auch viele andere die am Kalender mitarbeiten. Also wenn es darum geht und schnell sein soll lieber da.
 {{</info-contact>}}
 
-## Hier fehlt Inhalt!
-Ja, das stimmt bestimmt! Lust etwas neues zu schreiben? Grafiken zu basteln? Videos zu drehen? Podcasts aufzunehmen? Melde dich einfach bei uns!
-Wir freuen uns total über neuen Content und/oder Ideen!
-
-
-## Ich habe einen Bug gefunden! Irgendwas funktioniert nicht. Ihr könnt das besser machen!
-Sprich uns einfach beim Social-Dance an, oder schreib uns über E-Mail oder Signal.
-
-Wenn du einen Github Account hast, freuen wir uns besonders über einen kleinen Bug-Report oder Pull-Request in unserem [Frontend Projekt](https://github.com/rhein-main-swingtime/frontend-hugo).
-
 
 ## Ich schmeiße eine Swingtanz-Party, organisiere ein Konzert, will Kurse oder einen Workshop anbieten.
 Mega! 🚀🙌🤩 Da gibt's ein paar Sachen die wir tun können:
@@ -35,10 +25,21 @@ Mega! 🚀🙌🤩 Da gibt's ein paar Sachen die wir tun können:
 Wie auch immer: Wir sind gespannt zu lesen was du hast! Schreib uns!
 alle nötigen Infos und los geht's! Wichtig wären zB:
 * Name der Veranstaltung
-* Datum und Uhrzeiten (Anfang und Ende oder Dauer)
+* Datum und Uhrzeiten (Anfang und wichtig!: **Ende oder Dauer** (sonst schreiben wir irgendwas))
 * gegebenenfalls Häufigkeiten (alle 2 Wochen, 1. Sonntag ...)
-* Beschreibungstext (möglichst kompakt)
+* Beschreibungstext (möglichst kompakt bitte!)
 * Links, Facebook-Events, Eintrittspreise, Kosten ...
+
+
+## Hier fehlt Inhalt!
+Ja, das stimmt bestimmt! Lust etwas neues zu schreiben? Grafiken zu basteln? Videos zu drehen? Podcasts aufzunehmen? Melde dich einfach bei uns!
+Wir freuen uns total über neuen Content und/oder Ideen!
+
+
+## Ich habe einen Bug gefunden! Irgendwas funktioniert nicht. Ihr könnt das besser machen!
+Sprich uns einfach beim Social-Dance an, oder schreib uns über E-Mail oder Signal.
+
+Wenn du einen Github Account hast, freuen wir uns besonders über einen kleinen Bug-Report oder Pull-Request in unserem [Frontend Projekt](https://github.com/rhein-main-swingtime/frontend-hugo).
 
 
 ## Ich habe Bock mit euch zu coden!
