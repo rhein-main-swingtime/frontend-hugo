@@ -29,6 +29,8 @@ In any case we're happy to hear what you're up to! Just send us all needed infor
 * description text (please: rather compact if possible!)
 * links, Facebook-events, fees, prices ...
 
+Please **don't send pictures**! At the moment we have no use for these. That may be available in a future version of the page ;]
+
 
 ## This site is missing content!
 Yes, that's most probably correct! Would you like to contribute some text, do graphics or videos? Record a podcasts? Just get in contact. We're super happy about new content and/or ideas!

@@ -30,6 +30,8 @@ alle nötigen Infos und los geht's! Wichtig wären zB:
 * Beschreibungstext (möglichst kompakt bitte!)
 * Links, Facebook-Events, Eintrittspreise, Kosten ...
 
+Bitte schick uns **keine Bilder**! Momentan können wir damit nix anfangen. Das gibts vielleicht in einer zukünftigen Version der Seite ;]
+
 
 ## Hier fehlt Inhalt!
 Ja, das stimmt bestimmt! Lust etwas neues zu schreiben? Grafiken zu basteln? Videos zu drehen? Podcasts aufzunehmen? Melde dich einfach bei uns!
