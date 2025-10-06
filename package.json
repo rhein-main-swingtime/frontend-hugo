@@ -31,7 +31,7 @@
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^8.18.2",
-        "@typescript-eslint/parser": "^8.18.2",
+        "@typescript-eslint/parser": "^8.45.0",
         "babel-plugin-lodash": "^3.3.4",
         "browser-sync": "^3.0.3",
         "browser-sync-webpack-plugin": "^2.3.0",
