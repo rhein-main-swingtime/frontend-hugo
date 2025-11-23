@@ -169,3 +169,12 @@ items:
           mail: iso@herquist.de
       category: band
       location: Frankfurt
+
+    - name: Petite Fleur - Jazz & Blues Band
+      contact:
+          web: https://kas-music.com
+          mail: starz-rodenbach@t-online.de
+          facebook: www.facebook.com/petitefleurjazzband
+          phone: +49151-67634887
+      category: band
+      location: Rodenbach
