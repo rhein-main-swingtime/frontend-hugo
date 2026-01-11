@@ -178,3 +178,9 @@ items:
           phone: +49151-67634887
       category: band
       location: Rodenbach
+
+    - name: JazzApple
+      contact:
+          web: https://jazzapple.de
+      category: band
+      location: Rüsselsheim
