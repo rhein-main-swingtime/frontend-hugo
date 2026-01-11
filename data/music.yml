@@ -71,10 +71,10 @@ items:
 
     - name: Balduin | Electro Swing
       contact:
-          web: http://www.balduinmusic.de/
+          web: http://balduinmusic.de
           mail: mail@balduinmusic.de
-          youtube: https://www.youtube.com/balduinofficial # Does not work yet
-          instagram: https://www.instagram.com/balduinmusic/ # Does not work yet
+          youtube: https://www.youtube.com/balduinofficial
+          instagram: https://www.instagram.com/balduinmusic
       category: band
 
     - name: MVH Big Band
