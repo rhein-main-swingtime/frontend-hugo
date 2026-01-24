@@ -34,7 +34,7 @@ Das ist eine gute Frage und tatsächlich auch eine, die immer wieder diskutiert 
 
 Andersherum gilt aber auch: **Aktzeptiere Absagen** und versuch es einfach bei jemand anderem. "Ok, vielleicht ja später." ist eine völlig normale Antwort. Eine Absage sollte nie ein Anlass sein zu diskutieren oder mehrmals nachzuhaken.
 
-**In Deutschland ist es gängig, zwei Songs am Stück miteinander zu tanzen**, bevor du dir jemanden neues suchst. Das ist aber keine festgeschriebene Regel. Regional ist das tatsächlich komplett unterschiedlich! Frag einfach obs noch einer sein darf! Wenn der Tanz besonders gut war, oder ihr viel Spaß hattet, kanns auch ein dritter werden aber selten mehr. Ein einfaches "Vielen Dank" zum Abschied reicht dabei völlig.
+**In Deutschland ist es gängig, zwei Songs am Stück miteinander zu tanzen**, bevor du dir jemanden neues suchst. Das ist aber keine festgeschriebene Regel. Regional ist das tatsächlich komplett unterschiedlich! Frag einfach obs noch einer sein darf! Wenn der Tanz besonders gut war, oder ihr viel Spaß hattet, kann es auch ein dritter werden aber selten mehr. Ein einfaches "Vielen Dank" zum Abschied reicht dabei völlig.
 
 Verabschiedet sich dein Gegenüber schon nach einem Song, bedeutet das aber aber auch nicht schlechtes. Vielleicht möchte die Person etwas trinken, sich etwas frisch machem, oder braucht einfach eine Pause.
 
@@ -42,7 +42,7 @@ Das wichtigste zum Schluss: **Seid nett zueinander**. Tanzen soll Spaß machen u
 
 Es schadet nicht, dein Gegenüber auch ein Mal anzulächeln und in die Augen zu schauen. Falls du Angst hast aufdringlich rüber zu kommen, ist ein einfacher Trick, deinem Gegenüber über die Schulter zu schauen anstatt ständig in die Augen zu starren.
 
-Damit hast du zusätzlich auch noch den Blinden Winkel deines Partners im Blick und kanns aufpassen, das ihr niemanden anrempelt!
+Damit hast du zusätzlich auch noch den Blinden Winkel deines Partners im Blick und kannst aufpassen, das ihr niemanden anrempelt!
 {{</togglebox>}}
 
 {{<togglebox hl="Ich habe ein Lindyhop-Video im Netz gesehen, das sieht furchbar akrobatisch aus!">}}
