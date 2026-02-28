@@ -15,7 +15,7 @@ Only the core team is looking into the e-mails though and it might happen that s
 {{</info-contact>}}
 
 
-## I'm throwing Swing Dance parties, a concert or want to offer classes or a workshop.
+## I’m throwing Swing Dance parties, a concert or want to offer classes or a workshop.
 Awesome! 🚀🙌🤩 There is different things we can do:
 
 * It's single **social** event or dedicated series: We add it to the calendar. Voilà.
@@ -47,5 +47,5 @@ You're already into programming and want to help us developing this page?\
 Drop us a message or visit us at [GitHub](https://github.com/rhein-main-swingtime).
 
 
-## I didn't find what I was looking for! 😒
+## I didn’t find what I was looking for! 😒
 Happens. What is it that you want to know? Mail us and we'll see how we can do!

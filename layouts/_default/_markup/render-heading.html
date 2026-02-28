@@ -1,0 +1,5 @@
+<a href="#{{ .Anchor | safeURL }}" class="no-underline hover:underline">
+ <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="group relative scroll-mt-28">
+  {{ .Text | safeHTML }}
+ </h{{ .Level }}>
+</a>
