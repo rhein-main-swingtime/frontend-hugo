@@ -61,7 +61,7 @@ items:
 
     - name: Jonas and his Jivin' Five
       contact:
-          web: https://www.jonaslohse.de/
+          web: https://jonaslohse.de/
       category: band
 
     - name: Foxy and the Jazz Hounds
@@ -73,6 +73,7 @@ items:
       contact:
           web: http://balduinmusic.de
           mail: mail@balduinmusic.de
+      socialmedia:
           youtube: https://www.youtube.com/balduinofficial
           instagram: https://www.instagram.com/balduinmusic
       category: band
@@ -82,11 +83,12 @@ items:
       contact:
           web: https://mvh-bigband.de/
           mail: info@mvh-bigband.de
+      socialmedia:
           facebook: https//www.facebook.com/mvhbigband
 
     - name: Michele Alberti Trio
       contact:
-          web: https://www.michele-alberti-trio.de
+          web: https://michele-alberti-trio.de
           mail: info@michele-alberti-trio.de
       category: band
 
@@ -104,21 +106,21 @@ items:
 
     - name: Strick
       contact:
-          web: "https://www.ausderzeitgefallen.de/"
+          web: "https://ausderzeitgefallen.de/"
           mail: ausderzeitgefallen@gmail.com
       location: Frankfurt
       category: dj
 
     - name: Die Katzen
       contact:
-          web: "https://www.diekatzen-music.de"
+          web: "https://diekatzen-music.de"
           mail: diekatzen.mainz@yahoo.com
       location: Mainz
       category: band
 
     - name: DJ Micha
-      contact:
-          web: https://www.instagram.com/dj.micha.swing/
+      socialmedia:
+          instagram: https://www.instagram.com/dj.micha.swing/
       location: Frankfurt
       category: dj
 
@@ -130,8 +132,10 @@ items:
 
     - name: Dj Il Bacino
       contact:
-          web: https://lindyhop.social
+          web: https://bit.ly/m/bacino
           mail: noel@pfundbuero.de
+      socialmedia:
+          instagram: https://instagram.com/_il_bacino_
       location: Gießen
       category: dj
 
@@ -143,7 +147,7 @@ items:
 
     - name: The Groove Merchants
       contact:
-          web: https://www.the-groove-merchants.de
+          web: https://the-groove-merchants.de
       category: band
 
     - name: Rhein-Main Swingtett
@@ -174,8 +178,9 @@ items:
       contact:
           web: https://kas-music.com
           mail: starz-rodenbach@t-online.de
+          tel: +49151-67634887
+      socialmedia:
           facebook: www.facebook.com/petitefleurjazzband
-          phone: +49151-67634887
       category: band
       location: Rodenbach
 
@@ -188,6 +193,7 @@ items:
     - name: Something Blue
       contact:
           mail: evihelbig@gmail.com
-          web: https://www.facebook.com/profile.php?id=61567742935473
+      socialmedia:
+          facebook: https://www.facebook.com/profile.php?id=61567742935473
       category: band
       location: Frankfurt
