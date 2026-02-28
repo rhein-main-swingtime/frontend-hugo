@@ -184,3 +184,10 @@ items:
           web: https://jazzapple.de
       category: band
       location: Rüsselsheim
+
+    - name: Something Blue
+      contact:
+          mail: evihelbig@gmail.com
+          web: https://www.facebook.com/profile.php?id=61567742935473
+      category: band
+      location: Frankfurt
