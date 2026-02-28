@@ -15,14 +15,14 @@
       </span>
     </div>
   </header>
+    {{ if isset .context.desc .lang }}
+    <div class="p-2 border-t-2 border-b-2 border-dashed border-gray-200 -mx-4 px-4">
+      <!-- <b>{{ i18n "scene-description" }}</b><br /> -->
+      {{ markdownify (index .context.desc .lang) }}
+    </div>
+  {{ end }}
+
   <div class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 text-base contact">
-    {{ if (isset .context.desc .lang) }}
-      <div class="border-gray-300 text-center flex justify-center">
-        <span class="prose prose-sm">
-          {{ markdownify (index .context.desc .lang) }}
-        </span>
-      </div>
-    {{ end }}
     <div>
       {{ range .context.address }}
         <span class="block">

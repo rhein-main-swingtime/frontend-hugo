@@ -17,17 +17,36 @@
       </span>
     </div>
   </header>
-  {{ if .context.contact.web }}
-    <div class="text-right">
-      <a href="{{ .context.contact.web }}" target="_blank" class="font-bold text-sm">
-        {{ i18n "__open-page" }}
-      </a>
-      {{ partial "heroicons/solid/chevron-double-right.svg" $iconClasses }}
+  {{ if isset .context.desc .lang }}
+    <div class="p-2 border-t-2 border-b-2 border-dashed border-gray-200 -mx-4 px-4">
+      <!-- <b>{{ i18n "scene-description" }}</b><br /> -->
+      {{ markdownify (index .context.desc .lang) }}
     </div>
   {{ end }}
-  {{ if .context.contact.mail }}
-    <div class="text-right">
-      {{ partial "reveal-mail" .context.contact.mail }}
+  <div class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 text-base contact">
+    {{ $colSpan:= (cond (isset .context "address") "" "col-span-2 grid sm:grid-cols-2") }}
+    <div class="{{ $colSpan }} ">
+      {{ range $index, $val := .context.contact }}
+        <div class="{{ $index }}">
+          {{ $partialPath := printf "contact/%s.html" $index }}
+          {{ if templates.Exists ( printf "partials/%s" $partialPath ) }}
+            {{ partial $partialPath . }}
+          {{ else }}
+            {{ $val }}
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ range $index, $val := .context.socialmedia }}
+        <div class="{{ $index }} inline-block mr-3 last:mr-0 xs:block xs:mr-0">
+          {{ $iconPath := printf "simpleicons.org/%s.svg" $index }}
+          {{ if templates.Exists ( printf "partials/%s" $iconPath ) }}
+            {{ partial ( printf "%s" $iconPath ) "inline-block w-4 h-4" }}
+          {{ end }}
+          <a href="{{ $val }}" target="_blank">
+            {{ i18n (printf "learn-%s" $index) }}
+          </a>
+        </div>
+      {{ end }}
     </div>
-  {{ end }}
+  </div>
 </div>
