@@ -1,20 +1,23 @@
 <div id="{{ .context.name | urlize }}" class="flex flex-col gap-4 relative opac">
   {{ partial (printf "simpleicons.org/%s.svg" .context.category) "absolute -top-8 -right-8 h-24 w-24 opacity-5" }}
-  <h4 class=" text-xl">
-    {{ partial "heroicons/solid/hashtag.svg" "is-icon is-1em text-red-500" }}
-    {{ .context.name }}
-  </h4>
-  <div>
-    <span class="is-badge text-sm bg-gray-200">
-      {{ i18n (printf "scene-%s" .context.category) }}
-      {{ if eq false .context.public }}
-        {{ partial "heroicons/outline/lock-closed.svg" "is-icon is-1em" }}
-      {{ end }}
-    </span>
-  </div>
+  <header class="text-center space-y-4">
+    <a href="#{{ .context.name | urlize }}" class="no-underline hover:underline">
+      <h4 class="text-4xl text-center font-thin">
+      {{ .context.name }}
+      </h4>
+    </a>
+    <div>
+      <span class="is-badge text-sm bg-gray-200">
+        {{ i18n (printf "scene-%s" .context.category) }}
+        {{ if eq false .context.public }}
+          {{ partial "heroicons/outline/lock-closed.svg" "is-icon is-1em" }}
+        {{ end }}
+      </span>
+    </div>
+  </header>
   {{ if isset .context.desc .lang }}
     <div class="p-2 border-t-2 border-b-2 border-dashed border-gray-200 -mx-4 px-4">
-      <b>{{ i18n "scene-description" }}</b><br />
+      <!-- <b>{{ i18n "scene-description" }}</b><br /> -->
       {{ markdownify (index .context.desc .lang) }}
     </div>
   {{ end }}

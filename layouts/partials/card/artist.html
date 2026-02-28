@@ -1,11 +1,12 @@
 {{ $iconClasses := "is-icon is-1.5em text-red-500" }}
 
-
 <div id="{{ .context.name | urlize }}" class="flex flex-col gap-4 relative opac">
   <header class="text-center space-y-4">
+    <a href="#{{ .context.name | urlize }}" class="no-underline hover:underline">
     <h4 class="text-4xl text-center font-thin">
       {{ .context.name }}
     </h4>
+    </a>
     <div>
       <span class="is-badge bg-gray-200">
         {{ if isset .context "category_alt" }}

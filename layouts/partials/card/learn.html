@@ -1,16 +1,10 @@
-<div class="flex flex-col">
-  <header class="space-y-4 mb-6 mt-4">
-    {{ if (isset .context.contact "web") }}
-      <a class="is-thin-decoration" target="_blank" href="{{ .context.contact.web | safeURL }}">
-        <h1 class="text-4xl text-center font-thin">
-          {{ .context.name }}
-        </h1>
-      </a>
-    {{ else }}
+<div id="{{ .context.name | urlize }}" class="flex flex-col gap-4 relative opac">
+  <header class="text-center space-y-4">
+    <a href="#{{ .context.name | urlize }}" class="no-underline hover:underline">
       <h1 class="text-4xl text-center font-thin">
         {{ .context.name }}
       </h1>
-    {{ end }}
+    </a>
     <div class="mb-4 text-center">
       <span class="is-badge bg-gray-200">
         {{ if isset .context.display.category .lang }}
@@ -20,6 +14,8 @@
         {{ end }}
       </span>
     </div>
+  </header>
+  <div class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 text-base contact">
     {{ if (isset .context.desc .lang) }}
       <div class="border-gray-300 text-center flex justify-center">
         <span class="prose prose-sm">
@@ -27,9 +23,6 @@
         </span>
       </div>
     {{ end }}
-  </header>
-
-  <div class="class mt-auto flex flex-col gap-2 xs:grid xs:grid-cols-2 text-base contact">
     <div>
       {{ range .context.address }}
         <span class="block">
