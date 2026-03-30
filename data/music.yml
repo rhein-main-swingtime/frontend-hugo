@@ -24,26 +24,29 @@ items:
     - name: Jubilee Jumpers
       location: Frankfurt
       contact:
-          web: "http://jubileejumpers.de"
+          web: http://jubileejumpers.de
       category: band
 
     - name: Maurice Kühn's SWINGKOMBINAT
       contact:
-          web: "https://youtu.be/RTrz76FspW4"
+          web: https://mauricekuehn.de
       category: band
+      socialmedia:
+          youtube: https://youtube.com/@swingkombinat
+          instagram: https://instagram.com/swingkombinat
 
     - name: Schallplattenunterhalter Kaiser L
       contact:
-          web: "http://music.jumpinjive.com/html/aktuell.htm"
+          web: http://music.jumpinjive.com/html/aktuell.htm
       socialmedia:
-          facebook: "https://facebook.com/DJKaiserL"
+          facebook: https://facebook.com/DJKaiserL
       location: Frankfurt
       category: dj
       category_alt: Schallplattenunterhalter
 
     - name: Jo van Nelsen
       contact:
-          web: "https://jovannelsen.de"
+          web: https://jovannelsen.de
       location: Frankfurt
       category: dj
 
@@ -74,8 +77,8 @@ items:
           web: http://balduinmusic.de
           mail: mail@balduinmusic.de
       socialmedia:
-          youtube: https://www.youtube.com/balduinofficial
-          instagram: https://www.instagram.com/balduinmusic
+          youtube: https://youtube.com/balduinofficial
+          instagram: https://instagram.com/balduinmusic
       category: band
 
     - name: MVH Big Band
@@ -84,7 +87,7 @@ items:
           web: https://mvh-bigband.de/
           mail: info@mvh-bigband.de
       socialmedia:
-          facebook: https//www.facebook.com/mvhbigband
+          facebook: https//facebook.com/mvhbigband
 
     - name: Michele Alberti Trio
       contact:
@@ -106,21 +109,21 @@ items:
 
     - name: Strick
       contact:
-          web: "https://ausderzeitgefallen.de/"
+          web: https://ausderzeitgefallen.de
           mail: ausderzeitgefallen@gmail.com
       location: Frankfurt
       category: dj
 
     - name: Die Katzen
       contact:
-          web: "https://diekatzen-music.de"
+          web: https://diekatzen-music.de
           mail: diekatzen.mainz@yahoo.com
       location: Mainz
       category: band
 
     - name: DJ Micha
       socialmedia:
-          instagram: https://www.instagram.com/dj.micha.swing/
+          instagram: https://instagram.com/dj.micha.swing/
       location: Frankfurt
       category: dj
 
@@ -180,7 +183,7 @@ items:
           mail: starz-rodenbach@t-online.de
           tel: +49151-67634887
       socialmedia:
-          facebook: www.facebook.com/petitefleurjazzband
+          facebook: https://facebook.com/petitefleurjazzband
       category: band
       location: Rodenbach
 
@@ -193,8 +196,9 @@ items:
     - name: Something Blue
       contact:
           mail: evihelbig@gmail.com
+          web: evelyn-helbig.de
       socialmedia:
-          facebook: https://www.facebook.com/profile.php?id=61567742935473
+          facebook: https://facebook.com/profile.php?id=61567742935473
       category: band
       location: Frankfurt
 
