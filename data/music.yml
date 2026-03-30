@@ -197,3 +197,14 @@ items:
           facebook: https://www.facebook.com/profile.php?id=61567742935473
       category: band
       location: Frankfurt
+
+    - name: Jack 'n Jill
+      contact:
+          mail: info.jack.n.jill@web.de
+          tel: 0151 / 24 20 28 23
+      desc:
+          de: die kleine feine Swingdance Combo aus dem Rhein Main Gebiet.
+            # Mit viel Witz und noch mehr Spielfreude bringen die 5 versierten Jazzmusiker bekannte und weniger bekannte Stücke der goldenen Ära des Swing zu Gehör, aber auch mal wenig gespielte Swingversionen anderer Musiktitel und auch andere Rhythmen, die zum tanzen einladen. Jack'n Jill - das sind Daniel Reck (clar.), Jonas Vogt (git.), Wolfgang Marx (b), Christian Steiner (dr.) und Heiner Geerlings (p, voc., arr., bandleading).
+          en: the small, fine swing dance combo from the Rhine Main area.
+            # With a lot of humor and even more joy in playing, the 5 accomplished jazz musicians perform well-known and lesser-known pieces from the golden era of swing, but also rarely played swing versions of other music titles and other rhythms that invite you to dance. Jack'n Jill - that is Daniel Reck (clar.), Jonas Vogt (git.), Wolfgang Marx (b), Christian Steiner (dr.) and Heiner Geerlings (p, voc., arr., bandleading).
+      category: band
