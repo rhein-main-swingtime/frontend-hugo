@@ -178,6 +178,10 @@ items:
           mail: iso@herquist.de
       category: band
       location: Frankfurt
+      socialmedia:
+          instagram: https://instagram.com/iso_herquist
+          facebook: https://facebook.com/herquist
+          youtube: https://youtube.com/@IsoHerquistsUkulele
 
     - name: Petite Fleur - Jazz & Blues Band
       contact:
