@@ -70,6 +70,8 @@ items:
     - name: Foxy and the Jazz Hounds
       contact:
           web: http://foxy-jazzhounds.de
+      socialmedia:
+          facebook: https://facebook.com/FoxyandtheJazzhounds
       category: band
 
     - name: Balduin | Electro Swing
