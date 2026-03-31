@@ -199,6 +199,7 @@ items:
     - name: JazzApple
       desc:
           de: JazzApple steht für handgemachten Jazz – frisch, charmant und voller Swing!
+              # Das Septett aus Rüsselsheim rund um Sängerin Sarah Inanc bringt als Mini-Big-Band den Groove der 30er bis 50er Jahre auf die Bühne. Klassiker wie „Sing, Sing, Sing“ oder „Fly Me to the Moon“ und moderne Hits im tanzbaren Swing-Gewand – ein Genuss, der direkt in die Beine geht.
           en: JazzApple stands for handmade Jazz – fresh, charming and full of Swing!
       contact:
           web: https://jazzapple.de
