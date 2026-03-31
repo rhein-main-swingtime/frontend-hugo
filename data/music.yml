@@ -197,8 +197,12 @@ items:
       location: Rodenbach
 
     - name: JazzApple
+      desc:
+          de: JazzApple steht für handgemachten Jazz – frisch, charmant und voller Swing!
+          en: JazzApple stands for handmade Jazz – fresh, charming and full of Swing!
       contact:
           web: https://jazzapple.de
+          mail: info@jazzapple.de
       category: band
       location: Rüsselsheim
 
