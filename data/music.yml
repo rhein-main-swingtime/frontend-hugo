@@ -75,13 +75,19 @@ items:
       category: band
 
     - name: Balduin | Electro Swing
+      desc:
+          de: Electro Swing DJ mit Live Saxophon.
+          en: Electro Swing DJ with Live Saxophone.
       contact:
           web: http://balduinmusic.de
           mail: mail@balduinmusic.de
+          tel: 017655531191
       socialmedia:
           youtube: https://youtube.com/balduinofficial
           instagram: https://instagram.com/balduinmusic
+          facebook: https://facebook.com/balduinmusic
       category: band
+      category_alt: DJ + Live Sax
 
     - name: MVH Big Band
       category: band
