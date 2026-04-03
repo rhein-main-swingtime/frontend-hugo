@@ -67,11 +67,18 @@ items:
           web: https://jonaslohse.de/
       category: band
 
-    - name: Foxy and the Jazz Hounds
+    - name: Foxy & the Jazz Hounds
+      desc:
+          de: Wir spielen Swing, Lindy Hop und Blues für Sie. Leise im Background oder laut zum Tanzen! Vom echten Klassiker bis hin zum beswingten Popsong - im Duo Trio oder als ganze Band.
+          en: We play Swing, Lindy Hop, and Blues for you — softly in the background or loud enough for dancing! From true classics to swing-style pop songs — as a duo, trio, or full band.
       contact:
           web: http://foxy-jazzhounds.de
+          tel: 0157/4797576
+          mail: info@foxy-jazzhounds.de
       socialmedia:
           facebook: https://facebook.com/FoxyandtheJazzhounds
+          instagram: https://instagram.com/foxy_and_the_jazzhounds
+          youtube: https://youtube.com/@cordu1122
       category: band
 
     - name: Balduin | Electro Swing
