@@ -1765,10 +1765,10 @@ ajv@^8.0.0, ajv@^8.9.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
 
-alpinejs@^3.14.8:
-  version "3.14.8"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.14.8.tgz#062de45daa219db14375b3cb35ba28e5b0627337"
-  integrity sha512-wT2fuP2DXpGk/jKaglwy7S/IJpm1FD+b7U6zUrhwErjoq5h27S4dxkJEXVvhbdwyPv9U+3OkUuNLkZT4h2Kfrg==
+alpinejs@^3.15.9:
+  version "3.15.9"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.15.9.tgz#aaf19f08aaa81c97765558fd7d73f1561803347f"
+  integrity sha512-O30m8Tw/aARbLXmeTnISAFgrNm0K71PT7bZy/1NgRqFD36QGb34VJ4a6WBL1iIO/bofN+LkIkKLikUTkfPL2wQ==
   dependencies:
     "@vue/reactivity" "~3.1.1"
 
