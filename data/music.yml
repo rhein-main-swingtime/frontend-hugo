@@ -38,8 +38,11 @@ items:
     - name: Schallplattenunterhalter Kaiser L
       contact:
           web: http://music.jumpinjive.com/html/aktuell.htm
+          tel: 0160/4494351
+          mail: dj@swinginfrankfurt.de
       socialmedia:
           facebook: https://facebook.com/DJKaiserL
+          instagram: https://instagram.com/schallplattenunterhalter
       location: Frankfurt
       category: dj
       category_alt: Schallplattenunterhalter
