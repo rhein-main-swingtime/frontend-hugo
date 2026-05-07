@@ -108,10 +108,16 @@ items:
           facebook: https//facebook.com/mvhbigband
 
     - name: Michele Alberti Trio
+      desc:
+          de: Swing, Blues und Balboa, mit viel Freude für Tänzer gespielt.
+          en: Swing, Blues and Balboa, played with great joy for dancers.
       contact:
           web: https://michele-alberti-trio.de
           mail: info@michele-alberti-trio.de
       category: band
+      socialmedia:
+          youtube: https://youtube.com/playlist?list=PLqCDYxjf55ZbWL_kUe3V_RSxJSU8BjmFx
+          facebook: https://facebook.com/michelealbertitrio
 
     - name: Cora
       contact:
