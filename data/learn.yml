@@ -69,17 +69,16 @@ items:
           - Balboa-Heiner
           - Dieburger Str. 194
           - 64287 Darmstadt
-    - name: SugarfootSwing
+    - name: Frankfurt Swingout Society e.V.
       location: Frankfurt
-      category: school
+      category: club
       contact:
-          web: "https://www.sugarfootswing.de"
-          mail: info@sugarfootswing.de
-      address:
-          - Zentrum Zeitlos
-          - Hungener Str. 5
-          - 60389 Frankfurt am Main
-      calendar: "SugarfootSwing"
+          web: "https://www.frankfurt-swingoutsociety.de"
+          mail: info@frankfurt-swingoutsociety.de
+      socialmedia:
+          facebook: "https://www.facebook.com/frankfurtswingoutsociety/"
+          instagram: "https://www.instagram.com/frankfurtswingout/"
+      calendar: "FrankfurtSwingoutSociety"
     - name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
       location: Mainz
       category: club
