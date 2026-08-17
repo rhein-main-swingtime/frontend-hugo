@@ -244,3 +244,15 @@ items:
           mail: brianundjohanna@gmail.com
       socialmedia:
           instagram: "https://instagram.com/brianundjohanna"
+
+    - name: Frankfurt Swingout Society e.V.
+      location: Frankfurt
+      desc:
+        de: Trägt dazu bei, das afroamerikanische Erbe der Tänze Lindy Hop, Shag, Balboa und Blues in der Frankfurter Swingtanz-Szene aufrechtzuerhalten und weiterzuentwickeln.
+        en: Contributes to preserving and developing the Black American heritage of Lindy Hop, Shag, Balboa, and Blues in the Frankfurt swing dance scene.
+      category: club
+      contact:
+        mail: info@frankfurt-swingoutsociety.de
+      socialmedia:
+        instagram: https://instagram.com/frankfurtswingout
+        facebook: https://facebook.com/frankfurtswingoutsociety
