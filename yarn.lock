@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@alpinejs/intersect@^3.14.8":
-  version "3.14.8"
-  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.14.8.tgz#6311c561aa3a19387d785ff2dd464b05e569223b"
-  integrity sha512-C1Nbl8n8xq5xDO3sEHFMrIkUQLQZNKb5ucV42JMTo7LakPIh+hQjT9lRErnUz65uJfU5sBZVwQwMZlWKO3bIjw==
+"@alpinejs/intersect@^3.15.11":
+  version "3.15.11"
+  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.15.11.tgz#5a4898d609b0e31854aceb1e4d41a59cdfaea6ac"
+  integrity sha512-oGbp6vvn19vN8xoph32Wpo6DrGLXcMR/hLr8hh+gGhgrDpseDOG72h+lsjUivZYI58Uzs1oAxl7XPiQdRyRbtw==
 
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"
