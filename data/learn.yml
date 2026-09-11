@@ -69,17 +69,6 @@ items:
           - Balboa-Heiner
           - Dieburger Str. 194
           - 64287 Darmstadt
-    - name: SugarfootSwing
-      location: Frankfurt
-      category: school
-      contact:
-          web: "https://www.sugarfootswing.de"
-          mail: info@sugarfootswing.de
-      address:
-          - Zentrum Zeitlos
-          - Hungener Str. 5
-          - 60389 Frankfurt am Main
-      calendar: "SugarfootSwing"
     - name: Lindy Boogie Hoppers Club 1992 Mainz e.V.
       location: Mainz
       category: club
@@ -112,8 +101,8 @@ items:
       contact:
           web: "https://www.ftg-frankfurt.de"
       desc:
-        de: Auch für Nichtmitglieder! Auf der website nach "Premium-Kurse" suchen. Es gibt Lindy Hop & Solo Jazz.
-        en: Also vor non-members! Lool for "Premium-Kurse" on the website. There is Lindy Hop & Solo Jazz.
+          de: Auch für Nichtmitglieder! Auf der website nach "Premium-Kurse" suchen. Es gibt Lindy Hop & Solo Jazz.
+          en: Also vor non-members! Look for "Premium-Kurse" on the website. There is Lindy Hop & Solo Jazz.
 
     - name: Swingin` Wiesbaden e.V.
       location: Wiesbaden
@@ -155,7 +144,7 @@ items:
       category: uni
       desc:
           de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
-          en: "New class every semster, availability may vary."
+          en: "New class every semester, availability may vary."
       contact:
           web: "https://zfh-db.sport.uni-frankfurt.de/angebote/aktueller_zeitraum/_Tanz_-_Lindy_Hop___Swing.html"
     - name: TU Darmstadt
@@ -163,7 +152,7 @@ items:
       category: uni
       desc:
           de: Neue Kurse jedes Semester. Verfügbarkeit kann schwanken
-          en: "New class every semster, availability may vary."
+          en: "New class every semester, availability may vary."
       contact:
           web: "https://online-anmeldung.usz.tu-darmstadt.de/sportarten/aktueller_zeitraum/index.html#bs_as"
     - name: Sunny Side Swing
@@ -248,12 +237,13 @@ items:
     - name: Frankfurt Swingout Society e.V.
       location: Frankfurt
       desc:
-        de: Trägt dazu bei, das afroamerikanische Erbe der Tänze Lindy Hop, Shag, Balboa und Blues in der Frankfurter Swingtanz-Szene aufrechtzuerhalten und weiterzuentwickeln.
-        en: Contributes to preserving and developing the Black American heritage of Lindy Hop, Shag, Balboa, and Blues in the Frankfurt swing dance scene.
+          de: Swingtanz Kurse, Socials und Workshops
+          en: Swing dance classes, socials, and workshops
       category: club
       contact:
-        web: https://frankfurt-swingoutsociety.de
-        mail: info@frankfurt-swingoutsociety.de
+          web: https://frankfurt-swingoutsociety.de
+          mail: info@frankfurt-swingoutsociety.de
       socialmedia:
-        instagram: https://instagram.com/frankfurtswingout
-        facebook: https://facebook.com/frankfurtswingoutsociety
+          instagram: https://instagram.com/frankfurtswingout
+          facebook: https://facebook.com/frankfurtswingoutsociety
+      calendar: "FrankfurtSwingoutSociety"
