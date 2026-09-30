@@ -30,16 +30,11 @@
         "typescript": "^5.7.2"
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^8.18.2",
-        "@typescript-eslint/parser": "^8.58.1",
         "babel-plugin-lodash": "^3.3.4",
         "browser-sync": "^3.0.3",
         "browser-sync-webpack-plugin": "^2.3.0",
         "eslint": "^9.17.0",
-        "eslint-config-standard": "^17.1.0",
-        "eslint-plugin-import": "^2.32.0",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-promise": "^7.2.1",
+        "neostandard": "^0.13.0",
         "prettier": "^3.8.1",
         "prettier-plugin-go-template": "^0.0.15",
         "ts-loader": "^9.5.1"
@@ -54,6 +49,7 @@
         "prod": "npm run production",
         "production": "mix --production",
         "hugo-dev-server": "hugo server -D",
-        "hugo-watch": "hugo --watch"
+        "hugo-watch": "hugo --watch",
+        "lint": "eslint ."
     }
 }

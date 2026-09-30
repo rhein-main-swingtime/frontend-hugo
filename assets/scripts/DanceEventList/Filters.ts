@@ -112,7 +112,7 @@ export class Filters {
     }
 
     private getParamsAsObject () {
-        const out: {[key:string]: string[]} = {}
+        const out: { [key:string]: string[] } = {}
         const path = window.location.toString().split('?')[1] || ''
         path.split('&')
             .forEach((i) => {
@@ -155,7 +155,7 @@ export class Filters {
                 (element) => element.includes('weekday[]')
             ).forEach((wd) => {
                 console.log(wd)
-                let e = wd.split('=')[1] || false
+                const e = wd.split('=')[1] || false
                 if (e !== false) {
                     this.weekDays.push(String(e))
                 }
@@ -190,15 +190,15 @@ export class Filters {
         return out
     }
 
-    public handleWeekday(day: string): void {
+    public handleWeekday (day: string): void {
         if (this.weekDays.includes(day)) {
             this.weekDays = this.weekDays.filter((e) => e !== day)
-            return;
+            return
         }
         this.weekDays.push(day)
     }
 
-    get isDayChecked() {
+    get isDayChecked () {
         return (day: string) => this.weekDays.includes(day)
     }
 

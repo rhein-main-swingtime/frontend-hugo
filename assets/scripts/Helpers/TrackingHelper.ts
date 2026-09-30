@@ -1,4 +1,3 @@
-
 export interface trackingEventInterface {
     category: 'danceEventFavorite' | 'eventfilter' | 'filterbar' | 'danceEventInteraction',
     action: string,

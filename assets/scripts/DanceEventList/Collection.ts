@@ -23,8 +23,8 @@ export class Collection {
         return this.danceEvents.length
     }
 
-    get eventsInDates (): {[key: string]: DanceEvent[]} {
-        const out: {[key: string]: DanceEvent[]} = {}
+    get eventsInDates (): { [key: string]: DanceEvent[] } {
+        const out: { [key: string]: DanceEvent[] } = {}
 
         this.danceEvents.forEach((e) => {
             const key = genDateKey(e)
@@ -37,7 +37,7 @@ export class Collection {
         return out
     }
 
-    findEvent (id: number): null|DanceEvent {
+    findEvent (id: number): null | DanceEvent {
         return this.danceEvents.find((i) => i.id === id) || null
     }
 }

@@ -1,4 +1,3 @@
-
 module.exports = {
     plugins: [require('babel-plugin-lodash')],
     presets: [

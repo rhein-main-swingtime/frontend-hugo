@@ -26,13 +26,13 @@ interface FilterBarFilterInterface {
 interface FilterBarInterface {
     config: GenericListConfig,
     filters: FilterBarFilterInterface
-    items: {[key:string]: any}[],
+    items: { [key:string]: any }[],
     registerElement: Function,
     getSelectedFilters(category: string): string,
 }
 
 interface ContentItemInterface {
-    [key: number | string] : string | number | string[]
+    [key: number | string]: string | number | string[]
 }
 
 export default function createFilterBarInstance (config: GenericListConfig) {
@@ -56,12 +56,12 @@ export default function createFilterBarInstance (config: GenericListConfig) {
 
                     const val = element[f]
                     switch (typeof val) {
-                    case 'string':
-                    case 'number':
-                        out = (val === selected)
-                        break
-                    default:
-                        out = val.includes(selected.toString())
+                        case 'string':
+                        case 'number':
+                            out = (val === selected)
+                            break
+                        default:
+                            out = val.includes(selected.toString())
                     }
                 })
 
@@ -101,7 +101,7 @@ function registerElement (this: FilterBarInterface, element: any) {
     })
 }
 
-function getSelectedFilters (filters: FilterBarFilterInterface, category: string): string|null {
+function getSelectedFilters (filters: FilterBarFilterInterface, category: string): string | null {
     for (const [key, value] of Object.entries(filters[category])) {
         if (value) {
             return key

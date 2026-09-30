@@ -123,14 +123,10 @@ class DanceEvent implements DancEventInterface {
     }
 
     get shareUrl (): string {
-        return (
-                window.siteSettings!.eventShareUrl ||
-                (
-                    window.location.protocol + '//' +
-                    window.location.host + window.location.pathname
-                )
-        ) +
-                '?' + String(this.id)
+        const baseUrl = window.siteSettings!.eventShareUrl ||
+            window.location.protocol + '//' + window.location.host + window.location.pathname
+
+        return baseUrl + '?' + String(this.id)
     }
 
     get shareLinkCopy (): string {

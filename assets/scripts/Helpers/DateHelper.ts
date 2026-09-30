@@ -1,4 +1,3 @@
-
 const localTimeFormat = new Intl.DateTimeFormat('de-de', {
     hour: '2-digit',
     minute: '2-digit'
