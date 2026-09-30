@@ -1,6 +1,6 @@
 export interface DanceEventPayload {
     id: number
-    foreign_url: string         // eslint-disable-line
+    foreign_url: string
     source: string
     creator: string
     location: string
@@ -9,12 +9,12 @@ export interface DanceEventPayload {
     description: string
     created: string
     category: 'class' | 'socials'
-    start_date_time: string     // eslint-disable-line
-    end_date_time?: string      // eslint-disable-line
-    startDateTime?: string      // eslint-disable-line
-    endDateTime?: string        // eslint-disable-line
-    day_number?: number | null  // eslint-disable-line
-    day_count?: number | null   // eslint-disable-line
+    start_date_time: string
+    end_date_time?: string
+    startDateTime?: string
+    endDateTime?: string
+    day_number?: number | null
+    day_count?: number | null
     dayNumber?: number | null
     dayCount?: number | null
 }

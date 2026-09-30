@@ -52,7 +52,7 @@ export class FavoritesStore {
         trackEvent({
             category: 'danceEventFavorite',
             action: 'remove',
-            name: name,
+            name,
             value: id
         })
         this.collection = this.collection.filter(e => e.id !== id)

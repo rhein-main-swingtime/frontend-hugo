@@ -1,8 +1,3 @@
-interface togglePayload {
-    id: string,
-    payload: Object
-}
-
 export default class MobileNavigationStore {
     public readonly navIdMobileNav = 'nav:mobile'
     public readonly idForwardingNotice = 'notice:forwarding'

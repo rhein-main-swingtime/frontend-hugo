@@ -1,4 +1,3 @@
-
 export function detectTouchDevice () {
     return ('ontouchstart' in window) ||
            (navigator.maxTouchPoints > 0) ||

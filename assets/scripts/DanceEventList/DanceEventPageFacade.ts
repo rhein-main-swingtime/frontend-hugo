@@ -6,8 +6,6 @@ import { Stores } from '../Settings/Stores'
 import { Collection } from './Collection'
 import { fetchEventsById } from '../Helpers/FetchEventList'
 import DanceEvent from '../DTO/DanceEvent'
-import RedirectionPermissionHelper from '../Helpers/RedirectionPermissionHelper'
-import { createPopper } from '@popperjs/core'
 import trackEvent, { trackingEventInterface } from '../Helpers/TrackingHelper'
 import scrollToElement from '../Helpers/scrollToElement'
 
@@ -17,7 +15,7 @@ function isFavPageVisible () {
 
 const pageFavorites = 'favorites'
 const pageList = 'events'
-const eventListElementId = 'dance-event-list';
+const eventListElementId = 'dance-event-list'
 
 export default function create () {
     const collection = new Collection()
@@ -51,13 +49,11 @@ export default function create () {
             this.updateSearchQuery(value)
             this.list.reset()
 
-
             // @todo make this cleaner
             const listElement = document.getElementById(eventListElementId)
             if (listElement) {
                 scrollToElement(listElement)()
             }
-
         },
 
         handleOpenEventSection (current: string | null, s: string): string | null {

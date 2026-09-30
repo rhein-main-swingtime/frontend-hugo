@@ -124,7 +124,7 @@ class DanceEvent implements DancEventInterface {
 
     get shareUrl (): string {
         return (
-                window.siteSettings!.eventShareUrl ||
+            window.siteSettings!.eventShareUrl ||
                 (
                     window.location.protocol + '//' +
                     window.location.host + window.location.pathname

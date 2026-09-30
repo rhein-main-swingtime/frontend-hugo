@@ -1,4 +1,3 @@
-import { createDanceEventFromJson } from '../DTO/DanceEvent'
 import { fetchEventsById } from './FetchEventList'
 
 function getSharedEventIdsFromUrl () {

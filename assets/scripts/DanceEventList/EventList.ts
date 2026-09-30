@@ -1,39 +1,14 @@
 import DanceEvent, { createDanceEventFromJson } from '../DTO/DanceEvent'
 import DanceEventQr from './DanceEventQr'
 import FetchEventList from '../Helpers/FetchEventList'
-import { elementOffset } from '../Helpers/UiHelpers'
 import { convertStringToDate, getLocalizedDate } from '../Helpers/DateHelper'
 import { Collection } from './Collection'
 
-function addEvent (this: EventList, e: DanceEvent) {
-    const key = [
-        e.startDateTime.getFullYear(),
-        e.startDateTime.getMonth() + 1,
-        e.startDateTime.getDate()
-    ].map(i => String(i).padStart(2, '0')).join('-')
-
-    if (this.eventsInDates[key] === undefined) {
-        this.eventsInDates[key] = []
-    }
-    this.eventsInDates[key].push(e)
-}
-
-function removeEvent (this: EventList, id: number) {
-    Object.keys(this.eventsInDates).forEach((date) => {
-        this.eventsInDates[date] = Object.values(this.eventsInDates[date]).filter((danceEvent) => {
-            return danceEvent.id !== id
-        })
-    })
-}
-
-function getEventsByDate (this: EventList, date: string): DanceEvent[] {
-    return this.eventsInDates[date] || []
-}
 export class EventList {
     public readonly fetchLimit = 25
     public preloadersVisible: number = 0
     public state: 'nothing-found' | 'more-available' | 'end-reached' | 'updating' = 'updating'
-    public eventsInDates: {[key: string]: DanceEvent[]} = {}
+    public eventsInDates: { [key: string]: DanceEvent[] } = {}
     public additional: string | null = null
     public initialized = false
 
@@ -63,7 +38,7 @@ export class EventList {
 
     public triggerScrollTo (): void {
         const loadedEvent = new Event('dance-events-loaded')
-        document.dispatchEvent(loadedEvent);
+        document.dispatchEvent(loadedEvent)
     }
 
     get isSorry (): boolean {
