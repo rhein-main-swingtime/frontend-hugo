@@ -3,6 +3,7 @@
         {{ partial "heroicons/outline/calendar.svg" "is-icon is-base"}}
         <span x-text="danceEvent.startDateLocalized"></span>
     </div>
+    <template x-if="!danceEvent.isDayOfMultiDayEvent">
     <div>
         {{ partial "heroicons/outline/clock.svg" "is-icon is-base"}}
         <span x-text="danceEvent.startTimeLocalized"></span>
@@ -13,4 +14,5 @@
         <span x-text="danceEvent.endTimeLocalized"></span>
         Uhr
     </div>
+    </template>
 </div>

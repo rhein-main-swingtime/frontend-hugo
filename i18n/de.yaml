@@ -27,6 +27,8 @@ event-category-class:
     other: Kurs
 event-category-socials:
     other: Social Dance
+event-day-of-count:
+    other: Tag %DAY% von %COUNT%
 event-directions:
     other: Karte öffnen
 event-download-web:
