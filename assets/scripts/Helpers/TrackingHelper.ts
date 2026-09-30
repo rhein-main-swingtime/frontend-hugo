@@ -7,7 +7,7 @@ export interface trackingEventInterface {
 }
 
 export default function trackEvent (e: trackingEventInterface): void {
-    if (!_paq) {
+    if (!window._paq) {
         console.info('_paq method not found')
         return
     }
@@ -21,7 +21,7 @@ export default function trackEvent (e: trackingEventInterface): void {
     ]
 
     try {
-        _paq.push(payload)
+        window._paq.push(payload)
     } catch (e) {
         console.error(e, payload)
     }

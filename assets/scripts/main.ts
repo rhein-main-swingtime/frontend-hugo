@@ -23,9 +23,16 @@ declare global {
             [key: string]: string
         }},
         siteLang: string,
+        siteSettings?: {
+            eventShareUrl?: string,
+            eventListPage?: string
+        },
         _paq: {
             push: Function
         }
+    }
+    var Alpine: { // eslint-disable-line
+        store: (name: string, value?: any) => any
     }
 }
 

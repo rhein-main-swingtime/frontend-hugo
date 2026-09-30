@@ -253,10 +253,6 @@ export class Filters {
     }
 
     get searchQuery (): string | null {
-        if (this._filters === {}) {
-            return null
-        }
-
         let out: string[] = []
 
         if (this.onlyFavorites) {
