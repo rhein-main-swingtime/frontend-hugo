@@ -61,8 +61,8 @@ class DanceEvent implements DancEventInterface {
         this.created = convertStringToDate(payload.created)
         this.startDateTime = convertStringToDate(payload.start_date_time || payload.startDateTime || '')
         this.endDateTime = convertStringToDate(payload.end_date_time || payload.startDateTime || '')
-        this.dayNumber = payload.day_number ?? null
-        this.dayCount = payload.day_count ?? null
+        this.dayNumber = payload.day_number ?? payload.dayNumber ?? null
+        this.dayCount = payload.day_count ?? payload.dayCount ?? null
     }
 
     copyToClipboard () {
@@ -92,7 +92,7 @@ class DanceEvent implements DancEventInterface {
      * Such an entry covers exactly one day, its end is the next day 00:00.
      */
     get isDayOfMultiDayEvent (): boolean {
-        return this.dayNumber !== null
+        return this.dayNumber !== null && this.dayCount !== null
     }
 
     get dayLabel (): string {

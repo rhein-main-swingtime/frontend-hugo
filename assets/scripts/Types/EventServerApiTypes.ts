@@ -15,6 +15,8 @@ export interface DanceEventPayload {
     endDateTime?: string        // eslint-disable-line
     day_number?: number | null  // eslint-disable-line
     day_count?: number | null   // eslint-disable-line
+    dayNumber?: number | null
+    dayCount?: number | null
 }
 
 export interface DanceEventDatesInterface {
