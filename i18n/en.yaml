@@ -25,6 +25,8 @@ event-category-class:
   other: Class
 event-category-socials:
   other: Social Dance
+event-day-of-count:
+  other: Day %DAY% of %COUNT%
 event-directions:
   other: Open Map
 event-filters-reset:

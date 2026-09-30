@@ -15,6 +15,8 @@ interface DancEventInterface {
     startDateTime: Date
     endDateTime: Date
     category: 'class' | 'socials'
+    dayNumber: number | null
+    dayCount: number | null
 }
 
 /**
@@ -34,6 +36,8 @@ class DanceEvent implements DancEventInterface {
     readonly startDateTime: Date
     readonly endDateTime: Date
     readonly category: 'class' | 'socials'
+    readonly dayNumber: number | null
+    readonly dayCount: number | null
 
     wasCopied: boolean = false
 
@@ -57,6 +61,8 @@ class DanceEvent implements DancEventInterface {
         this.created = convertStringToDate(payload.created)
         this.startDateTime = convertStringToDate(payload.start_date_time || payload.startDateTime || '')
         this.endDateTime = convertStringToDate(payload.end_date_time || payload.startDateTime || '')
+        this.dayNumber = payload.day_number ?? null
+        this.dayCount = payload.day_count ?? null
     }
 
     copyToClipboard () {
@@ -79,6 +85,20 @@ class DanceEvent implements DancEventInterface {
 
     get endDateLocalized () {
         return getLocalizedDate(this.endDateTime)
+    }
+
+    /**
+     * Multi-day all-day events are split by the api into one entry per day.
+     * Such an entry covers exactly one day, its end is the next day 00:00.
+     */
+    get isDayOfMultiDayEvent (): boolean {
+        return this.dayNumber !== null
+    }
+
+    get dayLabel (): string {
+        return T('event-day-of-count')
+            .replace('%DAY%', String(this.dayNumber))
+            .replace('%COUNT%', String(this.dayCount))
     }
 
     get isSocial () {
