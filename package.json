@@ -9,7 +9,7 @@
         "@babel/cli": "^7.26.4",
         "@babel/core": "^7.29.7",
         "@babel/preset-env": "^7.29.7",
-        "@babel/preset-typescript": "^7.26.0",
+        "@babel/preset-typescript": "^7.29.7",
         "@popperjs/core": "^2.11.8",
         "@tailwindcss/forms": "0.5.9",
         "@tailwindcss/line-clamp": "^0.4.4",
