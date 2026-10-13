@@ -35,7 +35,7 @@
         "browser-sync-webpack-plugin": "^2.4.0",
         "eslint": "^9.17.0",
         "neostandard": "^0.13.0",
-        "prettier": "^3.8.1",
+        "prettier": "^3.9.10",
         "prettier-plugin-go-template": "^0.0.15",
         "ts-loader": "^9.5.1"
     },
