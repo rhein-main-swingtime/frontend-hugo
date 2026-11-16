@@ -53,7 +53,7 @@ Wir sind nicht qualifiziert dir hier eine wirkliche historische Abhandlung zu ge
 
 Es ist faszninierend, teils traurig aber auch wundervoll!
 
-- [Sugarfootstomp NZ:  ORIGINS OF SWING DANCING](https://www.sugarfootstomp.co.nz/origins-of-swing-dancing#:~:text=Swing%20Dancing%20originated%20in%20Harlem,the%20Jazz%20music%20swing%20beat.)
+- [Sugarfootstomp NZ:  ORIGINS OF SWING DANCING](https://web.archive.org/web/20250220125816/https://www.sugarfootstomp.co.nz/origins-of-swing-dancing)
 - [dance-america.com: Swing Dance History (archived)](https://web.archive.org/web/20231101021019/https://dance-america.com/swing-dance-history-83.html)
 
 In den letzten Jahren wird in der historischen Betrachtung zunehmend ein zwischenzeitlich weitgehend verdrängtes US-Afroamerikanisches Erbe in den Blick genommen.
